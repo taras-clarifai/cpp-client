@@ -47,6 +47,7 @@ jobs:
 
     - name: test
       run: |
+        cd build
         make test ARGS=-V
         "../scripts/ci/get_code_cov.sh" "${PWD}"
 
