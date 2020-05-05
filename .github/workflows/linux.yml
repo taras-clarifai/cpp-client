@@ -36,8 +36,9 @@ jobs:
 
     - name: build
       run: |
+        mkdir build
         ulimit -c unlimited -S
-        cmake --build build --config Debug -j4
+        cmake --build build --config Debug -DCODE_COVERAGE=ON -j4
 
     - name: test
       run: |
