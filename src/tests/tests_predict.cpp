@@ -16,8 +16,6 @@ protected:
 };
 
 TEST_F (ClarifaiTestsSuite, TestPlaceholder) {
-    std::string address("api-grpc.clarifai.com:18080");
-
     auto *image = new clarifai::api::Image();
     image->set_url("https://samples.clarifai.com/metro-north.jpg");
 
@@ -28,6 +26,7 @@ TEST_F (ClarifaiTestsSuite, TestPlaceholder) {
     request.set_model_id("aaa03c23b3724a16a56b629203edc62c");
     request.add_inputs()->set_allocated_data(data);
 
+    std::string address("api-grpc.clarifai.com:18080");
     auto stub = clarifai::api::V2::NewStub(
                 grpc::CreateChannel(
                     address,
