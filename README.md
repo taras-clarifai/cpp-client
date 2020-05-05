@@ -6,4 +6,4 @@ C++ client PoC for Clarifai API
 [![codecov](https://codecov.io/gh/taras-clarifai/cpp-client/branch/master/graph/badge.svg)](https://codecov.io/gh/taras-clarifai/cpp-client)
 
 ![language](https://img.shields.io/badge/language-c++-blue.svg)
-![c++](https://img.shields.io/badge/std-c++11-blue.svg) 
+![c++](https://img.shields.io/badge/std-c++14-blue.svg) 
