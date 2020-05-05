@@ -34,11 +34,10 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-ccache
 
-    - name: configure
-      run: cmake -Htest -Bbuild -DENABLE_TEST_COVERAGE=1
-
     - name: build
-      run: cmake --build build --config Debug -j4
+      run: |
+        ulimit -c unlimited -S
+        cmake --build build --config Debug -j4
 
     - name: test
       run: |
