@@ -9,11 +9,15 @@ set(HEADERS
     clientlib_global.h
     client.h)
 
-add_library(clarifai STATIC SHARED ${SOURCES} ${HEADERS})
+file(GLOB_RECURSE PROTO_SOURCES proto/**/*.cc)
+file(GLOB_RECURSE PROTO_HEADERS proto/**/*.h)
+
+add_library(clarifai STATIC SHARED ${SOURCES} ${HEADERS} ${PROTO_SOURCES} ${PROTO_HEADERS})
 
 target_include_directories(clarifai PRIVATE ${CLIENTLIB_ROOT_DIR}/src/clientlib)
 
 target_link_libraries(clarifai debug coverage_config)
+target_link_libraries(clarifai grpc++)
 
 if(WIN32)
     target_link_libraries(clarifai

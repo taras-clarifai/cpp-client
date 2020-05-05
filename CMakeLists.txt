@@ -8,11 +8,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(GTEST_SOURCE_DIR ${PROJECT_SOURCE_DIR}/vendors/gtest)
 set(CLIENTLIB_ROOT_DIR ${PROJECT_SOURCE_DIR})
 
-#add_definitions(-DGTEST_HAS_SEH=0)
-
+###########################################
+###############  CODECOV  #################
+###########################################
 # Code Coverage Configuration
 add_library(coverage_config INTERFACE)
-
 option(CODE_COVERAGE "Enable coverage reporting" OFF)
 if(CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
   # Add required flags (GCC & LLVM/Clang)
@@ -28,6 +28,30 @@ if(CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
   endif()
 endif()
 
+###########################################
+#################  GRPC  ##################
+###########################################
+add_subdirectory(vendors/grpc)
+message(STATUS "Using gRPC via add_subdirectory.")
+# After using add_subdirectory, we can now use the grpc targets directly from
+# this build.
+set(_PROTOBUF_LIBPROTOBUF libprotobuf)
+set(_REFLECTION grpc++_reflection)
+if(CMAKE_CROSSCOMPILING)
+  find_program(_PROTOBUF_PROTOC protoc)
+else()
+  set(_PROTOBUF_PROTOC $<TARGET_FILE:protobuf::protoc>)
+endif()
+set(_GRPC_GRPCPP grpc++)
+if(CMAKE_CROSSCOMPILING)
+  find_program(_GRPC_CPP_PLUGIN_EXECUTABLE grpc_cpp_plugin)
+else()
+  set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:grpc_cpp_plugin>)
+endif()
+
+###########################################
+##############  CLIENTLIB  ################
+###########################################
 add_subdirectory(src/clientlib)
 
 option (BUILD_TESTING "Build the testing tree." OFF)
