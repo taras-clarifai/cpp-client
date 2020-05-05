@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -58,7 +57,7 @@ static void InitDefaultsscc_info_ConceptEmbeddingDump_proto_2fknowledge_5fgraph_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ConceptEmbeddingDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_ConceptEmbeddingDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ConceptEmbeddingDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
       &scc_info_DataExample_proto_2futils_2fdata_5fexample_2eproto.base,}};
 
 static void InitDefaultsscc_info_ConceptMap_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto() {
@@ -73,7 +72,7 @@ static void InitDefaultsscc_info_ConceptMap_proto_2fknowledge_5fgraph_2fkg_5fpy_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ConceptMap_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_ConceptMap_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ConceptMap_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
       &scc_info_Concept_proto_2fclarifai_2fapi_2fresources_2eproto.base,}};
 
 static void InitDefaultsscc_info_CustomerDataDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto() {
@@ -88,7 +87,7 @@ static void InitDefaultsscc_info_CustomerDataDump_proto_2fknowledge_5fgraph_2fkg
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CustomerDataDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_CustomerDataDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CustomerDataDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
       &scc_info_DataExample_proto_2futils_2fdata_5fexample_2eproto.base,}};
 
 static void InitDefaultsscc_info_PostKnowledgeGraphMatchRequest_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto() {
@@ -103,7 +102,7 @@ static void InitDefaultsscc_info_PostKnowledgeGraphMatchRequest_proto_2fknowledg
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_PostKnowledgeGraphMatchRequest_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsscc_info_PostKnowledgeGraphMatchRequest_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_PostKnowledgeGraphMatchRequest_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
       &scc_info_RequestMeta_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_CustomerDataDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto.base,
       &scc_info_ConceptEmbeddingDump_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto.base,}};
@@ -120,7 +119,7 @@ static void InitDefaultsscc_info_PostKnowledgeGraphMatchResponse_proto_2fknowled
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PostKnowledgeGraphMatchResponse_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_PostKnowledgeGraphMatchResponse_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_PostKnowledgeGraphMatchResponse_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto}, {
       &scc_info_ResponseStatus_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_ConceptMap_proto_2fknowledge_5fgraph_2fkg_5fpy_5fservice_2eproto.base,}};
 
@@ -269,7 +268,7 @@ ConceptMap::ConceptMap(const ConceptMap& from)
       _internal_metadata_(nullptr),
       golden_concept_(from.golden_concept_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_customer_concept()) {
+  if (from._internal_has_customer_concept()) {
     customer_concept_ = new ::clarifai::api::Concept(*from.customer_concept_);
   } else {
     customer_concept_ = nullptr;
@@ -314,7 +313,6 @@ void ConceptMap::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ConceptMap::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -325,7 +323,7 @@ const char* ConceptMap::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
       // .clarifai.api.Concept customer_concept = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_customer_concept(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_customer_concept(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -335,10 +333,10 @@ const char* ConceptMap::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_golden_concept(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_golden_concept(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -360,112 +358,32 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ConceptMap::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:clarifai.api.ConceptMap)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .clarifai.api.Concept customer_concept = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_customer_concept()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .clarifai.api.Concept golden_concept = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_golden_concept()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:clarifai.api.ConceptMap)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:clarifai.api.ConceptMap)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ConceptMap::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:clarifai.api.ConceptMap)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .clarifai.api.Concept customer_concept = 1;
-  if (this->has_customer_concept()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::customer_concept(this), output);
-  }
-
-  // repeated .clarifai.api.Concept golden_concept = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->golden_concept_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->golden_concept(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:clarifai.api.ConceptMap)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ConceptMap::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ConceptMap::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:clarifai.api.ConceptMap)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .clarifai.api.Concept customer_concept = 1;
   if (this->has_customer_concept()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::customer_concept(this), target);
+      InternalWriteMessage(
+        1, _Internal::customer_concept(this), target, stream);
   }
 
   // repeated .clarifai.api.Concept golden_concept = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->golden_concept_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_golden_concept_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->golden_concept(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_golden_concept(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:clarifai.api.ConceptMap)
   return target;
@@ -475,24 +393,15 @@ size_t ConceptMap::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:clarifai.api.ConceptMap)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .clarifai.api.Concept golden_concept = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->golden_concept_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->golden_concept(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_golden_concept_size();
+  for (const auto& msg : this->golden_concept_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .clarifai.api.Concept customer_concept = 1;
@@ -502,6 +411,10 @@ size_t ConceptMap::ByteSizeLong() const {
         *customer_concept_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -531,7 +444,7 @@ void ConceptMap::MergeFrom(const ConceptMap& from) {
 
   golden_concept_.MergeFrom(from.golden_concept_);
   if (from.has_customer_concept()) {
-    mutable_customer_concept()->::clarifai::api::Concept::MergeFrom(from.customer_concept());
+    _internal_mutable_customer_concept()->::clarifai::api::Concept::MergeFrom(from._internal_customer_concept());
   }
 }
 
@@ -556,7 +469,7 @@ bool ConceptMap::IsInitialized() const {
 void ConceptMap::InternalSwap(ConceptMap* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&golden_concept_)->InternalSwap(CastToBase(&other->golden_concept_));
+  golden_concept_.InternalSwap(&other->golden_concept_);
   swap(customer_concept_, other->customer_concept_);
 }
 
@@ -587,7 +500,7 @@ ConceptEmbeddingDump::ConceptEmbeddingDump(const ConceptEmbeddingDump& from)
       example_(from.example_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   location_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.location().empty()) {
+  if (!from._internal_location().empty()) {
     location_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.location_);
   }
   // @@protoc_insertion_point(copy_constructor:clarifai.api.ConceptEmbeddingDump)
@@ -627,7 +540,6 @@ void ConceptEmbeddingDump::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ConceptEmbeddingDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -638,7 +550,9 @@ const char* ConceptEmbeddingDump::_InternalParse(const char* ptr, ::PROTOBUF_NAM
       // string location = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_location(), ptr, ctx, "clarifai.api.ConceptEmbeddingDump.location");
+          auto str = _internal_mutable_location();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "clarifai.api.ConceptEmbeddingDump.location"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -648,10 +562,10 @@ const char* ConceptEmbeddingDump::_InternalParse(const char* ptr, ::PROTOBUF_NAM
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_example(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_example(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -673,98 +587,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ConceptEmbeddingDump::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:clarifai.api.ConceptEmbeddingDump)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string location = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_location()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->location().data(), static_cast<int>(this->location().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "clarifai.api.ConceptEmbeddingDump.location"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .DataExample example = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_example()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:clarifai.api.ConceptEmbeddingDump)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:clarifai.api.ConceptEmbeddingDump)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ConceptEmbeddingDump::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:clarifai.api.ConceptEmbeddingDump)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string location = 1;
-  if (this->location().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->location().data(), static_cast<int>(this->location().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "clarifai.api.ConceptEmbeddingDump.location");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->location(), output);
-  }
-
-  // repeated .DataExample example = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->example_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->example(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:clarifai.api.ConceptEmbeddingDump)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ConceptEmbeddingDump::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ConceptEmbeddingDump::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:clarifai.api.ConceptEmbeddingDump)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -772,25 +597,24 @@ void ConceptEmbeddingDump::SerializeWithCachedSizes(
   // string location = 1;
   if (this->location().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->location().data(), static_cast<int>(this->location().length()),
+      this->_internal_location().data(), static_cast<int>(this->_internal_location().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "clarifai.api.ConceptEmbeddingDump.location");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->location(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_location(), target);
   }
 
   // repeated .DataExample example = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->example_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_example_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->example(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_example(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:clarifai.api.ConceptEmbeddingDump)
   return target;
@@ -800,33 +624,28 @@ size_t ConceptEmbeddingDump::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:clarifai.api.ConceptEmbeddingDump)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .DataExample example = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->example_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->example(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_example_size();
+  for (const auto& msg : this->example_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string location = 1;
   if (this->location().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->location());
+        this->_internal_location());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -882,7 +701,7 @@ bool ConceptEmbeddingDump::IsInitialized() const {
 void ConceptEmbeddingDump::InternalSwap(ConceptEmbeddingDump* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&example_)->InternalSwap(CastToBase(&other->example_));
+  example_.InternalSwap(&other->example_);
   location_.Swap(&other->location_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
 }
@@ -914,7 +733,7 @@ CustomerDataDump::CustomerDataDump(const CustomerDataDump& from)
       example_(from.example_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   locaiton_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.locaiton().empty()) {
+  if (!from._internal_locaiton().empty()) {
     locaiton_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.locaiton_);
   }
   // @@protoc_insertion_point(copy_constructor:clarifai.api.CustomerDataDump)
@@ -954,7 +773,6 @@ void CustomerDataDump::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* CustomerDataDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -965,7 +783,9 @@ const char* CustomerDataDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       // string locaiton = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_locaiton(), ptr, ctx, "clarifai.api.CustomerDataDump.locaiton");
+          auto str = _internal_mutable_locaiton();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "clarifai.api.CustomerDataDump.locaiton"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -975,10 +795,10 @@ const char* CustomerDataDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_example(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_example(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1000,98 +820,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool CustomerDataDump::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:clarifai.api.CustomerDataDump)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string locaiton = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_locaiton()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->locaiton().data(), static_cast<int>(this->locaiton().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "clarifai.api.CustomerDataDump.locaiton"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .DataExample example = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_example()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:clarifai.api.CustomerDataDump)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:clarifai.api.CustomerDataDump)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void CustomerDataDump::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:clarifai.api.CustomerDataDump)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string locaiton = 1;
-  if (this->locaiton().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->locaiton().data(), static_cast<int>(this->locaiton().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "clarifai.api.CustomerDataDump.locaiton");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->locaiton(), output);
-  }
-
-  // repeated .DataExample example = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->example_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->example(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:clarifai.api.CustomerDataDump)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* CustomerDataDump::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* CustomerDataDump::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:clarifai.api.CustomerDataDump)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1099,25 +830,24 @@ void CustomerDataDump::SerializeWithCachedSizes(
   // string locaiton = 1;
   if (this->locaiton().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->locaiton().data(), static_cast<int>(this->locaiton().length()),
+      this->_internal_locaiton().data(), static_cast<int>(this->_internal_locaiton().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "clarifai.api.CustomerDataDump.locaiton");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->locaiton(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_locaiton(), target);
   }
 
   // repeated .DataExample example = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->example_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_example_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->example(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_example(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:clarifai.api.CustomerDataDump)
   return target;
@@ -1127,33 +857,28 @@ size_t CustomerDataDump::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:clarifai.api.CustomerDataDump)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .DataExample example = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->example_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->example(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_example_size();
+  for (const auto& msg : this->example_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string locaiton = 1;
   if (this->locaiton().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->locaiton());
+        this->_internal_locaiton());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1209,7 +934,7 @@ bool CustomerDataDump::IsInitialized() const {
 void CustomerDataDump::InternalSwap(CustomerDataDump* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&example_)->InternalSwap(CastToBase(&other->example_));
+  example_.InternalSwap(&other->example_);
   locaiton_.Swap(&other->locaiton_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
 }
@@ -1257,12 +982,12 @@ PostKnowledgeGraphMatchRequest::PostKnowledgeGraphMatchRequest(const PostKnowled
       _internal_metadata_(nullptr),
       shareable_concept_embeddings_(from.shareable_concept_embeddings_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_meta()) {
+  if (from._internal_has_meta()) {
     meta_ = new ::RequestMeta(*from.meta_);
   } else {
     meta_ = nullptr;
   }
-  if (from.has_customer_data()) {
+  if (from._internal_has_customer_data()) {
     customer_data_ = new ::clarifai::api::CustomerDataDump(*from.customer_data_);
   } else {
     customer_data_ = nullptr;
@@ -1320,7 +1045,6 @@ void PostKnowledgeGraphMatchRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* PostKnowledgeGraphMatchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1331,7 +1055,7 @@ const char* PostKnowledgeGraphMatchRequest::_InternalParse(const char* ptr, ::PR
       // .RequestMeta meta = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_meta(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1366,7 +1090,7 @@ const char* PostKnowledgeGraphMatchRequest::_InternalParse(const char* ptr, ::PR
       // .clarifai.api.CustomerDataDump customer_data = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(mutable_customer_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_customer_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1376,10 +1100,10 @@ const char* PostKnowledgeGraphMatchRequest::_InternalParse(const char* ptr, ::PR
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_shareable_concept_embeddings(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_shareable_concept_embeddings(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 58);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1401,228 +1125,64 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool PostKnowledgeGraphMatchRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:clarifai.api.PostKnowledgeGraphMatchRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .RequestMeta meta = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_meta()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // bool children = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &children_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool siblings = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &siblings_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 max_depth = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &max_depth_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 max_width = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &max_width_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .clarifai.api.CustomerDataDump customer_data = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_customer_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .clarifai.api.ConceptEmbeddingDump shareable_concept_embeddings = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_shareable_concept_embeddings()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:clarifai.api.PostKnowledgeGraphMatchRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:clarifai.api.PostKnowledgeGraphMatchRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void PostKnowledgeGraphMatchRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:clarifai.api.PostKnowledgeGraphMatchRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .RequestMeta meta = 1;
-  if (this->has_meta()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::meta(this), output);
-  }
-
-  // bool children = 2;
-  if (this->children() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(2, this->children(), output);
-  }
-
-  // bool siblings = 3;
-  if (this->siblings() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(3, this->siblings(), output);
-  }
-
-  // int32 max_depth = 4;
-  if (this->max_depth() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->max_depth(), output);
-  }
-
-  // int32 max_width = 5;
-  if (this->max_width() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(5, this->max_width(), output);
-  }
-
-  // .clarifai.api.CustomerDataDump customer_data = 6;
-  if (this->has_customer_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, _Internal::customer_data(this), output);
-  }
-
-  // repeated .clarifai.api.ConceptEmbeddingDump shareable_concept_embeddings = 7;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->shareable_concept_embeddings_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7,
-      this->shareable_concept_embeddings(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:clarifai.api.PostKnowledgeGraphMatchRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* PostKnowledgeGraphMatchRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* PostKnowledgeGraphMatchRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:clarifai.api.PostKnowledgeGraphMatchRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .RequestMeta meta = 1;
   if (this->has_meta()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::meta(this), target);
+      InternalWriteMessage(
+        1, _Internal::meta(this), target, stream);
   }
 
   // bool children = 2;
   if (this->children() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->children(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_children(), target);
   }
 
   // bool siblings = 3;
   if (this->siblings() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->siblings(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_siblings(), target);
   }
 
   // int32 max_depth = 4;
   if (this->max_depth() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->max_depth(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_max_depth(), target);
   }
 
   // int32 max_width = 5;
   if (this->max_width() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->max_width(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_max_width(), target);
   }
 
   // .clarifai.api.CustomerDataDump customer_data = 6;
   if (this->has_customer_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, _Internal::customer_data(this), target);
+      InternalWriteMessage(
+        6, _Internal::customer_data(this), target, stream);
   }
 
   // repeated .clarifai.api.ConceptEmbeddingDump shareable_concept_embeddings = 7;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->shareable_concept_embeddings_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_shareable_concept_embeddings_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, this->shareable_concept_embeddings(static_cast<int>(i)), target);
+      InternalWriteMessage(7, this->_internal_shareable_concept_embeddings(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:clarifai.api.PostKnowledgeGraphMatchRequest)
   return target;
@@ -1632,24 +1192,15 @@ size_t PostKnowledgeGraphMatchRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:clarifai.api.PostKnowledgeGraphMatchRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .clarifai.api.ConceptEmbeddingDump shareable_concept_embeddings = 7;
-  {
-    unsigned int count = static_cast<unsigned int>(this->shareable_concept_embeddings_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->shareable_concept_embeddings(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_shareable_concept_embeddings_size();
+  for (const auto& msg : this->shareable_concept_embeddings_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .RequestMeta meta = 1;
@@ -1680,16 +1231,20 @@ size_t PostKnowledgeGraphMatchRequest::ByteSizeLong() const {
   if (this->max_depth() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->max_depth());
+        this->_internal_max_depth());
   }
 
   // int32 max_width = 5;
   if (this->max_width() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->max_width());
+        this->_internal_max_width());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1719,22 +1274,22 @@ void PostKnowledgeGraphMatchRequest::MergeFrom(const PostKnowledgeGraphMatchRequ
 
   shareable_concept_embeddings_.MergeFrom(from.shareable_concept_embeddings_);
   if (from.has_meta()) {
-    mutable_meta()->::RequestMeta::MergeFrom(from.meta());
+    _internal_mutable_meta()->::RequestMeta::MergeFrom(from._internal_meta());
   }
   if (from.has_customer_data()) {
-    mutable_customer_data()->::clarifai::api::CustomerDataDump::MergeFrom(from.customer_data());
+    _internal_mutable_customer_data()->::clarifai::api::CustomerDataDump::MergeFrom(from._internal_customer_data());
   }
   if (from.children() != 0) {
-    set_children(from.children());
+    _internal_set_children(from._internal_children());
   }
   if (from.siblings() != 0) {
-    set_siblings(from.siblings());
+    _internal_set_siblings(from._internal_siblings());
   }
   if (from.max_depth() != 0) {
-    set_max_depth(from.max_depth());
+    _internal_set_max_depth(from._internal_max_depth());
   }
   if (from.max_width() != 0) {
-    set_max_width(from.max_width());
+    _internal_set_max_width(from._internal_max_width());
   }
 }
 
@@ -1759,7 +1314,7 @@ bool PostKnowledgeGraphMatchRequest::IsInitialized() const {
 void PostKnowledgeGraphMatchRequest::InternalSwap(PostKnowledgeGraphMatchRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&shareable_concept_embeddings_)->InternalSwap(CastToBase(&other->shareable_concept_embeddings_));
+  shareable_concept_embeddings_.InternalSwap(&other->shareable_concept_embeddings_);
   swap(meta_, other->meta_);
   swap(customer_data_, other->customer_data_);
   swap(children_, other->children_);
@@ -1804,7 +1359,7 @@ PostKnowledgeGraphMatchResponse::PostKnowledgeGraphMatchResponse(const PostKnowl
       _internal_metadata_(nullptr),
       concept_map_(from.concept_map_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_status()) {
+  if (from._internal_has_status()) {
     status_ = new ::ResponseStatus(*from.status_);
   } else {
     status_ = nullptr;
@@ -1849,7 +1404,6 @@ void PostKnowledgeGraphMatchResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* PostKnowledgeGraphMatchResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1860,7 +1414,7 @@ const char* PostKnowledgeGraphMatchResponse::_InternalParse(const char* ptr, ::P
       // .ResponseStatus status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_status(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1870,10 +1424,10 @@ const char* PostKnowledgeGraphMatchResponse::_InternalParse(const char* ptr, ::P
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_concept_map(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_concept_map(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1895,112 +1449,32 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool PostKnowledgeGraphMatchResponse::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:clarifai.api.PostKnowledgeGraphMatchResponse)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ResponseStatus status = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_status()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .clarifai.api.ConceptMap concept_map = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_concept_map()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:clarifai.api.PostKnowledgeGraphMatchResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:clarifai.api.PostKnowledgeGraphMatchResponse)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void PostKnowledgeGraphMatchResponse::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:clarifai.api.PostKnowledgeGraphMatchResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ResponseStatus status = 1;
-  if (this->has_status()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::status(this), output);
-  }
-
-  // repeated .clarifai.api.ConceptMap concept_map = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->concept_map_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->concept_map(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:clarifai.api.PostKnowledgeGraphMatchResponse)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* PostKnowledgeGraphMatchResponse::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* PostKnowledgeGraphMatchResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:clarifai.api.PostKnowledgeGraphMatchResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ResponseStatus status = 1;
   if (this->has_status()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::status(this), target);
+      InternalWriteMessage(
+        1, _Internal::status(this), target, stream);
   }
 
   // repeated .clarifai.api.ConceptMap concept_map = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->concept_map_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_concept_map_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->concept_map(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_concept_map(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:clarifai.api.PostKnowledgeGraphMatchResponse)
   return target;
@@ -2010,24 +1484,15 @@ size_t PostKnowledgeGraphMatchResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:clarifai.api.PostKnowledgeGraphMatchResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .clarifai.api.ConceptMap concept_map = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->concept_map_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->concept_map(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_concept_map_size();
+  for (const auto& msg : this->concept_map_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .ResponseStatus status = 1;
@@ -2037,6 +1502,10 @@ size_t PostKnowledgeGraphMatchResponse::ByteSizeLong() const {
         *status_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -2066,7 +1535,7 @@ void PostKnowledgeGraphMatchResponse::MergeFrom(const PostKnowledgeGraphMatchRes
 
   concept_map_.MergeFrom(from.concept_map_);
   if (from.has_status()) {
-    mutable_status()->::ResponseStatus::MergeFrom(from.status());
+    _internal_mutable_status()->::ResponseStatus::MergeFrom(from._internal_status());
   }
 }
 
@@ -2091,7 +1560,7 @@ bool PostKnowledgeGraphMatchResponse::IsInitialized() const {
 void PostKnowledgeGraphMatchResponse::InternalSwap(PostKnowledgeGraphMatchResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&concept_map_)->InternalSwap(CastToBase(&other->concept_map_));
+  concept_map_.InternalSwap(&other->concept_map_);
   swap(status_, other->status_);
 }
 

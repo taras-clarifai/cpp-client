@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -118,7 +117,7 @@ static void InitDefaultsscc_info_AttributeMixIn_proto_2flopq_2flopq_5fservice_2e
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AttributeMixIn_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_AttributeMixIn_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_AttributeMixIn_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_ConceptOverride_proto_2flopq_2flopq_5fservice_2eproto.base,}};
 
 static void InitDefaultsscc_info_BruteForceResult_proto_2flopq_2flopq_5fservice_2eproto() {
@@ -133,7 +132,7 @@ static void InitDefaultsscc_info_BruteForceResult_proto_2flopq_2flopq_5fservice_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BruteForceResult_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_BruteForceResult_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_BruteForceResult_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_LOPQSearchResult_proto_2flopq_2flopq_5fservice_2eproto.base,}};
 
 static void InitDefaultsscc_info_ConceptOverride_proto_2flopq_2flopq_5fservice_2eproto() {
@@ -148,7 +147,7 @@ static void InitDefaultsscc_info_ConceptOverride_proto_2flopq_2flopq_5fservice_2
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ConceptOverride_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ConceptOverride_proto_2flopq_2flopq_5fservice_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ConceptOverride_proto_2flopq_2flopq_5fservice_2eproto}, {}};
 
 static void InitDefaultsscc_info_LOPQAttributeSearchRequest_proto_2flopq_2flopq_5fservice_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -162,7 +161,7 @@ static void InitDefaultsscc_info_LOPQAttributeSearchRequest_proto_2flopq_2flopq_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_LOPQAttributeSearchRequest_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsscc_info_LOPQAttributeSearchRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_LOPQAttributeSearchRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_RequestMeta_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_DataBatch_proto_2futils_2fdatabatch_2eproto.base,
       &scc_info_AttributeMixIn_proto_2flopq_2flopq_5fservice_2eproto.base,}};
@@ -179,7 +178,7 @@ static void InitDefaultsscc_info_LOPQBruteForceSearchRequest_proto_2flopq_2flopq
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQBruteForceSearchRequest_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQBruteForceSearchRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQBruteForceSearchRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_RequestMeta_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_DataBatch_proto_2futils_2fdatabatch_2eproto.base,}};
 
@@ -195,7 +194,7 @@ static void InitDefaultsscc_info_LOPQBruteForceSearchResponse_proto_2flopq_2flop
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQBruteForceSearchResponse_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQBruteForceSearchResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQBruteForceSearchResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_ResponseStatus_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_BruteForceResult_proto_2flopq_2flopq_5fservice_2eproto.base,}};
 
@@ -211,7 +210,7 @@ static void InitDefaultsscc_info_LOPQModelParams_proto_2flopq_2flopq_5fservice_2
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LOPQModelParams_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_LOPQModelParams_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LOPQModelParams_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_NDArray_proto_2futils_2fndarray_2eproto.base,}};
 
 static void InitDefaultsscc_info_LOPQPredictRequest_proto_2flopq_2flopq_5fservice_2eproto() {
@@ -226,7 +225,7 @@ static void InitDefaultsscc_info_LOPQPredictRequest_proto_2flopq_2flopq_5fservic
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQPredictRequest_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQPredictRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQPredictRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_RequestMeta_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_DataBatch_proto_2futils_2fdatabatch_2eproto.base,}};
 
@@ -242,7 +241,7 @@ static void InitDefaultsscc_info_LOPQPredictResponse_proto_2flopq_2flopq_5fservi
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_LOPQPredictResponse_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsscc_info_LOPQPredictResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_LOPQPredictResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_ResponseStatus_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_LOPQCode_proto_2futils_2flopq_5fcode_2eproto.base,
       &scc_info_DataBatch_proto_2futils_2fdatabatch_2eproto.base,}};
@@ -259,7 +258,7 @@ static void InitDefaultsscc_info_LOPQSearchForCodeResult_proto_2flopq_2flopq_5fs
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LOPQSearchForCodeResult_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_LOPQSearchForCodeResult_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LOPQSearchForCodeResult_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_LOPQCode_proto_2futils_2flopq_5fcode_2eproto.base,}};
 
 static void InitDefaultsscc_info_LOPQSearchForCodesRequest_proto_2flopq_2flopq_5fservice_2eproto() {
@@ -274,7 +273,7 @@ static void InitDefaultsscc_info_LOPQSearchForCodesRequest_proto_2flopq_2flopq_5
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQSearchForCodesRequest_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQSearchForCodesRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQSearchForCodesRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_RequestMeta_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_DataBatch_proto_2futils_2fdatabatch_2eproto.base,}};
 
@@ -290,7 +289,7 @@ static void InitDefaultsscc_info_LOPQSearchForCodesResponse_proto_2flopq_2flopq_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQSearchForCodesResponse_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQSearchForCodesResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQSearchForCodesResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_ResponseStatus_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_LOPQSearchForCodeResult_proto_2flopq_2flopq_5fservice_2eproto.base,}};
 
@@ -306,7 +305,7 @@ static void InitDefaultsscc_info_LOPQSearchRequest_proto_2flopq_2flopq_5fservice
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQSearchRequest_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQSearchRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQSearchRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_RequestMeta_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_DataBatch_proto_2futils_2fdatabatch_2eproto.base,}};
 
@@ -322,7 +321,7 @@ static void InitDefaultsscc_info_LOPQSearchResponse_proto_2flopq_2flopq_5fservic
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQSearchResponse_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQSearchResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQSearchResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_ResponseStatus_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_LOPQSearchResult_proto_2flopq_2flopq_5fservice_2eproto.base,}};
 
@@ -338,7 +337,7 @@ static void InitDefaultsscc_info_LOPQSearchResult_proto_2flopq_2flopq_5fservice_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LOPQSearchResult_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_LOPQSearchResult_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LOPQSearchResult_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_LOPQCode_proto_2futils_2flopq_5fcode_2eproto.base,}};
 
 static void InitDefaultsscc_info_LOPQTrainAndEvalRequest_proto_2flopq_2flopq_5fservice_2eproto() {
@@ -353,7 +352,7 @@ static void InitDefaultsscc_info_LOPQTrainAndEvalRequest_proto_2flopq_2flopq_5fs
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQTrainAndEvalRequest_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQTrainAndEvalRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQTrainAndEvalRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_RequestMeta_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_DataBatch_proto_2futils_2fdatabatch_2eproto.base,}};
 
@@ -369,7 +368,7 @@ static void InitDefaultsscc_info_LOPQTrainAndEvalResponse_proto_2flopq_2flopq_5f
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQTrainAndEvalResponse_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQTrainAndEvalResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQTrainAndEvalResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_ResponseStatus_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_LOPQEvalResult_proto_2futils_2flopq_5fservice_2eproto.base,}};
 
@@ -385,7 +384,7 @@ static void InitDefaultsscc_info_LOPQTrainRequest_proto_2flopq_2flopq_5fservice_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LOPQTrainRequest_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_LOPQTrainRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_LOPQTrainRequest_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_RequestMeta_proto_2futils_2frequest_5fmeta_2eproto.base,
       &scc_info_DataBatch_proto_2futils_2fdatabatch_2eproto.base,}};
 
@@ -401,7 +400,7 @@ static void InitDefaultsscc_info_LOPQTrainResponse_proto_2flopq_2flopq_5fservice
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LOPQTrainResponse_proto_2flopq_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_LOPQTrainResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LOPQTrainResponse_proto_2flopq_2flopq_5fservice_2eproto}, {
       &scc_info_ResponseStatus_proto_2futils_2frequest_5fmeta_2eproto.base,}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_proto_2flopq_2flopq_5fservice_2eproto[19];
@@ -816,15 +815,15 @@ LOPQPredictRequest::LOPQPredictRequest(const LOPQPredictRequest& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   lopq_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.lopq_model_name().empty()) {
+  if (!from._internal_lopq_model_name().empty()) {
     lopq_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.lopq_model_name_);
   }
-  if (from.has_meta()) {
+  if (from._internal_has_meta()) {
     meta_ = new ::RequestMeta(*from.meta_);
   } else {
     meta_ = nullptr;
   }
-  if (from.has_data()) {
+  if (from._internal_has_data()) {
     data_ = new ::DataBatch(*from.data_);
   } else {
     data_ = nullptr;
@@ -878,7 +877,6 @@ void LOPQPredictRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQPredictRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -889,21 +887,23 @@ const char* LOPQPredictRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // .RequestMeta meta = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_meta(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataBatch data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string lopq_model_name = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_lopq_model_name(), ptr, ctx, "LOPQPredictRequest.lopq_model_name");
+          auto str = _internal_mutable_lopq_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQPredictRequest.lopq_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -926,144 +926,42 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQPredictRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQPredictRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .RequestMeta meta = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_meta()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataBatch data = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string lopq_model_name = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_lopq_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQPredictRequest.lopq_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQPredictRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQPredictRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQPredictRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQPredictRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .RequestMeta meta = 1;
-  if (this->has_meta()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::meta(this), output);
-  }
-
-  // .DataBatch data = 2;
-  if (this->has_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::data(this), output);
-  }
-
-  // string lopq_model_name = 3;
-  if (this->lopq_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQPredictRequest.lopq_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->lopq_model_name(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQPredictRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQPredictRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQPredictRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQPredictRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .RequestMeta meta = 1;
   if (this->has_meta()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::meta(this), target);
+      InternalWriteMessage(
+        1, _Internal::meta(this), target, stream);
   }
 
   // .DataBatch data = 2;
   if (this->has_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::data(this), target);
+      InternalWriteMessage(
+        2, _Internal::data(this), target, stream);
   }
 
   // string lopq_model_name = 3;
   if (this->lopq_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
+      this->_internal_lopq_model_name().data(), static_cast<int>(this->_internal_lopq_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQPredictRequest.lopq_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->lopq_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_lopq_model_name(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQPredictRequest)
   return target;
@@ -1073,11 +971,6 @@ size_t LOPQPredictRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQPredictRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1086,7 +979,7 @@ size_t LOPQPredictRequest::ByteSizeLong() const {
   if (this->lopq_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->lopq_model_name());
+        this->_internal_lopq_model_name());
   }
 
   // .RequestMeta meta = 1;
@@ -1103,6 +996,10 @@ size_t LOPQPredictRequest::ByteSizeLong() const {
         *data_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1135,10 +1032,10 @@ void LOPQPredictRequest::MergeFrom(const LOPQPredictRequest& from) {
     lopq_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.lopq_model_name_);
   }
   if (from.has_meta()) {
-    mutable_meta()->::RequestMeta::MergeFrom(from.meta());
+    _internal_mutable_meta()->::RequestMeta::MergeFrom(from._internal_meta());
   }
   if (from.has_data()) {
-    mutable_data()->::DataBatch::MergeFrom(from.data());
+    _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
   }
 }
 
@@ -1221,12 +1118,12 @@ LOPQPredictResponse::LOPQPredictResponse(const LOPQPredictResponse& from)
       _internal_metadata_(nullptr),
       code_(from.code_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_status()) {
+  if (from._internal_has_status()) {
     status_ = new ::ResponseStatus(*from.status_);
   } else {
     status_ = nullptr;
   }
-  if (from.has_results()) {
+  if (from._internal_has_results()) {
     results_ = new ::DataBatch(*from.results_);
   } else {
     results_ = nullptr;
@@ -1278,7 +1175,6 @@ void LOPQPredictResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQPredictResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1289,7 +1185,7 @@ const char* LOPQPredictResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAME
       // .ResponseStatus status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_status(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1299,16 +1195,16 @@ const char* LOPQPredictResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_code(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_code(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       // .DataBatch results = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_results(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_results(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1331,136 +1227,40 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQPredictResponse::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQPredictResponse)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ResponseStatus status = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_status()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .LOPQCode code = 2 [deprecated = true];
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_code()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .DataBatch results = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_results()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQPredictResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQPredictResponse)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQPredictResponse::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQPredictResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ResponseStatus status = 1;
-  if (this->has_status()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::status(this), output);
-  }
-
-  // repeated .LOPQCode code = 2 [deprecated = true];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->code_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->code(static_cast<int>(i)),
-      output);
-  }
-
-  // .DataBatch results = 3;
-  if (this->has_results()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::results(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQPredictResponse)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQPredictResponse::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQPredictResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQPredictResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ResponseStatus status = 1;
   if (this->has_status()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::status(this), target);
+      InternalWriteMessage(
+        1, _Internal::status(this), target, stream);
   }
 
   // repeated .LOPQCode code = 2 [deprecated = true];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->code_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_code_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->code(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_code(i), target, stream);
   }
 
   // .DataBatch results = 3;
   if (this->has_results()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::results(this), target);
+      InternalWriteMessage(
+        3, _Internal::results(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQPredictResponse)
   return target;
@@ -1470,24 +1270,15 @@ size_t LOPQPredictResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQPredictResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .LOPQCode code = 2 [deprecated = true];
-  {
-    unsigned int count = static_cast<unsigned int>(this->code_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->code(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_code_size();
+  for (const auto& msg : this->code_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .ResponseStatus status = 1;
@@ -1504,6 +1295,10 @@ size_t LOPQPredictResponse::ByteSizeLong() const {
         *results_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1533,10 +1328,10 @@ void LOPQPredictResponse::MergeFrom(const LOPQPredictResponse& from) {
 
   code_.MergeFrom(from.code_);
   if (from.has_status()) {
-    mutable_status()->::ResponseStatus::MergeFrom(from.status());
+    _internal_mutable_status()->::ResponseStatus::MergeFrom(from._internal_status());
   }
   if (from.has_results()) {
-    mutable_results()->::DataBatch::MergeFrom(from.results());
+    _internal_mutable_results()->::DataBatch::MergeFrom(from._internal_results());
   }
 }
 
@@ -1561,7 +1356,7 @@ bool LOPQPredictResponse::IsInitialized() const {
 void LOPQPredictResponse::InternalSwap(LOPQPredictResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&code_)->InternalSwap(CastToBase(&other->code_));
+  code_.InternalSwap(&other->code_);
   swap(status_, other->status_);
   swap(results_, other->results_);
 }
@@ -1617,27 +1412,27 @@ LOPQSearchRequest::LOPQSearchRequest(const LOPQSearchRequest& from)
       negative_aiids_(from.negative_aiids_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   sql_template_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.sql_template().empty()) {
+  if (!from._internal_sql_template().empty()) {
     sql_template_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.sql_template_);
   }
   lopq_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.lopq_model_name().empty()) {
+  if (!from._internal_lopq_model_name().empty()) {
     lopq_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.lopq_model_name_);
   }
   fallback_sql_template_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.fallback_sql_template().empty()) {
+  if (!from._internal_fallback_sql_template().empty()) {
     fallback_sql_template_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.fallback_sql_template_);
   }
   custom_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.custom_model_name().empty()) {
+  if (!from._internal_custom_model_name().empty()) {
     custom_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.custom_model_name_);
   }
-  if (from.has_meta()) {
+  if (from._internal_has_meta()) {
     meta_ = new ::RequestMeta(*from.meta_);
   } else {
     meta_ = nullptr;
   }
-  if (from.has_data()) {
+  if (from._internal_has_data()) {
     data_ = new ::DataBatch(*from.data_);
   } else {
     data_ = nullptr;
@@ -1708,7 +1503,6 @@ void LOPQSearchRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQSearchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1719,21 +1513,23 @@ const char* LOPQSearchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
       // .RequestMeta meta = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_meta(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataBatch data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string sql_template = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_sql_template(), ptr, ctx, "LOPQSearchRequest.sql_template");
+          auto str = _internal_mutable_sql_template();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchRequest.sql_template"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1761,7 +1557,9 @@ const char* LOPQSearchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
       // string lopq_model_name = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_lopq_model_name(), ptr, ctx, "LOPQSearchRequest.lopq_model_name");
+          auto str = _internal_mutable_lopq_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchRequest.lopq_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1775,14 +1573,18 @@ const char* LOPQSearchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
       // string fallback_sql_template = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_fallback_sql_template(), ptr, ctx, "LOPQSearchRequest.fallback_sql_template");
+          auto str = _internal_mutable_fallback_sql_template();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchRequest.fallback_sql_template"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string custom_model_name = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_custom_model_name(), ptr, ctx, "LOPQSearchRequest.custom_model_name");
+          auto str = _internal_mutable_custom_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchRequest.custom_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1792,10 +1594,12 @@ const char* LOPQSearchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(add_positive_aiids(), ptr, ctx, "LOPQSearchRequest.positive_aiids");
+            auto str = _internal_add_positive_aiids();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchRequest.positive_aiids"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 90);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<90>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated string negative_aiids = 12;
@@ -1804,10 +1608,12 @@ const char* LOPQSearchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(add_negative_aiids(), ptr, ctx, "LOPQSearchRequest.negative_aiids");
+            auto str = _internal_add_negative_aiids();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchRequest.negative_aiids"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 98);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<98>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1829,416 +1635,116 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQSearchRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQSearchRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .RequestMeta meta = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_meta()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataBatch data = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string sql_template = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_sql_template()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->sql_template().data(), static_cast<int>(this->sql_template().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchRequest.sql_template"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 k = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &k_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 quota = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &quota_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 max_visited = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &max_visited_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string lopq_model_name = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_lopq_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchRequest.lopq_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool weight_query = 8 [deprecated = true];
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (64 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &weight_query_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string fallback_sql_template = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_fallback_sql_template()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->fallback_sql_template().data(), static_cast<int>(this->fallback_sql_template().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchRequest.fallback_sql_template"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string custom_model_name = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_custom_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->custom_model_name().data(), static_cast<int>(this->custom_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchRequest.custom_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated string positive_aiids = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->add_positive_aiids()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->positive_aiids(this->positive_aiids_size() - 1).data(),
-            static_cast<int>(this->positive_aiids(this->positive_aiids_size() - 1).length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchRequest.positive_aiids"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated string negative_aiids = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->add_negative_aiids()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->negative_aiids(this->negative_aiids_size() - 1).data(),
-            static_cast<int>(this->negative_aiids(this->negative_aiids_size() - 1).length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchRequest.negative_aiids"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQSearchRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQSearchRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQSearchRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQSearchRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .RequestMeta meta = 1;
-  if (this->has_meta()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::meta(this), output);
-  }
-
-  // .DataBatch data = 2;
-  if (this->has_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::data(this), output);
-  }
-
-  // string sql_template = 3;
-  if (this->sql_template().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_template().data(), static_cast<int>(this->sql_template().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchRequest.sql_template");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->sql_template(), output);
-  }
-
-  // int32 k = 4;
-  if (this->k() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->k(), output);
-  }
-
-  // int32 quota = 5;
-  if (this->quota() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(5, this->quota(), output);
-  }
-
-  // int32 max_visited = 6;
-  if (this->max_visited() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(6, this->max_visited(), output);
-  }
-
-  // string lopq_model_name = 7;
-  if (this->lopq_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchRequest.lopq_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->lopq_model_name(), output);
-  }
-
-  // bool weight_query = 8 [deprecated = true];
-  if (this->weight_query() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(8, this->weight_query(), output);
-  }
-
-  // string fallback_sql_template = 9;
-  if (this->fallback_sql_template().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->fallback_sql_template().data(), static_cast<int>(this->fallback_sql_template().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchRequest.fallback_sql_template");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      9, this->fallback_sql_template(), output);
-  }
-
-  // string custom_model_name = 10;
-  if (this->custom_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->custom_model_name().data(), static_cast<int>(this->custom_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchRequest.custom_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      10, this->custom_model_name(), output);
-  }
-
-  // repeated string positive_aiids = 11;
-  for (int i = 0, n = this->positive_aiids_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->positive_aiids(i).data(), static_cast<int>(this->positive_aiids(i).length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchRequest.positive_aiids");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteString(
-      11, this->positive_aiids(i), output);
-  }
-
-  // repeated string negative_aiids = 12;
-  for (int i = 0, n = this->negative_aiids_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->negative_aiids(i).data(), static_cast<int>(this->negative_aiids(i).length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchRequest.negative_aiids");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteString(
-      12, this->negative_aiids(i), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQSearchRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQSearchRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .RequestMeta meta = 1;
   if (this->has_meta()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::meta(this), target);
+      InternalWriteMessage(
+        1, _Internal::meta(this), target, stream);
   }
 
   // .DataBatch data = 2;
   if (this->has_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::data(this), target);
+      InternalWriteMessage(
+        2, _Internal::data(this), target, stream);
   }
 
   // string sql_template = 3;
   if (this->sql_template().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_template().data(), static_cast<int>(this->sql_template().length()),
+      this->_internal_sql_template().data(), static_cast<int>(this->_internal_sql_template().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchRequest.sql_template");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->sql_template(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_sql_template(), target);
   }
 
   // int32 k = 4;
   if (this->k() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->k(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_k(), target);
   }
 
   // int32 quota = 5;
   if (this->quota() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->quota(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_quota(), target);
   }
 
   // int32 max_visited = 6;
   if (this->max_visited() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->max_visited(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->_internal_max_visited(), target);
   }
 
   // string lopq_model_name = 7;
   if (this->lopq_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
+      this->_internal_lopq_model_name().data(), static_cast<int>(this->_internal_lopq_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchRequest.lopq_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        7, this->lopq_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_lopq_model_name(), target);
   }
 
   // bool weight_query = 8 [deprecated = true];
   if (this->weight_query() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->weight_query(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->_internal_weight_query(), target);
   }
 
   // string fallback_sql_template = 9;
   if (this->fallback_sql_template().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->fallback_sql_template().data(), static_cast<int>(this->fallback_sql_template().length()),
+      this->_internal_fallback_sql_template().data(), static_cast<int>(this->_internal_fallback_sql_template().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchRequest.fallback_sql_template");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        9, this->fallback_sql_template(), target);
+    target = stream->WriteStringMaybeAliased(
+        9, this->_internal_fallback_sql_template(), target);
   }
 
   // string custom_model_name = 10;
   if (this->custom_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->custom_model_name().data(), static_cast<int>(this->custom_model_name().length()),
+      this->_internal_custom_model_name().data(), static_cast<int>(this->_internal_custom_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchRequest.custom_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        10, this->custom_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        10, this->_internal_custom_model_name(), target);
   }
 
   // repeated string positive_aiids = 11;
-  for (int i = 0, n = this->positive_aiids_size(); i < n; i++) {
+  for (int i = 0, n = this->_internal_positive_aiids_size(); i < n; i++) {
+    const auto& s = this->_internal_positive_aiids(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->positive_aiids(i).data(), static_cast<int>(this->positive_aiids(i).length()),
+      s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchRequest.positive_aiids");
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteStringToArray(11, this->positive_aiids(i), target);
+    target = stream->WriteString(11, s, target);
   }
 
   // repeated string negative_aiids = 12;
-  for (int i = 0, n = this->negative_aiids_size(); i < n; i++) {
+  for (int i = 0, n = this->_internal_negative_aiids_size(); i < n; i++) {
+    const auto& s = this->_internal_negative_aiids(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->negative_aiids(i).data(), static_cast<int>(this->negative_aiids(i).length()),
+      s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchRequest.negative_aiids");
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteStringToArray(12, this->negative_aiids(i), target);
+    target = stream->WriteString(12, s, target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQSearchRequest)
   return target;
@@ -2248,57 +1754,52 @@ size_t LOPQSearchRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQSearchRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated string positive_aiids = 11;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->positive_aiids_size());
-  for (int i = 0, n = this->positive_aiids_size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(positive_aiids_.size());
+  for (int i = 0, n = positive_aiids_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      this->positive_aiids(i));
+      positive_aiids_.Get(i));
   }
 
   // repeated string negative_aiids = 12;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->negative_aiids_size());
-  for (int i = 0, n = this->negative_aiids_size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(negative_aiids_.size());
+  for (int i = 0, n = negative_aiids_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      this->negative_aiids(i));
+      negative_aiids_.Get(i));
   }
 
   // string sql_template = 3;
   if (this->sql_template().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->sql_template());
+        this->_internal_sql_template());
   }
 
   // string lopq_model_name = 7;
   if (this->lopq_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->lopq_model_name());
+        this->_internal_lopq_model_name());
   }
 
   // string fallback_sql_template = 9;
   if (this->fallback_sql_template().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->fallback_sql_template());
+        this->_internal_fallback_sql_template());
   }
 
   // string custom_model_name = 10;
   if (this->custom_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->custom_model_name());
+        this->_internal_custom_model_name());
   }
 
   // .RequestMeta meta = 1;
@@ -2319,21 +1820,21 @@ size_t LOPQSearchRequest::ByteSizeLong() const {
   if (this->k() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->k());
+        this->_internal_k());
   }
 
   // int32 quota = 5;
   if (this->quota() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->quota());
+        this->_internal_quota());
   }
 
   // int32 max_visited = 6;
   if (this->max_visited() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->max_visited());
+        this->_internal_max_visited());
   }
 
   // bool weight_query = 8 [deprecated = true];
@@ -2341,6 +1842,10 @@ size_t LOPQSearchRequest::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -2387,22 +1892,22 @@ void LOPQSearchRequest::MergeFrom(const LOPQSearchRequest& from) {
     custom_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.custom_model_name_);
   }
   if (from.has_meta()) {
-    mutable_meta()->::RequestMeta::MergeFrom(from.meta());
+    _internal_mutable_meta()->::RequestMeta::MergeFrom(from._internal_meta());
   }
   if (from.has_data()) {
-    mutable_data()->::DataBatch::MergeFrom(from.data());
+    _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
   }
   if (from.k() != 0) {
-    set_k(from.k());
+    _internal_set_k(from._internal_k());
   }
   if (from.quota() != 0) {
-    set_quota(from.quota());
+    _internal_set_quota(from._internal_quota());
   }
   if (from.max_visited() != 0) {
-    set_max_visited(from.max_visited());
+    _internal_set_max_visited(from._internal_max_visited());
   }
   if (from.weight_query() != 0) {
-    set_weight_query(from.weight_query());
+    _internal_set_weight_query(from._internal_weight_query());
   }
 }
 
@@ -2427,8 +1932,8 @@ bool LOPQSearchRequest::IsInitialized() const {
 void LOPQSearchRequest::InternalSwap(LOPQSearchRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  positive_aiids_.InternalSwap(CastToBase(&other->positive_aiids_));
-  negative_aiids_.InternalSwap(CastToBase(&other->negative_aiids_));
+  positive_aiids_.InternalSwap(&other->positive_aiids_);
+  negative_aiids_.InternalSwap(&other->negative_aiids_);
   sql_template_.Swap(&other->sql_template_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   lopq_model_name_.Swap(&other->lopq_model_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
@@ -2468,11 +1973,11 @@ ConceptOverride::ConceptOverride(const ConceptOverride& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.id().empty()) {
+  if (!from._internal_id().empty()) {
     id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
   }
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.name().empty()) {
+  if (!from._internal_name().empty()) {
     name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
   value_ = from.value_;
@@ -2517,7 +2022,6 @@ void ConceptOverride::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ConceptOverride::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -2528,14 +2032,18 @@ const char* ConceptOverride::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
       // string id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_id(), ptr, ctx, "ConceptOverride.id");
+          auto str = _internal_mutable_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ConceptOverride.id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_name(), ptr, ctx, "ConceptOverride.name");
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ConceptOverride.name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2565,121 +2073,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ConceptOverride::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ConceptOverride)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string id = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->id().data(), static_cast<int>(this->id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ConceptOverride.id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // string name = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ConceptOverride.name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float value = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &value_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ConceptOverride)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ConceptOverride)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ConceptOverride::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ConceptOverride)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string id = 1;
-  if (this->id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ConceptOverride.id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->id(), output);
-  }
-
-  // string name = 2;
-  if (this->name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ConceptOverride.name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->name(), output);
-  }
-
-  // float value = 3;
-  if (!(this->value() <= 0 && this->value() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->value(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ConceptOverride)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ConceptOverride::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ConceptOverride::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ConceptOverride)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2687,33 +2083,32 @@ void ConceptOverride::SerializeWithCachedSizes(
   // string id = 1;
   if (this->id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ConceptOverride.id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->id(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_id(), target);
   }
 
   // string name = 2;
   if (this->name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ConceptOverride.name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->name(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_name(), target);
   }
 
   // float value = 3;
   if (!(this->value() <= 0 && this->value() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->value(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_value(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ConceptOverride)
   return target;
@@ -2723,11 +2118,6 @@ size_t ConceptOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ConceptOverride)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2736,14 +2126,14 @@ size_t ConceptOverride::ByteSizeLong() const {
   if (this->id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->id());
+        this->_internal_id());
   }
 
   // string name = 2;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->name());
+        this->_internal_name());
   }
 
   // float value = 3;
@@ -2751,6 +2141,10 @@ size_t ConceptOverride::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -2787,7 +2181,7 @@ void ConceptOverride::MergeFrom(const ConceptOverride& from) {
     name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
   if (!(from.value() <= 0 && from.value() >= 0)) {
-    set_value(from.value());
+    _internal_set_value(from._internal_value());
   }
 }
 
@@ -2849,10 +2243,10 @@ AttributeMixIn::AttributeMixIn(const AttributeMixIn& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   model_version_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.model_version_id().empty()) {
+  if (!from._internal_model_version_id().empty()) {
     model_version_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.model_version_id_);
   }
-  if (from.has_concept_override()) {
+  if (from._internal_has_concept_override()) {
     concept_override_ = new ::ConceptOverride(*from.concept_override_);
   } else {
     concept_override_ = nullptr;
@@ -2903,7 +2297,6 @@ void AttributeMixIn::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* AttributeMixIn::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -2914,7 +2307,9 @@ const char* AttributeMixIn::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // string model_version_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_model_version_id(), ptr, ctx, "AttributeMixIn.model_version_id");
+          auto str = _internal_mutable_model_version_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "AttributeMixIn.model_version_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2928,7 +2323,7 @@ const char* AttributeMixIn::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // .ConceptOverride concept_override = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_concept_override(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_concept_override(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2951,113 +2346,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AttributeMixIn::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:AttributeMixIn)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string model_version_id = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_model_version_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->model_version_id().data(), static_cast<int>(this->model_version_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "AttributeMixIn.model_version_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // float mix_in_coefficient = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &mix_in_coefficient_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .ConceptOverride concept_override = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_concept_override()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:AttributeMixIn)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:AttributeMixIn)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AttributeMixIn::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:AttributeMixIn)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string model_version_id = 1;
-  if (this->model_version_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->model_version_id().data(), static_cast<int>(this->model_version_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "AttributeMixIn.model_version_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->model_version_id(), output);
-  }
-
-  // float mix_in_coefficient = 2;
-  if (!(this->mix_in_coefficient() <= 0 && this->mix_in_coefficient() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->mix_in_coefficient(), output);
-  }
-
-  // .ConceptOverride concept_override = 3;
-  if (this->has_concept_override()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::concept_override(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:AttributeMixIn)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AttributeMixIn::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* AttributeMixIn::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AttributeMixIn)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3065,29 +2356,30 @@ void AttributeMixIn::SerializeWithCachedSizes(
   // string model_version_id = 1;
   if (this->model_version_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->model_version_id().data(), static_cast<int>(this->model_version_id().length()),
+      this->_internal_model_version_id().data(), static_cast<int>(this->_internal_model_version_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "AttributeMixIn.model_version_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->model_version_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_model_version_id(), target);
   }
 
   // float mix_in_coefficient = 2;
   if (!(this->mix_in_coefficient() <= 0 && this->mix_in_coefficient() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->mix_in_coefficient(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_mix_in_coefficient(), target);
   }
 
   // .ConceptOverride concept_override = 3;
   if (this->has_concept_override()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::concept_override(this), target);
+      InternalWriteMessage(
+        3, _Internal::concept_override(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AttributeMixIn)
   return target;
@@ -3097,11 +2389,6 @@ size_t AttributeMixIn::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AttributeMixIn)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3110,7 +2397,7 @@ size_t AttributeMixIn::ByteSizeLong() const {
   if (this->model_version_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->model_version_id());
+        this->_internal_model_version_id());
   }
 
   // .ConceptOverride concept_override = 3;
@@ -3125,6 +2412,10 @@ size_t AttributeMixIn::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -3157,10 +2448,10 @@ void AttributeMixIn::MergeFrom(const AttributeMixIn& from) {
     model_version_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.model_version_id_);
   }
   if (from.has_concept_override()) {
-    mutable_concept_override()->::ConceptOverride::MergeFrom(from.concept_override());
+    _internal_mutable_concept_override()->::ConceptOverride::MergeFrom(from._internal_concept_override());
   }
   if (!(from.mix_in_coefficient() <= 0 && from.mix_in_coefficient() >= 0)) {
-    set_mix_in_coefficient(from.mix_in_coefficient());
+    _internal_set_mix_in_coefficient(from._internal_mix_in_coefficient());
   }
 }
 
@@ -3241,23 +2532,23 @@ LOPQAttributeSearchRequest::LOPQAttributeSearchRequest(const LOPQAttributeSearch
       attribute_mix_in_(from.attribute_mix_in_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   sql_template_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.sql_template().empty()) {
+  if (!from._internal_sql_template().empty()) {
     sql_template_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.sql_template_);
   }
   lopq_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.lopq_model_name().empty()) {
+  if (!from._internal_lopq_model_name().empty()) {
     lopq_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.lopq_model_name_);
   }
   fallback_sql_template_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.fallback_sql_template().empty()) {
+  if (!from._internal_fallback_sql_template().empty()) {
     fallback_sql_template_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.fallback_sql_template_);
   }
-  if (from.has_meta()) {
+  if (from._internal_has_meta()) {
     meta_ = new ::RequestMeta(*from.meta_);
   } else {
     meta_ = nullptr;
   }
-  if (from.has_data()) {
+  if (from._internal_has_data()) {
     data_ = new ::DataBatch(*from.data_);
   } else {
     data_ = nullptr;
@@ -3324,7 +2615,6 @@ void LOPQAttributeSearchRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQAttributeSearchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -3335,21 +2625,23 @@ const char* LOPQAttributeSearchRequest::_InternalParse(const char* ptr, ::PROTOB
       // .RequestMeta meta = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_meta(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataBatch data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string sql_template = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_sql_template(), ptr, ctx, "LOPQAttributeSearchRequest.sql_template");
+          auto str = _internal_mutable_sql_template();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQAttributeSearchRequest.sql_template"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3377,14 +2669,18 @@ const char* LOPQAttributeSearchRequest::_InternalParse(const char* ptr, ::PROTOB
       // string lopq_model_name = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_lopq_model_name(), ptr, ctx, "LOPQAttributeSearchRequest.lopq_model_name");
+          auto str = _internal_mutable_lopq_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQAttributeSearchRequest.lopq_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string fallback_sql_template = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_fallback_sql_template(), ptr, ctx, "LOPQAttributeSearchRequest.fallback_sql_template");
+          auto str = _internal_mutable_fallback_sql_template();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQAttributeSearchRequest.fallback_sql_template"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3394,10 +2690,10 @@ const char* LOPQAttributeSearchRequest::_InternalParse(const char* ptr, ::PROTOB
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_attribute_mix_in(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_attribute_mix_in(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 74);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -3419,313 +2715,88 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQAttributeSearchRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQAttributeSearchRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .RequestMeta meta = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_meta()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataBatch data = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string sql_template = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_sql_template()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->sql_template().data(), static_cast<int>(this->sql_template().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQAttributeSearchRequest.sql_template"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 k = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &k_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 quota = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &quota_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 max_visited = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &max_visited_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string lopq_model_name = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_lopq_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQAttributeSearchRequest.lopq_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string fallback_sql_template = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_fallback_sql_template()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->fallback_sql_template().data(), static_cast<int>(this->fallback_sql_template().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQAttributeSearchRequest.fallback_sql_template"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .AttributeMixIn attribute_mix_in = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_attribute_mix_in()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQAttributeSearchRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQAttributeSearchRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQAttributeSearchRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQAttributeSearchRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .RequestMeta meta = 1;
-  if (this->has_meta()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::meta(this), output);
-  }
-
-  // .DataBatch data = 2;
-  if (this->has_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::data(this), output);
-  }
-
-  // string sql_template = 3;
-  if (this->sql_template().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_template().data(), static_cast<int>(this->sql_template().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQAttributeSearchRequest.sql_template");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->sql_template(), output);
-  }
-
-  // int32 k = 4;
-  if (this->k() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->k(), output);
-  }
-
-  // int32 quota = 5;
-  if (this->quota() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(5, this->quota(), output);
-  }
-
-  // int32 max_visited = 6;
-  if (this->max_visited() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(6, this->max_visited(), output);
-  }
-
-  // string lopq_model_name = 7;
-  if (this->lopq_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQAttributeSearchRequest.lopq_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->lopq_model_name(), output);
-  }
-
-  // string fallback_sql_template = 8;
-  if (this->fallback_sql_template().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->fallback_sql_template().data(), static_cast<int>(this->fallback_sql_template().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQAttributeSearchRequest.fallback_sql_template");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->fallback_sql_template(), output);
-  }
-
-  // repeated .AttributeMixIn attribute_mix_in = 9;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->attribute_mix_in_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9,
-      this->attribute_mix_in(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQAttributeSearchRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQAttributeSearchRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQAttributeSearchRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQAttributeSearchRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .RequestMeta meta = 1;
   if (this->has_meta()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::meta(this), target);
+      InternalWriteMessage(
+        1, _Internal::meta(this), target, stream);
   }
 
   // .DataBatch data = 2;
   if (this->has_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::data(this), target);
+      InternalWriteMessage(
+        2, _Internal::data(this), target, stream);
   }
 
   // string sql_template = 3;
   if (this->sql_template().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_template().data(), static_cast<int>(this->sql_template().length()),
+      this->_internal_sql_template().data(), static_cast<int>(this->_internal_sql_template().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQAttributeSearchRequest.sql_template");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->sql_template(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_sql_template(), target);
   }
 
   // int32 k = 4;
   if (this->k() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->k(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_k(), target);
   }
 
   // int32 quota = 5;
   if (this->quota() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->quota(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_quota(), target);
   }
 
   // int32 max_visited = 6;
   if (this->max_visited() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->max_visited(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->_internal_max_visited(), target);
   }
 
   // string lopq_model_name = 7;
   if (this->lopq_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
+      this->_internal_lopq_model_name().data(), static_cast<int>(this->_internal_lopq_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQAttributeSearchRequest.lopq_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        7, this->lopq_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_lopq_model_name(), target);
   }
 
   // string fallback_sql_template = 8;
   if (this->fallback_sql_template().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->fallback_sql_template().data(), static_cast<int>(this->fallback_sql_template().length()),
+      this->_internal_fallback_sql_template().data(), static_cast<int>(this->_internal_fallback_sql_template().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQAttributeSearchRequest.fallback_sql_template");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        8, this->fallback_sql_template(), target);
+    target = stream->WriteStringMaybeAliased(
+        8, this->_internal_fallback_sql_template(), target);
   }
 
   // repeated .AttributeMixIn attribute_mix_in = 9;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->attribute_mix_in_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_attribute_mix_in_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, this->attribute_mix_in(static_cast<int>(i)), target);
+      InternalWriteMessage(9, this->_internal_attribute_mix_in(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQAttributeSearchRequest)
   return target;
@@ -3735,45 +2806,36 @@ size_t LOPQAttributeSearchRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQAttributeSearchRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .AttributeMixIn attribute_mix_in = 9;
-  {
-    unsigned int count = static_cast<unsigned int>(this->attribute_mix_in_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->attribute_mix_in(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_attribute_mix_in_size();
+  for (const auto& msg : this->attribute_mix_in_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string sql_template = 3;
   if (this->sql_template().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->sql_template());
+        this->_internal_sql_template());
   }
 
   // string lopq_model_name = 7;
   if (this->lopq_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->lopq_model_name());
+        this->_internal_lopq_model_name());
   }
 
   // string fallback_sql_template = 8;
   if (this->fallback_sql_template().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->fallback_sql_template());
+        this->_internal_fallback_sql_template());
   }
 
   // .RequestMeta meta = 1;
@@ -3794,23 +2856,27 @@ size_t LOPQAttributeSearchRequest::ByteSizeLong() const {
   if (this->k() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->k());
+        this->_internal_k());
   }
 
   // int32 quota = 5;
   if (this->quota() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->quota());
+        this->_internal_quota());
   }
 
   // int32 max_visited = 6;
   if (this->max_visited() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->max_visited());
+        this->_internal_max_visited());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -3852,19 +2918,19 @@ void LOPQAttributeSearchRequest::MergeFrom(const LOPQAttributeSearchRequest& fro
     fallback_sql_template_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.fallback_sql_template_);
   }
   if (from.has_meta()) {
-    mutable_meta()->::RequestMeta::MergeFrom(from.meta());
+    _internal_mutable_meta()->::RequestMeta::MergeFrom(from._internal_meta());
   }
   if (from.has_data()) {
-    mutable_data()->::DataBatch::MergeFrom(from.data());
+    _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
   }
   if (from.k() != 0) {
-    set_k(from.k());
+    _internal_set_k(from._internal_k());
   }
   if (from.quota() != 0) {
-    set_quota(from.quota());
+    _internal_set_quota(from._internal_quota());
   }
   if (from.max_visited() != 0) {
-    set_max_visited(from.max_visited());
+    _internal_set_max_visited(from._internal_max_visited());
   }
 }
 
@@ -3889,7 +2955,7 @@ bool LOPQAttributeSearchRequest::IsInitialized() const {
 void LOPQAttributeSearchRequest::InternalSwap(LOPQAttributeSearchRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&attribute_mix_in_)->InternalSwap(CastToBase(&other->attribute_mix_in_));
+  attribute_mix_in_.InternalSwap(&other->attribute_mix_in_);
   sql_template_.Swap(&other->sql_template_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   lopq_model_name_.Swap(&other->lopq_model_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
@@ -3939,14 +3005,14 @@ LOPQSearchResult::LOPQSearchResult(const LOPQSearchResult& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   asset_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.asset_id().empty()) {
+  if (!from._internal_asset_id().empty()) {
     asset_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.asset_id_);
   }
   annotation_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.annotation_id().empty()) {
+  if (!from._internal_annotation_id().empty()) {
     annotation_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.annotation_id_);
   }
-  if (from.has_code()) {
+  if (from._internal_has_code()) {
     code_ = new ::LOPQCode(*from.code_);
   } else {
     code_ = nullptr;
@@ -4004,7 +3070,6 @@ void LOPQSearchResult::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQSearchResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -4015,7 +3080,9 @@ const char* LOPQSearchResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       // string asset_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_asset_id(), ptr, ctx, "LOPQSearchResult.asset_id");
+          auto str = _internal_mutable_asset_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchResult.asset_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4036,14 +3103,16 @@ const char* LOPQSearchResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       // string annotation_id = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_annotation_id(), ptr, ctx, "LOPQSearchResult.annotation_id");
+          auto str = _internal_mutable_annotation_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchResult.annotation_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LOPQCode code = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(mutable_code(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_code(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4066,156 +3135,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQSearchResult::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQSearchResult)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string asset_id = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_asset_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->asset_id().data(), static_cast<int>(this->asset_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchResult.asset_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // float score = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &score_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float distance = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &distance_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string annotation_id = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_annotation_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->annotation_id().data(), static_cast<int>(this->annotation_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchResult.annotation_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LOPQCode code = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_code()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQSearchResult)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQSearchResult)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQSearchResult::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQSearchResult)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string asset_id = 1;
-  if (this->asset_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->asset_id().data(), static_cast<int>(this->asset_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchResult.asset_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->asset_id(), output);
-  }
-
-  // float score = 2;
-  if (!(this->score() <= 0 && this->score() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->score(), output);
-  }
-
-  // float distance = 3;
-  if (!(this->distance() <= 0 && this->distance() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->distance(), output);
-  }
-
-  // string annotation_id = 4;
-  if (this->annotation_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->annotation_id().data(), static_cast<int>(this->annotation_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchResult.annotation_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->annotation_id(), output);
-  }
-
-  // .LOPQCode code = 5;
-  if (this->has_code()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, _Internal::code(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQSearchResult)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchResult::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchResult::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQSearchResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4223,45 +3145,46 @@ void LOPQSearchResult::SerializeWithCachedSizes(
   // string asset_id = 1;
   if (this->asset_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->asset_id().data(), static_cast<int>(this->asset_id().length()),
+      this->_internal_asset_id().data(), static_cast<int>(this->_internal_asset_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchResult.asset_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->asset_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_asset_id(), target);
   }
 
   // float score = 2;
   if (!(this->score() <= 0 && this->score() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->score(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_score(), target);
   }
 
   // float distance = 3;
   if (!(this->distance() <= 0 && this->distance() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->distance(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_distance(), target);
   }
 
   // string annotation_id = 4;
   if (this->annotation_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->annotation_id().data(), static_cast<int>(this->annotation_id().length()),
+      this->_internal_annotation_id().data(), static_cast<int>(this->_internal_annotation_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchResult.annotation_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->annotation_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_annotation_id(), target);
   }
 
   // .LOPQCode code = 5;
   if (this->has_code()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, _Internal::code(this), target);
+      InternalWriteMessage(
+        5, _Internal::code(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQSearchResult)
   return target;
@@ -4271,11 +3194,6 @@ size_t LOPQSearchResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQSearchResult)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4284,14 +3202,14 @@ size_t LOPQSearchResult::ByteSizeLong() const {
   if (this->asset_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->asset_id());
+        this->_internal_asset_id());
   }
 
   // string annotation_id = 4;
   if (this->annotation_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->annotation_id());
+        this->_internal_annotation_id());
   }
 
   // .LOPQCode code = 5;
@@ -4311,6 +3229,10 @@ size_t LOPQSearchResult::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -4347,13 +3269,13 @@ void LOPQSearchResult::MergeFrom(const LOPQSearchResult& from) {
     annotation_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.annotation_id_);
   }
   if (from.has_code()) {
-    mutable_code()->::LOPQCode::MergeFrom(from.code());
+    _internal_mutable_code()->::LOPQCode::MergeFrom(from._internal_code());
   }
   if (!(from.score() <= 0 && from.score() >= 0)) {
-    set_score(from.score());
+    _internal_set_score(from._internal_score());
   }
   if (!(from.distance() <= 0 && from.distance() >= 0)) {
-    set_distance(from.distance());
+    _internal_set_distance(from._internal_distance());
   }
 }
 
@@ -4423,7 +3345,7 @@ LOPQSearchResponse::LOPQSearchResponse(const LOPQSearchResponse& from)
       _internal_metadata_(nullptr),
       result_(from.result_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_status()) {
+  if (from._internal_has_status()) {
     status_ = new ::ResponseStatus(*from.status_);
   } else {
     status_ = nullptr;
@@ -4468,7 +3390,6 @@ void LOPQSearchResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQSearchResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -4479,7 +3400,7 @@ const char* LOPQSearchResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // .ResponseStatus status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_status(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4489,10 +3410,10 @@ const char* LOPQSearchResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_result(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_result(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -4514,112 +3435,32 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQSearchResponse::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQSearchResponse)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ResponseStatus status = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_status()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .LOPQSearchResult result = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_result()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQSearchResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQSearchResponse)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQSearchResponse::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQSearchResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ResponseStatus status = 1;
-  if (this->has_status()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::status(this), output);
-  }
-
-  // repeated .LOPQSearchResult result = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->result_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->result(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQSearchResponse)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchResponse::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQSearchResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ResponseStatus status = 1;
   if (this->has_status()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::status(this), target);
+      InternalWriteMessage(
+        1, _Internal::status(this), target, stream);
   }
 
   // repeated .LOPQSearchResult result = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->result_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_result_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->result(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_result(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQSearchResponse)
   return target;
@@ -4629,24 +3470,15 @@ size_t LOPQSearchResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQSearchResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .LOPQSearchResult result = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->result_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->result(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_result_size();
+  for (const auto& msg : this->result_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .ResponseStatus status = 1;
@@ -4656,6 +3488,10 @@ size_t LOPQSearchResponse::ByteSizeLong() const {
         *status_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -4685,7 +3521,7 @@ void LOPQSearchResponse::MergeFrom(const LOPQSearchResponse& from) {
 
   result_.MergeFrom(from.result_);
   if (from.has_status()) {
-    mutable_status()->::ResponseStatus::MergeFrom(from.status());
+    _internal_mutable_status()->::ResponseStatus::MergeFrom(from._internal_status());
   }
 }
 
@@ -4710,7 +3546,7 @@ bool LOPQSearchResponse::IsInitialized() const {
 void LOPQSearchResponse::InternalSwap(LOPQSearchResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&result_)->InternalSwap(CastToBase(&other->result_));
+  result_.InternalSwap(&other->result_);
   swap(status_, other->status_);
 }
 
@@ -4763,15 +3599,15 @@ LOPQSearchForCodesRequest::LOPQSearchForCodesRequest(const LOPQSearchForCodesReq
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   lopq_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.lopq_model_name().empty()) {
+  if (!from._internal_lopq_model_name().empty()) {
     lopq_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.lopq_model_name_);
   }
-  if (from.has_meta()) {
+  if (from._internal_has_meta()) {
     meta_ = new ::RequestMeta(*from.meta_);
   } else {
     meta_ = nullptr;
   }
-  if (from.has_data()) {
+  if (from._internal_has_data()) {
     data_ = new ::DataBatch(*from.data_);
   } else {
     data_ = nullptr;
@@ -4827,7 +3663,6 @@ void LOPQSearchForCodesRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQSearchForCodesRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -4838,14 +3673,14 @@ const char* LOPQSearchForCodesRequest::_InternalParse(const char* ptr, ::PROTOBU
       // .RequestMeta meta = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_meta(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataBatch data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4859,7 +3694,9 @@ const char* LOPQSearchForCodesRequest::_InternalParse(const char* ptr, ::PROTOBU
       // string lopq_model_name = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_lopq_model_name(), ptr, ctx, "LOPQSearchForCodesRequest.lopq_model_name");
+          auto str = _internal_mutable_lopq_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQSearchForCodesRequest.lopq_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4882,167 +3719,48 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQSearchForCodesRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQSearchForCodesRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .RequestMeta meta = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_meta()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataBatch data = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 max_visited = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &max_visited_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string lopq_model_name = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_lopq_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQSearchForCodesRequest.lopq_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQSearchForCodesRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQSearchForCodesRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQSearchForCodesRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQSearchForCodesRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .RequestMeta meta = 1;
-  if (this->has_meta()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::meta(this), output);
-  }
-
-  // .DataBatch data = 2;
-  if (this->has_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::data(this), output);
-  }
-
-  // int32 max_visited = 3;
-  if (this->max_visited() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(3, this->max_visited(), output);
-  }
-
-  // string lopq_model_name = 4;
-  if (this->lopq_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQSearchForCodesRequest.lopq_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->lopq_model_name(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQSearchForCodesRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchForCodesRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchForCodesRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQSearchForCodesRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .RequestMeta meta = 1;
   if (this->has_meta()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::meta(this), target);
+      InternalWriteMessage(
+        1, _Internal::meta(this), target, stream);
   }
 
   // .DataBatch data = 2;
   if (this->has_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::data(this), target);
+      InternalWriteMessage(
+        2, _Internal::data(this), target, stream);
   }
 
   // int32 max_visited = 3;
   if (this->max_visited() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->max_visited(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_max_visited(), target);
   }
 
   // string lopq_model_name = 4;
   if (this->lopq_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
+      this->_internal_lopq_model_name().data(), static_cast<int>(this->_internal_lopq_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQSearchForCodesRequest.lopq_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->lopq_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_lopq_model_name(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQSearchForCodesRequest)
   return target;
@@ -5052,11 +3770,6 @@ size_t LOPQSearchForCodesRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQSearchForCodesRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5065,7 +3778,7 @@ size_t LOPQSearchForCodesRequest::ByteSizeLong() const {
   if (this->lopq_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->lopq_model_name());
+        this->_internal_lopq_model_name());
   }
 
   // .RequestMeta meta = 1;
@@ -5086,9 +3799,13 @@ size_t LOPQSearchForCodesRequest::ByteSizeLong() const {
   if (this->max_visited() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->max_visited());
+        this->_internal_max_visited());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -5121,13 +3838,13 @@ void LOPQSearchForCodesRequest::MergeFrom(const LOPQSearchForCodesRequest& from)
     lopq_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.lopq_model_name_);
   }
   if (from.has_meta()) {
-    mutable_meta()->::RequestMeta::MergeFrom(from.meta());
+    _internal_mutable_meta()->::RequestMeta::MergeFrom(from._internal_meta());
   }
   if (from.has_data()) {
-    mutable_data()->::DataBatch::MergeFrom(from.data());
+    _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
   }
   if (from.max_visited() != 0) {
-    set_max_visited(from.max_visited());
+    _internal_set_max_visited(from._internal_max_visited());
   }
 }
 
@@ -5194,7 +3911,7 @@ LOPQSearchForCodeResult::LOPQSearchForCodeResult(const LOPQSearchForCodeResult& 
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_code()) {
+  if (from._internal_has_code()) {
     code_ = new ::LOPQCode(*from.code_);
   } else {
     code_ = nullptr;
@@ -5246,7 +3963,6 @@ void LOPQSearchForCodeResult::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQSearchForCodeResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -5257,7 +3973,7 @@ const char* LOPQSearchForCodeResult::_InternalParse(const char* ptr, ::PROTOBUF_
       // .LOPQCode code = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_code(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_code(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5294,130 +4010,36 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQSearchForCodeResult::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQSearchForCodeResult)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .LOPQCode code = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_code()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // float score = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &score_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float distance = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &distance_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQSearchForCodeResult)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQSearchForCodeResult)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQSearchForCodeResult::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQSearchForCodeResult)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .LOPQCode code = 1;
-  if (this->has_code()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::code(this), output);
-  }
-
-  // float score = 2;
-  if (!(this->score() <= 0 && this->score() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->score(), output);
-  }
-
-  // float distance = 3;
-  if (!(this->distance() <= 0 && this->distance() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->distance(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQSearchForCodeResult)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchForCodeResult::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchForCodeResult::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQSearchForCodeResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .LOPQCode code = 1;
   if (this->has_code()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::code(this), target);
+      InternalWriteMessage(
+        1, _Internal::code(this), target, stream);
   }
 
   // float score = 2;
   if (!(this->score() <= 0 && this->score() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->score(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_score(), target);
   }
 
   // float distance = 3;
   if (!(this->distance() <= 0 && this->distance() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->distance(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_distance(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQSearchForCodeResult)
   return target;
@@ -5427,11 +4049,6 @@ size_t LOPQSearchForCodeResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQSearchForCodeResult)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5453,6 +4070,10 @@ size_t LOPQSearchForCodeResult::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -5481,13 +4102,13 @@ void LOPQSearchForCodeResult::MergeFrom(const LOPQSearchForCodeResult& from) {
   (void) cached_has_bits;
 
   if (from.has_code()) {
-    mutable_code()->::LOPQCode::MergeFrom(from.code());
+    _internal_mutable_code()->::LOPQCode::MergeFrom(from._internal_code());
   }
   if (!(from.score() <= 0 && from.score() >= 0)) {
-    set_score(from.score());
+    _internal_set_score(from._internal_score());
   }
   if (!(from.distance() <= 0 && from.distance() >= 0)) {
-    set_distance(from.distance());
+    _internal_set_distance(from._internal_distance());
   }
 }
 
@@ -5553,7 +4174,7 @@ LOPQSearchForCodesResponse::LOPQSearchForCodesResponse(const LOPQSearchForCodesR
       _internal_metadata_(nullptr),
       result_(from.result_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_status()) {
+  if (from._internal_has_status()) {
     status_ = new ::ResponseStatus(*from.status_);
   } else {
     status_ = nullptr;
@@ -5598,7 +4219,6 @@ void LOPQSearchForCodesResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQSearchForCodesResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -5609,7 +4229,7 @@ const char* LOPQSearchForCodesResponse::_InternalParse(const char* ptr, ::PROTOB
       // .ResponseStatus status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_status(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5619,10 +4239,10 @@ const char* LOPQSearchForCodesResponse::_InternalParse(const char* ptr, ::PROTOB
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_result(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_result(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -5644,112 +4264,32 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQSearchForCodesResponse::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQSearchForCodesResponse)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ResponseStatus status = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_status()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .LOPQSearchForCodeResult result = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_result()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQSearchForCodesResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQSearchForCodesResponse)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQSearchForCodesResponse::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQSearchForCodesResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ResponseStatus status = 1;
-  if (this->has_status()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::status(this), output);
-  }
-
-  // repeated .LOPQSearchForCodeResult result = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->result_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->result(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQSearchForCodesResponse)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchForCodesResponse::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQSearchForCodesResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQSearchForCodesResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ResponseStatus status = 1;
   if (this->has_status()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::status(this), target);
+      InternalWriteMessage(
+        1, _Internal::status(this), target, stream);
   }
 
   // repeated .LOPQSearchForCodeResult result = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->result_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_result_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->result(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_result(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQSearchForCodesResponse)
   return target;
@@ -5759,24 +4299,15 @@ size_t LOPQSearchForCodesResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQSearchForCodesResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .LOPQSearchForCodeResult result = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->result_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->result(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_result_size();
+  for (const auto& msg : this->result_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .ResponseStatus status = 1;
@@ -5786,6 +4317,10 @@ size_t LOPQSearchForCodesResponse::ByteSizeLong() const {
         *status_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -5815,7 +4350,7 @@ void LOPQSearchForCodesResponse::MergeFrom(const LOPQSearchForCodesResponse& fro
 
   result_.MergeFrom(from.result_);
   if (from.has_status()) {
-    mutable_status()->::ResponseStatus::MergeFrom(from.status());
+    _internal_mutable_status()->::ResponseStatus::MergeFrom(from._internal_status());
   }
 }
 
@@ -5840,7 +4375,7 @@ bool LOPQSearchForCodesResponse::IsInitialized() const {
 void LOPQSearchForCodesResponse::InternalSwap(LOPQSearchForCodesResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&result_)->InternalSwap(CastToBase(&other->result_));
+  result_.InternalSwap(&other->result_);
   swap(status_, other->status_);
 }
 
@@ -5893,15 +4428,15 @@ LOPQBruteForceSearchRequest::LOPQBruteForceSearchRequest(const LOPQBruteForceSea
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   sql_query_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.sql_query().empty()) {
+  if (!from._internal_sql_query().empty()) {
     sql_query_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.sql_query_);
   }
-  if (from.has_meta()) {
+  if (from._internal_has_meta()) {
     meta_ = new ::RequestMeta(*from.meta_);
   } else {
     meta_ = nullptr;
   }
-  if (from.has_data()) {
+  if (from._internal_has_data()) {
     data_ = new ::DataBatch(*from.data_);
   } else {
     data_ = nullptr;
@@ -5961,7 +4496,6 @@ void LOPQBruteForceSearchRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQBruteForceSearchRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -5972,21 +4506,23 @@ const char* LOPQBruteForceSearchRequest::_InternalParse(const char* ptr, ::PROTO
       // .RequestMeta meta = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_meta(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataBatch data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string sql_query = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_sql_query(), ptr, ctx, "LOPQBruteForceSearchRequest.sql_query");
+          auto str = _internal_mutable_sql_query();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQBruteForceSearchRequest.sql_query"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6023,190 +4559,54 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQBruteForceSearchRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQBruteForceSearchRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .RequestMeta meta = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_meta()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataBatch data = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string sql_query = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_sql_query()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->sql_query().data(), static_cast<int>(this->sql_query().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQBruteForceSearchRequest.sql_query"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 k = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &k_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool avg_concept_brute_force = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &avg_concept_brute_force_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQBruteForceSearchRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQBruteForceSearchRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQBruteForceSearchRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQBruteForceSearchRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .RequestMeta meta = 1;
-  if (this->has_meta()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::meta(this), output);
-  }
-
-  // .DataBatch data = 2;
-  if (this->has_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::data(this), output);
-  }
-
-  // string sql_query = 3;
-  if (this->sql_query().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_query().data(), static_cast<int>(this->sql_query().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQBruteForceSearchRequest.sql_query");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->sql_query(), output);
-  }
-
-  // int32 k = 4;
-  if (this->k() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->k(), output);
-  }
-
-  // bool avg_concept_brute_force = 5;
-  if (this->avg_concept_brute_force() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(5, this->avg_concept_brute_force(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQBruteForceSearchRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQBruteForceSearchRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQBruteForceSearchRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQBruteForceSearchRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .RequestMeta meta = 1;
   if (this->has_meta()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::meta(this), target);
+      InternalWriteMessage(
+        1, _Internal::meta(this), target, stream);
   }
 
   // .DataBatch data = 2;
   if (this->has_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::data(this), target);
+      InternalWriteMessage(
+        2, _Internal::data(this), target, stream);
   }
 
   // string sql_query = 3;
   if (this->sql_query().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_query().data(), static_cast<int>(this->sql_query().length()),
+      this->_internal_sql_query().data(), static_cast<int>(this->_internal_sql_query().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQBruteForceSearchRequest.sql_query");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->sql_query(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_sql_query(), target);
   }
 
   // int32 k = 4;
   if (this->k() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->k(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_k(), target);
   }
 
   // bool avg_concept_brute_force = 5;
   if (this->avg_concept_brute_force() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->avg_concept_brute_force(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_avg_concept_brute_force(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQBruteForceSearchRequest)
   return target;
@@ -6216,11 +4616,6 @@ size_t LOPQBruteForceSearchRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQBruteForceSearchRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6229,7 +4624,7 @@ size_t LOPQBruteForceSearchRequest::ByteSizeLong() const {
   if (this->sql_query().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->sql_query());
+        this->_internal_sql_query());
   }
 
   // .RequestMeta meta = 1;
@@ -6250,7 +4645,7 @@ size_t LOPQBruteForceSearchRequest::ByteSizeLong() const {
   if (this->k() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->k());
+        this->_internal_k());
   }
 
   // bool avg_concept_brute_force = 5;
@@ -6258,6 +4653,10 @@ size_t LOPQBruteForceSearchRequest::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -6290,16 +4689,16 @@ void LOPQBruteForceSearchRequest::MergeFrom(const LOPQBruteForceSearchRequest& f
     sql_query_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.sql_query_);
   }
   if (from.has_meta()) {
-    mutable_meta()->::RequestMeta::MergeFrom(from.meta());
+    _internal_mutable_meta()->::RequestMeta::MergeFrom(from._internal_meta());
   }
   if (from.has_data()) {
-    mutable_data()->::DataBatch::MergeFrom(from.data());
+    _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
   }
   if (from.k() != 0) {
-    set_k(from.k());
+    _internal_set_k(from._internal_k());
   }
   if (from.avg_concept_brute_force() != 0) {
-    set_avg_concept_brute_force(from.avg_concept_brute_force());
+    _internal_set_avg_concept_brute_force(from._internal_avg_concept_brute_force());
   }
 }
 
@@ -6368,7 +4767,7 @@ LOPQBruteForceSearchResponse::LOPQBruteForceSearchResponse(const LOPQBruteForceS
       _internal_metadata_(nullptr),
       all_results_(from.all_results_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_status()) {
+  if (from._internal_has_status()) {
     status_ = new ::ResponseStatus(*from.status_);
   } else {
     status_ = nullptr;
@@ -6413,7 +4812,6 @@ void LOPQBruteForceSearchResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQBruteForceSearchResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -6424,7 +4822,7 @@ const char* LOPQBruteForceSearchResponse::_InternalParse(const char* ptr, ::PROT
       // .ResponseStatus status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_status(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6434,10 +4832,10 @@ const char* LOPQBruteForceSearchResponse::_InternalParse(const char* ptr, ::PROT
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_all_results(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_all_results(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -6459,112 +4857,32 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQBruteForceSearchResponse::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQBruteForceSearchResponse)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ResponseStatus status = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_status()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .BruteForceResult all_results = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_all_results()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQBruteForceSearchResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQBruteForceSearchResponse)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQBruteForceSearchResponse::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQBruteForceSearchResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ResponseStatus status = 1;
-  if (this->has_status()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::status(this), output);
-  }
-
-  // repeated .BruteForceResult all_results = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->all_results_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->all_results(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQBruteForceSearchResponse)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQBruteForceSearchResponse::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQBruteForceSearchResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQBruteForceSearchResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ResponseStatus status = 1;
   if (this->has_status()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::status(this), target);
+      InternalWriteMessage(
+        1, _Internal::status(this), target, stream);
   }
 
   // repeated .BruteForceResult all_results = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->all_results_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_all_results_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->all_results(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_all_results(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQBruteForceSearchResponse)
   return target;
@@ -6574,24 +4892,15 @@ size_t LOPQBruteForceSearchResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQBruteForceSearchResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .BruteForceResult all_results = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->all_results_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->all_results(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_all_results_size();
+  for (const auto& msg : this->all_results_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .ResponseStatus status = 1;
@@ -6601,6 +4910,10 @@ size_t LOPQBruteForceSearchResponse::ByteSizeLong() const {
         *status_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -6630,7 +4943,7 @@ void LOPQBruteForceSearchResponse::MergeFrom(const LOPQBruteForceSearchResponse&
 
   all_results_.MergeFrom(from.all_results_);
   if (from.has_status()) {
-    mutable_status()->::ResponseStatus::MergeFrom(from.status());
+    _internal_mutable_status()->::ResponseStatus::MergeFrom(from._internal_status());
   }
 }
 
@@ -6655,7 +4968,7 @@ bool LOPQBruteForceSearchResponse::IsInitialized() const {
 void LOPQBruteForceSearchResponse::InternalSwap(LOPQBruteForceSearchResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&all_results_)->InternalSwap(CastToBase(&other->all_results_));
+  all_results_.InternalSwap(&other->all_results_);
   swap(status_, other->status_);
 }
 
@@ -6716,7 +5029,6 @@ void BruteForceResult::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* BruteForceResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -6730,10 +5042,10 @@ const char* BruteForceResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_results(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_results(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -6755,88 +5067,24 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool BruteForceResult::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:BruteForceResult)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .LOPQSearchResult results = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_results()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:BruteForceResult)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:BruteForceResult)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void BruteForceResult::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:BruteForceResult)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .LOPQSearchResult results = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->results_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->results(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:BruteForceResult)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* BruteForceResult::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* BruteForceResult::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:BruteForceResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .LOPQSearchResult results = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->results_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_results_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->results(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_results(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:BruteForceResult)
   return target;
@@ -6846,26 +5094,21 @@ size_t BruteForceResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:BruteForceResult)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .LOPQSearchResult results = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->results_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->results(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_results_size();
+  for (const auto& msg : this->results_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -6917,7 +5160,7 @@ bool BruteForceResult::IsInitialized() const {
 void BruteForceResult::InternalSwap(BruteForceResult* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&results_)->InternalSwap(CastToBase(&other->results_));
+  results_.InternalSwap(&other->results_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BruteForceResult::GetMetadata() const {
@@ -6970,7 +5213,7 @@ void LOPQTrainRequest::set_allocated_data(::DataBatch* data) {
   // @@protoc_insertion_point(field_set_allocated:LOPQTrainRequest.data)
 }
 void LOPQTrainRequest::clear_data() {
-  if (has_data()) {
+  if (_internal_has_data()) {
     delete training_data_.data_;
     clear_has_training_data();
   }
@@ -6985,14 +5228,14 @@ LOPQTrainRequest::LOPQTrainRequest(const LOPQTrainRequest& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   lopq_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.lopq_model_name().empty()) {
+  if (!from._internal_lopq_model_name().empty()) {
     lopq_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.lopq_model_name_);
   }
   prev_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.prev_model_name().empty()) {
+  if (!from._internal_prev_model_name().empty()) {
     prev_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.prev_model_name_);
   }
-  if (from.has_meta()) {
+  if (from._internal_has_meta()) {
     meta_ = new ::RequestMeta(*from.meta_);
   } else {
     meta_ = nullptr;
@@ -7003,11 +5246,11 @@ LOPQTrainRequest::LOPQTrainRequest(const LOPQTrainRequest& from)
   clear_has_training_data();
   switch (from.training_data_case()) {
     case kData: {
-      mutable_data()->::DataBatch::MergeFrom(from.data());
+      _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
       break;
     }
     case kSqlQuery: {
-      set_sql_query(from.sql_query());
+      _internal_set_sql_query(from._internal_sql_query());
       break;
     }
     case TRAINING_DATA_NOT_SET: {
@@ -7088,7 +5331,6 @@ void LOPQTrainRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQTrainRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -7099,28 +5341,32 @@ const char* LOPQTrainRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       // .RequestMeta meta = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_meta(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataBatch data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string sql_query = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_sql_query(), ptr, ctx, "LOPQTrainRequest.sql_query");
+          auto str = _internal_mutable_sql_query();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQTrainRequest.sql_query"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string lopq_model_name = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_lopq_model_name(), ptr, ctx, "LOPQTrainRequest.lopq_model_name");
+          auto str = _internal_mutable_lopq_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQTrainRequest.lopq_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7141,7 +5387,9 @@ const char* LOPQTrainRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       // string prev_model_name = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_prev_model_name(), ptr, ctx, "LOPQTrainRequest.prev_model_name");
+          auto str = _internal_mutable_prev_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQTrainRequest.prev_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7164,262 +5412,74 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQTrainRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQTrainRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .RequestMeta meta = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_meta()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataBatch data = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string sql_query = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_sql_query()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->sql_query().data(), static_cast<int>(this->sql_query().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQTrainRequest.sql_query"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string lopq_model_name = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_lopq_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQTrainRequest.lopq_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 coarse_clusters = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &coarse_clusters_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 train_iters = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &train_iters_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string prev_model_name = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_prev_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->prev_model_name().data(), static_cast<int>(this->prev_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQTrainRequest.prev_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQTrainRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQTrainRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQTrainRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQTrainRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .RequestMeta meta = 1;
-  if (this->has_meta()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::meta(this), output);
-  }
-
-  // .DataBatch data = 2;
-  if (has_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::data(this), output);
-  }
-
-  // string sql_query = 3;
-  if (has_sql_query()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_query().data(), static_cast<int>(this->sql_query().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQTrainRequest.sql_query");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->sql_query(), output);
-  }
-
-  // string lopq_model_name = 4;
-  if (this->lopq_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQTrainRequest.lopq_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->lopq_model_name(), output);
-  }
-
-  // int32 coarse_clusters = 5;
-  if (this->coarse_clusters() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(5, this->coarse_clusters(), output);
-  }
-
-  // int32 train_iters = 6;
-  if (this->train_iters() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(6, this->train_iters(), output);
-  }
-
-  // string prev_model_name = 7;
-  if (this->prev_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->prev_model_name().data(), static_cast<int>(this->prev_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQTrainRequest.prev_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->prev_model_name(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQTrainRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQTrainRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQTrainRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQTrainRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .RequestMeta meta = 1;
   if (this->has_meta()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::meta(this), target);
+      InternalWriteMessage(
+        1, _Internal::meta(this), target, stream);
   }
 
   // .DataBatch data = 2;
-  if (has_data()) {
+  if (_internal_has_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::data(this), target);
+      InternalWriteMessage(
+        2, _Internal::data(this), target, stream);
   }
 
   // string sql_query = 3;
-  if (has_sql_query()) {
+  if (_internal_has_sql_query()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_query().data(), static_cast<int>(this->sql_query().length()),
+      this->_internal_sql_query().data(), static_cast<int>(this->_internal_sql_query().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQTrainRequest.sql_query");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->sql_query(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_sql_query(), target);
   }
 
   // string lopq_model_name = 4;
   if (this->lopq_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
+      this->_internal_lopq_model_name().data(), static_cast<int>(this->_internal_lopq_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQTrainRequest.lopq_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->lopq_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_lopq_model_name(), target);
   }
 
   // int32 coarse_clusters = 5;
   if (this->coarse_clusters() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->coarse_clusters(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_coarse_clusters(), target);
   }
 
   // int32 train_iters = 6;
   if (this->train_iters() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->train_iters(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->_internal_train_iters(), target);
   }
 
   // string prev_model_name = 7;
   if (this->prev_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->prev_model_name().data(), static_cast<int>(this->prev_model_name().length()),
+      this->_internal_prev_model_name().data(), static_cast<int>(this->_internal_prev_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQTrainRequest.prev_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        7, this->prev_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_prev_model_name(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQTrainRequest)
   return target;
@@ -7429,11 +5489,6 @@ size_t LOPQTrainRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQTrainRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7442,14 +5497,14 @@ size_t LOPQTrainRequest::ByteSizeLong() const {
   if (this->lopq_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->lopq_model_name());
+        this->_internal_lopq_model_name());
   }
 
   // string prev_model_name = 7;
   if (this->prev_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->prev_model_name());
+        this->_internal_prev_model_name());
   }
 
   // .RequestMeta meta = 1;
@@ -7463,14 +5518,14 @@ size_t LOPQTrainRequest::ByteSizeLong() const {
   if (this->coarse_clusters() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->coarse_clusters());
+        this->_internal_coarse_clusters());
   }
 
   // int32 train_iters = 6;
   if (this->train_iters() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->train_iters());
+        this->_internal_train_iters());
   }
 
   switch (training_data_case()) {
@@ -7485,12 +5540,16 @@ size_t LOPQTrainRequest::ByteSizeLong() const {
     case kSqlQuery: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->sql_query());
+          this->_internal_sql_query());
       break;
     }
     case TRAINING_DATA_NOT_SET: {
       break;
     }
+  }
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
   }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
@@ -7528,21 +5587,21 @@ void LOPQTrainRequest::MergeFrom(const LOPQTrainRequest& from) {
     prev_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.prev_model_name_);
   }
   if (from.has_meta()) {
-    mutable_meta()->::RequestMeta::MergeFrom(from.meta());
+    _internal_mutable_meta()->::RequestMeta::MergeFrom(from._internal_meta());
   }
   if (from.coarse_clusters() != 0) {
-    set_coarse_clusters(from.coarse_clusters());
+    _internal_set_coarse_clusters(from._internal_coarse_clusters());
   }
   if (from.train_iters() != 0) {
-    set_train_iters(from.train_iters());
+    _internal_set_train_iters(from._internal_train_iters());
   }
   switch (from.training_data_case()) {
     case kData: {
-      mutable_data()->::DataBatch::MergeFrom(from.data());
+      _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
       break;
     }
     case kSqlQuery: {
-      set_sql_query(from.sql_query());
+      _internal_set_sql_query(from._internal_sql_query());
       break;
     }
     case TRAINING_DATA_NOT_SET: {
@@ -7618,7 +5677,7 @@ LOPQTrainResponse::LOPQTrainResponse(const LOPQTrainResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_status()) {
+  if (from._internal_has_status()) {
     status_ = new ::ResponseStatus(*from.status_);
   } else {
     status_ = nullptr;
@@ -7662,7 +5721,6 @@ void LOPQTrainResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQTrainResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -7673,7 +5731,7 @@ const char* LOPQTrainResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
       // .ResponseStatus status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_status(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7696,84 +5754,24 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQTrainResponse::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQTrainResponse)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ResponseStatus status = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_status()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQTrainResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQTrainResponse)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQTrainResponse::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQTrainResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ResponseStatus status = 1;
-  if (this->has_status()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::status(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQTrainResponse)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQTrainResponse::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQTrainResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQTrainResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ResponseStatus status = 1;
   if (this->has_status()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::status(this), target);
+      InternalWriteMessage(
+        1, _Internal::status(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQTrainResponse)
   return target;
@@ -7783,11 +5781,6 @@ size_t LOPQTrainResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQTrainResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7799,6 +5792,10 @@ size_t LOPQTrainResponse::ByteSizeLong() const {
         *status_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -7827,7 +5824,7 @@ void LOPQTrainResponse::MergeFrom(const LOPQTrainResponse& from) {
   (void) cached_has_bits;
 
   if (from.has_status()) {
-    mutable_status()->::ResponseStatus::MergeFrom(from.status());
+    _internal_mutable_status()->::ResponseStatus::MergeFrom(from._internal_status());
   }
 }
 
@@ -7958,27 +5955,27 @@ LOPQModelParams::LOPQModelParams(const LOPQModelParams& from)
       mus_(from.mus_),
       subs_(from.subs_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_pca_p()) {
+  if (from._internal_has_pca_p()) {
     pca_p_ = new ::NDArray(*from.pca_p_);
   } else {
     pca_p_ = nullptr;
   }
-  if (from.has_pca_mu()) {
+  if (from._internal_has_pca_mu()) {
     pca_mu_ = new ::NDArray(*from.pca_mu_);
   } else {
     pca_mu_ = nullptr;
   }
-  if (from.has_pca_permuted_inds()) {
+  if (from._internal_has_pca_permuted_inds()) {
     pca_permuted_inds_ = new ::NDArray(*from.pca_permuted_inds_);
   } else {
     pca_permuted_inds_ = nullptr;
   }
-  if (from.has_projection_p()) {
+  if (from._internal_has_projection_p()) {
     projection_p_ = new ::NDArray(*from.projection_p_);
   } else {
     projection_p_ = nullptr;
   }
-  if (from.has_projection_mu()) {
+  if (from._internal_has_projection_mu()) {
     projection_mu_ = new ::NDArray(*from.projection_mu_);
   } else {
     projection_mu_ = nullptr;
@@ -8054,7 +6051,6 @@ void LOPQModelParams::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQModelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -8096,10 +6092,10 @@ const char* LOPQModelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_cs(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_cs(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 42);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .NDArray Rs = 6;
@@ -8108,10 +6104,10 @@ const char* LOPQModelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_rs(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_rs(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 50);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .NDArray mus = 7;
@@ -8120,10 +6116,10 @@ const char* LOPQModelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_mus(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_mus(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 58);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .NDArray subs = 8;
@@ -8132,23 +6128,23 @@ const char* LOPQModelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_subs(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_subs(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 66);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
         } else goto handle_unusual;
         continue;
       // .NDArray pca_P = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(mutable_pca_p(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_pca_p(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .NDArray pca_mu = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(mutable_pca_mu(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_pca_mu(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8169,7 +6165,7 @@ const char* LOPQModelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
       // .NDArray pca_permuted_inds = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(mutable_pca_permuted_inds(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_pca_permuted_inds(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8183,14 +6179,14 @@ const char* LOPQModelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
       // .NDArray projection_P = 15;
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
-          ptr = ctx->ParseMessage(mutable_projection_p(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_projection_p(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .NDArray projection_mu = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
-          ptr = ctx->ParseMessage(mutable_projection_mu(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_projection_mu(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8213,453 +6209,130 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQModelParams::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQModelParams)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 D = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &d_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 V = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &v_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 M = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &m_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 num_subquantizers = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &num_subquantizers_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .NDArray Cs = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_cs()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .NDArray Rs = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_rs()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .NDArray mus = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_mus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .NDArray subs = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_subs()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .NDArray pca_P = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_pca_p()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .NDArray pca_mu = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_pca_mu()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool use_embeddings = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (88 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &use_embeddings_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool pca_just_shuffle = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (96 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &pca_just_shuffle_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .NDArray pca_permuted_inds = 13;
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_pca_permuted_inds()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 num_point_dims = 14;
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (112 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &num_point_dims_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .NDArray projection_P = 15;
-      case 15: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (122 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_projection_p()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .NDArray projection_mu = 16;
-      case 16: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (130 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_projection_mu()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQModelParams)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQModelParams)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQModelParams::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQModelParams)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 D = 1;
-  if (this->d() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->d(), output);
-  }
-
-  // uint32 V = 2;
-  if (this->v() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->v(), output);
-  }
-
-  // uint32 M = 3;
-  if (this->m() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(3, this->m(), output);
-  }
-
-  // uint32 num_subquantizers = 4;
-  if (this->num_subquantizers() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(4, this->num_subquantizers(), output);
-  }
-
-  // repeated .NDArray Cs = 5;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->cs_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5,
-      this->cs(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .NDArray Rs = 6;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->rs_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6,
-      this->rs(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .NDArray mus = 7;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->mus_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7,
-      this->mus(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .NDArray subs = 8;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->subs_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8,
-      this->subs(static_cast<int>(i)),
-      output);
-  }
-
-  // .NDArray pca_P = 9;
-  if (this->has_pca_p()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, _Internal::pca_p(this), output);
-  }
-
-  // .NDArray pca_mu = 10;
-  if (this->has_pca_mu()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, _Internal::pca_mu(this), output);
-  }
-
-  // bool use_embeddings = 11;
-  if (this->use_embeddings() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(11, this->use_embeddings(), output);
-  }
-
-  // bool pca_just_shuffle = 12;
-  if (this->pca_just_shuffle() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(12, this->pca_just_shuffle(), output);
-  }
-
-  // .NDArray pca_permuted_inds = 13;
-  if (this->has_pca_permuted_inds()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      13, _Internal::pca_permuted_inds(this), output);
-  }
-
-  // uint32 num_point_dims = 14;
-  if (this->num_point_dims() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(14, this->num_point_dims(), output);
-  }
-
-  // .NDArray projection_P = 15;
-  if (this->has_projection_p()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      15, _Internal::projection_p(this), output);
-  }
-
-  // .NDArray projection_mu = 16;
-  if (this->has_projection_mu()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      16, _Internal::projection_mu(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQModelParams)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQModelParams::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQModelParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQModelParams)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint32 D = 1;
   if (this->d() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->d(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_d(), target);
   }
 
   // uint32 V = 2;
   if (this->v() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->v(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_v(), target);
   }
 
   // uint32 M = 3;
   if (this->m() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->m(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_m(), target);
   }
 
   // uint32 num_subquantizers = 4;
   if (this->num_subquantizers() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->num_subquantizers(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->_internal_num_subquantizers(), target);
   }
 
   // repeated .NDArray Cs = 5;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->cs_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_cs_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->cs(static_cast<int>(i)), target);
+      InternalWriteMessage(5, this->_internal_cs(i), target, stream);
   }
 
   // repeated .NDArray Rs = 6;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->rs_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_rs_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->rs(static_cast<int>(i)), target);
+      InternalWriteMessage(6, this->_internal_rs(i), target, stream);
   }
 
   // repeated .NDArray mus = 7;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->mus_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_mus_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, this->mus(static_cast<int>(i)), target);
+      InternalWriteMessage(7, this->_internal_mus(i), target, stream);
   }
 
   // repeated .NDArray subs = 8;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->subs_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_subs_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, this->subs(static_cast<int>(i)), target);
+      InternalWriteMessage(8, this->_internal_subs(i), target, stream);
   }
 
   // .NDArray pca_P = 9;
   if (this->has_pca_p()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, _Internal::pca_p(this), target);
+      InternalWriteMessage(
+        9, _Internal::pca_p(this), target, stream);
   }
 
   // .NDArray pca_mu = 10;
   if (this->has_pca_mu()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, _Internal::pca_mu(this), target);
+      InternalWriteMessage(
+        10, _Internal::pca_mu(this), target, stream);
   }
 
   // bool use_embeddings = 11;
   if (this->use_embeddings() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(11, this->use_embeddings(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(11, this->_internal_use_embeddings(), target);
   }
 
   // bool pca_just_shuffle = 12;
   if (this->pca_just_shuffle() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(12, this->pca_just_shuffle(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(12, this->_internal_pca_just_shuffle(), target);
   }
 
   // .NDArray pca_permuted_inds = 13;
   if (this->has_pca_permuted_inds()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        13, _Internal::pca_permuted_inds(this), target);
+      InternalWriteMessage(
+        13, _Internal::pca_permuted_inds(this), target, stream);
   }
 
   // uint32 num_point_dims = 14;
   if (this->num_point_dims() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(14, this->num_point_dims(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(14, this->_internal_num_point_dims(), target);
   }
 
   // .NDArray projection_P = 15;
   if (this->has_projection_p()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        15, _Internal::projection_p(this), target);
+      InternalWriteMessage(
+        15, _Internal::projection_p(this), target, stream);
   }
 
   // .NDArray projection_mu = 16;
   if (this->has_projection_mu()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        16, _Internal::projection_mu(this), target);
+      InternalWriteMessage(
+        16, _Internal::projection_mu(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQModelParams)
   return target;
@@ -8669,57 +6342,36 @@ size_t LOPQModelParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQModelParams)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .NDArray Cs = 5;
-  {
-    unsigned int count = static_cast<unsigned int>(this->cs_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->cs(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_cs_size();
+  for (const auto& msg : this->cs_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .NDArray Rs = 6;
-  {
-    unsigned int count = static_cast<unsigned int>(this->rs_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->rs(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_rs_size();
+  for (const auto& msg : this->rs_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .NDArray mus = 7;
-  {
-    unsigned int count = static_cast<unsigned int>(this->mus_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->mus(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_mus_size();
+  for (const auto& msg : this->mus_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .NDArray subs = 8;
-  {
-    unsigned int count = static_cast<unsigned int>(this->subs_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->subs(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_subs_size();
+  for (const auto& msg : this->subs_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .NDArray pca_P = 9;
@@ -8761,28 +6413,28 @@ size_t LOPQModelParams::ByteSizeLong() const {
   if (this->d() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->d());
+        this->_internal_d());
   }
 
   // uint32 V = 2;
   if (this->v() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->v());
+        this->_internal_v());
   }
 
   // uint32 M = 3;
   if (this->m() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->m());
+        this->_internal_m());
   }
 
   // uint32 num_subquantizers = 4;
   if (this->num_subquantizers() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->num_subquantizers());
+        this->_internal_num_subquantizers());
   }
 
   // bool use_embeddings = 11;
@@ -8799,9 +6451,13 @@ size_t LOPQModelParams::ByteSizeLong() const {
   if (this->num_point_dims() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->num_point_dims());
+        this->_internal_num_point_dims());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -8834,40 +6490,40 @@ void LOPQModelParams::MergeFrom(const LOPQModelParams& from) {
   mus_.MergeFrom(from.mus_);
   subs_.MergeFrom(from.subs_);
   if (from.has_pca_p()) {
-    mutable_pca_p()->::NDArray::MergeFrom(from.pca_p());
+    _internal_mutable_pca_p()->::NDArray::MergeFrom(from._internal_pca_p());
   }
   if (from.has_pca_mu()) {
-    mutable_pca_mu()->::NDArray::MergeFrom(from.pca_mu());
+    _internal_mutable_pca_mu()->::NDArray::MergeFrom(from._internal_pca_mu());
   }
   if (from.has_pca_permuted_inds()) {
-    mutable_pca_permuted_inds()->::NDArray::MergeFrom(from.pca_permuted_inds());
+    _internal_mutable_pca_permuted_inds()->::NDArray::MergeFrom(from._internal_pca_permuted_inds());
   }
   if (from.has_projection_p()) {
-    mutable_projection_p()->::NDArray::MergeFrom(from.projection_p());
+    _internal_mutable_projection_p()->::NDArray::MergeFrom(from._internal_projection_p());
   }
   if (from.has_projection_mu()) {
-    mutable_projection_mu()->::NDArray::MergeFrom(from.projection_mu());
+    _internal_mutable_projection_mu()->::NDArray::MergeFrom(from._internal_projection_mu());
   }
   if (from.d() != 0) {
-    set_d(from.d());
+    _internal_set_d(from._internal_d());
   }
   if (from.v() != 0) {
-    set_v(from.v());
+    _internal_set_v(from._internal_v());
   }
   if (from.m() != 0) {
-    set_m(from.m());
+    _internal_set_m(from._internal_m());
   }
   if (from.num_subquantizers() != 0) {
-    set_num_subquantizers(from.num_subquantizers());
+    _internal_set_num_subquantizers(from._internal_num_subquantizers());
   }
   if (from.use_embeddings() != 0) {
-    set_use_embeddings(from.use_embeddings());
+    _internal_set_use_embeddings(from._internal_use_embeddings());
   }
   if (from.pca_just_shuffle() != 0) {
-    set_pca_just_shuffle(from.pca_just_shuffle());
+    _internal_set_pca_just_shuffle(from._internal_pca_just_shuffle());
   }
   if (from.num_point_dims() != 0) {
-    set_num_point_dims(from.num_point_dims());
+    _internal_set_num_point_dims(from._internal_num_point_dims());
   }
 }
 
@@ -8892,10 +6548,10 @@ bool LOPQModelParams::IsInitialized() const {
 void LOPQModelParams::InternalSwap(LOPQModelParams* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&cs_)->InternalSwap(CastToBase(&other->cs_));
-  CastToBase(&rs_)->InternalSwap(CastToBase(&other->rs_));
-  CastToBase(&mus_)->InternalSwap(CastToBase(&other->mus_));
-  CastToBase(&subs_)->InternalSwap(CastToBase(&other->subs_));
+  cs_.InternalSwap(&other->cs_);
+  rs_.InternalSwap(&other->rs_);
+  mus_.InternalSwap(&other->mus_);
+  subs_.InternalSwap(&other->subs_);
   swap(pca_p_, other->pca_p_);
   swap(pca_mu_, other->pca_mu_);
   swap(pca_permuted_inds_, other->pca_permuted_inds_);
@@ -8960,7 +6616,7 @@ void LOPQTrainAndEvalRequest::set_allocated_data(::DataBatch* data) {
   // @@protoc_insertion_point(field_set_allocated:LOPQTrainAndEvalRequest.data)
 }
 void LOPQTrainAndEvalRequest::clear_data() {
-  if (has_data()) {
+  if (_internal_has_data()) {
     delete training_data_.data_;
     clear_has_training_data();
   }
@@ -8975,22 +6631,22 @@ LOPQTrainAndEvalRequest::LOPQTrainAndEvalRequest(const LOPQTrainAndEvalRequest& 
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   lopq_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.lopq_model_name().empty()) {
+  if (!from._internal_lopq_model_name().empty()) {
     lopq_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.lopq_model_name_);
   }
   prev_model_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.prev_model_name().empty()) {
+  if (!from._internal_prev_model_name().empty()) {
     prev_model_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.prev_model_name_);
   }
   spire_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.spire_name().empty()) {
+  if (!from._internal_spire_name().empty()) {
     spire_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.spire_name_);
   }
   hyper_parameters_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.hyper_parameters().empty()) {
+  if (!from._internal_hyper_parameters().empty()) {
     hyper_parameters_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.hyper_parameters_);
   }
-  if (from.has_meta()) {
+  if (from._internal_has_meta()) {
     meta_ = new ::RequestMeta(*from.meta_);
   } else {
     meta_ = nullptr;
@@ -8999,11 +6655,11 @@ LOPQTrainAndEvalRequest::LOPQTrainAndEvalRequest(const LOPQTrainAndEvalRequest& 
   clear_has_training_data();
   switch (from.training_data_case()) {
     case kData: {
-      mutable_data()->::DataBatch::MergeFrom(from.data());
+      _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
       break;
     }
     case kSqlQuery: {
-      set_sql_query(from.sql_query());
+      _internal_set_sql_query(from._internal_sql_query());
       break;
     }
     case TRAINING_DATA_NOT_SET: {
@@ -9088,7 +6744,6 @@ void LOPQTrainAndEvalRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQTrainAndEvalRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -9099,28 +6754,32 @@ const char* LOPQTrainAndEvalRequest::_InternalParse(const char* ptr, ::PROTOBUF_
       // .RequestMeta meta = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_meta(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_meta(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataBatch data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string sql_query = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_sql_query(), ptr, ctx, "LOPQTrainAndEvalRequest.sql_query");
+          auto str = _internal_mutable_sql_query();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQTrainAndEvalRequest.sql_query"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string lopq_model_name = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_lopq_model_name(), ptr, ctx, "LOPQTrainAndEvalRequest.lopq_model_name");
+          auto str = _internal_mutable_lopq_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQTrainAndEvalRequest.lopq_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9134,21 +6793,27 @@ const char* LOPQTrainAndEvalRequest::_InternalParse(const char* ptr, ::PROTOBUF_
       // string prev_model_name = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_prev_model_name(), ptr, ctx, "LOPQTrainAndEvalRequest.prev_model_name");
+          auto str = _internal_mutable_prev_model_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQTrainAndEvalRequest.prev_model_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string spire_name = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_spire_name(), ptr, ctx, "LOPQTrainAndEvalRequest.spire_name");
+          auto str = _internal_mutable_spire_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQTrainAndEvalRequest.spire_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string hyper_parameters = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_hyper_parameters(), ptr, ctx, "LOPQTrainAndEvalRequest.hyper_parameters");
+          auto str = _internal_mutable_hyper_parameters();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LOPQTrainAndEvalRequest.hyper_parameters"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9171,311 +6836,88 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQTrainAndEvalRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQTrainAndEvalRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .RequestMeta meta = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_meta()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataBatch data = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string sql_query = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_sql_query()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->sql_query().data(), static_cast<int>(this->sql_query().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQTrainAndEvalRequest.sql_query"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string lopq_model_name = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_lopq_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQTrainAndEvalRequest.lopq_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 train_iters = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &train_iters_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string prev_model_name = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_prev_model_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->prev_model_name().data(), static_cast<int>(this->prev_model_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQTrainAndEvalRequest.prev_model_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string spire_name = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_spire_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->spire_name().data(), static_cast<int>(this->spire_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQTrainAndEvalRequest.spire_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string hyper_parameters = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_hyper_parameters()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->hyper_parameters().data(), static_cast<int>(this->hyper_parameters().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LOPQTrainAndEvalRequest.hyper_parameters"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQTrainAndEvalRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQTrainAndEvalRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQTrainAndEvalRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQTrainAndEvalRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .RequestMeta meta = 1;
-  if (this->has_meta()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::meta(this), output);
-  }
-
-  // .DataBatch data = 2;
-  if (has_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::data(this), output);
-  }
-
-  // string sql_query = 3;
-  if (has_sql_query()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_query().data(), static_cast<int>(this->sql_query().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQTrainAndEvalRequest.sql_query");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->sql_query(), output);
-  }
-
-  // string lopq_model_name = 4;
-  if (this->lopq_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQTrainAndEvalRequest.lopq_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->lopq_model_name(), output);
-  }
-
-  // int32 train_iters = 5;
-  if (this->train_iters() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(5, this->train_iters(), output);
-  }
-
-  // string prev_model_name = 6;
-  if (this->prev_model_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->prev_model_name().data(), static_cast<int>(this->prev_model_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQTrainAndEvalRequest.prev_model_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->prev_model_name(), output);
-  }
-
-  // string spire_name = 7;
-  if (this->spire_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->spire_name().data(), static_cast<int>(this->spire_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQTrainAndEvalRequest.spire_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->spire_name(), output);
-  }
-
-  // string hyper_parameters = 8;
-  if (this->hyper_parameters().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->hyper_parameters().data(), static_cast<int>(this->hyper_parameters().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LOPQTrainAndEvalRequest.hyper_parameters");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->hyper_parameters(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQTrainAndEvalRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQTrainAndEvalRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQTrainAndEvalRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQTrainAndEvalRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .RequestMeta meta = 1;
   if (this->has_meta()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::meta(this), target);
+      InternalWriteMessage(
+        1, _Internal::meta(this), target, stream);
   }
 
   // .DataBatch data = 2;
-  if (has_data()) {
+  if (_internal_has_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::data(this), target);
+      InternalWriteMessage(
+        2, _Internal::data(this), target, stream);
   }
 
   // string sql_query = 3;
-  if (has_sql_query()) {
+  if (_internal_has_sql_query()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sql_query().data(), static_cast<int>(this->sql_query().length()),
+      this->_internal_sql_query().data(), static_cast<int>(this->_internal_sql_query().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQTrainAndEvalRequest.sql_query");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->sql_query(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_sql_query(), target);
   }
 
   // string lopq_model_name = 4;
   if (this->lopq_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->lopq_model_name().data(), static_cast<int>(this->lopq_model_name().length()),
+      this->_internal_lopq_model_name().data(), static_cast<int>(this->_internal_lopq_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQTrainAndEvalRequest.lopq_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->lopq_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_lopq_model_name(), target);
   }
 
   // int32 train_iters = 5;
   if (this->train_iters() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->train_iters(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_train_iters(), target);
   }
 
   // string prev_model_name = 6;
   if (this->prev_model_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->prev_model_name().data(), static_cast<int>(this->prev_model_name().length()),
+      this->_internal_prev_model_name().data(), static_cast<int>(this->_internal_prev_model_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQTrainAndEvalRequest.prev_model_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        6, this->prev_model_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_prev_model_name(), target);
   }
 
   // string spire_name = 7;
   if (this->spire_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->spire_name().data(), static_cast<int>(this->spire_name().length()),
+      this->_internal_spire_name().data(), static_cast<int>(this->_internal_spire_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQTrainAndEvalRequest.spire_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        7, this->spire_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_spire_name(), target);
   }
 
   // string hyper_parameters = 8;
   if (this->hyper_parameters().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->hyper_parameters().data(), static_cast<int>(this->hyper_parameters().length()),
+      this->_internal_hyper_parameters().data(), static_cast<int>(this->_internal_hyper_parameters().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LOPQTrainAndEvalRequest.hyper_parameters");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        8, this->hyper_parameters(), target);
+    target = stream->WriteStringMaybeAliased(
+        8, this->_internal_hyper_parameters(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQTrainAndEvalRequest)
   return target;
@@ -9485,11 +6927,6 @@ size_t LOPQTrainAndEvalRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQTrainAndEvalRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9498,28 +6935,28 @@ size_t LOPQTrainAndEvalRequest::ByteSizeLong() const {
   if (this->lopq_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->lopq_model_name());
+        this->_internal_lopq_model_name());
   }
 
   // string prev_model_name = 6;
   if (this->prev_model_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->prev_model_name());
+        this->_internal_prev_model_name());
   }
 
   // string spire_name = 7;
   if (this->spire_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->spire_name());
+        this->_internal_spire_name());
   }
 
   // string hyper_parameters = 8;
   if (this->hyper_parameters().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->hyper_parameters());
+        this->_internal_hyper_parameters());
   }
 
   // .RequestMeta meta = 1;
@@ -9533,7 +6970,7 @@ size_t LOPQTrainAndEvalRequest::ByteSizeLong() const {
   if (this->train_iters() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->train_iters());
+        this->_internal_train_iters());
   }
 
   switch (training_data_case()) {
@@ -9548,12 +6985,16 @@ size_t LOPQTrainAndEvalRequest::ByteSizeLong() const {
     case kSqlQuery: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->sql_query());
+          this->_internal_sql_query());
       break;
     }
     case TRAINING_DATA_NOT_SET: {
       break;
     }
+  }
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
   }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
@@ -9599,18 +7040,18 @@ void LOPQTrainAndEvalRequest::MergeFrom(const LOPQTrainAndEvalRequest& from) {
     hyper_parameters_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.hyper_parameters_);
   }
   if (from.has_meta()) {
-    mutable_meta()->::RequestMeta::MergeFrom(from.meta());
+    _internal_mutable_meta()->::RequestMeta::MergeFrom(from._internal_meta());
   }
   if (from.train_iters() != 0) {
-    set_train_iters(from.train_iters());
+    _internal_set_train_iters(from._internal_train_iters());
   }
   switch (from.training_data_case()) {
     case kData: {
-      mutable_data()->::DataBatch::MergeFrom(from.data());
+      _internal_mutable_data()->::DataBatch::MergeFrom(from._internal_data());
       break;
     }
     case kSqlQuery: {
-      set_sql_query(from.sql_query());
+      _internal_set_sql_query(from._internal_sql_query());
       break;
     }
     case TRAINING_DATA_NOT_SET: {
@@ -9693,7 +7134,7 @@ LOPQTrainAndEvalResponse::LOPQTrainAndEvalResponse(const LOPQTrainAndEvalRespons
       _internal_metadata_(nullptr),
       result_(from.result_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_status()) {
+  if (from._internal_has_status()) {
     status_ = new ::ResponseStatus(*from.status_);
   } else {
     status_ = nullptr;
@@ -9738,7 +7179,6 @@ void LOPQTrainAndEvalResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQTrainAndEvalResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -9749,7 +7189,7 @@ const char* LOPQTrainAndEvalResponse::_InternalParse(const char* ptr, ::PROTOBUF
       // .ResponseStatus status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_status(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9759,10 +7199,10 @@ const char* LOPQTrainAndEvalResponse::_InternalParse(const char* ptr, ::PROTOBUF
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_result(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_result(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -9784,112 +7224,32 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQTrainAndEvalResponse::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQTrainAndEvalResponse)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ResponseStatus status = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_status()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .LOPQEvalResult result = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_result()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQTrainAndEvalResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQTrainAndEvalResponse)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQTrainAndEvalResponse::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQTrainAndEvalResponse)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ResponseStatus status = 1;
-  if (this->has_status()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::status(this), output);
-  }
-
-  // repeated .LOPQEvalResult result = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->result_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->result(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQTrainAndEvalResponse)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQTrainAndEvalResponse::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQTrainAndEvalResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQTrainAndEvalResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ResponseStatus status = 1;
   if (this->has_status()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::status(this), target);
+      InternalWriteMessage(
+        1, _Internal::status(this), target, stream);
   }
 
   // repeated .LOPQEvalResult result = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->result_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_result_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->result(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_result(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQTrainAndEvalResponse)
   return target;
@@ -9899,24 +7259,15 @@ size_t LOPQTrainAndEvalResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQTrainAndEvalResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .LOPQEvalResult result = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->result_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->result(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_result_size();
+  for (const auto& msg : this->result_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .ResponseStatus status = 1;
@@ -9926,6 +7277,10 @@ size_t LOPQTrainAndEvalResponse::ByteSizeLong() const {
         *status_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -9955,7 +7310,7 @@ void LOPQTrainAndEvalResponse::MergeFrom(const LOPQTrainAndEvalResponse& from) {
 
   result_.MergeFrom(from.result_);
   if (from.has_status()) {
-    mutable_status()->::ResponseStatus::MergeFrom(from.status());
+    _internal_mutable_status()->::ResponseStatus::MergeFrom(from._internal_status());
   }
 }
 
@@ -9980,7 +7335,7 @@ bool LOPQTrainAndEvalResponse::IsInitialized() const {
 void LOPQTrainAndEvalResponse::InternalSwap(LOPQTrainAndEvalResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&result_)->InternalSwap(CastToBase(&other->result_));
+  result_.InternalSwap(&other->result_);
   swap(status_, other->status_);
 }
 

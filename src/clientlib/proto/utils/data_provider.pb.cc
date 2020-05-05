@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -226,7 +225,7 @@ static void InitDefaultsscc_info_AffineTransform_proto_2futils_2fdata_5fprovider
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AffineTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AffineTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AffineTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_AspectRatioTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -240,7 +239,7 @@ static void InitDefaultsscc_info_AspectRatioTransform_proto_2futils_2fdata_5fpro
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AspectRatioTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AspectRatioTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AspectRatioTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_AudioMFCCTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -254,7 +253,7 @@ static void InitDefaultsscc_info_AudioMFCCTransform_proto_2futils_2fdata_5fprovi
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AudioMFCCTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AudioMFCCTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AudioMFCCTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_ColorTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -268,7 +267,7 @@ static void InitDefaultsscc_info_ColorTransform_proto_2futils_2fdata_5fprovider_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ColorTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ColorTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ColorTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_DataProviderParams_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -288,7 +287,7 @@ static void InitDefaultsscc_info_DataProviderParams_proto_2futils_2fdata_5fprovi
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<22> scc_info_DataProviderParams_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 22, InitDefaultsscc_info_DataProviderParams_proto_2futils_2fdata_5fprovider_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 22, 0, InitDefaultsscc_info_DataProviderParams_proto_2futils_2fdata_5fprovider_2eproto}, {
       &scc_info_ProcessingParams_proto_2futils_2fdata_5fprovider_2eproto.base,
       &scc_info_ImageCropTransform_proto_2futils_2fdata_5fprovider_2eproto.base,
       &scc_info_SavedOutputParams_proto_2futils_2fdata_5fprovider_2eproto.base,
@@ -324,7 +323,7 @@ static void InitDefaultsscc_info_DistortionTransform_proto_2futils_2fdata_5fprov
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DistortionTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_DistortionTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_DistortionTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_FakeBoxes_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -338,7 +337,7 @@ static void InitDefaultsscc_info_FakeBoxes_proto_2futils_2fdata_5fprovider_2epro
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FakeBoxes_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FakeBoxes_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_FakeBoxes_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_FilterBbox_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -352,7 +351,7 @@ static void InitDefaultsscc_info_FilterBbox_proto_2futils_2fdata_5fprovider_2epr
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FilterBbox_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FilterBbox_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_FilterBbox_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_FilterInvalidItems_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -366,7 +365,7 @@ static void InitDefaultsscc_info_FilterInvalidItems_proto_2futils_2fdata_5fprovi
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FilterInvalidItems_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FilterInvalidItems_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_FilterInvalidItems_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_FilterPositiveLabels_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -380,7 +379,7 @@ static void InitDefaultsscc_info_FilterPositiveLabels_proto_2futils_2fdata_5fpro
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FilterPositiveLabels_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FilterPositiveLabels_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_FilterPositiveLabels_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_FlipTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -394,7 +393,7 @@ static void InitDefaultsscc_info_FlipTransform_proto_2futils_2fdata_5fprovider_2
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FlipTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FlipTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_FlipTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_ImageCropTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -408,7 +407,7 @@ static void InitDefaultsscc_info_ImageCropTransform_proto_2futils_2fdata_5fprovi
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ImageCropTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ImageCropTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ImageCropTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_JPEGRecompression_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -422,7 +421,7 @@ static void InitDefaultsscc_info_JPEGRecompression_proto_2futils_2fdata_5fprovid
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_JPEGRecompression_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_JPEGRecompression_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_JPEGRecompression_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_LabelDropper_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -436,7 +435,7 @@ static void InitDefaultsscc_info_LabelDropper_proto_2futils_2fdata_5fprovider_2e
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LabelDropper_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_LabelDropper_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LabelDropper_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_LabelMapper_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -450,7 +449,7 @@ static void InitDefaultsscc_info_LabelMapper_proto_2futils_2fdata_5fprovider_2ep
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LabelMapper_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_LabelMapper_proto_2futils_2fdata_5fprovider_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LabelMapper_proto_2futils_2fdata_5fprovider_2eproto}, {
       &scc_info_LabelMapper_CatidMapEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto.base,}};
 
 static void InitDefaultsscc_info_LabelMapper_CatidMapEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto() {
@@ -464,7 +463,7 @@ static void InitDefaultsscc_info_LabelMapper_CatidMapEntry_DoNotUse_proto_2futil
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LabelMapper_CatidMapEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_LabelMapper_CatidMapEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LabelMapper_CatidMapEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_LabelSetter_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -478,7 +477,7 @@ static void InitDefaultsscc_info_LabelSetter_proto_2futils_2fdata_5fprovider_2ep
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LabelSetter_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_LabelSetter_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LabelSetter_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_LabelSmoother_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -492,7 +491,7 @@ static void InitDefaultsscc_info_LabelSmoother_proto_2futils_2fdata_5fprovider_2
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LabelSmoother_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_LabelSmoother_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LabelSmoother_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_LabelWeight_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -506,7 +505,7 @@ static void InitDefaultsscc_info_LabelWeight_proto_2futils_2fdata_5fprovider_2ep
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LabelWeight_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_LabelWeight_proto_2futils_2fdata_5fprovider_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LabelWeight_proto_2futils_2fdata_5fprovider_2eproto}, {
       &scc_info_LabelWeight_CatidConstWeightsEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto.base,}};
 
 static void InitDefaultsscc_info_LabelWeight_CatidConstWeightsEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto() {
@@ -520,7 +519,7 @@ static void InitDefaultsscc_info_LabelWeight_CatidConstWeightsEntry_DoNotUse_pro
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LabelWeight_CatidConstWeightsEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_LabelWeight_CatidConstWeightsEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LabelWeight_CatidConstWeightsEntry_DoNotUse_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_LabelsFromBboxes_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -534,7 +533,7 @@ static void InitDefaultsscc_info_LabelsFromBboxes_proto_2futils_2fdata_5fprovide
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LabelsFromBboxes_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_LabelsFromBboxes_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LabelsFromBboxes_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_LandmarkAlignTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -548,7 +547,7 @@ static void InitDefaultsscc_info_LandmarkAlignTransform_proto_2futils_2fdata_5fp
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LandmarkAlignTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_LandmarkAlignTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LandmarkAlignTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_LogoDataParams_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -562,7 +561,7 @@ static void InitDefaultsscc_info_LogoDataParams_proto_2futils_2fdata_5fprovider_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LogoDataParams_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_LogoDataParams_proto_2futils_2fdata_5fprovider_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LogoDataParams_proto_2futils_2fdata_5fprovider_2eproto}, {
       &scc_info_MultiDataset_proto_2futils_2fdata_5fprovider_2eproto.base,}};
 
 static void InitDefaultsscc_info_MaxNumLabelDropper_proto_2futils_2fdata_5fprovider_2eproto() {
@@ -577,7 +576,7 @@ static void InitDefaultsscc_info_MaxNumLabelDropper_proto_2futils_2fdata_5fprovi
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MaxNumLabelDropper_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_MaxNumLabelDropper_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_MaxNumLabelDropper_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_MiniBatchItemStage_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -591,7 +590,7 @@ static void InitDefaultsscc_info_MiniBatchItemStage_proto_2futils_2fdata_5fprovi
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<23> scc_info_MiniBatchItemStage_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 23, InitDefaultsscc_info_MiniBatchItemStage_proto_2futils_2fdata_5fprovider_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 23, 0, InitDefaultsscc_info_MiniBatchItemStage_proto_2futils_2fdata_5fprovider_2eproto}, {
       &scc_info_ImageCropTransform_proto_2futils_2fdata_5fprovider_2eproto.base,
       &scc_info_LabelSmoother_proto_2futils_2fdata_5fprovider_2eproto.base,
       &scc_info_LabelDropper_proto_2futils_2fdata_5fprovider_2eproto.base,
@@ -628,7 +627,7 @@ static void InitDefaultsscc_info_MultiDataset_proto_2futils_2fdata_5fprovider_2e
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MultiDataset_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_MultiDataset_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_MultiDataset_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_OCRCropTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -642,7 +641,7 @@ static void InitDefaultsscc_info_OCRCropTransform_proto_2futils_2fdata_5fprovide
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OCRCropTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_OCRCropTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_OCRCropTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_ProcessingParams_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -656,7 +655,7 @@ static void InitDefaultsscc_info_ProcessingParams_proto_2futils_2fdata_5fprovide
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ProcessingParams_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ProcessingParams_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ProcessingParams_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_RelativeCropTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -670,7 +669,7 @@ static void InitDefaultsscc_info_RelativeCropTransform_proto_2futils_2fdata_5fpr
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RelativeCropTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_RelativeCropTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RelativeCropTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_SSDRandomCropOperation_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -684,7 +683,7 @@ static void InitDefaultsscc_info_SSDRandomCropOperation_proto_2futils_2fdata_5fp
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SSDRandomCropOperation_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_SSDRandomCropOperation_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SSDRandomCropOperation_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_SavedOutputParams_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -698,7 +697,7 @@ static void InitDefaultsscc_info_SavedOutputParams_proto_2futils_2fdata_5fprovid
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SavedOutputParams_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_SavedOutputParams_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SavedOutputParams_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_ScaleTransform_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -712,7 +711,7 @@ static void InitDefaultsscc_info_ScaleTransform_proto_2futils_2fdata_5fprovider_
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ScaleTransform_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ScaleTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ScaleTransform_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_TokenIndexer_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -726,7 +725,7 @@ static void InitDefaultsscc_info_TokenIndexer_proto_2futils_2fdata_5fprovider_2e
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TokenIndexer_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_TokenIndexer_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TokenIndexer_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static void InitDefaultsscc_info_WhitespaceTokenizer_proto_2futils_2fdata_5fprovider_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -740,7 +739,7 @@ static void InitDefaultsscc_info_WhitespaceTokenizer_proto_2futils_2fdata_5fprov
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_WhitespaceTokenizer_proto_2futils_2fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_WhitespaceTokenizer_proto_2futils_2fdata_5fprovider_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_WhitespaceTokenizer_proto_2futils_2fdata_5fprovider_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_proto_2futils_2fdata_5fprovider_2eproto[35];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_proto_2futils_2fdata_5fprovider_2eproto[1];
@@ -1621,97 +1620,97 @@ DataProviderParams::DataProviderParams(const DataProviderParams& from)
       mbitem_stage_(from.mbitem_stage_),
       serving_mbitem_stage_(from.serving_mbitem_stage_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_processing_params()) {
+  if (from._internal_has_processing_params()) {
     processing_params_ = new ::ProcessingParams(*from.processing_params_);
   } else {
     processing_params_ = nullptr;
   }
-  if (from.has_image_crop_transform()) {
+  if (from._internal_has_image_crop_transform()) {
     image_crop_transform_ = new ::ImageCropTransform(*from.image_crop_transform_);
   } else {
     image_crop_transform_ = nullptr;
   }
-  if (from.has_saved_output()) {
+  if (from._internal_has_saved_output()) {
     saved_output_ = new ::SavedOutputParams(*from.saved_output_);
   } else {
     saved_output_ = nullptr;
   }
-  if (from.has_label_smoother()) {
+  if (from._internal_has_label_smoother()) {
     label_smoother_ = new ::LabelSmoother(*from.label_smoother_);
   } else {
     label_smoother_ = nullptr;
   }
-  if (from.has_label_dropper()) {
+  if (from._internal_has_label_dropper()) {
     label_dropper_ = new ::LabelDropper(*from.label_dropper_);
   } else {
     label_dropper_ = nullptr;
   }
-  if (from.has_max_num_label_dropper()) {
+  if (from._internal_has_max_num_label_dropper()) {
     max_num_label_dropper_ = new ::MaxNumLabelDropper(*from.max_num_label_dropper_);
   } else {
     max_num_label_dropper_ = nullptr;
   }
-  if (from.has_label_weight()) {
+  if (from._internal_has_label_weight()) {
     label_weight_ = new ::LabelWeight(*from.label_weight_);
   } else {
     label_weight_ = nullptr;
   }
-  if (from.has_ssd_random_crop()) {
+  if (from._internal_has_ssd_random_crop()) {
     ssd_random_crop_ = new ::SSDRandomCropOperation(*from.ssd_random_crop_);
   } else {
     ssd_random_crop_ = nullptr;
   }
-  if (from.has_relative_crop_transform()) {
+  if (from._internal_has_relative_crop_transform()) {
     relative_crop_transform_ = new ::RelativeCropTransform(*from.relative_crop_transform_);
   } else {
     relative_crop_transform_ = nullptr;
   }
-  if (from.has_affine_transform()) {
+  if (from._internal_has_affine_transform()) {
     affine_transform_ = new ::AffineTransform(*from.affine_transform_);
   } else {
     affine_transform_ = nullptr;
   }
-  if (from.has_color_transform()) {
+  if (from._internal_has_color_transform()) {
     color_transform_ = new ::ColorTransform(*from.color_transform_);
   } else {
     color_transform_ = nullptr;
   }
-  if (from.has_filter_bbox()) {
+  if (from._internal_has_filter_bbox()) {
     filter_bbox_ = new ::FilterBbox(*from.filter_bbox_);
   } else {
     filter_bbox_ = nullptr;
   }
-  if (from.has_logo_data()) {
+  if (from._internal_has_logo_data()) {
     logo_data_ = new ::LogoDataParams(*from.logo_data_);
   } else {
     logo_data_ = nullptr;
   }
-  if (from.has_aspect_ratio_transform()) {
+  if (from._internal_has_aspect_ratio_transform()) {
     aspect_ratio_transform_ = new ::AspectRatioTransform(*from.aspect_ratio_transform_);
   } else {
     aspect_ratio_transform_ = nullptr;
   }
-  if (from.has_flip_transform()) {
+  if (from._internal_has_flip_transform()) {
     flip_transform_ = new ::FlipTransform(*from.flip_transform_);
   } else {
     flip_transform_ = nullptr;
   }
-  if (from.has_jpeg_recompression()) {
+  if (from._internal_has_jpeg_recompression()) {
     jpeg_recompression_ = new ::JPEGRecompression(*from.jpeg_recompression_);
   } else {
     jpeg_recompression_ = nullptr;
   }
-  if (from.has_grpc_reader_params()) {
+  if (from._internal_has_grpc_reader_params()) {
     grpc_reader_params_ = new ::gRPCReaderParams(*from.grpc_reader_params_);
   } else {
     grpc_reader_params_ = nullptr;
   }
-  if (from.has_fake_boxes()) {
+  if (from._internal_has_fake_boxes()) {
     fake_boxes_ = new ::FakeBoxes(*from.fake_boxes_);
   } else {
     fake_boxes_ = nullptr;
   }
-  if (from.has_filter_invalid_items()) {
+  if (from._internal_has_filter_invalid_items()) {
     filter_invalid_items_ = new ::FilterInvalidItems(*from.filter_invalid_items_);
   } else {
     filter_invalid_items_ = nullptr;
@@ -1854,7 +1853,6 @@ void DataProviderParams::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* DataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1865,21 +1863,21 @@ const char* DataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // .ProcessingParams processing_params = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_processing_params(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_processing_params(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .ImageCropTransform image_crop_transform = 2 [deprecated = true];
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_image_crop_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_image_crop_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .SavedOutputParams saved_output = 3 [deprecated = true];
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_saved_output(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_saved_output(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1889,10 +1887,10 @@ const char* DataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_multi_dataset(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_multi_dataset(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 34);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .LabelSetter label_setter = 5 [deprecated = true];
@@ -1901,10 +1899,10 @@ const char* DataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_label_setter(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_label_setter(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 42);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .LabelMapper label_mapper = 6 [deprecated = true];
@@ -1913,100 +1911,100 @@ const char* DataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_label_mapper(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_label_mapper(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 50);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
         } else goto handle_unusual;
         continue;
       // .LabelSmoother label_smoother = 7 [deprecated = true];
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(mutable_label_smoother(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_label_smoother(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LabelDropper label_dropper = 8 [deprecated = true];
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(mutable_label_dropper(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_label_dropper(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .MaxNumLabelDropper max_num_label_dropper = 9 [deprecated = true];
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(mutable_max_num_label_dropper(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_max_num_label_dropper(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LabelWeight label_weight = 10 [deprecated = true];
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(mutable_label_weight(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_label_weight(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .SSDRandomCropOperation ssd_random_crop = 11 [deprecated = true];
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(mutable_ssd_random_crop(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_ssd_random_crop(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .RelativeCropTransform relative_crop_transform = 12 [deprecated = true];
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(mutable_relative_crop_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_relative_crop_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .AffineTransform affine_transform = 13 [deprecated = true];
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(mutable_affine_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_affine_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .ColorTransform color_transform = 14 [deprecated = true];
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
-          ptr = ctx->ParseMessage(mutable_color_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_color_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .FilterBbox filter_bbox = 15 [deprecated = true];
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
-          ptr = ctx->ParseMessage(mutable_filter_bbox(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_filter_bbox(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LogoDataParams logo_data = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
-          ptr = ctx->ParseMessage(mutable_logo_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_logo_data(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .AspectRatioTransform aspect_ratio_transform = 17 [deprecated = true];
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
-          ptr = ctx->ParseMessage(mutable_aspect_ratio_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_aspect_ratio_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .FlipTransform flip_transform = 18 [deprecated = true];
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 146)) {
-          ptr = ctx->ParseMessage(mutable_flip_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_flip_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .JPEGRecompression jpeg_recompression = 19 [deprecated = true];
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
-          ptr = ctx->ParseMessage(mutable_jpeg_recompression(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_jpeg_recompression(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2016,10 +2014,10 @@ const char* DataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ptr -= 2;
           do {
             ptr += 2;
-            ptr = ctx->ParseMessage(add_mbitem_stage(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_mbitem_stage(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint16>(ptr) == 418);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<162>(ptr));
         } else goto handle_unusual;
         continue;
       // int32 num_grpc_readers = 21 [deprecated = true];
@@ -2032,7 +2030,7 @@ const char* DataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // .gRPCReaderParams grpc_reader_params = 22 [deprecated = true];
       case 22:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 178)) {
-          ptr = ctx->ParseMessage(mutable_grpc_reader_params(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_grpc_reader_params(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2042,23 +2040,23 @@ const char* DataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ptr -= 2;
           do {
             ptr += 2;
-            ptr = ctx->ParseMessage(add_serving_mbitem_stage(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_serving_mbitem_stage(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint16>(ptr) == 442);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<186>(ptr));
         } else goto handle_unusual;
         continue;
       // .FakeBoxes fake_boxes = 24;
       case 24:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 194)) {
-          ptr = ctx->ParseMessage(mutable_fake_boxes(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_fake_boxes(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .FilterInvalidItems filter_invalid_items = 25;
       case 25:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 202)) {
-          ptr = ctx->ParseMessage(mutable_filter_invalid_items(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_filter_invalid_items(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2081,679 +2079,214 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool DataProviderParams::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:DataProviderParams)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ProcessingParams processing_params = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_processing_params()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .ImageCropTransform image_crop_transform = 2 [deprecated = true];
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_image_crop_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .SavedOutputParams saved_output = 3 [deprecated = true];
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_saved_output()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .MultiDataset multi_dataset = 4 [deprecated = true];
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_multi_dataset()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .LabelSetter label_setter = 5 [deprecated = true];
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_label_setter()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .LabelMapper label_mapper = 6 [deprecated = true];
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_label_mapper()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LabelSmoother label_smoother = 7 [deprecated = true];
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_label_smoother()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LabelDropper label_dropper = 8 [deprecated = true];
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_label_dropper()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .MaxNumLabelDropper max_num_label_dropper = 9 [deprecated = true];
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_max_num_label_dropper()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LabelWeight label_weight = 10 [deprecated = true];
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_label_weight()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .SSDRandomCropOperation ssd_random_crop = 11 [deprecated = true];
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_ssd_random_crop()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .RelativeCropTransform relative_crop_transform = 12 [deprecated = true];
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_relative_crop_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .AffineTransform affine_transform = 13 [deprecated = true];
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_affine_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .ColorTransform color_transform = 14 [deprecated = true];
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (114 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_color_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .FilterBbox filter_bbox = 15 [deprecated = true];
-      case 15: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (122 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_filter_bbox()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LogoDataParams logo_data = 16;
-      case 16: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (130 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_logo_data()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .AspectRatioTransform aspect_ratio_transform = 17 [deprecated = true];
-      case 17: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (138 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_aspect_ratio_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .FlipTransform flip_transform = 18 [deprecated = true];
-      case 18: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (146 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_flip_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .JPEGRecompression jpeg_recompression = 19 [deprecated = true];
-      case 19: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (154 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_jpeg_recompression()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .MiniBatchItemStage mbitem_stage = 20;
-      case 20: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (162 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_mbitem_stage()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 num_grpc_readers = 21 [deprecated = true];
-      case 21: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (168 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &num_grpc_readers_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .gRPCReaderParams grpc_reader_params = 22 [deprecated = true];
-      case 22: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (178 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_grpc_reader_params()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .MiniBatchItemStage serving_mbitem_stage = 23;
-      case 23: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (186 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_serving_mbitem_stage()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .FakeBoxes fake_boxes = 24;
-      case 24: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (194 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_fake_boxes()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .FilterInvalidItems filter_invalid_items = 25;
-      case 25: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (202 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_filter_invalid_items()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:DataProviderParams)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:DataProviderParams)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void DataProviderParams::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:DataProviderParams)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ProcessingParams processing_params = 1;
-  if (this->has_processing_params()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::processing_params(this), output);
-  }
-
-  // .ImageCropTransform image_crop_transform = 2 [deprecated = true];
-  if (this->has_image_crop_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::image_crop_transform(this), output);
-  }
-
-  // .SavedOutputParams saved_output = 3 [deprecated = true];
-  if (this->has_saved_output()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::saved_output(this), output);
-  }
-
-  // repeated .MultiDataset multi_dataset = 4 [deprecated = true];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->multi_dataset_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4,
-      this->multi_dataset(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .LabelSetter label_setter = 5 [deprecated = true];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->label_setter_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5,
-      this->label_setter(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .LabelMapper label_mapper = 6 [deprecated = true];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->label_mapper_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6,
-      this->label_mapper(static_cast<int>(i)),
-      output);
-  }
-
-  // .LabelSmoother label_smoother = 7 [deprecated = true];
-  if (this->has_label_smoother()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, _Internal::label_smoother(this), output);
-  }
-
-  // .LabelDropper label_dropper = 8 [deprecated = true];
-  if (this->has_label_dropper()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, _Internal::label_dropper(this), output);
-  }
-
-  // .MaxNumLabelDropper max_num_label_dropper = 9 [deprecated = true];
-  if (this->has_max_num_label_dropper()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, _Internal::max_num_label_dropper(this), output);
-  }
-
-  // .LabelWeight label_weight = 10 [deprecated = true];
-  if (this->has_label_weight()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, _Internal::label_weight(this), output);
-  }
-
-  // .SSDRandomCropOperation ssd_random_crop = 11 [deprecated = true];
-  if (this->has_ssd_random_crop()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, _Internal::ssd_random_crop(this), output);
-  }
-
-  // .RelativeCropTransform relative_crop_transform = 12 [deprecated = true];
-  if (this->has_relative_crop_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, _Internal::relative_crop_transform(this), output);
-  }
-
-  // .AffineTransform affine_transform = 13 [deprecated = true];
-  if (this->has_affine_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      13, _Internal::affine_transform(this), output);
-  }
-
-  // .ColorTransform color_transform = 14 [deprecated = true];
-  if (this->has_color_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      14, _Internal::color_transform(this), output);
-  }
-
-  // .FilterBbox filter_bbox = 15 [deprecated = true];
-  if (this->has_filter_bbox()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      15, _Internal::filter_bbox(this), output);
-  }
-
-  // .LogoDataParams logo_data = 16;
-  if (this->has_logo_data()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      16, _Internal::logo_data(this), output);
-  }
-
-  // .AspectRatioTransform aspect_ratio_transform = 17 [deprecated = true];
-  if (this->has_aspect_ratio_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      17, _Internal::aspect_ratio_transform(this), output);
-  }
-
-  // .FlipTransform flip_transform = 18 [deprecated = true];
-  if (this->has_flip_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      18, _Internal::flip_transform(this), output);
-  }
-
-  // .JPEGRecompression jpeg_recompression = 19 [deprecated = true];
-  if (this->has_jpeg_recompression()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      19, _Internal::jpeg_recompression(this), output);
-  }
-
-  // repeated .MiniBatchItemStage mbitem_stage = 20;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->mbitem_stage_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      20,
-      this->mbitem_stage(static_cast<int>(i)),
-      output);
-  }
-
-  // int32 num_grpc_readers = 21 [deprecated = true];
-  if (this->num_grpc_readers() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(21, this->num_grpc_readers(), output);
-  }
-
-  // .gRPCReaderParams grpc_reader_params = 22 [deprecated = true];
-  if (this->has_grpc_reader_params()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      22, _Internal::grpc_reader_params(this), output);
-  }
-
-  // repeated .MiniBatchItemStage serving_mbitem_stage = 23;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->serving_mbitem_stage_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      23,
-      this->serving_mbitem_stage(static_cast<int>(i)),
-      output);
-  }
-
-  // .FakeBoxes fake_boxes = 24;
-  if (this->has_fake_boxes()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      24, _Internal::fake_boxes(this), output);
-  }
-
-  // .FilterInvalidItems filter_invalid_items = 25;
-  if (this->has_filter_invalid_items()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      25, _Internal::filter_invalid_items(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:DataProviderParams)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* DataProviderParams::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* DataProviderParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DataProviderParams)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ProcessingParams processing_params = 1;
   if (this->has_processing_params()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::processing_params(this), target);
+      InternalWriteMessage(
+        1, _Internal::processing_params(this), target, stream);
   }
 
   // .ImageCropTransform image_crop_transform = 2 [deprecated = true];
   if (this->has_image_crop_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::image_crop_transform(this), target);
+      InternalWriteMessage(
+        2, _Internal::image_crop_transform(this), target, stream);
   }
 
   // .SavedOutputParams saved_output = 3 [deprecated = true];
   if (this->has_saved_output()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::saved_output(this), target);
+      InternalWriteMessage(
+        3, _Internal::saved_output(this), target, stream);
   }
 
   // repeated .MultiDataset multi_dataset = 4 [deprecated = true];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->multi_dataset_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_multi_dataset_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, this->multi_dataset(static_cast<int>(i)), target);
+      InternalWriteMessage(4, this->_internal_multi_dataset(i), target, stream);
   }
 
   // repeated .LabelSetter label_setter = 5 [deprecated = true];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->label_setter_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_label_setter_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->label_setter(static_cast<int>(i)), target);
+      InternalWriteMessage(5, this->_internal_label_setter(i), target, stream);
   }
 
   // repeated .LabelMapper label_mapper = 6 [deprecated = true];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->label_mapper_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_label_mapper_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->label_mapper(static_cast<int>(i)), target);
+      InternalWriteMessage(6, this->_internal_label_mapper(i), target, stream);
   }
 
   // .LabelSmoother label_smoother = 7 [deprecated = true];
   if (this->has_label_smoother()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, _Internal::label_smoother(this), target);
+      InternalWriteMessage(
+        7, _Internal::label_smoother(this), target, stream);
   }
 
   // .LabelDropper label_dropper = 8 [deprecated = true];
   if (this->has_label_dropper()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, _Internal::label_dropper(this), target);
+      InternalWriteMessage(
+        8, _Internal::label_dropper(this), target, stream);
   }
 
   // .MaxNumLabelDropper max_num_label_dropper = 9 [deprecated = true];
   if (this->has_max_num_label_dropper()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, _Internal::max_num_label_dropper(this), target);
+      InternalWriteMessage(
+        9, _Internal::max_num_label_dropper(this), target, stream);
   }
 
   // .LabelWeight label_weight = 10 [deprecated = true];
   if (this->has_label_weight()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, _Internal::label_weight(this), target);
+      InternalWriteMessage(
+        10, _Internal::label_weight(this), target, stream);
   }
 
   // .SSDRandomCropOperation ssd_random_crop = 11 [deprecated = true];
   if (this->has_ssd_random_crop()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, _Internal::ssd_random_crop(this), target);
+      InternalWriteMessage(
+        11, _Internal::ssd_random_crop(this), target, stream);
   }
 
   // .RelativeCropTransform relative_crop_transform = 12 [deprecated = true];
   if (this->has_relative_crop_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        12, _Internal::relative_crop_transform(this), target);
+      InternalWriteMessage(
+        12, _Internal::relative_crop_transform(this), target, stream);
   }
 
   // .AffineTransform affine_transform = 13 [deprecated = true];
   if (this->has_affine_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        13, _Internal::affine_transform(this), target);
+      InternalWriteMessage(
+        13, _Internal::affine_transform(this), target, stream);
   }
 
   // .ColorTransform color_transform = 14 [deprecated = true];
   if (this->has_color_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        14, _Internal::color_transform(this), target);
+      InternalWriteMessage(
+        14, _Internal::color_transform(this), target, stream);
   }
 
   // .FilterBbox filter_bbox = 15 [deprecated = true];
   if (this->has_filter_bbox()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        15, _Internal::filter_bbox(this), target);
+      InternalWriteMessage(
+        15, _Internal::filter_bbox(this), target, stream);
   }
 
   // .LogoDataParams logo_data = 16;
   if (this->has_logo_data()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        16, _Internal::logo_data(this), target);
+      InternalWriteMessage(
+        16, _Internal::logo_data(this), target, stream);
   }
 
   // .AspectRatioTransform aspect_ratio_transform = 17 [deprecated = true];
   if (this->has_aspect_ratio_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        17, _Internal::aspect_ratio_transform(this), target);
+      InternalWriteMessage(
+        17, _Internal::aspect_ratio_transform(this), target, stream);
   }
 
   // .FlipTransform flip_transform = 18 [deprecated = true];
   if (this->has_flip_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        18, _Internal::flip_transform(this), target);
+      InternalWriteMessage(
+        18, _Internal::flip_transform(this), target, stream);
   }
 
   // .JPEGRecompression jpeg_recompression = 19 [deprecated = true];
   if (this->has_jpeg_recompression()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        19, _Internal::jpeg_recompression(this), target);
+      InternalWriteMessage(
+        19, _Internal::jpeg_recompression(this), target, stream);
   }
 
   // repeated .MiniBatchItemStage mbitem_stage = 20;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->mbitem_stage_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_mbitem_stage_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        20, this->mbitem_stage(static_cast<int>(i)), target);
+      InternalWriteMessage(20, this->_internal_mbitem_stage(i), target, stream);
   }
 
   // int32 num_grpc_readers = 21 [deprecated = true];
   if (this->num_grpc_readers() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(21, this->num_grpc_readers(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(21, this->_internal_num_grpc_readers(), target);
   }
 
   // .gRPCReaderParams grpc_reader_params = 22 [deprecated = true];
   if (this->has_grpc_reader_params()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        22, _Internal::grpc_reader_params(this), target);
+      InternalWriteMessage(
+        22, _Internal::grpc_reader_params(this), target, stream);
   }
 
   // repeated .MiniBatchItemStage serving_mbitem_stage = 23;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->serving_mbitem_stage_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_serving_mbitem_stage_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        23, this->serving_mbitem_stage(static_cast<int>(i)), target);
+      InternalWriteMessage(23, this->_internal_serving_mbitem_stage(i), target, stream);
   }
 
   // .FakeBoxes fake_boxes = 24;
   if (this->has_fake_boxes()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        24, _Internal::fake_boxes(this), target);
+      InternalWriteMessage(
+        24, _Internal::fake_boxes(this), target, stream);
   }
 
   // .FilterInvalidItems filter_invalid_items = 25;
   if (this->has_filter_invalid_items()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        25, _Internal::filter_invalid_items(this), target);
+      InternalWriteMessage(
+        25, _Internal::filter_invalid_items(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DataProviderParams)
   return target;
@@ -2763,68 +2296,43 @@ size_t DataProviderParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DataProviderParams)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .MultiDataset multi_dataset = 4 [deprecated = true];
-  {
-    unsigned int count = static_cast<unsigned int>(this->multi_dataset_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->multi_dataset(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_multi_dataset_size();
+  for (const auto& msg : this->multi_dataset_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .LabelSetter label_setter = 5 [deprecated = true];
-  {
-    unsigned int count = static_cast<unsigned int>(this->label_setter_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->label_setter(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_label_setter_size();
+  for (const auto& msg : this->label_setter_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .LabelMapper label_mapper = 6 [deprecated = true];
-  {
-    unsigned int count = static_cast<unsigned int>(this->label_mapper_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->label_mapper(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_label_mapper_size();
+  for (const auto& msg : this->label_mapper_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .MiniBatchItemStage mbitem_stage = 20;
-  {
-    unsigned int count = static_cast<unsigned int>(this->mbitem_stage_size());
-    total_size += 2UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->mbitem_stage(static_cast<int>(i)));
-    }
+  total_size += 2UL * this->_internal_mbitem_stage_size();
+  for (const auto& msg : this->mbitem_stage_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .MiniBatchItemStage serving_mbitem_stage = 23;
-  {
-    unsigned int count = static_cast<unsigned int>(this->serving_mbitem_stage_size());
-    total_size += 2UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->serving_mbitem_stage(static_cast<int>(i)));
-    }
+  total_size += 2UL * this->_internal_serving_mbitem_stage_size();
+  for (const auto& msg : this->serving_mbitem_stage_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .ProcessingParams processing_params = 1;
@@ -2964,9 +2472,13 @@ size_t DataProviderParams::ByteSizeLong() const {
   if (this->num_grpc_readers() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->num_grpc_readers());
+        this->_internal_num_grpc_readers());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -3000,64 +2512,64 @@ void DataProviderParams::MergeFrom(const DataProviderParams& from) {
   mbitem_stage_.MergeFrom(from.mbitem_stage_);
   serving_mbitem_stage_.MergeFrom(from.serving_mbitem_stage_);
   if (from.has_processing_params()) {
-    mutable_processing_params()->::ProcessingParams::MergeFrom(from.processing_params());
+    _internal_mutable_processing_params()->::ProcessingParams::MergeFrom(from._internal_processing_params());
   }
   if (from.has_image_crop_transform()) {
-    mutable_image_crop_transform()->::ImageCropTransform::MergeFrom(from.image_crop_transform());
+    _internal_mutable_image_crop_transform()->::ImageCropTransform::MergeFrom(from._internal_image_crop_transform());
   }
   if (from.has_saved_output()) {
-    mutable_saved_output()->::SavedOutputParams::MergeFrom(from.saved_output());
+    _internal_mutable_saved_output()->::SavedOutputParams::MergeFrom(from._internal_saved_output());
   }
   if (from.has_label_smoother()) {
-    mutable_label_smoother()->::LabelSmoother::MergeFrom(from.label_smoother());
+    _internal_mutable_label_smoother()->::LabelSmoother::MergeFrom(from._internal_label_smoother());
   }
   if (from.has_label_dropper()) {
-    mutable_label_dropper()->::LabelDropper::MergeFrom(from.label_dropper());
+    _internal_mutable_label_dropper()->::LabelDropper::MergeFrom(from._internal_label_dropper());
   }
   if (from.has_max_num_label_dropper()) {
-    mutable_max_num_label_dropper()->::MaxNumLabelDropper::MergeFrom(from.max_num_label_dropper());
+    _internal_mutable_max_num_label_dropper()->::MaxNumLabelDropper::MergeFrom(from._internal_max_num_label_dropper());
   }
   if (from.has_label_weight()) {
-    mutable_label_weight()->::LabelWeight::MergeFrom(from.label_weight());
+    _internal_mutable_label_weight()->::LabelWeight::MergeFrom(from._internal_label_weight());
   }
   if (from.has_ssd_random_crop()) {
-    mutable_ssd_random_crop()->::SSDRandomCropOperation::MergeFrom(from.ssd_random_crop());
+    _internal_mutable_ssd_random_crop()->::SSDRandomCropOperation::MergeFrom(from._internal_ssd_random_crop());
   }
   if (from.has_relative_crop_transform()) {
-    mutable_relative_crop_transform()->::RelativeCropTransform::MergeFrom(from.relative_crop_transform());
+    _internal_mutable_relative_crop_transform()->::RelativeCropTransform::MergeFrom(from._internal_relative_crop_transform());
   }
   if (from.has_affine_transform()) {
-    mutable_affine_transform()->::AffineTransform::MergeFrom(from.affine_transform());
+    _internal_mutable_affine_transform()->::AffineTransform::MergeFrom(from._internal_affine_transform());
   }
   if (from.has_color_transform()) {
-    mutable_color_transform()->::ColorTransform::MergeFrom(from.color_transform());
+    _internal_mutable_color_transform()->::ColorTransform::MergeFrom(from._internal_color_transform());
   }
   if (from.has_filter_bbox()) {
-    mutable_filter_bbox()->::FilterBbox::MergeFrom(from.filter_bbox());
+    _internal_mutable_filter_bbox()->::FilterBbox::MergeFrom(from._internal_filter_bbox());
   }
   if (from.has_logo_data()) {
-    mutable_logo_data()->::LogoDataParams::MergeFrom(from.logo_data());
+    _internal_mutable_logo_data()->::LogoDataParams::MergeFrom(from._internal_logo_data());
   }
   if (from.has_aspect_ratio_transform()) {
-    mutable_aspect_ratio_transform()->::AspectRatioTransform::MergeFrom(from.aspect_ratio_transform());
+    _internal_mutable_aspect_ratio_transform()->::AspectRatioTransform::MergeFrom(from._internal_aspect_ratio_transform());
   }
   if (from.has_flip_transform()) {
-    mutable_flip_transform()->::FlipTransform::MergeFrom(from.flip_transform());
+    _internal_mutable_flip_transform()->::FlipTransform::MergeFrom(from._internal_flip_transform());
   }
   if (from.has_jpeg_recompression()) {
-    mutable_jpeg_recompression()->::JPEGRecompression::MergeFrom(from.jpeg_recompression());
+    _internal_mutable_jpeg_recompression()->::JPEGRecompression::MergeFrom(from._internal_jpeg_recompression());
   }
   if (from.has_grpc_reader_params()) {
-    mutable_grpc_reader_params()->::gRPCReaderParams::MergeFrom(from.grpc_reader_params());
+    _internal_mutable_grpc_reader_params()->::gRPCReaderParams::MergeFrom(from._internal_grpc_reader_params());
   }
   if (from.has_fake_boxes()) {
-    mutable_fake_boxes()->::FakeBoxes::MergeFrom(from.fake_boxes());
+    _internal_mutable_fake_boxes()->::FakeBoxes::MergeFrom(from._internal_fake_boxes());
   }
   if (from.has_filter_invalid_items()) {
-    mutable_filter_invalid_items()->::FilterInvalidItems::MergeFrom(from.filter_invalid_items());
+    _internal_mutable_filter_invalid_items()->::FilterInvalidItems::MergeFrom(from._internal_filter_invalid_items());
   }
   if (from.num_grpc_readers() != 0) {
-    set_num_grpc_readers(from.num_grpc_readers());
+    _internal_set_num_grpc_readers(from._internal_num_grpc_readers());
   }
 }
 
@@ -3082,11 +2594,11 @@ bool DataProviderParams::IsInitialized() const {
 void DataProviderParams::InternalSwap(DataProviderParams* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&multi_dataset_)->InternalSwap(CastToBase(&other->multi_dataset_));
-  CastToBase(&label_setter_)->InternalSwap(CastToBase(&other->label_setter_));
-  CastToBase(&label_mapper_)->InternalSwap(CastToBase(&other->label_mapper_));
-  CastToBase(&mbitem_stage_)->InternalSwap(CastToBase(&other->mbitem_stage_));
-  CastToBase(&serving_mbitem_stage_)->InternalSwap(CastToBase(&other->serving_mbitem_stage_));
+  multi_dataset_.InternalSwap(&other->multi_dataset_);
+  label_setter_.InternalSwap(&other->label_setter_);
+  label_mapper_.InternalSwap(&other->label_mapper_);
+  mbitem_stage_.InternalSwap(&other->mbitem_stage_);
+  serving_mbitem_stage_.InternalSwap(&other->serving_mbitem_stage_);
   swap(processing_params_, other->processing_params_);
   swap(image_crop_transform_, other->image_crop_transform_);
   swap(saved_output_, other->saved_output_);
@@ -3175,7 +2687,6 @@ void ProcessingParams::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ProcessingParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -3238,10 +2749,12 @@ const char* ProcessingParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(add_required_output_fields(), ptr, ctx, "ProcessingParams.required_output_fields");
+            auto str = _internal_add_required_output_fields();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ProcessingParams.required_output_fields"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 66);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
         } else goto handle_unusual;
         continue;
       // int32 queue_size = 9;
@@ -3270,280 +2783,74 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ProcessingParams::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ProcessingParams)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // bool readers_keep_empty = 1 [deprecated = true];
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &readers_keep_empty_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 reader_threads = 2 [deprecated = true];
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &reader_threads_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 worker_threads = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &worker_threads_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 minibatch_size = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &minibatch_size_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool continuous = 5 [deprecated = true];
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &continuous_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool shuffle = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &shuffle_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int64 num_items_per_epoch = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (56 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &num_items_per_epoch_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated string required_output_fields = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->add_required_output_fields()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->required_output_fields(this->required_output_fields_size() - 1).data(),
-            static_cast<int>(this->required_output_fields(this->required_output_fields_size() - 1).length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ProcessingParams.required_output_fields"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 queue_size = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (72 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &queue_size_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ProcessingParams)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ProcessingParams)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ProcessingParams::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ProcessingParams)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool readers_keep_empty = 1 [deprecated = true];
-  if (this->readers_keep_empty() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(1, this->readers_keep_empty(), output);
-  }
-
-  // int32 reader_threads = 2 [deprecated = true];
-  if (this->reader_threads() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->reader_threads(), output);
-  }
-
-  // int32 worker_threads = 3;
-  if (this->worker_threads() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(3, this->worker_threads(), output);
-  }
-
-  // int32 minibatch_size = 4;
-  if (this->minibatch_size() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->minibatch_size(), output);
-  }
-
-  // bool continuous = 5 [deprecated = true];
-  if (this->continuous() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(5, this->continuous(), output);
-  }
-
-  // bool shuffle = 6;
-  if (this->shuffle() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(6, this->shuffle(), output);
-  }
-
-  // int64 num_items_per_epoch = 7;
-  if (this->num_items_per_epoch() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(7, this->num_items_per_epoch(), output);
-  }
-
-  // repeated string required_output_fields = 8;
-  for (int i = 0, n = this->required_output_fields_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->required_output_fields(i).data(), static_cast<int>(this->required_output_fields(i).length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProcessingParams.required_output_fields");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteString(
-      8, this->required_output_fields(i), output);
-  }
-
-  // int32 queue_size = 9;
-  if (this->queue_size() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(9, this->queue_size(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ProcessingParams)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ProcessingParams::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ProcessingParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ProcessingParams)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool readers_keep_empty = 1 [deprecated = true];
   if (this->readers_keep_empty() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->readers_keep_empty(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_readers_keep_empty(), target);
   }
 
   // int32 reader_threads = 2 [deprecated = true];
   if (this->reader_threads() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->reader_threads(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_reader_threads(), target);
   }
 
   // int32 worker_threads = 3;
   if (this->worker_threads() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->worker_threads(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_worker_threads(), target);
   }
 
   // int32 minibatch_size = 4;
   if (this->minibatch_size() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->minibatch_size(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_minibatch_size(), target);
   }
 
   // bool continuous = 5 [deprecated = true];
   if (this->continuous() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->continuous(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_continuous(), target);
   }
 
   // bool shuffle = 6;
   if (this->shuffle() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->shuffle(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->_internal_shuffle(), target);
   }
 
   // int64 num_items_per_epoch = 7;
   if (this->num_items_per_epoch() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(7, this->num_items_per_epoch(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(7, this->_internal_num_items_per_epoch(), target);
   }
 
   // repeated string required_output_fields = 8;
-  for (int i = 0, n = this->required_output_fields_size(); i < n; i++) {
+  for (int i = 0, n = this->_internal_required_output_fields_size(); i < n; i++) {
+    const auto& s = this->_internal_required_output_fields(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->required_output_fields(i).data(), static_cast<int>(this->required_output_fields(i).length()),
+      s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ProcessingParams.required_output_fields");
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteStringToArray(8, this->required_output_fields(i), target);
+    target = stream->WriteString(8, s, target);
   }
 
   // int32 queue_size = 9;
   if (this->queue_size() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(9, this->queue_size(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(9, this->_internal_queue_size(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ProcessingParams)
   return target;
@@ -3553,42 +2860,37 @@ size_t ProcessingParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ProcessingParams)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated string required_output_fields = 8;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->required_output_fields_size());
-  for (int i = 0, n = this->required_output_fields_size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(required_output_fields_.size());
+  for (int i = 0, n = required_output_fields_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      this->required_output_fields(i));
+      required_output_fields_.Get(i));
   }
 
   // int32 reader_threads = 2 [deprecated = true];
   if (this->reader_threads() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->reader_threads());
+        this->_internal_reader_threads());
   }
 
   // int32 worker_threads = 3;
   if (this->worker_threads() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->worker_threads());
+        this->_internal_worker_threads());
   }
 
   // int32 minibatch_size = 4;
   if (this->minibatch_size() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->minibatch_size());
+        this->_internal_minibatch_size());
   }
 
   // bool readers_keep_empty = 1 [deprecated = true];
@@ -3610,16 +2912,20 @@ size_t ProcessingParams::ByteSizeLong() const {
   if (this->num_items_per_epoch() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->num_items_per_epoch());
+        this->_internal_num_items_per_epoch());
   }
 
   // int32 queue_size = 9;
   if (this->queue_size() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->queue_size());
+        this->_internal_queue_size());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -3649,28 +2955,28 @@ void ProcessingParams::MergeFrom(const ProcessingParams& from) {
 
   required_output_fields_.MergeFrom(from.required_output_fields_);
   if (from.reader_threads() != 0) {
-    set_reader_threads(from.reader_threads());
+    _internal_set_reader_threads(from._internal_reader_threads());
   }
   if (from.worker_threads() != 0) {
-    set_worker_threads(from.worker_threads());
+    _internal_set_worker_threads(from._internal_worker_threads());
   }
   if (from.minibatch_size() != 0) {
-    set_minibatch_size(from.minibatch_size());
+    _internal_set_minibatch_size(from._internal_minibatch_size());
   }
   if (from.readers_keep_empty() != 0) {
-    set_readers_keep_empty(from.readers_keep_empty());
+    _internal_set_readers_keep_empty(from._internal_readers_keep_empty());
   }
   if (from.continuous() != 0) {
-    set_continuous(from.continuous());
+    _internal_set_continuous(from._internal_continuous());
   }
   if (from.shuffle() != 0) {
-    set_shuffle(from.shuffle());
+    _internal_set_shuffle(from._internal_shuffle());
   }
   if (from.num_items_per_epoch() != 0) {
-    set_num_items_per_epoch(from.num_items_per_epoch());
+    _internal_set_num_items_per_epoch(from._internal_num_items_per_epoch());
   }
   if (from.queue_size() != 0) {
-    set_queue_size(from.queue_size());
+    _internal_set_queue_size(from._internal_queue_size());
   }
 }
 
@@ -3695,7 +3001,7 @@ bool ProcessingParams::IsInitialized() const {
 void ProcessingParams::InternalSwap(ProcessingParams* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  required_output_fields_.InternalSwap(CastToBase(&other->required_output_fields_));
+  required_output_fields_.InternalSwap(&other->required_output_fields_);
   swap(reader_threads_, other->reader_threads_);
   swap(worker_threads_, other->worker_threads_);
   swap(minibatch_size_, other->minibatch_size_);
@@ -3731,11 +3037,11 @@ ImageCropTransform::ImageCropTransform(const ImageCropTransform& from)
       downsample_size_(from.downsample_size_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   crop_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.crop_type().empty()) {
+  if (!from._internal_crop_type().empty()) {
     crop_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.crop_type_);
   }
   test_crop_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.test_crop_type().empty()) {
+  if (!from._internal_test_crop_type().empty()) {
     test_crop_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.test_crop_type_);
   }
   ::memcpy(&crop_size_pixel_stride_, &from.crop_size_pixel_stride_,
@@ -3788,7 +3094,6 @@ void ImageCropTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ImageCropTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -3799,34 +3104,38 @@ const char* ImageCropTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // string crop_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_crop_type(), ptr, ctx, "ImageCropTransform.crop_type");
+          auto str = _internal_mutable_crop_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ImageCropTransform.crop_type"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string test_crop_type = 2 [deprecated = true];
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_test_crop_type(), ptr, ctx, "ImageCropTransform.test_crop_type");
+          auto str = _internal_mutable_test_crop_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ImageCropTransform.test_crop_type"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // repeated int32 crop_size = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(mutable_crop_size(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_crop_size(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24) {
-          add_crop_size(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          _internal_add_crop_size(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // repeated int32 downsample_size = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(mutable_downsample_size(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_downsample_size(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32) {
-          add_downsample_size(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          _internal_add_downsample_size(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3877,229 +3186,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ImageCropTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ImageCropTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string crop_type = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_crop_type()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->crop_type().data(), static_cast<int>(this->crop_type().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ImageCropTransform.crop_type"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // string test_crop_type = 2 [deprecated = true];
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_test_crop_type()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->test_crop_type().data(), static_cast<int>(this->test_crop_type().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ImageCropTransform.test_crop_type"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated int32 crop_size = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, this->mutable_crop_size())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 1, 26u, input, this->mutable_crop_size())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated int32 downsample_size = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, this->mutable_downsample_size())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 1, 34u, input, this->mutable_downsample_size())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 crop_size_pixel_stride = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &crop_size_pixel_stride_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool skip_convert_rgb = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (56 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &skip_convert_rgb_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool skip_resize = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (64 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &skip_resize_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool skip_crop = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (72 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &skip_crop_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ImageCropTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ImageCropTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ImageCropTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ImageCropTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string crop_type = 1;
-  if (this->crop_type().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->crop_type().data(), static_cast<int>(this->crop_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ImageCropTransform.crop_type");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->crop_type(), output);
-  }
-
-  // string test_crop_type = 2 [deprecated = true];
-  if (this->test_crop_type().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->test_crop_type().data(), static_cast<int>(this->test_crop_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ImageCropTransform.test_crop_type");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->test_crop_type(), output);
-  }
-
-  // repeated int32 crop_size = 3;
-  if (this->crop_size_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(3, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_crop_size_cached_byte_size_.load(
-        std::memory_order_relaxed));
-  }
-  for (int i = 0, n = this->crop_size_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32NoTag(
-      this->crop_size(i), output);
-  }
-
-  // repeated int32 downsample_size = 4;
-  if (this->downsample_size_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(4, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_downsample_size_cached_byte_size_.load(
-        std::memory_order_relaxed));
-  }
-  for (int i = 0, n = this->downsample_size_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32NoTag(
-      this->downsample_size(i), output);
-  }
-
-  // int32 crop_size_pixel_stride = 5;
-  if (this->crop_size_pixel_stride() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(5, this->crop_size_pixel_stride(), output);
-  }
-
-  // bool skip_convert_rgb = 7;
-  if (this->skip_convert_rgb() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(7, this->skip_convert_rgb(), output);
-  }
-
-  // bool skip_resize = 8;
-  if (this->skip_resize() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(8, this->skip_resize(), output);
-  }
-
-  // bool skip_crop = 9;
-  if (this->skip_crop() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(9, this->skip_crop(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ImageCropTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ImageCropTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ImageCropTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ImageCropTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4107,74 +3196,68 @@ void ImageCropTransform::SerializeWithCachedSizes(
   // string crop_type = 1;
   if (this->crop_type().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->crop_type().data(), static_cast<int>(this->crop_type().length()),
+      this->_internal_crop_type().data(), static_cast<int>(this->_internal_crop_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ImageCropTransform.crop_type");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->crop_type(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_crop_type(), target);
   }
 
   // string test_crop_type = 2 [deprecated = true];
   if (this->test_crop_type().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->test_crop_type().data(), static_cast<int>(this->test_crop_type().length()),
+      this->_internal_test_crop_type().data(), static_cast<int>(this->_internal_test_crop_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ImageCropTransform.test_crop_type");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->test_crop_type(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_test_crop_type(), target);
   }
 
   // repeated int32 crop_size = 3;
-  if (this->crop_size_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      3,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _crop_size_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteInt32NoTagToArray(this->crop_size_, target);
+  {
+    int byte_size = _crop_size_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteInt32Packed(
+          3, _internal_crop_size(), byte_size, target);
+    }
   }
 
   // repeated int32 downsample_size = 4;
-  if (this->downsample_size_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      4,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _downsample_size_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteInt32NoTagToArray(this->downsample_size_, target);
+  {
+    int byte_size = _downsample_size_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteInt32Packed(
+          4, _internal_downsample_size(), byte_size, target);
+    }
   }
 
   // int32 crop_size_pixel_stride = 5;
   if (this->crop_size_pixel_stride() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->crop_size_pixel_stride(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_crop_size_pixel_stride(), target);
   }
 
   // bool skip_convert_rgb = 7;
   if (this->skip_convert_rgb() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(7, this->skip_convert_rgb(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(7, this->_internal_skip_convert_rgb(), target);
   }
 
   // bool skip_resize = 8;
   if (this->skip_resize() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->skip_resize(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->_internal_skip_resize(), target);
   }
 
   // bool skip_crop = 9;
   if (this->skip_crop() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(9, this->skip_crop(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(9, this->_internal_skip_crop(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ImageCropTransform)
   return target;
@@ -4184,11 +3267,6 @@ size_t ImageCropTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ImageCropTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4227,21 +3305,21 @@ size_t ImageCropTransform::ByteSizeLong() const {
   if (this->crop_type().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->crop_type());
+        this->_internal_crop_type());
   }
 
   // string test_crop_type = 2 [deprecated = true];
   if (this->test_crop_type().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->test_crop_type());
+        this->_internal_test_crop_type());
   }
 
   // int32 crop_size_pixel_stride = 5;
   if (this->crop_size_pixel_stride() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->crop_size_pixel_stride());
+        this->_internal_crop_size_pixel_stride());
   }
 
   // bool skip_convert_rgb = 7;
@@ -4259,6 +3337,10 @@ size_t ImageCropTransform::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -4297,16 +3379,16 @@ void ImageCropTransform::MergeFrom(const ImageCropTransform& from) {
     test_crop_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.test_crop_type_);
   }
   if (from.crop_size_pixel_stride() != 0) {
-    set_crop_size_pixel_stride(from.crop_size_pixel_stride());
+    _internal_set_crop_size_pixel_stride(from._internal_crop_size_pixel_stride());
   }
   if (from.skip_convert_rgb() != 0) {
-    set_skip_convert_rgb(from.skip_convert_rgb());
+    _internal_set_skip_convert_rgb(from._internal_skip_convert_rgb());
   }
   if (from.skip_resize() != 0) {
-    set_skip_resize(from.skip_resize());
+    _internal_set_skip_resize(from._internal_skip_resize());
   }
   if (from.skip_crop() != 0) {
-    set_skip_crop(from.skip_crop());
+    _internal_set_skip_crop(from._internal_skip_crop());
   }
 }
 
@@ -4400,7 +3482,6 @@ void SavedOutputParams::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* SavedOutputParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -4434,83 +3515,22 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SavedOutputParams::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:SavedOutputParams)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // bool saved_output_load_databatch = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &saved_output_load_databatch_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:SavedOutputParams)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:SavedOutputParams)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SavedOutputParams::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:SavedOutputParams)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool saved_output_load_databatch = 1;
-  if (this->saved_output_load_databatch() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(1, this->saved_output_load_databatch(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:SavedOutputParams)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* SavedOutputParams::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SavedOutputParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:SavedOutputParams)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool saved_output_load_databatch = 1;
   if (this->saved_output_load_databatch() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->saved_output_load_databatch(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_saved_output_load_databatch(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SavedOutputParams)
   return target;
@@ -4520,11 +3540,6 @@ size_t SavedOutputParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:SavedOutputParams)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4534,6 +3549,10 @@ size_t SavedOutputParams::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -4562,7 +3581,7 @@ void SavedOutputParams::MergeFrom(const SavedOutputParams& from) {
   (void) cached_has_bits;
 
   if (from.saved_output_load_databatch() != 0) {
-    set_saved_output_load_databatch(from.saved_output_load_databatch());
+    _internal_set_saved_output_load_databatch(from._internal_saved_output_load_databatch());
   }
 }
 
@@ -4613,11 +3632,11 @@ MultiDataset::MultiDataset(const MultiDataset& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   dataset_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.dataset_name().empty()) {
+  if (!from._internal_dataset_name().empty()) {
     dataset_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.dataset_name_);
   }
   saved_output_layer_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.saved_output_layer().empty()) {
+  if (!from._internal_saved_output_layer().empty()) {
     saved_output_layer_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.saved_output_layer_);
   }
   ::memcpy(&sample_rate_, &from.sample_rate_,
@@ -4668,7 +3687,6 @@ void MultiDataset::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* MultiDataset::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -4679,7 +3697,9 @@ const char* MultiDataset::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
       // string dataset_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_dataset_name(), ptr, ctx, "MultiDataset.dataset_name");
+          auto str = _internal_mutable_dataset_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "MultiDataset.dataset_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4700,7 +3720,9 @@ const char* MultiDataset::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
       // string saved_output_layer = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_saved_output_layer(), ptr, ctx, "MultiDataset.saved_output_layer");
+          auto str = _internal_mutable_saved_output_layer();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "MultiDataset.saved_output_layer"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4723,139 +3745,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool MultiDataset::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:MultiDataset)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string dataset_name = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_dataset_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "MultiDataset.dataset_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // float sample_rate = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &sample_rate_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 saved_output_eid = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &saved_output_eid_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string saved_output_layer = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_saved_output_layer()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->saved_output_layer().data(), static_cast<int>(this->saved_output_layer().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "MultiDataset.saved_output_layer"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:MultiDataset)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:MultiDataset)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void MultiDataset::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:MultiDataset)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string dataset_name = 1;
-  if (this->dataset_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "MultiDataset.dataset_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->dataset_name(), output);
-  }
-
-  // float sample_rate = 2;
-  if (!(this->sample_rate() <= 0 && this->sample_rate() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->sample_rate(), output);
-  }
-
-  // int32 saved_output_eid = 3;
-  if (this->saved_output_eid() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(3, this->saved_output_eid(), output);
-  }
-
-  // string saved_output_layer = 4;
-  if (this->saved_output_layer().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->saved_output_layer().data(), static_cast<int>(this->saved_output_layer().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "MultiDataset.saved_output_layer");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->saved_output_layer(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:MultiDataset)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* MultiDataset::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* MultiDataset::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:MultiDataset)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4863,38 +3755,38 @@ void MultiDataset::SerializeWithCachedSizes(
   // string dataset_name = 1;
   if (this->dataset_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
+      this->_internal_dataset_name().data(), static_cast<int>(this->_internal_dataset_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "MultiDataset.dataset_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->dataset_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_dataset_name(), target);
   }
 
   // float sample_rate = 2;
   if (!(this->sample_rate() <= 0 && this->sample_rate() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->sample_rate(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_sample_rate(), target);
   }
 
   // int32 saved_output_eid = 3;
   if (this->saved_output_eid() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->saved_output_eid(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_saved_output_eid(), target);
   }
 
   // string saved_output_layer = 4;
   if (this->saved_output_layer().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->saved_output_layer().data(), static_cast<int>(this->saved_output_layer().length()),
+      this->_internal_saved_output_layer().data(), static_cast<int>(this->_internal_saved_output_layer().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "MultiDataset.saved_output_layer");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->saved_output_layer(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_saved_output_layer(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:MultiDataset)
   return target;
@@ -4904,11 +3796,6 @@ size_t MultiDataset::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:MultiDataset)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4917,14 +3804,14 @@ size_t MultiDataset::ByteSizeLong() const {
   if (this->dataset_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->dataset_name());
+        this->_internal_dataset_name());
   }
 
   // string saved_output_layer = 4;
   if (this->saved_output_layer().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->saved_output_layer());
+        this->_internal_saved_output_layer());
   }
 
   // float sample_rate = 2;
@@ -4936,9 +3823,13 @@ size_t MultiDataset::ByteSizeLong() const {
   if (this->saved_output_eid() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->saved_output_eid());
+        this->_internal_saved_output_eid());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -4975,10 +3866,10 @@ void MultiDataset::MergeFrom(const MultiDataset& from) {
     saved_output_layer_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.saved_output_layer_);
   }
   if (!(from.sample_rate() <= 0 && from.sample_rate() >= 0)) {
-    set_sample_rate(from.sample_rate());
+    _internal_set_sample_rate(from._internal_sample_rate());
   }
   if (from.saved_output_eid() != 0) {
-    set_saved_output_eid(from.saved_output_eid());
+    _internal_set_saved_output_eid(from._internal_saved_output_eid());
   }
 }
 
@@ -5067,7 +3958,6 @@ void LabelSetter::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LabelSetter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -5078,10 +3968,10 @@ const char* LabelSetter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
       // repeated int64 hardcoded_labels = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt64Parser(mutable_hardcoded_labels(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt64Parser(_internal_mutable_hardcoded_labels(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
-          add_hardcoded_labels(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          _internal_add_hardcoded_labels(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5104,100 +3994,25 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LabelSetter::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LabelSetter)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated int64 hardcoded_labels = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, this->mutable_hardcoded_labels())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 1, 10u, input, this->mutable_hardcoded_labels())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LabelSetter)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LabelSetter)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LabelSetter::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LabelSetter)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated int64 hardcoded_labels = 1;
-  if (this->hardcoded_labels_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(1, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_hardcoded_labels_cached_byte_size_.load(
-        std::memory_order_relaxed));
-  }
-  for (int i = 0, n = this->hardcoded_labels_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64NoTag(
-      this->hardcoded_labels(i), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LabelSetter)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LabelSetter::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LabelSetter::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LabelSetter)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated int64 hardcoded_labels = 1;
-  if (this->hardcoded_labels_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      1,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _hardcoded_labels_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteInt64NoTagToArray(this->hardcoded_labels_, target);
+  {
+    int byte_size = _hardcoded_labels_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteInt64Packed(
+          1, _internal_hardcoded_labels(), byte_size, target);
+    }
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LabelSetter)
   return target;
@@ -5207,11 +4022,6 @@ size_t LabelSetter::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LabelSetter)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5231,6 +4041,10 @@ size_t LabelSetter::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -5326,27 +4140,27 @@ LabelMapper::LabelMapper(const LabelMapper& from)
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   catid_map_.MergeFrom(from.catid_map_);
   dataset_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.dataset_name().empty()) {
+  if (!from._internal_dataset_name().empty()) {
     dataset_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.dataset_name_);
   }
   type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.type().empty()) {
+  if (!from._internal_type().empty()) {
     type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.type_);
   }
   not_in_output_aiid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.not_in_output_aiid().empty()) {
+  if (!from._internal_not_in_output_aiid().empty()) {
     not_in_output_aiid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.not_in_output_aiid_);
   }
   aiid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.aiid().empty()) {
+  if (!from._internal_aiid().empty()) {
     aiid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.aiid_);
   }
   src_dataset_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.src_dataset().empty()) {
+  if (!from._internal_src_dataset().empty()) {
     src_dataset_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.src_dataset_);
   }
   dst_dataset_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.dst_dataset().empty()) {
+  if (!from._internal_dst_dataset().empty()) {
     dst_dataset_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.dst_dataset_);
   }
   // @@protoc_insertion_point(copy_constructor:LabelMapper)
@@ -5401,7 +4215,6 @@ void LabelMapper::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LabelMapper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -5412,42 +4225,54 @@ const char* LabelMapper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
       // string dataset_name = 1 [deprecated = true];
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_dataset_name(), ptr, ctx, "LabelMapper.dataset_name");
+          auto str = _internal_mutable_dataset_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelMapper.dataset_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string type = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_type(), ptr, ctx, "LabelMapper.type");
+          auto str = _internal_mutable_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelMapper.type"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string not_in_output_aiid = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_not_in_output_aiid(), ptr, ctx, "LabelMapper.not_in_output_aiid");
+          auto str = _internal_mutable_not_in_output_aiid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelMapper.not_in_output_aiid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string aiid = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_aiid(), ptr, ctx, "LabelMapper.aiid");
+          auto str = _internal_mutable_aiid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelMapper.aiid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string src_dataset = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_src_dataset(), ptr, ctx, "LabelMapper.src_dataset");
+          auto str = _internal_mutable_src_dataset();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelMapper.src_dataset"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string dst_dataset = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_dst_dataset(), ptr, ctx, "LabelMapper.dst_dataset");
+          auto str = _internal_mutable_dst_dataset();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelMapper.dst_dataset"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5460,7 +4285,7 @@ const char* LabelMapper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
             ptr = ctx->ParseMessage(&catid_map_, ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 58);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -5482,274 +4307,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LabelMapper::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LabelMapper)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string dataset_name = 1 [deprecated = true];
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_dataset_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelMapper.dataset_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // string type = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_type()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->type().data(), static_cast<int>(this->type().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelMapper.type"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string not_in_output_aiid = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_not_in_output_aiid()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->not_in_output_aiid().data(), static_cast<int>(this->not_in_output_aiid().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelMapper.not_in_output_aiid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string aiid = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_aiid()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->aiid().data(), static_cast<int>(this->aiid().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelMapper.aiid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string src_dataset = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_src_dataset()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->src_dataset().data(), static_cast<int>(this->src_dataset().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelMapper.src_dataset"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string dst_dataset = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_dst_dataset()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->dst_dataset().data(), static_cast<int>(this->dst_dataset().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelMapper.dst_dataset"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<string, string> catid_map = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          LabelMapper_CatidMapEntry_DoNotUse::Parser< ::PROTOBUF_NAMESPACE_ID::internal::MapField<
-              LabelMapper_CatidMapEntry_DoNotUse,
-              std::string, std::string,
-              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-              0 >,
-            ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string > > parser(&catid_map_);
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            parser.key().data(), static_cast<int>(parser.key().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelMapper.CatidMapEntry.key"));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            parser.value().data(), static_cast<int>(parser.value().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelMapper.CatidMapEntry.value"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LabelMapper)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LabelMapper)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LabelMapper::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LabelMapper)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string dataset_name = 1 [deprecated = true];
-  if (this->dataset_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelMapper.dataset_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->dataset_name(), output);
-  }
-
-  // string type = 2;
-  if (this->type().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->type().data(), static_cast<int>(this->type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelMapper.type");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->type(), output);
-  }
-
-  // string not_in_output_aiid = 3;
-  if (this->not_in_output_aiid().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->not_in_output_aiid().data(), static_cast<int>(this->not_in_output_aiid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelMapper.not_in_output_aiid");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->not_in_output_aiid(), output);
-  }
-
-  // string aiid = 4;
-  if (this->aiid().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->aiid().data(), static_cast<int>(this->aiid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelMapper.aiid");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->aiid(), output);
-  }
-
-  // string src_dataset = 5;
-  if (this->src_dataset().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->src_dataset().data(), static_cast<int>(this->src_dataset().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelMapper.src_dataset");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->src_dataset(), output);
-  }
-
-  // string dst_dataset = 6;
-  if (this->dst_dataset().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dst_dataset().data(), static_cast<int>(this->dst_dataset().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelMapper.dst_dataset");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->dst_dataset(), output);
-  }
-
-  // map<string, string> catid_map = 7;
-  if (!this->catid_map().empty()) {
-    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
-        ConstPtr;
-    typedef ConstPtr SortItem;
-    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
-    struct Utf8Check {
-      static void Check(ConstPtr p) {
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->first.data(), static_cast<int>(p->first.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "LabelMapper.CatidMapEntry.key");
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->second.data(), static_cast<int>(p->second.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "LabelMapper.CatidMapEntry.value");
-      }
-    };
-
-    if (output->IsSerializationDeterministic() &&
-        this->catid_map().size() > 1) {
-      ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->catid_map().size()]);
-      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
-      size_type n = 0;
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->catid_map().begin();
-          it != this->catid_map().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      for (size_type i = 0; i < n; i++) {
-        LabelMapper_CatidMapEntry_DoNotUse::Funcs::SerializeToCodedStream(7, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, output);
-        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
-      }
-    } else {
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->catid_map().begin();
-          it != this->catid_map().end(); ++it) {
-        LabelMapper_CatidMapEntry_DoNotUse::Funcs::SerializeToCodedStream(7, it->first, it->second, output);
-        Utf8Check::Check(&(*it));
-      }
-    }
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LabelMapper)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LabelMapper::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LabelMapper::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LabelMapper)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5757,71 +4317,65 @@ void LabelMapper::SerializeWithCachedSizes(
   // string dataset_name = 1 [deprecated = true];
   if (this->dataset_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
+      this->_internal_dataset_name().data(), static_cast<int>(this->_internal_dataset_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelMapper.dataset_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->dataset_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_dataset_name(), target);
   }
 
   // string type = 2;
   if (this->type().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->type().data(), static_cast<int>(this->type().length()),
+      this->_internal_type().data(), static_cast<int>(this->_internal_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelMapper.type");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->type(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_type(), target);
   }
 
   // string not_in_output_aiid = 3;
   if (this->not_in_output_aiid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->not_in_output_aiid().data(), static_cast<int>(this->not_in_output_aiid().length()),
+      this->_internal_not_in_output_aiid().data(), static_cast<int>(this->_internal_not_in_output_aiid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelMapper.not_in_output_aiid");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->not_in_output_aiid(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_not_in_output_aiid(), target);
   }
 
   // string aiid = 4;
   if (this->aiid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->aiid().data(), static_cast<int>(this->aiid().length()),
+      this->_internal_aiid().data(), static_cast<int>(this->_internal_aiid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelMapper.aiid");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->aiid(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_aiid(), target);
   }
 
   // string src_dataset = 5;
   if (this->src_dataset().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->src_dataset().data(), static_cast<int>(this->src_dataset().length()),
+      this->_internal_src_dataset().data(), static_cast<int>(this->_internal_src_dataset().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelMapper.src_dataset");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        5, this->src_dataset(), target);
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_src_dataset(), target);
   }
 
   // string dst_dataset = 6;
   if (this->dst_dataset().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dst_dataset().data(), static_cast<int>(this->dst_dataset().length()),
+      this->_internal_dst_dataset().data(), static_cast<int>(this->_internal_dst_dataset().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelMapper.dst_dataset");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        6, this->dst_dataset(), target);
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_dst_dataset(), target);
   }
 
   // map<string, string> catid_map = 7;
-  if (!this->catid_map().empty()) {
+  if (!this->_internal_catid_map().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
@@ -5839,35 +4393,35 @@ void LabelMapper::SerializeWithCachedSizes(
       }
     };
 
-    if (false &&
-        this->catid_map().size() > 1) {
+    if (stream->IsSerializationDeterministic() &&
+        this->_internal_catid_map().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->catid_map().size()]);
+          new SortItem[this->_internal_catid_map().size()]);
       typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
       size_type n = 0;
       for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->catid_map().begin();
-          it != this->catid_map().end(); ++it, ++n) {
+          it = this->_internal_catid_map().begin();
+          it != this->_internal_catid_map().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        target = LabelMapper_CatidMapEntry_DoNotUse::Funcs::SerializeToArray(7, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target);
+        target = LabelMapper_CatidMapEntry_DoNotUse::Funcs::InternalSerialize(7, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->catid_map().begin();
-          it != this->catid_map().end(); ++it) {
-        target = LabelMapper_CatidMapEntry_DoNotUse::Funcs::SerializeToArray(7, it->first, it->second, target);
+          it = this->_internal_catid_map().begin();
+          it != this->_internal_catid_map().end(); ++it) {
+        target = LabelMapper_CatidMapEntry_DoNotUse::Funcs::InternalSerialize(7, it->first, it->second, target, stream);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LabelMapper)
   return target;
@@ -5877,21 +4431,16 @@ size_t LabelMapper::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LabelMapper)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // map<string, string> catid_map = 7;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->catid_map_size());
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_catid_map_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-      it = this->catid_map().begin();
-      it != this->catid_map().end(); ++it) {
+      it = this->_internal_catid_map().begin();
+      it != this->_internal_catid_map().end(); ++it) {
     total_size += LabelMapper_CatidMapEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
@@ -5899,44 +4448,48 @@ size_t LabelMapper::ByteSizeLong() const {
   if (this->dataset_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->dataset_name());
+        this->_internal_dataset_name());
   }
 
   // string type = 2;
   if (this->type().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->type());
+        this->_internal_type());
   }
 
   // string not_in_output_aiid = 3;
   if (this->not_in_output_aiid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->not_in_output_aiid());
+        this->_internal_not_in_output_aiid());
   }
 
   // string aiid = 4;
   if (this->aiid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->aiid());
+        this->_internal_aiid());
   }
 
   // string src_dataset = 5;
   if (this->src_dataset().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->src_dataset());
+        this->_internal_src_dataset());
   }
 
   // string dst_dataset = 6;
   if (this->dst_dataset().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->dst_dataset());
+        this->_internal_dst_dataset());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -6053,7 +4606,7 @@ LabelSmoother::LabelSmoother(const LabelSmoother& from)
       log_scale_(from.log_scale_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   mode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.mode().empty()) {
+  if (!from._internal_mode().empty()) {
     mode_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.mode_);
   }
   num_labels_ = from.num_labels_;
@@ -6098,7 +4651,6 @@ void LabelSmoother::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LabelSmoother::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -6109,37 +4661,39 @@ const char* LabelSmoother::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
       // string mode = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_mode(), ptr, ctx, "LabelSmoother.mode");
+          auto str = _internal_mutable_mode();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelSmoother.mode"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // repeated float constant_range = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_constant_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_constant_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21) {
-          add_constant_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_constant_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated float linear_scale = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_linear_scale(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_linear_scale(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 29) {
-          add_linear_scale(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_linear_scale(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated float log_scale = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_log_scale(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_log_scale(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 37) {
-          add_log_scale(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_log_scale(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
@@ -6169,171 +4723,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LabelSmoother::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LabelSmoother)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string mode = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_mode()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->mode().data(), static_cast<int>(this->mode().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelSmoother.mode"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated float constant_range = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_constant_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 18u, input, this->mutable_constant_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated float linear_scale = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_linear_scale())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 26u, input, this->mutable_linear_scale())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated float log_scale = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_log_scale())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 34u, input, this->mutable_log_scale())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int64 num_labels = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &num_labels_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LabelSmoother)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LabelSmoother)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LabelSmoother::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LabelSmoother)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string mode = 1;
-  if (this->mode().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->mode().data(), static_cast<int>(this->mode().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelSmoother.mode");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->mode(), output);
-  }
-
-  // repeated float constant_range = 2;
-  if (this->constant_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(2, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_constant_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->constant_range().data(), this->constant_range_size(), output);
-  }
-
-  // repeated float linear_scale = 3;
-  if (this->linear_scale_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(3, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_linear_scale_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->linear_scale().data(), this->linear_scale_size(), output);
-  }
-
-  // repeated float log_scale = 4;
-  if (this->log_scale_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(4, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_log_scale_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->log_scale().data(), this->log_scale_size(), output);
-  }
-
-  // int64 num_labels = 5;
-  if (this->num_labels() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(5, this->num_labels(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LabelSmoother)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LabelSmoother::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LabelSmoother::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LabelSmoother)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -6341,61 +4733,37 @@ void LabelSmoother::SerializeWithCachedSizes(
   // string mode = 1;
   if (this->mode().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->mode().data(), static_cast<int>(this->mode().length()),
+      this->_internal_mode().data(), static_cast<int>(this->_internal_mode().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelSmoother.mode");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->mode(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_mode(), target);
   }
 
   // repeated float constant_range = 2;
-  if (this->constant_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      2,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _constant_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->constant_range_, target);
+  if (this->_internal_constant_range_size() > 0) {
+    target = stream->WriteFixedPacked(2, _internal_constant_range(), target);
   }
 
   // repeated float linear_scale = 3;
-  if (this->linear_scale_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      3,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _linear_scale_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->linear_scale_, target);
+  if (this->_internal_linear_scale_size() > 0) {
+    target = stream->WriteFixedPacked(3, _internal_linear_scale(), target);
   }
 
   // repeated float log_scale = 4;
-  if (this->log_scale_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      4,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _log_scale_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->log_scale_, target);
+  if (this->_internal_log_scale_size() > 0) {
+    target = stream->WriteFixedPacked(4, _internal_log_scale(), target);
   }
 
   // int64 num_labels = 5;
   if (this->num_labels() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(5, this->num_labels(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(5, this->_internal_num_labels(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LabelSmoother)
   return target;
@@ -6405,18 +4773,13 @@ size_t LabelSmoother::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LabelSmoother)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float constant_range = 2;
   {
-    unsigned int count = static_cast<unsigned int>(this->constant_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_constant_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -6431,7 +4794,7 @@ size_t LabelSmoother::ByteSizeLong() const {
 
   // repeated float linear_scale = 3;
   {
-    unsigned int count = static_cast<unsigned int>(this->linear_scale_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_linear_scale_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -6446,7 +4809,7 @@ size_t LabelSmoother::ByteSizeLong() const {
 
   // repeated float log_scale = 4;
   {
-    unsigned int count = static_cast<unsigned int>(this->log_scale_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_log_scale_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -6463,16 +4826,20 @@ size_t LabelSmoother::ByteSizeLong() const {
   if (this->mode().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->mode());
+        this->_internal_mode());
   }
 
   // int64 num_labels = 5;
   if (this->num_labels() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->num_labels());
+        this->_internal_num_labels());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -6508,7 +4875,7 @@ void LabelSmoother::MergeFrom(const LabelSmoother& from) {
     mode_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.mode_);
   }
   if (from.num_labels() != 0) {
-    set_num_labels(from.num_labels());
+    _internal_set_num_labels(from._internal_num_labels());
   }
 }
 
@@ -6597,7 +4964,6 @@ void LabelDropper::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LabelDropper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -6608,10 +4974,10 @@ const char* LabelDropper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
       // repeated int64 drop_labels = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt64Parser(mutable_drop_labels(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt64Parser(_internal_mutable_drop_labels(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
-          add_drop_labels(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          _internal_add_drop_labels(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6634,100 +5000,25 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LabelDropper::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LabelDropper)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated int64 drop_labels = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, this->mutable_drop_labels())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 1, 10u, input, this->mutable_drop_labels())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LabelDropper)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LabelDropper)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LabelDropper::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LabelDropper)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated int64 drop_labels = 1;
-  if (this->drop_labels_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(1, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_drop_labels_cached_byte_size_.load(
-        std::memory_order_relaxed));
-  }
-  for (int i = 0, n = this->drop_labels_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64NoTag(
-      this->drop_labels(i), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LabelDropper)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LabelDropper::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LabelDropper::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LabelDropper)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated int64 drop_labels = 1;
-  if (this->drop_labels_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      1,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _drop_labels_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteInt64NoTagToArray(this->drop_labels_, target);
+  {
+    int byte_size = _drop_labels_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteInt64Packed(
+          1, _internal_drop_labels(), byte_size, target);
+    }
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LabelDropper)
   return target;
@@ -6737,11 +5028,6 @@ size_t LabelDropper::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LabelDropper)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6761,6 +5047,10 @@ size_t LabelDropper::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -6878,7 +5168,6 @@ void OCRCropTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* OCRCropTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -6919,106 +5208,28 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool OCRCropTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:OCRCropTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int64 height = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &height_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int64 width = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &width_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:OCRCropTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:OCRCropTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void OCRCropTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:OCRCropTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int64 height = 1;
-  if (this->height() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(1, this->height(), output);
-  }
-
-  // int64 width = 2;
-  if (this->width() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(2, this->width(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:OCRCropTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* OCRCropTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* OCRCropTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:OCRCropTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 height = 1;
   if (this->height() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->height(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_height(), target);
   }
 
   // int64 width = 2;
   if (this->width() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->width(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_width(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:OCRCropTransform)
   return target;
@@ -7028,11 +5239,6 @@ size_t OCRCropTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:OCRCropTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7041,16 +5247,20 @@ size_t OCRCropTransform::ByteSizeLong() const {
   if (this->height() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->height());
+        this->_internal_height());
   }
 
   // int64 width = 2;
   if (this->width() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->width());
+        this->_internal_width());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -7079,10 +5289,10 @@ void OCRCropTransform::MergeFrom(const OCRCropTransform& from) {
   (void) cached_has_bits;
 
   if (from.height() != 0) {
-    set_height(from.height());
+    _internal_set_height(from._internal_height());
   }
   if (from.width() != 0) {
-    set_width(from.width());
+    _internal_set_width(from._internal_width());
   }
 }
 
@@ -7174,7 +5384,6 @@ void MaxNumLabelDropper::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* MaxNumLabelDropper::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -7215,106 +5424,28 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool MaxNumLabelDropper::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:MaxNumLabelDropper)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int64 max_num_labels = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &max_num_labels_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int64 min_num_labels = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &min_num_labels_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:MaxNumLabelDropper)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:MaxNumLabelDropper)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void MaxNumLabelDropper::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:MaxNumLabelDropper)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int64 max_num_labels = 1;
-  if (this->max_num_labels() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(1, this->max_num_labels(), output);
-  }
-
-  // int64 min_num_labels = 2;
-  if (this->min_num_labels() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(2, this->min_num_labels(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:MaxNumLabelDropper)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* MaxNumLabelDropper::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* MaxNumLabelDropper::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:MaxNumLabelDropper)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 max_num_labels = 1;
   if (this->max_num_labels() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->max_num_labels(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_max_num_labels(), target);
   }
 
   // int64 min_num_labels = 2;
   if (this->min_num_labels() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->min_num_labels(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_min_num_labels(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:MaxNumLabelDropper)
   return target;
@@ -7324,11 +5455,6 @@ size_t MaxNumLabelDropper::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:MaxNumLabelDropper)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7337,16 +5463,20 @@ size_t MaxNumLabelDropper::ByteSizeLong() const {
   if (this->max_num_labels() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->max_num_labels());
+        this->_internal_max_num_labels());
   }
 
   // int64 min_num_labels = 2;
   if (this->min_num_labels() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->min_num_labels());
+        this->_internal_min_num_labels());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -7375,10 +5505,10 @@ void MaxNumLabelDropper::MergeFrom(const MaxNumLabelDropper& from) {
   (void) cached_has_bits;
 
   if (from.max_num_labels() != 0) {
-    set_max_num_labels(from.max_num_labels());
+    _internal_set_max_num_labels(from._internal_max_num_labels());
   }
   if (from.min_num_labels() != 0) {
-    set_min_num_labels(from.min_num_labels());
+    _internal_set_min_num_labels(from._internal_min_num_labels());
   }
 }
 
@@ -7448,15 +5578,15 @@ LabelWeight::LabelWeight(const LabelWeight& from)
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   catid_const_weights_.MergeFrom(from.catid_const_weights_);
   catid_frequencies_file_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.catid_frequencies_file().empty()) {
+  if (!from._internal_catid_frequencies_file().empty()) {
     catid_frequencies_file_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.catid_frequencies_file_);
   }
   dataset_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.dataset_name().empty()) {
+  if (!from._internal_dataset_name().empty()) {
     dataset_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.dataset_name_);
   }
   split_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.split().empty()) {
+  if (!from._internal_split().empty()) {
     split_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.split_);
   }
   ::memcpy(&min_count_, &from.min_count_,
@@ -7511,7 +5641,6 @@ void LabelWeight::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LabelWeight::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -7522,7 +5651,9 @@ const char* LabelWeight::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
       // string catid_frequencies_file = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_catid_frequencies_file(), ptr, ctx, "LabelWeight.catid_frequencies_file");
+          auto str = _internal_mutable_catid_frequencies_file();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelWeight.catid_frequencies_file"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7556,7 +5687,7 @@ const char* LabelWeight::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
             ptr = ctx->ParseMessage(&catid_const_weights_, ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 42);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
       // float default_weight = 6;
@@ -7569,14 +5700,18 @@ const char* LabelWeight::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
       // string dataset_name = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_dataset_name(), ptr, ctx, "LabelWeight.dataset_name");
+          auto str = _internal_mutable_dataset_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelWeight.dataset_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string split = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_split(), ptr, ctx, "LabelWeight.split");
+          auto str = _internal_mutable_split();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LabelWeight.split"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7599,263 +5734,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LabelWeight::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LabelWeight)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string catid_frequencies_file = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_catid_frequencies_file()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->catid_frequencies_file().data(), static_cast<int>(this->catid_frequencies_file().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelWeight.catid_frequencies_file"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // float target_frequency = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &target_frequency_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int64 min_count = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &min_count_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool sqrt = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &sqrt_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<string, float> catid_const_weights = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          LabelWeight_CatidConstWeightsEntry_DoNotUse::Parser< ::PROTOBUF_NAMESPACE_ID::internal::MapField<
-              LabelWeight_CatidConstWeightsEntry_DoNotUse,
-              std::string, float,
-              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT,
-              0 >,
-            ::PROTOBUF_NAMESPACE_ID::Map< std::string, float > > parser(&catid_const_weights_);
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            parser.key().data(), static_cast<int>(parser.key().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelWeight.CatidConstWeightsEntry.key"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float default_weight = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (53 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &default_weight_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string dataset_name = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_dataset_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelWeight.dataset_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string split = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_split()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->split().data(), static_cast<int>(this->split().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LabelWeight.split"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LabelWeight)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LabelWeight)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LabelWeight::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LabelWeight)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string catid_frequencies_file = 1;
-  if (this->catid_frequencies_file().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->catid_frequencies_file().data(), static_cast<int>(this->catid_frequencies_file().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelWeight.catid_frequencies_file");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->catid_frequencies_file(), output);
-  }
-
-  // float target_frequency = 2;
-  if (!(this->target_frequency() <= 0 && this->target_frequency() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->target_frequency(), output);
-  }
-
-  // int64 min_count = 3;
-  if (this->min_count() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(3, this->min_count(), output);
-  }
-
-  // bool sqrt = 4;
-  if (this->sqrt() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(4, this->sqrt(), output);
-  }
-
-  // map<string, float> catid_const_weights = 5;
-  if (!this->catid_const_weights().empty()) {
-    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::const_pointer
-        ConstPtr;
-    typedef ConstPtr SortItem;
-    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
-    struct Utf8Check {
-      static void Check(ConstPtr p) {
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->first.data(), static_cast<int>(p->first.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "LabelWeight.CatidConstWeightsEntry.key");
-      }
-    };
-
-    if (output->IsSerializationDeterministic() &&
-        this->catid_const_weights().size() > 1) {
-      ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->catid_const_weights().size()]);
-      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::size_type size_type;
-      size_type n = 0;
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::const_iterator
-          it = this->catid_const_weights().begin();
-          it != this->catid_const_weights().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      for (size_type i = 0; i < n; i++) {
-        LabelWeight_CatidConstWeightsEntry_DoNotUse::Funcs::SerializeToCodedStream(5, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, output);
-        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
-      }
-    } else {
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::const_iterator
-          it = this->catid_const_weights().begin();
-          it != this->catid_const_weights().end(); ++it) {
-        LabelWeight_CatidConstWeightsEntry_DoNotUse::Funcs::SerializeToCodedStream(5, it->first, it->second, output);
-        Utf8Check::Check(&(*it));
-      }
-    }
-  }
-
-  // float default_weight = 6;
-  if (!(this->default_weight() <= 0 && this->default_weight() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(6, this->default_weight(), output);
-  }
-
-  // string dataset_name = 7;
-  if (this->dataset_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelWeight.dataset_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->dataset_name(), output);
-  }
-
-  // string split = 8;
-  if (this->split().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->split().data(), static_cast<int>(this->split().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LabelWeight.split");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->split(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LabelWeight)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LabelWeight::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LabelWeight::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LabelWeight)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -7863,31 +5744,33 @@ void LabelWeight::SerializeWithCachedSizes(
   // string catid_frequencies_file = 1;
   if (this->catid_frequencies_file().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->catid_frequencies_file().data(), static_cast<int>(this->catid_frequencies_file().length()),
+      this->_internal_catid_frequencies_file().data(), static_cast<int>(this->_internal_catid_frequencies_file().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelWeight.catid_frequencies_file");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->catid_frequencies_file(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_catid_frequencies_file(), target);
   }
 
   // float target_frequency = 2;
   if (!(this->target_frequency() <= 0 && this->target_frequency() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->target_frequency(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_target_frequency(), target);
   }
 
   // int64 min_count = 3;
   if (this->min_count() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->min_count(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_min_count(), target);
   }
 
   // bool sqrt = 4;
   if (this->sqrt() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->sqrt(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_sqrt(), target);
   }
 
   // map<string, float> catid_const_weights = 5;
-  if (!this->catid_const_weights().empty()) {
+  if (!this->_internal_catid_const_weights().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
@@ -7901,27 +5784,27 @@ void LabelWeight::SerializeWithCachedSizes(
       }
     };
 
-    if (false &&
-        this->catid_const_weights().size() > 1) {
+    if (stream->IsSerializationDeterministic() &&
+        this->_internal_catid_const_weights().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->catid_const_weights().size()]);
+          new SortItem[this->_internal_catid_const_weights().size()]);
       typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::size_type size_type;
       size_type n = 0;
       for (::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::const_iterator
-          it = this->catid_const_weights().begin();
-          it != this->catid_const_weights().end(); ++it, ++n) {
+          it = this->_internal_catid_const_weights().begin();
+          it != this->_internal_catid_const_weights().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        target = LabelWeight_CatidConstWeightsEntry_DoNotUse::Funcs::SerializeToArray(5, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target);
+        target = LabelWeight_CatidConstWeightsEntry_DoNotUse::Funcs::InternalSerialize(5, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::const_iterator
-          it = this->catid_const_weights().begin();
-          it != this->catid_const_weights().end(); ++it) {
-        target = LabelWeight_CatidConstWeightsEntry_DoNotUse::Funcs::SerializeToArray(5, it->first, it->second, target);
+          it = this->_internal_catid_const_weights().begin();
+          it != this->_internal_catid_const_weights().end(); ++it) {
+        target = LabelWeight_CatidConstWeightsEntry_DoNotUse::Funcs::InternalSerialize(5, it->first, it->second, target, stream);
         Utf8Check::Check(&(*it));
       }
     }
@@ -7929,34 +5812,33 @@ void LabelWeight::SerializeWithCachedSizes(
 
   // float default_weight = 6;
   if (!(this->default_weight() <= 0 && this->default_weight() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->default_weight(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->_internal_default_weight(), target);
   }
 
   // string dataset_name = 7;
   if (this->dataset_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
+      this->_internal_dataset_name().data(), static_cast<int>(this->_internal_dataset_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelWeight.dataset_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        7, this->dataset_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_dataset_name(), target);
   }
 
   // string split = 8;
   if (this->split().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->split().data(), static_cast<int>(this->split().length()),
+      this->_internal_split().data(), static_cast<int>(this->_internal_split().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LabelWeight.split");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        8, this->split(), target);
+    target = stream->WriteStringMaybeAliased(
+        8, this->_internal_split(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LabelWeight)
   return target;
@@ -7966,21 +5848,16 @@ size_t LabelWeight::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LabelWeight)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // map<string, float> catid_const_weights = 5;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->catid_const_weights_size());
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_catid_const_weights_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, float >::const_iterator
-      it = this->catid_const_weights().begin();
-      it != this->catid_const_weights().end(); ++it) {
+      it = this->_internal_catid_const_weights().begin();
+      it != this->_internal_catid_const_weights().end(); ++it) {
     total_size += LabelWeight_CatidConstWeightsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
@@ -7988,28 +5865,28 @@ size_t LabelWeight::ByteSizeLong() const {
   if (this->catid_frequencies_file().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->catid_frequencies_file());
+        this->_internal_catid_frequencies_file());
   }
 
   // string dataset_name = 7;
   if (this->dataset_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->dataset_name());
+        this->_internal_dataset_name());
   }
 
   // string split = 8;
   if (this->split().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->split());
+        this->_internal_split());
   }
 
   // int64 min_count = 3;
   if (this->min_count() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->min_count());
+        this->_internal_min_count());
   }
 
   // float target_frequency = 2;
@@ -8027,6 +5904,10 @@ size_t LabelWeight::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -8068,16 +5949,16 @@ void LabelWeight::MergeFrom(const LabelWeight& from) {
     split_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.split_);
   }
   if (from.min_count() != 0) {
-    set_min_count(from.min_count());
+    _internal_set_min_count(from._internal_min_count());
   }
   if (!(from.target_frequency() <= 0 && from.target_frequency() >= 0)) {
-    set_target_frequency(from.target_frequency());
+    _internal_set_target_frequency(from._internal_target_frequency());
   }
   if (from.sqrt() != 0) {
-    set_sqrt(from.sqrt());
+    _internal_set_sqrt(from._internal_sqrt());
   }
   if (!(from.default_weight() <= 0 && from.default_weight() >= 0)) {
-    set_default_weight(from.default_weight());
+    _internal_set_default_weight(from._internal_default_weight());
   }
 }
 
@@ -8172,7 +6053,6 @@ void LabelsFromBboxes::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LabelsFromBboxes::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -8206,83 +6086,22 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LabelsFromBboxes::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LabelsFromBboxes)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // bool set_background_label_zero = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &set_background_label_zero_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LabelsFromBboxes)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LabelsFromBboxes)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LabelsFromBboxes::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LabelsFromBboxes)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool set_background_label_zero = 1;
-  if (this->set_background_label_zero() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(1, this->set_background_label_zero(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LabelsFromBboxes)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LabelsFromBboxes::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LabelsFromBboxes::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LabelsFromBboxes)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool set_background_label_zero = 1;
   if (this->set_background_label_zero() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->set_background_label_zero(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_set_background_label_zero(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LabelsFromBboxes)
   return target;
@@ -8292,11 +6111,6 @@ size_t LabelsFromBboxes::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LabelsFromBboxes)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8306,6 +6120,10 @@ size_t LabelsFromBboxes::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -8334,7 +6152,7 @@ void LabelsFromBboxes::MergeFrom(const LabelsFromBboxes& from) {
   (void) cached_has_bits;
 
   if (from.set_background_label_zero() != 0) {
-    set_set_background_label_zero(from.set_background_label_zero());
+    _internal_set_set_background_label_zero(from._internal_set_background_label_zero());
   }
 }
 
@@ -8425,7 +6243,6 @@ void SSDRandomCropOperation::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* SSDRandomCropOperation::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -8501,221 +6318,58 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SSDRandomCropOperation::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:SSDRandomCropOperation)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // float min_object_covered = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &min_object_covered_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float min_aspect_ratio = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &min_aspect_ratio_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float max_aspect_ratio = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &max_aspect_ratio_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float min_area = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &min_area_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float max_area = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (45 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &max_area_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float overlap_thresh = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (53 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &overlap_thresh_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float random_coef = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (61 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &random_coef_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:SSDRandomCropOperation)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:SSDRandomCropOperation)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SSDRandomCropOperation::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:SSDRandomCropOperation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // float min_object_covered = 1;
-  if (!(this->min_object_covered() <= 0 && this->min_object_covered() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(1, this->min_object_covered(), output);
-  }
-
-  // float min_aspect_ratio = 2;
-  if (!(this->min_aspect_ratio() <= 0 && this->min_aspect_ratio() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->min_aspect_ratio(), output);
-  }
-
-  // float max_aspect_ratio = 3;
-  if (!(this->max_aspect_ratio() <= 0 && this->max_aspect_ratio() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->max_aspect_ratio(), output);
-  }
-
-  // float min_area = 4;
-  if (!(this->min_area() <= 0 && this->min_area() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->min_area(), output);
-  }
-
-  // float max_area = 5;
-  if (!(this->max_area() <= 0 && this->max_area() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(5, this->max_area(), output);
-  }
-
-  // float overlap_thresh = 6;
-  if (!(this->overlap_thresh() <= 0 && this->overlap_thresh() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(6, this->overlap_thresh(), output);
-  }
-
-  // float random_coef = 7;
-  if (!(this->random_coef() <= 0 && this->random_coef() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(7, this->random_coef(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:SSDRandomCropOperation)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* SSDRandomCropOperation::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SSDRandomCropOperation::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:SSDRandomCropOperation)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // float min_object_covered = 1;
   if (!(this->min_object_covered() <= 0 && this->min_object_covered() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->min_object_covered(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_min_object_covered(), target);
   }
 
   // float min_aspect_ratio = 2;
   if (!(this->min_aspect_ratio() <= 0 && this->min_aspect_ratio() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->min_aspect_ratio(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_min_aspect_ratio(), target);
   }
 
   // float max_aspect_ratio = 3;
   if (!(this->max_aspect_ratio() <= 0 && this->max_aspect_ratio() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->max_aspect_ratio(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_max_aspect_ratio(), target);
   }
 
   // float min_area = 4;
   if (!(this->min_area() <= 0 && this->min_area() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->min_area(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_min_area(), target);
   }
 
   // float max_area = 5;
   if (!(this->max_area() <= 0 && this->max_area() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->max_area(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_max_area(), target);
   }
 
   // float overlap_thresh = 6;
   if (!(this->overlap_thresh() <= 0 && this->overlap_thresh() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->overlap_thresh(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->_internal_overlap_thresh(), target);
   }
 
   // float random_coef = 7;
   if (!(this->random_coef() <= 0 && this->random_coef() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(7, this->random_coef(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(7, this->_internal_random_coef(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SSDRandomCropOperation)
   return target;
@@ -8725,11 +6379,6 @@ size_t SSDRandomCropOperation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:SSDRandomCropOperation)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8769,6 +6418,10 @@ size_t SSDRandomCropOperation::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -8797,25 +6450,25 @@ void SSDRandomCropOperation::MergeFrom(const SSDRandomCropOperation& from) {
   (void) cached_has_bits;
 
   if (!(from.min_object_covered() <= 0 && from.min_object_covered() >= 0)) {
-    set_min_object_covered(from.min_object_covered());
+    _internal_set_min_object_covered(from._internal_min_object_covered());
   }
   if (!(from.min_aspect_ratio() <= 0 && from.min_aspect_ratio() >= 0)) {
-    set_min_aspect_ratio(from.min_aspect_ratio());
+    _internal_set_min_aspect_ratio(from._internal_min_aspect_ratio());
   }
   if (!(from.max_aspect_ratio() <= 0 && from.max_aspect_ratio() >= 0)) {
-    set_max_aspect_ratio(from.max_aspect_ratio());
+    _internal_set_max_aspect_ratio(from._internal_max_aspect_ratio());
   }
   if (!(from.min_area() <= 0 && from.min_area() >= 0)) {
-    set_min_area(from.min_area());
+    _internal_set_min_area(from._internal_min_area());
   }
   if (!(from.max_area() <= 0 && from.max_area() >= 0)) {
-    set_max_area(from.max_area());
+    _internal_set_max_area(from._internal_max_area());
   }
   if (!(from.overlap_thresh() <= 0 && from.overlap_thresh() >= 0)) {
-    set_overlap_thresh(from.overlap_thresh());
+    _internal_set_overlap_thresh(from._internal_overlap_thresh());
   }
   if (!(from.random_coef() <= 0 && from.random_coef() >= 0)) {
-    set_random_coef(from.random_coef());
+    _internal_set_random_coef(from._internal_random_coef());
   }
 }
 
@@ -8916,7 +6569,6 @@ void RelativeCropTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* RelativeCropTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -8927,20 +6579,20 @@ const char* RelativeCropTransform::_InternalParse(const char* ptr, ::PROTOBUF_NA
       // repeated float relative_scale_range = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_relative_scale_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_relative_scale_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13) {
-          add_relative_scale_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_relative_scale_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated float relative_aspect_range = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_relative_aspect_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_relative_aspect_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21) {
-          add_relative_aspect_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_relative_aspect_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
@@ -8970,7 +6622,7 @@ const char* RelativeCropTransform::_InternalParse(const char* ptr, ::PROTOBUF_NA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_max_attempts_fallback(static_cast<::RelativeCropTransform_FallbackMode>(val));
+          _internal_set_max_attempts_fallback(static_cast<::RelativeCropTransform_FallbackMode>(val));
         } else goto handle_unusual;
         continue;
       // .RelativeCropTransform.FallbackMode images_with_no_bboxes_fallback = 7;
@@ -8978,7 +6630,7 @@ const char* RelativeCropTransform::_InternalParse(const char* ptr, ::PROTOBUF_NA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_images_with_no_bboxes_fallback(static_cast<::RelativeCropTransform_FallbackMode>(val));
+          _internal_set_images_with_no_bboxes_fallback(static_cast<::RelativeCropTransform_FallbackMode>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -9000,257 +6652,58 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool RelativeCropTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:RelativeCropTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated float relative_scale_range = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_relative_scale_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 10u, input, this->mutable_relative_scale_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated float relative_aspect_range = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_relative_aspect_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 18u, input, this->mutable_relative_aspect_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool horizontal_flip = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &horizontal_flip_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float min_bbox_overlap = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &min_bbox_overlap_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 attempts = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &attempts_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .RelativeCropTransform.FallbackMode max_attempts_fallback = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_max_attempts_fallback(static_cast< ::RelativeCropTransform_FallbackMode >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .RelativeCropTransform.FallbackMode images_with_no_bboxes_fallback = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (56 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_images_with_no_bboxes_fallback(static_cast< ::RelativeCropTransform_FallbackMode >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:RelativeCropTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:RelativeCropTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void RelativeCropTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:RelativeCropTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated float relative_scale_range = 1;
-  if (this->relative_scale_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(1, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_relative_scale_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->relative_scale_range().data(), this->relative_scale_range_size(), output);
-  }
-
-  // repeated float relative_aspect_range = 2;
-  if (this->relative_aspect_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(2, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_relative_aspect_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->relative_aspect_range().data(), this->relative_aspect_range_size(), output);
-  }
-
-  // bool horizontal_flip = 3;
-  if (this->horizontal_flip() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(3, this->horizontal_flip(), output);
-  }
-
-  // float min_bbox_overlap = 4;
-  if (!(this->min_bbox_overlap() <= 0 && this->min_bbox_overlap() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->min_bbox_overlap(), output);
-  }
-
-  // int32 attempts = 5;
-  if (this->attempts() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(5, this->attempts(), output);
-  }
-
-  // .RelativeCropTransform.FallbackMode max_attempts_fallback = 6;
-  if (this->max_attempts_fallback() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      6, this->max_attempts_fallback(), output);
-  }
-
-  // .RelativeCropTransform.FallbackMode images_with_no_bboxes_fallback = 7;
-  if (this->images_with_no_bboxes_fallback() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      7, this->images_with_no_bboxes_fallback(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:RelativeCropTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* RelativeCropTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RelativeCropTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RelativeCropTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated float relative_scale_range = 1;
-  if (this->relative_scale_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      1,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _relative_scale_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->relative_scale_range_, target);
+  if (this->_internal_relative_scale_range_size() > 0) {
+    target = stream->WriteFixedPacked(1, _internal_relative_scale_range(), target);
   }
 
   // repeated float relative_aspect_range = 2;
-  if (this->relative_aspect_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      2,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _relative_aspect_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->relative_aspect_range_, target);
+  if (this->_internal_relative_aspect_range_size() > 0) {
+    target = stream->WriteFixedPacked(2, _internal_relative_aspect_range(), target);
   }
 
   // bool horizontal_flip = 3;
   if (this->horizontal_flip() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->horizontal_flip(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_horizontal_flip(), target);
   }
 
   // float min_bbox_overlap = 4;
   if (!(this->min_bbox_overlap() <= 0 && this->min_bbox_overlap() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->min_bbox_overlap(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_min_bbox_overlap(), target);
   }
 
   // int32 attempts = 5;
   if (this->attempts() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->attempts(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_attempts(), target);
   }
 
   // .RelativeCropTransform.FallbackMode max_attempts_fallback = 6;
   if (this->max_attempts_fallback() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      6, this->max_attempts_fallback(), target);
+      6, this->_internal_max_attempts_fallback(), target);
   }
 
   // .RelativeCropTransform.FallbackMode images_with_no_bboxes_fallback = 7;
   if (this->images_with_no_bboxes_fallback() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      7, this->images_with_no_bboxes_fallback(), target);
+      7, this->_internal_images_with_no_bboxes_fallback(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RelativeCropTransform)
   return target;
@@ -9260,18 +6713,13 @@ size_t RelativeCropTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RelativeCropTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float relative_scale_range = 1;
   {
-    unsigned int count = static_cast<unsigned int>(this->relative_scale_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_relative_scale_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -9286,7 +6734,7 @@ size_t RelativeCropTransform::ByteSizeLong() const {
 
   // repeated float relative_aspect_range = 2;
   {
-    unsigned int count = static_cast<unsigned int>(this->relative_aspect_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_relative_aspect_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -9313,21 +6761,25 @@ size_t RelativeCropTransform::ByteSizeLong() const {
   if (this->attempts() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->attempts());
+        this->_internal_attempts());
   }
 
   // .RelativeCropTransform.FallbackMode max_attempts_fallback = 6;
   if (this->max_attempts_fallback() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->max_attempts_fallback());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_max_attempts_fallback());
   }
 
   // .RelativeCropTransform.FallbackMode images_with_no_bboxes_fallback = 7;
   if (this->images_with_no_bboxes_fallback() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->images_with_no_bboxes_fallback());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_images_with_no_bboxes_fallback());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -9358,19 +6810,19 @@ void RelativeCropTransform::MergeFrom(const RelativeCropTransform& from) {
   relative_scale_range_.MergeFrom(from.relative_scale_range_);
   relative_aspect_range_.MergeFrom(from.relative_aspect_range_);
   if (from.horizontal_flip() != 0) {
-    set_horizontal_flip(from.horizontal_flip());
+    _internal_set_horizontal_flip(from._internal_horizontal_flip());
   }
   if (!(from.min_bbox_overlap() <= 0 && from.min_bbox_overlap() >= 0)) {
-    set_min_bbox_overlap(from.min_bbox_overlap());
+    _internal_set_min_bbox_overlap(from._internal_min_bbox_overlap());
   }
   if (from.attempts() != 0) {
-    set_attempts(from.attempts());
+    _internal_set_attempts(from._internal_attempts());
   }
   if (from.max_attempts_fallback() != 0) {
-    set_max_attempts_fallback(from.max_attempts_fallback());
+    _internal_set_max_attempts_fallback(from._internal_max_attempts_fallback());
   }
   if (from.images_with_no_bboxes_fallback() != 0) {
-    set_images_with_no_bboxes_fallback(from.images_with_no_bboxes_fallback());
+    _internal_set_images_with_no_bboxes_fallback(from._internal_images_with_no_bboxes_fallback());
   }
 }
 
@@ -9460,7 +6912,6 @@ void AspectRatioTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* AspectRatioTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -9471,10 +6922,10 @@ const char* AspectRatioTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAM
       // repeated float relative_aspect_range = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_relative_aspect_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_relative_aspect_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13) {
-          add_relative_aspect_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_relative_aspect_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
@@ -9497,98 +6948,21 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AspectRatioTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:AspectRatioTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated float relative_aspect_range = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_relative_aspect_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 10u, input, this->mutable_relative_aspect_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:AspectRatioTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:AspectRatioTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AspectRatioTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:AspectRatioTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated float relative_aspect_range = 1;
-  if (this->relative_aspect_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(1, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_relative_aspect_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->relative_aspect_range().data(), this->relative_aspect_range_size(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:AspectRatioTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AspectRatioTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* AspectRatioTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AspectRatioTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated float relative_aspect_range = 1;
-  if (this->relative_aspect_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      1,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _relative_aspect_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->relative_aspect_range_, target);
+  if (this->_internal_relative_aspect_range_size() > 0) {
+    target = stream->WriteFixedPacked(1, _internal_relative_aspect_range(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AspectRatioTransform)
   return target;
@@ -9598,18 +6972,13 @@ size_t AspectRatioTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AspectRatioTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float relative_aspect_range = 1;
   {
-    unsigned int count = static_cast<unsigned int>(this->relative_aspect_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_relative_aspect_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -9622,6 +6991,10 @@ size_t AspectRatioTransform::ByteSizeLong() const {
     total_size += data_size;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -9739,7 +7112,6 @@ void AffineTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* AffineTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -9801,175 +7173,46 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AffineTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:AffineTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // float skip_prob = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &skip_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float rotate_min = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &rotate_min_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float rotate_max = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &rotate_max_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool crop_original_size = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &crop_original_size_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool use_transparent_corners = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &use_transparent_corners_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:AffineTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:AffineTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AffineTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:AffineTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // float skip_prob = 1;
-  if (!(this->skip_prob() <= 0 && this->skip_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(1, this->skip_prob(), output);
-  }
-
-  // float rotate_min = 2;
-  if (!(this->rotate_min() <= 0 && this->rotate_min() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->rotate_min(), output);
-  }
-
-  // float rotate_max = 3;
-  if (!(this->rotate_max() <= 0 && this->rotate_max() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->rotate_max(), output);
-  }
-
-  // bool crop_original_size = 4;
-  if (this->crop_original_size() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(4, this->crop_original_size(), output);
-  }
-
-  // bool use_transparent_corners = 5;
-  if (this->use_transparent_corners() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(5, this->use_transparent_corners(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:AffineTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AffineTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* AffineTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AffineTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // float skip_prob = 1;
   if (!(this->skip_prob() <= 0 && this->skip_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->skip_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_skip_prob(), target);
   }
 
   // float rotate_min = 2;
   if (!(this->rotate_min() <= 0 && this->rotate_min() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->rotate_min(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_rotate_min(), target);
   }
 
   // float rotate_max = 3;
   if (!(this->rotate_max() <= 0 && this->rotate_max() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->rotate_max(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_rotate_max(), target);
   }
 
   // bool crop_original_size = 4;
   if (this->crop_original_size() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->crop_original_size(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_crop_original_size(), target);
   }
 
   // bool use_transparent_corners = 5;
   if (this->use_transparent_corners() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->use_transparent_corners(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_use_transparent_corners(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AffineTransform)
   return target;
@@ -9979,11 +7222,6 @@ size_t AffineTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AffineTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10013,6 +7251,10 @@ size_t AffineTransform::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -10041,19 +7283,19 @@ void AffineTransform::MergeFrom(const AffineTransform& from) {
   (void) cached_has_bits;
 
   if (!(from.skip_prob() <= 0 && from.skip_prob() >= 0)) {
-    set_skip_prob(from.skip_prob());
+    _internal_set_skip_prob(from._internal_skip_prob());
   }
   if (!(from.rotate_min() <= 0 && from.rotate_min() >= 0)) {
-    set_rotate_min(from.rotate_min());
+    _internal_set_rotate_min(from._internal_rotate_min());
   }
   if (!(from.rotate_max() <= 0 && from.rotate_max() >= 0)) {
-    set_rotate_max(from.rotate_max());
+    _internal_set_rotate_max(from._internal_rotate_max());
   }
   if (from.crop_original_size() != 0) {
-    set_crop_original_size(from.crop_original_size());
+    _internal_set_crop_original_size(from._internal_crop_original_size());
   }
   if (from.use_transparent_corners() != 0) {
-    set_use_transparent_corners(from.use_transparent_corners());
+    _internal_set_use_transparent_corners(from._internal_use_transparent_corners());
   }
 }
 
@@ -10109,7 +7351,7 @@ ScaleTransform::ScaleTransform(const ScaleTransform& from)
       size_range_(from.size_range_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   scale_based_on_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.scale_based_on().empty()) {
+  if (!from._internal_scale_based_on().empty()) {
     scale_based_on_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.scale_based_on_);
   }
   // @@protoc_insertion_point(copy_constructor:ScaleTransform)
@@ -10149,7 +7391,6 @@ void ScaleTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ScaleTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -10160,17 +7401,19 @@ const char* ScaleTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // string scale_based_on = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_scale_based_on(), ptr, ctx, "ScaleTransform.scale_based_on");
+          auto str = _internal_mutable_scale_based_on();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ScaleTransform.scale_based_on"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // repeated float size_range = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_size_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_size_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21) {
-          add_size_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_size_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
@@ -10193,103 +7436,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ScaleTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ScaleTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string scale_based_on = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_scale_based_on()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->scale_based_on().data(), static_cast<int>(this->scale_based_on().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ScaleTransform.scale_based_on"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated float size_range = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_size_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 18u, input, this->mutable_size_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ScaleTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ScaleTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ScaleTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ScaleTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string scale_based_on = 1;
-  if (this->scale_based_on().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->scale_based_on().data(), static_cast<int>(this->scale_based_on().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ScaleTransform.scale_based_on");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->scale_based_on(), output);
-  }
-
-  // repeated float size_range = 2;
-  if (this->size_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(2, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_size_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->size_range().data(), this->size_range_size(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ScaleTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ScaleTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ScaleTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ScaleTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -10297,30 +7446,21 @@ void ScaleTransform::SerializeWithCachedSizes(
   // string scale_based_on = 1;
   if (this->scale_based_on().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->scale_based_on().data(), static_cast<int>(this->scale_based_on().length()),
+      this->_internal_scale_based_on().data(), static_cast<int>(this->_internal_scale_based_on().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ScaleTransform.scale_based_on");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->scale_based_on(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_scale_based_on(), target);
   }
 
   // repeated float size_range = 2;
-  if (this->size_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      2,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _size_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->size_range_, target);
+  if (this->_internal_size_range_size() > 0) {
+    target = stream->WriteFixedPacked(2, _internal_size_range(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ScaleTransform)
   return target;
@@ -10330,18 +7470,13 @@ size_t ScaleTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ScaleTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float size_range = 2;
   {
-    unsigned int count = static_cast<unsigned int>(this->size_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_size_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -10358,9 +7493,13 @@ size_t ScaleTransform::ByteSizeLong() const {
   if (this->scale_based_on().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->scale_based_on());
+        this->_internal_scale_based_on());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -10484,7 +7623,6 @@ void DistortionTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* DistortionTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -10539,152 +7677,40 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool DistortionTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:DistortionTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // float skip_prob = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &skip_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 grid_width = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &grid_width_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 grid_height = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &grid_height_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float magnitude = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &magnitude_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:DistortionTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:DistortionTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void DistortionTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:DistortionTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // float skip_prob = 1;
-  if (!(this->skip_prob() <= 0 && this->skip_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(1, this->skip_prob(), output);
-  }
-
-  // int32 grid_width = 2;
-  if (this->grid_width() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->grid_width(), output);
-  }
-
-  // int32 grid_height = 3;
-  if (this->grid_height() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(3, this->grid_height(), output);
-  }
-
-  // float magnitude = 4;
-  if (!(this->magnitude() <= 0 && this->magnitude() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->magnitude(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:DistortionTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* DistortionTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* DistortionTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DistortionTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // float skip_prob = 1;
   if (!(this->skip_prob() <= 0 && this->skip_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->skip_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_skip_prob(), target);
   }
 
   // int32 grid_width = 2;
   if (this->grid_width() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->grid_width(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_grid_width(), target);
   }
 
   // int32 grid_height = 3;
   if (this->grid_height() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->grid_height(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_grid_height(), target);
   }
 
   // float magnitude = 4;
   if (!(this->magnitude() <= 0 && this->magnitude() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->magnitude(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_magnitude(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DistortionTransform)
   return target;
@@ -10694,11 +7720,6 @@ size_t DistortionTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DistortionTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10712,14 +7733,14 @@ size_t DistortionTransform::ByteSizeLong() const {
   if (this->grid_width() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->grid_width());
+        this->_internal_grid_width());
   }
 
   // int32 grid_height = 3;
   if (this->grid_height() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->grid_height());
+        this->_internal_grid_height());
   }
 
   // float magnitude = 4;
@@ -10727,6 +7748,10 @@ size_t DistortionTransform::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -10755,16 +7780,16 @@ void DistortionTransform::MergeFrom(const DistortionTransform& from) {
   (void) cached_has_bits;
 
   if (!(from.skip_prob() <= 0 && from.skip_prob() >= 0)) {
-    set_skip_prob(from.skip_prob());
+    _internal_set_skip_prob(from._internal_skip_prob());
   }
   if (from.grid_width() != 0) {
-    set_grid_width(from.grid_width());
+    _internal_set_grid_width(from._internal_grid_width());
   }
   if (from.grid_height() != 0) {
-    set_grid_height(from.grid_height());
+    _internal_set_grid_height(from._internal_grid_height());
   }
   if (!(from.magnitude() <= 0 && from.magnitude() >= 0)) {
-    set_magnitude(from.magnitude());
+    _internal_set_magnitude(from._internal_magnitude());
   }
 }
 
@@ -10858,7 +7883,6 @@ void FlipTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* FlipTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -10906,129 +7930,34 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool FlipTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:FlipTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // float flip_prob = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &flip_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool horizontal = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &horizontal_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool vertical = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &vertical_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:FlipTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:FlipTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void FlipTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:FlipTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // float flip_prob = 1;
-  if (!(this->flip_prob() <= 0 && this->flip_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(1, this->flip_prob(), output);
-  }
-
-  // bool horizontal = 2;
-  if (this->horizontal() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(2, this->horizontal(), output);
-  }
-
-  // bool vertical = 3;
-  if (this->vertical() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(3, this->vertical(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:FlipTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* FlipTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* FlipTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:FlipTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // float flip_prob = 1;
   if (!(this->flip_prob() <= 0 && this->flip_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->flip_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_flip_prob(), target);
   }
 
   // bool horizontal = 2;
   if (this->horizontal() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->horizontal(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_horizontal(), target);
   }
 
   // bool vertical = 3;
   if (this->vertical() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->vertical(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_vertical(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:FlipTransform)
   return target;
@@ -11038,11 +7967,6 @@ size_t FlipTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:FlipTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -11062,6 +7986,10 @@ size_t FlipTransform::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -11090,13 +8018,13 @@ void FlipTransform::MergeFrom(const FlipTransform& from) {
   (void) cached_has_bits;
 
   if (!(from.flip_prob() <= 0 && from.flip_prob() >= 0)) {
-    set_flip_prob(from.flip_prob());
+    _internal_set_flip_prob(from._internal_flip_prob());
   }
   if (from.horizontal() != 0) {
-    set_horizontal(from.horizontal());
+    _internal_set_horizontal(from._internal_horizontal());
   }
   if (from.vertical() != 0) {
-    set_vertical(from.vertical());
+    _internal_set_vertical(from._internal_vertical());
   }
 }
 
@@ -11197,7 +8125,6 @@ void ColorTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ColorTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -11208,40 +8135,40 @@ const char* ColorTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // repeated float brightness_range = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_brightness_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_brightness_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13) {
-          add_brightness_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_brightness_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated float contrast_range = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_contrast_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_contrast_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21) {
-          add_contrast_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_contrast_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated float color_range = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_color_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_color_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 29) {
-          add_color_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_color_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated float sharpness_range = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_sharpness_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_sharpness_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 37) {
-          add_sharpness_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_sharpness_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
@@ -11278,258 +8205,48 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ColorTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ColorTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated float brightness_range = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_brightness_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 10u, input, this->mutable_brightness_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated float contrast_range = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_contrast_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 18u, input, this->mutable_contrast_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated float color_range = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_color_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 26u, input, this->mutable_color_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated float sharpness_range = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_sharpness_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 34u, input, this->mutable_sharpness_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float invert_prob = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (45 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &invert_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float skip_prob = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (53 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &skip_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ColorTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ColorTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ColorTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ColorTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated float brightness_range = 1;
-  if (this->brightness_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(1, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_brightness_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->brightness_range().data(), this->brightness_range_size(), output);
-  }
-
-  // repeated float contrast_range = 2;
-  if (this->contrast_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(2, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_contrast_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->contrast_range().data(), this->contrast_range_size(), output);
-  }
-
-  // repeated float color_range = 3;
-  if (this->color_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(3, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_color_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->color_range().data(), this->color_range_size(), output);
-  }
-
-  // repeated float sharpness_range = 4;
-  if (this->sharpness_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(4, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_sharpness_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->sharpness_range().data(), this->sharpness_range_size(), output);
-  }
-
-  // float invert_prob = 5;
-  if (!(this->invert_prob() <= 0 && this->invert_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(5, this->invert_prob(), output);
-  }
-
-  // float skip_prob = 6;
-  if (!(this->skip_prob() <= 0 && this->skip_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(6, this->skip_prob(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ColorTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ColorTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ColorTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ColorTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated float brightness_range = 1;
-  if (this->brightness_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      1,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _brightness_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->brightness_range_, target);
+  if (this->_internal_brightness_range_size() > 0) {
+    target = stream->WriteFixedPacked(1, _internal_brightness_range(), target);
   }
 
   // repeated float contrast_range = 2;
-  if (this->contrast_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      2,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _contrast_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->contrast_range_, target);
+  if (this->_internal_contrast_range_size() > 0) {
+    target = stream->WriteFixedPacked(2, _internal_contrast_range(), target);
   }
 
   // repeated float color_range = 3;
-  if (this->color_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      3,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _color_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->color_range_, target);
+  if (this->_internal_color_range_size() > 0) {
+    target = stream->WriteFixedPacked(3, _internal_color_range(), target);
   }
 
   // repeated float sharpness_range = 4;
-  if (this->sharpness_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      4,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _sharpness_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->sharpness_range_, target);
+  if (this->_internal_sharpness_range_size() > 0) {
+    target = stream->WriteFixedPacked(4, _internal_sharpness_range(), target);
   }
 
   // float invert_prob = 5;
   if (!(this->invert_prob() <= 0 && this->invert_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->invert_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_invert_prob(), target);
   }
 
   // float skip_prob = 6;
   if (!(this->skip_prob() <= 0 && this->skip_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->skip_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->_internal_skip_prob(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ColorTransform)
   return target;
@@ -11539,18 +8256,13 @@ size_t ColorTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ColorTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float brightness_range = 1;
   {
-    unsigned int count = static_cast<unsigned int>(this->brightness_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_brightness_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -11565,7 +8277,7 @@ size_t ColorTransform::ByteSizeLong() const {
 
   // repeated float contrast_range = 2;
   {
-    unsigned int count = static_cast<unsigned int>(this->contrast_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_contrast_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -11580,7 +8292,7 @@ size_t ColorTransform::ByteSizeLong() const {
 
   // repeated float color_range = 3;
   {
-    unsigned int count = static_cast<unsigned int>(this->color_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_color_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -11595,7 +8307,7 @@ size_t ColorTransform::ByteSizeLong() const {
 
   // repeated float sharpness_range = 4;
   {
-    unsigned int count = static_cast<unsigned int>(this->sharpness_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_sharpness_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -11618,6 +8330,10 @@ size_t ColorTransform::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -11650,10 +8366,10 @@ void ColorTransform::MergeFrom(const ColorTransform& from) {
   color_range_.MergeFrom(from.color_range_);
   sharpness_range_.MergeFrom(from.sharpness_range_);
   if (!(from.invert_prob() <= 0 && from.invert_prob() >= 0)) {
-    set_invert_prob(from.invert_prob());
+    _internal_set_invert_prob(from._internal_invert_prob());
   }
   if (!(from.skip_prob() <= 0 && from.skip_prob() >= 0)) {
-    set_skip_prob(from.skip_prob());
+    _internal_set_skip_prob(from._internal_skip_prob());
   }
 }
 
@@ -11709,7 +8425,7 @@ LandmarkAlignTransform::LandmarkAlignTransform(const LandmarkAlignTransform& fro
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   transform_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.transform_type().empty()) {
+  if (!from._internal_transform_type().empty()) {
     transform_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.transform_type_);
   }
   output_size_ = from.output_size_;
@@ -11751,7 +8467,6 @@ void LandmarkAlignTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LandmarkAlignTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -11762,7 +8477,9 @@ const char* LandmarkAlignTransform::_InternalParse(const char* ptr, ::PROTOBUF_N
       // string transform_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_transform_type(), ptr, ctx, "LandmarkAlignTransform.transform_type");
+          auto str = _internal_mutable_transform_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LandmarkAlignTransform.transform_type"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -11792,96 +8509,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LandmarkAlignTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LandmarkAlignTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string transform_type = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_transform_type()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->transform_type().data(), static_cast<int>(this->transform_type().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LandmarkAlignTransform.transform_type"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // int32 output_size = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &output_size_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LandmarkAlignTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LandmarkAlignTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LandmarkAlignTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LandmarkAlignTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string transform_type = 1;
-  if (this->transform_type().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->transform_type().data(), static_cast<int>(this->transform_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LandmarkAlignTransform.transform_type");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->transform_type(), output);
-  }
-
-  // int32 output_size = 2;
-  if (this->output_size() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->output_size(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LandmarkAlignTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LandmarkAlignTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LandmarkAlignTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LandmarkAlignTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -11889,22 +8519,22 @@ void LandmarkAlignTransform::SerializeWithCachedSizes(
   // string transform_type = 1;
   if (this->transform_type().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->transform_type().data(), static_cast<int>(this->transform_type().length()),
+      this->_internal_transform_type().data(), static_cast<int>(this->_internal_transform_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LandmarkAlignTransform.transform_type");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->transform_type(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_transform_type(), target);
   }
 
   // int32 output_size = 2;
   if (this->output_size() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->output_size(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_output_size(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LandmarkAlignTransform)
   return target;
@@ -11914,11 +8544,6 @@ size_t LandmarkAlignTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LandmarkAlignTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -11927,16 +8552,20 @@ size_t LandmarkAlignTransform::ByteSizeLong() const {
   if (this->transform_type().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->transform_type());
+        this->_internal_transform_type());
   }
 
   // int32 output_size = 2;
   if (this->output_size() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->output_size());
+        this->_internal_output_size());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -11969,7 +8598,7 @@ void LandmarkAlignTransform::MergeFrom(const LandmarkAlignTransform& from) {
     transform_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.transform_type_);
   }
   if (from.output_size() != 0) {
-    set_output_size(from.output_size());
+    _internal_set_output_size(from._internal_output_size());
   }
 }
 
@@ -12062,7 +8691,6 @@ void FilterBbox::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* FilterBbox::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -12124,175 +8752,46 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool FilterBbox::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:FilterBbox)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // bool filter_bg_labels = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &filter_bg_labels_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool clip = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &clip_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float visible_area_threshold = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &visible_area_threshold_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float no_bboxes_crop_sample = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &no_bboxes_crop_sample_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float visible_absolute_area_threshold = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (45 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &visible_absolute_area_threshold_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:FilterBbox)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:FilterBbox)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void FilterBbox::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:FilterBbox)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool filter_bg_labels = 1;
-  if (this->filter_bg_labels() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(1, this->filter_bg_labels(), output);
-  }
-
-  // bool clip = 2;
-  if (this->clip() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(2, this->clip(), output);
-  }
-
-  // float visible_area_threshold = 3;
-  if (!(this->visible_area_threshold() <= 0 && this->visible_area_threshold() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->visible_area_threshold(), output);
-  }
-
-  // float no_bboxes_crop_sample = 4;
-  if (!(this->no_bboxes_crop_sample() <= 0 && this->no_bboxes_crop_sample() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->no_bboxes_crop_sample(), output);
-  }
-
-  // float visible_absolute_area_threshold = 5;
-  if (!(this->visible_absolute_area_threshold() <= 0 && this->visible_absolute_area_threshold() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(5, this->visible_absolute_area_threshold(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:FilterBbox)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* FilterBbox::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* FilterBbox::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:FilterBbox)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool filter_bg_labels = 1;
   if (this->filter_bg_labels() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->filter_bg_labels(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_filter_bg_labels(), target);
   }
 
   // bool clip = 2;
   if (this->clip() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->clip(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_clip(), target);
   }
 
   // float visible_area_threshold = 3;
   if (!(this->visible_area_threshold() <= 0 && this->visible_area_threshold() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->visible_area_threshold(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_visible_area_threshold(), target);
   }
 
   // float no_bboxes_crop_sample = 4;
   if (!(this->no_bboxes_crop_sample() <= 0 && this->no_bboxes_crop_sample() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->no_bboxes_crop_sample(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_no_bboxes_crop_sample(), target);
   }
 
   // float visible_absolute_area_threshold = 5;
   if (!(this->visible_absolute_area_threshold() <= 0 && this->visible_absolute_area_threshold() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->visible_absolute_area_threshold(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_visible_absolute_area_threshold(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:FilterBbox)
   return target;
@@ -12302,11 +8801,6 @@ size_t FilterBbox::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:FilterBbox)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -12336,6 +8830,10 @@ size_t FilterBbox::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -12364,19 +8862,19 @@ void FilterBbox::MergeFrom(const FilterBbox& from) {
   (void) cached_has_bits;
 
   if (from.filter_bg_labels() != 0) {
-    set_filter_bg_labels(from.filter_bg_labels());
+    _internal_set_filter_bg_labels(from._internal_filter_bg_labels());
   }
   if (from.clip() != 0) {
-    set_clip(from.clip());
+    _internal_set_clip(from._internal_clip());
   }
   if (!(from.visible_area_threshold() <= 0 && from.visible_area_threshold() >= 0)) {
-    set_visible_area_threshold(from.visible_area_threshold());
+    _internal_set_visible_area_threshold(from._internal_visible_area_threshold());
   }
   if (!(from.no_bboxes_crop_sample() <= 0 && from.no_bboxes_crop_sample() >= 0)) {
-    set_no_bboxes_crop_sample(from.no_bboxes_crop_sample());
+    _internal_set_no_bboxes_crop_sample(from._internal_no_bboxes_crop_sample());
   }
   if (!(from.visible_absolute_area_threshold() <= 0 && from.visible_absolute_area_threshold() >= 0)) {
-    set_visible_absolute_area_threshold(from.visible_absolute_area_threshold());
+    _internal_set_visible_absolute_area_threshold(from._internal_visible_absolute_area_threshold());
   }
 }
 
@@ -12471,7 +8969,6 @@ void JPEGRecompression::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* JPEGRecompression::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -12512,106 +9009,28 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool JPEGRecompression::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:JPEGRecompression)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 qmin = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &qmin_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 qmax = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &qmax_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:JPEGRecompression)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:JPEGRecompression)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void JPEGRecompression::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:JPEGRecompression)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 qmin = 1;
-  if (this->qmin() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->qmin(), output);
-  }
-
-  // int32 qmax = 2;
-  if (this->qmax() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->qmax(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:JPEGRecompression)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* JPEGRecompression::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* JPEGRecompression::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:JPEGRecompression)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 qmin = 1;
   if (this->qmin() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->qmin(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_qmin(), target);
   }
 
   // int32 qmax = 2;
   if (this->qmax() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->qmax(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_qmax(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:JPEGRecompression)
   return target;
@@ -12621,11 +9040,6 @@ size_t JPEGRecompression::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:JPEGRecompression)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -12634,16 +9048,20 @@ size_t JPEGRecompression::ByteSizeLong() const {
   if (this->qmin() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->qmin());
+        this->_internal_qmin());
   }
 
   // int32 qmax = 2;
   if (this->qmax() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->qmax());
+        this->_internal_qmax());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -12672,10 +9090,10 @@ void JPEGRecompression::MergeFrom(const JPEGRecompression& from) {
   (void) cached_has_bits;
 
   if (from.qmin() != 0) {
-    set_qmin(from.qmin());
+    _internal_set_qmin(from._internal_qmin());
   }
   if (from.qmax() != 0) {
-    set_qmax(from.qmax());
+    _internal_set_qmax(from._internal_qmax());
   }
 }
 
@@ -12734,23 +9152,23 @@ LogoDataParams::LogoDataParams(const LogoDataParams& from)
       multi_dataset_(from.multi_dataset_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   output_logos_dataset_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.output_logos_dataset().empty()) {
+  if (!from._internal_output_logos_dataset().empty()) {
     output_logos_dataset_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.output_logos_dataset_);
   }
   pos_logos_dataset_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.pos_logos_dataset().empty()) {
+  if (!from._internal_pos_logos_dataset().empty()) {
     pos_logos_dataset_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.pos_logos_dataset_);
   }
   neg_logos_dataset_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.neg_logos_dataset().empty()) {
+  if (!from._internal_neg_logos_dataset().empty()) {
     neg_logos_dataset_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.neg_logos_dataset_);
   }
   background_dataset_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.background_dataset().empty()) {
+  if (!from._internal_background_dataset().empty()) {
     background_dataset_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.background_dataset_);
   }
   mode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.mode().empty()) {
+  if (!from._internal_mode().empty()) {
     mode_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.mode_);
   }
   ::memcpy(&pos_logos_ratio_, &from.pos_logos_ratio_,
@@ -12817,7 +9235,6 @@ void LogoDataParams::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LogoDataParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -12828,21 +9245,27 @@ const char* LogoDataParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // string output_logos_dataset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_output_logos_dataset(), ptr, ctx, "LogoDataParams.output_logos_dataset");
+          auto str = _internal_mutable_output_logos_dataset();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LogoDataParams.output_logos_dataset"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string pos_logos_dataset = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_pos_logos_dataset(), ptr, ctx, "LogoDataParams.pos_logos_dataset");
+          auto str = _internal_mutable_pos_logos_dataset();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LogoDataParams.pos_logos_dataset"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string neg_logos_dataset = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_neg_logos_dataset(), ptr, ctx, "LogoDataParams.neg_logos_dataset");
+          auto str = _internal_mutable_neg_logos_dataset();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LogoDataParams.neg_logos_dataset"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -12863,7 +9286,9 @@ const char* LogoDataParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // string background_dataset = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_background_dataset(), ptr, ctx, "LogoDataParams.background_dataset");
+          auto str = _internal_mutable_background_dataset();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LogoDataParams.background_dataset"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -12905,10 +9330,10 @@ const char* LogoDataParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // repeated int32 background_crop_size_range = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(mutable_background_crop_size_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_background_crop_size_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 96) {
-          add_background_crop_size_range(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          _internal_add_background_crop_size_range(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -12953,29 +9378,31 @@ const char* LogoDataParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           ptr -= 2;
           do {
             ptr += 2;
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(add_combination_modes(), ptr, ctx, "LogoDataParams.combination_modes");
+            auto str = _internal_add_combination_modes();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LogoDataParams.combination_modes"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint16>(ptr) == 402);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<146>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated float alpha_range = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_alpha_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_alpha_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 157) {
-          add_alpha_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_alpha_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated int32 jpeg_recompress_range = 20;
       case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 162)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(mutable_jpeg_recompress_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_jpeg_recompress_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 160) {
-          add_jpeg_recompress_range(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          _internal_add_jpeg_recompress_range(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -13010,20 +9437,20 @@ const char* LogoDataParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       // repeated float contrast = 25;
       case 25:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 202)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_contrast(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_contrast(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 205) {
-          add_contrast(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_contrast(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated float color_tint = 26;
       case 26:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 210)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_color_tint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_color_tint(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 213) {
-          add_color_tint(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_color_tint(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
@@ -13124,16 +9551,18 @@ const char* LogoDataParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           ptr -= 2;
           do {
             ptr += 2;
-            ptr = ctx->ParseMessage(add_multi_dataset(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_multi_dataset(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint16>(ptr) == 706);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<322>(ptr));
         } else goto handle_unusual;
         continue;
       // string mode = 41;
       case 41:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_mode(), ptr, ctx, "LogoDataParams.mode");
+          auto str = _internal_mutable_mode();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "LogoDataParams.mode"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -13156,875 +9585,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LogoDataParams::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LogoDataParams)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string output_logos_dataset = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_output_logos_dataset()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->output_logos_dataset().data(), static_cast<int>(this->output_logos_dataset().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LogoDataParams.output_logos_dataset"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // string pos_logos_dataset = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_pos_logos_dataset()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->pos_logos_dataset().data(), static_cast<int>(this->pos_logos_dataset().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LogoDataParams.pos_logos_dataset"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string neg_logos_dataset = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_neg_logos_dataset()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->neg_logos_dataset().data(), static_cast<int>(this->neg_logos_dataset().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LogoDataParams.neg_logos_dataset"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool pos_logos_pregenerated = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &pos_logos_pregenerated_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool neg_logos_pregenerated = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &neg_logos_pregenerated_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string background_dataset = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_background_dataset()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->background_dataset().data(), static_cast<int>(this->background_dataset().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LogoDataParams.background_dataset"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float pos_logos_ratio = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (61 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &pos_logos_ratio_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float neg_logos_ratio = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (69 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &neg_logos_ratio_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 output_size = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (72 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &output_size_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 logo_working_res = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (80 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &logo_working_res_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float alpha_crop_threshold = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (93 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &alpha_crop_threshold_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated int32 background_crop_size_range = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, this->mutable_background_crop_size_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (96 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 1, 98u, input, this->mutable_background_crop_size_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float min_logo_size_of_image = 13;
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (109 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &min_logo_size_of_image_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float max_logo_size_of_image = 14;
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (117 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &max_logo_size_of_image_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 min_logo_size = 15;
-      case 15: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (120 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &min_logo_size_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float max_blur = 16;
-      case 16: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (133 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &max_blur_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float color_swap_prob = 17;
-      case 17: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (141 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &color_swap_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated string combination_modes = 18;
-      case 18: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (146 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->add_combination_modes()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->combination_modes(this->combination_modes_size() - 1).data(),
-            static_cast<int>(this->combination_modes(this->combination_modes_size() - 1).length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LogoDataParams.combination_modes"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated float alpha_range = 19;
-      case 19: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (154 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_alpha_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (157 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 2, 154u, input, this->mutable_alpha_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated int32 jpeg_recompress_range = 20;
-      case 20: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (162 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, this->mutable_jpeg_recompress_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (160 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 2, 162u, input, this->mutable_jpeg_recompress_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float rotate = 21;
-      case 21: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (173 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &rotate_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float rot90 = 22;
-      case 22: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (181 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &rot90_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool horizontal_flips = 23;
-      case 23: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (184 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &horizontal_flips_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool grayscale = 24;
-      case 24: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (192 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &grayscale_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated float contrast = 25;
-      case 25: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (202 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_contrast())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (205 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 2, 202u, input, this->mutable_contrast())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated float color_tint = 26;
-      case 26: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (210 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_color_tint())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (213 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 2, 210u, input, this->mutable_color_tint())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool use_neg_logo_label_index = 27;
-      case 27: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (216 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &use_neg_logo_label_index_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 nologo_label_ind = 28;
-      case 28: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (224 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &nologo_label_ind_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float max_logo_out_of_image = 29;
-      case 29: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (237 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &max_logo_out_of_image_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool remove_nologo_bboxes = 30;
-      case 30: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (240 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &remove_nologo_bboxes_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 full_image_crop = 31;
-      case 31: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (248 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &full_image_crop_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float working_res_scale = 32;
-      case 32: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (261 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &working_res_scale_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float pos_min_overlap_of_window_threshold = 33;
-      case 33: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (269 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &pos_min_overlap_of_window_threshold_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float pos_max_overlap_of_window_threshold = 34;
-      case 34: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (277 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &pos_max_overlap_of_window_threshold_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float neg_overlap_of_logo_threshold = 35;
-      case 35: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (285 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &neg_overlap_of_logo_threshold_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float pos_overlap_of_logo_threshold = 36;
-      case 36: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (293 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &pos_overlap_of_logo_threshold_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float overlap_max_logo_aspect = 37;
-      case 37: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (301 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &overlap_max_logo_aspect_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 num_views = 38;
-      case 38: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (304 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &num_views_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float white_bg_prob = 39;
-      case 39: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (317 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &white_bg_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .MultiDataset multi_dataset = 40;
-      case 40: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (322 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_multi_dataset()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string mode = 41;
-      case 41: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (330 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_mode()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->mode().data(), static_cast<int>(this->mode().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "LogoDataParams.mode"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LogoDataParams)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LogoDataParams)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LogoDataParams::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LogoDataParams)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string output_logos_dataset = 1;
-  if (this->output_logos_dataset().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->output_logos_dataset().data(), static_cast<int>(this->output_logos_dataset().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LogoDataParams.output_logos_dataset");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->output_logos_dataset(), output);
-  }
-
-  // string pos_logos_dataset = 2;
-  if (this->pos_logos_dataset().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->pos_logos_dataset().data(), static_cast<int>(this->pos_logos_dataset().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LogoDataParams.pos_logos_dataset");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->pos_logos_dataset(), output);
-  }
-
-  // string neg_logos_dataset = 3;
-  if (this->neg_logos_dataset().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->neg_logos_dataset().data(), static_cast<int>(this->neg_logos_dataset().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LogoDataParams.neg_logos_dataset");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->neg_logos_dataset(), output);
-  }
-
-  // bool pos_logos_pregenerated = 4;
-  if (this->pos_logos_pregenerated() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(4, this->pos_logos_pregenerated(), output);
-  }
-
-  // bool neg_logos_pregenerated = 5;
-  if (this->neg_logos_pregenerated() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(5, this->neg_logos_pregenerated(), output);
-  }
-
-  // string background_dataset = 6;
-  if (this->background_dataset().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->background_dataset().data(), static_cast<int>(this->background_dataset().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LogoDataParams.background_dataset");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->background_dataset(), output);
-  }
-
-  // float pos_logos_ratio = 7;
-  if (!(this->pos_logos_ratio() <= 0 && this->pos_logos_ratio() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(7, this->pos_logos_ratio(), output);
-  }
-
-  // float neg_logos_ratio = 8;
-  if (!(this->neg_logos_ratio() <= 0 && this->neg_logos_ratio() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(8, this->neg_logos_ratio(), output);
-  }
-
-  // int32 output_size = 9;
-  if (this->output_size() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(9, this->output_size(), output);
-  }
-
-  // int32 logo_working_res = 10;
-  if (this->logo_working_res() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(10, this->logo_working_res(), output);
-  }
-
-  // float alpha_crop_threshold = 11;
-  if (!(this->alpha_crop_threshold() <= 0 && this->alpha_crop_threshold() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(11, this->alpha_crop_threshold(), output);
-  }
-
-  // repeated int32 background_crop_size_range = 12;
-  if (this->background_crop_size_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(12, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_background_crop_size_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-  }
-  for (int i = 0, n = this->background_crop_size_range_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32NoTag(
-      this->background_crop_size_range(i), output);
-  }
-
-  // float min_logo_size_of_image = 13;
-  if (!(this->min_logo_size_of_image() <= 0 && this->min_logo_size_of_image() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(13, this->min_logo_size_of_image(), output);
-  }
-
-  // float max_logo_size_of_image = 14;
-  if (!(this->max_logo_size_of_image() <= 0 && this->max_logo_size_of_image() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(14, this->max_logo_size_of_image(), output);
-  }
-
-  // int32 min_logo_size = 15;
-  if (this->min_logo_size() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(15, this->min_logo_size(), output);
-  }
-
-  // float max_blur = 16;
-  if (!(this->max_blur() <= 0 && this->max_blur() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(16, this->max_blur(), output);
-  }
-
-  // float color_swap_prob = 17;
-  if (!(this->color_swap_prob() <= 0 && this->color_swap_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(17, this->color_swap_prob(), output);
-  }
-
-  // repeated string combination_modes = 18;
-  for (int i = 0, n = this->combination_modes_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->combination_modes(i).data(), static_cast<int>(this->combination_modes(i).length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LogoDataParams.combination_modes");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteString(
-      18, this->combination_modes(i), output);
-  }
-
-  // repeated float alpha_range = 19;
-  if (this->alpha_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(19, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_alpha_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->alpha_range().data(), this->alpha_range_size(), output);
-  }
-
-  // repeated int32 jpeg_recompress_range = 20;
-  if (this->jpeg_recompress_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(20, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_jpeg_recompress_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-  }
-  for (int i = 0, n = this->jpeg_recompress_range_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32NoTag(
-      this->jpeg_recompress_range(i), output);
-  }
-
-  // float rotate = 21;
-  if (!(this->rotate() <= 0 && this->rotate() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(21, this->rotate(), output);
-  }
-
-  // float rot90 = 22;
-  if (!(this->rot90() <= 0 && this->rot90() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(22, this->rot90(), output);
-  }
-
-  // bool horizontal_flips = 23;
-  if (this->horizontal_flips() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(23, this->horizontal_flips(), output);
-  }
-
-  // bool grayscale = 24;
-  if (this->grayscale() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(24, this->grayscale(), output);
-  }
-
-  // repeated float contrast = 25;
-  if (this->contrast_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(25, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_contrast_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->contrast().data(), this->contrast_size(), output);
-  }
-
-  // repeated float color_tint = 26;
-  if (this->color_tint_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(26, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_color_tint_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->color_tint().data(), this->color_tint_size(), output);
-  }
-
-  // bool use_neg_logo_label_index = 27;
-  if (this->use_neg_logo_label_index() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(27, this->use_neg_logo_label_index(), output);
-  }
-
-  // int32 nologo_label_ind = 28;
-  if (this->nologo_label_ind() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(28, this->nologo_label_ind(), output);
-  }
-
-  // float max_logo_out_of_image = 29;
-  if (!(this->max_logo_out_of_image() <= 0 && this->max_logo_out_of_image() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(29, this->max_logo_out_of_image(), output);
-  }
-
-  // bool remove_nologo_bboxes = 30;
-  if (this->remove_nologo_bboxes() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(30, this->remove_nologo_bboxes(), output);
-  }
-
-  // int32 full_image_crop = 31;
-  if (this->full_image_crop() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(31, this->full_image_crop(), output);
-  }
-
-  // float working_res_scale = 32;
-  if (!(this->working_res_scale() <= 0 && this->working_res_scale() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(32, this->working_res_scale(), output);
-  }
-
-  // float pos_min_overlap_of_window_threshold = 33;
-  if (!(this->pos_min_overlap_of_window_threshold() <= 0 && this->pos_min_overlap_of_window_threshold() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(33, this->pos_min_overlap_of_window_threshold(), output);
-  }
-
-  // float pos_max_overlap_of_window_threshold = 34;
-  if (!(this->pos_max_overlap_of_window_threshold() <= 0 && this->pos_max_overlap_of_window_threshold() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(34, this->pos_max_overlap_of_window_threshold(), output);
-  }
-
-  // float neg_overlap_of_logo_threshold = 35;
-  if (!(this->neg_overlap_of_logo_threshold() <= 0 && this->neg_overlap_of_logo_threshold() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(35, this->neg_overlap_of_logo_threshold(), output);
-  }
-
-  // float pos_overlap_of_logo_threshold = 36;
-  if (!(this->pos_overlap_of_logo_threshold() <= 0 && this->pos_overlap_of_logo_threshold() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(36, this->pos_overlap_of_logo_threshold(), output);
-  }
-
-  // float overlap_max_logo_aspect = 37;
-  if (!(this->overlap_max_logo_aspect() <= 0 && this->overlap_max_logo_aspect() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(37, this->overlap_max_logo_aspect(), output);
-  }
-
-  // int32 num_views = 38;
-  if (this->num_views() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(38, this->num_views(), output);
-  }
-
-  // float white_bg_prob = 39;
-  if (!(this->white_bg_prob() <= 0 && this->white_bg_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(39, this->white_bg_prob(), output);
-  }
-
-  // repeated .MultiDataset multi_dataset = 40;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->multi_dataset_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      40,
-      this->multi_dataset(static_cast<int>(i)),
-      output);
-  }
-
-  // string mode = 41;
-  if (this->mode().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->mode().data(), static_cast<int>(this->mode().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "LogoDataParams.mode");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      41, this->mode(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LogoDataParams)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LogoDataParams::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LogoDataParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LogoDataParams)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -14032,289 +9595,281 @@ void LogoDataParams::SerializeWithCachedSizes(
   // string output_logos_dataset = 1;
   if (this->output_logos_dataset().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->output_logos_dataset().data(), static_cast<int>(this->output_logos_dataset().length()),
+      this->_internal_output_logos_dataset().data(), static_cast<int>(this->_internal_output_logos_dataset().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LogoDataParams.output_logos_dataset");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->output_logos_dataset(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_output_logos_dataset(), target);
   }
 
   // string pos_logos_dataset = 2;
   if (this->pos_logos_dataset().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->pos_logos_dataset().data(), static_cast<int>(this->pos_logos_dataset().length()),
+      this->_internal_pos_logos_dataset().data(), static_cast<int>(this->_internal_pos_logos_dataset().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LogoDataParams.pos_logos_dataset");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->pos_logos_dataset(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_pos_logos_dataset(), target);
   }
 
   // string neg_logos_dataset = 3;
   if (this->neg_logos_dataset().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->neg_logos_dataset().data(), static_cast<int>(this->neg_logos_dataset().length()),
+      this->_internal_neg_logos_dataset().data(), static_cast<int>(this->_internal_neg_logos_dataset().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LogoDataParams.neg_logos_dataset");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->neg_logos_dataset(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_neg_logos_dataset(), target);
   }
 
   // bool pos_logos_pregenerated = 4;
   if (this->pos_logos_pregenerated() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->pos_logos_pregenerated(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_pos_logos_pregenerated(), target);
   }
 
   // bool neg_logos_pregenerated = 5;
   if (this->neg_logos_pregenerated() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->neg_logos_pregenerated(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_neg_logos_pregenerated(), target);
   }
 
   // string background_dataset = 6;
   if (this->background_dataset().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->background_dataset().data(), static_cast<int>(this->background_dataset().length()),
+      this->_internal_background_dataset().data(), static_cast<int>(this->_internal_background_dataset().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LogoDataParams.background_dataset");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        6, this->background_dataset(), target);
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_background_dataset(), target);
   }
 
   // float pos_logos_ratio = 7;
   if (!(this->pos_logos_ratio() <= 0 && this->pos_logos_ratio() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(7, this->pos_logos_ratio(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(7, this->_internal_pos_logos_ratio(), target);
   }
 
   // float neg_logos_ratio = 8;
   if (!(this->neg_logos_ratio() <= 0 && this->neg_logos_ratio() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(8, this->neg_logos_ratio(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(8, this->_internal_neg_logos_ratio(), target);
   }
 
   // int32 output_size = 9;
   if (this->output_size() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(9, this->output_size(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(9, this->_internal_output_size(), target);
   }
 
   // int32 logo_working_res = 10;
   if (this->logo_working_res() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(10, this->logo_working_res(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(10, this->_internal_logo_working_res(), target);
   }
 
   // float alpha_crop_threshold = 11;
   if (!(this->alpha_crop_threshold() <= 0 && this->alpha_crop_threshold() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(11, this->alpha_crop_threshold(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(11, this->_internal_alpha_crop_threshold(), target);
   }
 
   // repeated int32 background_crop_size_range = 12;
-  if (this->background_crop_size_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      12,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _background_crop_size_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteInt32NoTagToArray(this->background_crop_size_range_, target);
+  {
+    int byte_size = _background_crop_size_range_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteInt32Packed(
+          12, _internal_background_crop_size_range(), byte_size, target);
+    }
   }
 
   // float min_logo_size_of_image = 13;
   if (!(this->min_logo_size_of_image() <= 0 && this->min_logo_size_of_image() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(13, this->min_logo_size_of_image(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(13, this->_internal_min_logo_size_of_image(), target);
   }
 
   // float max_logo_size_of_image = 14;
   if (!(this->max_logo_size_of_image() <= 0 && this->max_logo_size_of_image() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(14, this->max_logo_size_of_image(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(14, this->_internal_max_logo_size_of_image(), target);
   }
 
   // int32 min_logo_size = 15;
   if (this->min_logo_size() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(15, this->min_logo_size(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(15, this->_internal_min_logo_size(), target);
   }
 
   // float max_blur = 16;
   if (!(this->max_blur() <= 0 && this->max_blur() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(16, this->max_blur(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(16, this->_internal_max_blur(), target);
   }
 
   // float color_swap_prob = 17;
   if (!(this->color_swap_prob() <= 0 && this->color_swap_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(17, this->color_swap_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(17, this->_internal_color_swap_prob(), target);
   }
 
   // repeated string combination_modes = 18;
-  for (int i = 0, n = this->combination_modes_size(); i < n; i++) {
+  for (int i = 0, n = this->_internal_combination_modes_size(); i < n; i++) {
+    const auto& s = this->_internal_combination_modes(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->combination_modes(i).data(), static_cast<int>(this->combination_modes(i).length()),
+      s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LogoDataParams.combination_modes");
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteStringToArray(18, this->combination_modes(i), target);
+    target = stream->WriteString(18, s, target);
   }
 
   // repeated float alpha_range = 19;
-  if (this->alpha_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      19,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _alpha_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->alpha_range_, target);
+  if (this->_internal_alpha_range_size() > 0) {
+    target = stream->WriteFixedPacked(19, _internal_alpha_range(), target);
   }
 
   // repeated int32 jpeg_recompress_range = 20;
-  if (this->jpeg_recompress_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      20,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _jpeg_recompress_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteInt32NoTagToArray(this->jpeg_recompress_range_, target);
+  {
+    int byte_size = _jpeg_recompress_range_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteInt32Packed(
+          20, _internal_jpeg_recompress_range(), byte_size, target);
+    }
   }
 
   // float rotate = 21;
   if (!(this->rotate() <= 0 && this->rotate() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(21, this->rotate(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(21, this->_internal_rotate(), target);
   }
 
   // float rot90 = 22;
   if (!(this->rot90() <= 0 && this->rot90() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(22, this->rot90(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(22, this->_internal_rot90(), target);
   }
 
   // bool horizontal_flips = 23;
   if (this->horizontal_flips() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(23, this->horizontal_flips(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(23, this->_internal_horizontal_flips(), target);
   }
 
   // bool grayscale = 24;
   if (this->grayscale() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(24, this->grayscale(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(24, this->_internal_grayscale(), target);
   }
 
   // repeated float contrast = 25;
-  if (this->contrast_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      25,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _contrast_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->contrast_, target);
+  if (this->_internal_contrast_size() > 0) {
+    target = stream->WriteFixedPacked(25, _internal_contrast(), target);
   }
 
   // repeated float color_tint = 26;
-  if (this->color_tint_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      26,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _color_tint_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->color_tint_, target);
+  if (this->_internal_color_tint_size() > 0) {
+    target = stream->WriteFixedPacked(26, _internal_color_tint(), target);
   }
 
   // bool use_neg_logo_label_index = 27;
   if (this->use_neg_logo_label_index() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(27, this->use_neg_logo_label_index(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(27, this->_internal_use_neg_logo_label_index(), target);
   }
 
   // int32 nologo_label_ind = 28;
   if (this->nologo_label_ind() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(28, this->nologo_label_ind(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(28, this->_internal_nologo_label_ind(), target);
   }
 
   // float max_logo_out_of_image = 29;
   if (!(this->max_logo_out_of_image() <= 0 && this->max_logo_out_of_image() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(29, this->max_logo_out_of_image(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(29, this->_internal_max_logo_out_of_image(), target);
   }
 
   // bool remove_nologo_bboxes = 30;
   if (this->remove_nologo_bboxes() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(30, this->remove_nologo_bboxes(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(30, this->_internal_remove_nologo_bboxes(), target);
   }
 
   // int32 full_image_crop = 31;
   if (this->full_image_crop() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(31, this->full_image_crop(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(31, this->_internal_full_image_crop(), target);
   }
 
   // float working_res_scale = 32;
   if (!(this->working_res_scale() <= 0 && this->working_res_scale() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(32, this->working_res_scale(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(32, this->_internal_working_res_scale(), target);
   }
 
   // float pos_min_overlap_of_window_threshold = 33;
   if (!(this->pos_min_overlap_of_window_threshold() <= 0 && this->pos_min_overlap_of_window_threshold() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(33, this->pos_min_overlap_of_window_threshold(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(33, this->_internal_pos_min_overlap_of_window_threshold(), target);
   }
 
   // float pos_max_overlap_of_window_threshold = 34;
   if (!(this->pos_max_overlap_of_window_threshold() <= 0 && this->pos_max_overlap_of_window_threshold() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(34, this->pos_max_overlap_of_window_threshold(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(34, this->_internal_pos_max_overlap_of_window_threshold(), target);
   }
 
   // float neg_overlap_of_logo_threshold = 35;
   if (!(this->neg_overlap_of_logo_threshold() <= 0 && this->neg_overlap_of_logo_threshold() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(35, this->neg_overlap_of_logo_threshold(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(35, this->_internal_neg_overlap_of_logo_threshold(), target);
   }
 
   // float pos_overlap_of_logo_threshold = 36;
   if (!(this->pos_overlap_of_logo_threshold() <= 0 && this->pos_overlap_of_logo_threshold() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(36, this->pos_overlap_of_logo_threshold(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(36, this->_internal_pos_overlap_of_logo_threshold(), target);
   }
 
   // float overlap_max_logo_aspect = 37;
   if (!(this->overlap_max_logo_aspect() <= 0 && this->overlap_max_logo_aspect() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(37, this->overlap_max_logo_aspect(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(37, this->_internal_overlap_max_logo_aspect(), target);
   }
 
   // int32 num_views = 38;
   if (this->num_views() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(38, this->num_views(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(38, this->_internal_num_views(), target);
   }
 
   // float white_bg_prob = 39;
   if (!(this->white_bg_prob() <= 0 && this->white_bg_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(39, this->white_bg_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(39, this->_internal_white_bg_prob(), target);
   }
 
   // repeated .MultiDataset multi_dataset = 40;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->multi_dataset_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_multi_dataset_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        40, this->multi_dataset(static_cast<int>(i)), target);
+      InternalWriteMessage(40, this->_internal_multi_dataset(i), target, stream);
   }
 
   // string mode = 41;
   if (this->mode().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->mode().data(), static_cast<int>(this->mode().length()),
+      this->_internal_mode().data(), static_cast<int>(this->_internal_mode().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "LogoDataParams.mode");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        41, this->mode(), target);
+    target = stream->WriteStringMaybeAliased(
+        41, this->_internal_mode(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LogoDataParams)
   return target;
@@ -14324,11 +9879,6 @@ size_t LogoDataParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LogoDataParams)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -14350,15 +9900,15 @@ size_t LogoDataParams::ByteSizeLong() const {
 
   // repeated string combination_modes = 18;
   total_size += 2 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->combination_modes_size());
-  for (int i = 0, n = this->combination_modes_size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(combination_modes_.size());
+  for (int i = 0, n = combination_modes_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      this->combination_modes(i));
+      combination_modes_.Get(i));
   }
 
   // repeated float alpha_range = 19;
   {
-    unsigned int count = static_cast<unsigned int>(this->alpha_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_alpha_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 2 +
@@ -14388,7 +9938,7 @@ size_t LogoDataParams::ByteSizeLong() const {
 
   // repeated float contrast = 25;
   {
-    unsigned int count = static_cast<unsigned int>(this->contrast_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_contrast_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 2 +
@@ -14403,7 +9953,7 @@ size_t LogoDataParams::ByteSizeLong() const {
 
   // repeated float color_tint = 26;
   {
-    unsigned int count = static_cast<unsigned int>(this->color_tint_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_color_tint_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 2 +
@@ -14417,49 +9967,45 @@ size_t LogoDataParams::ByteSizeLong() const {
   }
 
   // repeated .MultiDataset multi_dataset = 40;
-  {
-    unsigned int count = static_cast<unsigned int>(this->multi_dataset_size());
-    total_size += 2UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->multi_dataset(static_cast<int>(i)));
-    }
+  total_size += 2UL * this->_internal_multi_dataset_size();
+  for (const auto& msg : this->multi_dataset_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string output_logos_dataset = 1;
   if (this->output_logos_dataset().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->output_logos_dataset());
+        this->_internal_output_logos_dataset());
   }
 
   // string pos_logos_dataset = 2;
   if (this->pos_logos_dataset().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->pos_logos_dataset());
+        this->_internal_pos_logos_dataset());
   }
 
   // string neg_logos_dataset = 3;
   if (this->neg_logos_dataset().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->neg_logos_dataset());
+        this->_internal_neg_logos_dataset());
   }
 
   // string background_dataset = 6;
   if (this->background_dataset().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->background_dataset());
+        this->_internal_background_dataset());
   }
 
   // string mode = 41;
   if (this->mode().size() > 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->mode());
+        this->_internal_mode());
   }
 
   // float pos_logos_ratio = 7;
@@ -14476,14 +10022,14 @@ size_t LogoDataParams::ByteSizeLong() const {
   if (this->output_size() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->output_size());
+        this->_internal_output_size());
   }
 
   // int32 logo_working_res = 10;
   if (this->logo_working_res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->logo_working_res());
+        this->_internal_logo_working_res());
   }
 
   // float alpha_crop_threshold = 11;
@@ -14525,7 +10071,7 @@ size_t LogoDataParams::ByteSizeLong() const {
   if (this->min_logo_size() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->min_logo_size());
+        this->_internal_min_logo_size());
   }
 
   // float max_blur = 16;
@@ -14552,7 +10098,7 @@ size_t LogoDataParams::ByteSizeLong() const {
   if (this->nologo_label_ind() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->nologo_label_ind());
+        this->_internal_nologo_label_ind());
   }
 
   // bool use_neg_logo_label_index = 27;
@@ -14574,7 +10120,7 @@ size_t LogoDataParams::ByteSizeLong() const {
   if (this->full_image_crop() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->full_image_crop());
+        this->_internal_full_image_crop());
   }
 
   // float working_res_scale = 32;
@@ -14611,7 +10157,7 @@ size_t LogoDataParams::ByteSizeLong() const {
   if (this->num_views() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->num_views());
+        this->_internal_num_views());
   }
 
   // float white_bg_prob = 39;
@@ -14619,6 +10165,10 @@ size_t LogoDataParams::ByteSizeLong() const {
     total_size += 2 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -14674,91 +10224,91 @@ void LogoDataParams::MergeFrom(const LogoDataParams& from) {
     mode_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.mode_);
   }
   if (!(from.pos_logos_ratio() <= 0 && from.pos_logos_ratio() >= 0)) {
-    set_pos_logos_ratio(from.pos_logos_ratio());
+    _internal_set_pos_logos_ratio(from._internal_pos_logos_ratio());
   }
   if (!(from.neg_logos_ratio() <= 0 && from.neg_logos_ratio() >= 0)) {
-    set_neg_logos_ratio(from.neg_logos_ratio());
+    _internal_set_neg_logos_ratio(from._internal_neg_logos_ratio());
   }
   if (from.output_size() != 0) {
-    set_output_size(from.output_size());
+    _internal_set_output_size(from._internal_output_size());
   }
   if (from.logo_working_res() != 0) {
-    set_logo_working_res(from.logo_working_res());
+    _internal_set_logo_working_res(from._internal_logo_working_res());
   }
   if (!(from.alpha_crop_threshold() <= 0 && from.alpha_crop_threshold() >= 0)) {
-    set_alpha_crop_threshold(from.alpha_crop_threshold());
+    _internal_set_alpha_crop_threshold(from._internal_alpha_crop_threshold());
   }
   if (!(from.min_logo_size_of_image() <= 0 && from.min_logo_size_of_image() >= 0)) {
-    set_min_logo_size_of_image(from.min_logo_size_of_image());
+    _internal_set_min_logo_size_of_image(from._internal_min_logo_size_of_image());
   }
   if (!(from.max_logo_size_of_image() <= 0 && from.max_logo_size_of_image() >= 0)) {
-    set_max_logo_size_of_image(from.max_logo_size_of_image());
+    _internal_set_max_logo_size_of_image(from._internal_max_logo_size_of_image());
   }
   if (from.pos_logos_pregenerated() != 0) {
-    set_pos_logos_pregenerated(from.pos_logos_pregenerated());
+    _internal_set_pos_logos_pregenerated(from._internal_pos_logos_pregenerated());
   }
   if (from.neg_logos_pregenerated() != 0) {
-    set_neg_logos_pregenerated(from.neg_logos_pregenerated());
+    _internal_set_neg_logos_pregenerated(from._internal_neg_logos_pregenerated());
   }
   if (from.horizontal_flips() != 0) {
-    set_horizontal_flips(from.horizontal_flips());
+    _internal_set_horizontal_flips(from._internal_horizontal_flips());
   }
   if (from.grayscale() != 0) {
-    set_grayscale(from.grayscale());
+    _internal_set_grayscale(from._internal_grayscale());
   }
   if (from.min_logo_size() != 0) {
-    set_min_logo_size(from.min_logo_size());
+    _internal_set_min_logo_size(from._internal_min_logo_size());
   }
   if (!(from.max_blur() <= 0 && from.max_blur() >= 0)) {
-    set_max_blur(from.max_blur());
+    _internal_set_max_blur(from._internal_max_blur());
   }
   if (!(from.color_swap_prob() <= 0 && from.color_swap_prob() >= 0)) {
-    set_color_swap_prob(from.color_swap_prob());
+    _internal_set_color_swap_prob(from._internal_color_swap_prob());
   }
   if (!(from.rotate() <= 0 && from.rotate() >= 0)) {
-    set_rotate(from.rotate());
+    _internal_set_rotate(from._internal_rotate());
   }
   if (!(from.rot90() <= 0 && from.rot90() >= 0)) {
-    set_rot90(from.rot90());
+    _internal_set_rot90(from._internal_rot90());
   }
   if (from.nologo_label_ind() != 0) {
-    set_nologo_label_ind(from.nologo_label_ind());
+    _internal_set_nologo_label_ind(from._internal_nologo_label_ind());
   }
   if (from.use_neg_logo_label_index() != 0) {
-    set_use_neg_logo_label_index(from.use_neg_logo_label_index());
+    _internal_set_use_neg_logo_label_index(from._internal_use_neg_logo_label_index());
   }
   if (from.remove_nologo_bboxes() != 0) {
-    set_remove_nologo_bboxes(from.remove_nologo_bboxes());
+    _internal_set_remove_nologo_bboxes(from._internal_remove_nologo_bboxes());
   }
   if (!(from.max_logo_out_of_image() <= 0 && from.max_logo_out_of_image() >= 0)) {
-    set_max_logo_out_of_image(from.max_logo_out_of_image());
+    _internal_set_max_logo_out_of_image(from._internal_max_logo_out_of_image());
   }
   if (from.full_image_crop() != 0) {
-    set_full_image_crop(from.full_image_crop());
+    _internal_set_full_image_crop(from._internal_full_image_crop());
   }
   if (!(from.working_res_scale() <= 0 && from.working_res_scale() >= 0)) {
-    set_working_res_scale(from.working_res_scale());
+    _internal_set_working_res_scale(from._internal_working_res_scale());
   }
   if (!(from.pos_min_overlap_of_window_threshold() <= 0 && from.pos_min_overlap_of_window_threshold() >= 0)) {
-    set_pos_min_overlap_of_window_threshold(from.pos_min_overlap_of_window_threshold());
+    _internal_set_pos_min_overlap_of_window_threshold(from._internal_pos_min_overlap_of_window_threshold());
   }
   if (!(from.pos_max_overlap_of_window_threshold() <= 0 && from.pos_max_overlap_of_window_threshold() >= 0)) {
-    set_pos_max_overlap_of_window_threshold(from.pos_max_overlap_of_window_threshold());
+    _internal_set_pos_max_overlap_of_window_threshold(from._internal_pos_max_overlap_of_window_threshold());
   }
   if (!(from.neg_overlap_of_logo_threshold() <= 0 && from.neg_overlap_of_logo_threshold() >= 0)) {
-    set_neg_overlap_of_logo_threshold(from.neg_overlap_of_logo_threshold());
+    _internal_set_neg_overlap_of_logo_threshold(from._internal_neg_overlap_of_logo_threshold());
   }
   if (!(from.pos_overlap_of_logo_threshold() <= 0 && from.pos_overlap_of_logo_threshold() >= 0)) {
-    set_pos_overlap_of_logo_threshold(from.pos_overlap_of_logo_threshold());
+    _internal_set_pos_overlap_of_logo_threshold(from._internal_pos_overlap_of_logo_threshold());
   }
   if (!(from.overlap_max_logo_aspect() <= 0 && from.overlap_max_logo_aspect() >= 0)) {
-    set_overlap_max_logo_aspect(from.overlap_max_logo_aspect());
+    _internal_set_overlap_max_logo_aspect(from._internal_overlap_max_logo_aspect());
   }
   if (from.num_views() != 0) {
-    set_num_views(from.num_views());
+    _internal_set_num_views(from._internal_num_views());
   }
   if (!(from.white_bg_prob() <= 0 && from.white_bg_prob() >= 0)) {
-    set_white_bg_prob(from.white_bg_prob());
+    _internal_set_white_bg_prob(from._internal_white_bg_prob());
   }
 }
 
@@ -14784,12 +10334,12 @@ void LogoDataParams::InternalSwap(LogoDataParams* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   background_crop_size_range_.InternalSwap(&other->background_crop_size_range_);
-  combination_modes_.InternalSwap(CastToBase(&other->combination_modes_));
+  combination_modes_.InternalSwap(&other->combination_modes_);
   alpha_range_.InternalSwap(&other->alpha_range_);
   jpeg_recompress_range_.InternalSwap(&other->jpeg_recompress_range_);
   contrast_.InternalSwap(&other->contrast_);
   color_tint_.InternalSwap(&other->color_tint_);
-  CastToBase(&multi_dataset_)->InternalSwap(CastToBase(&other->multi_dataset_));
+  multi_dataset_.InternalSwap(&other->multi_dataset_);
   output_logos_dataset_.Swap(&other->output_logos_dataset_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   pos_logos_dataset_.Swap(&other->pos_logos_dataset_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
@@ -14854,7 +10404,7 @@ WhitespaceTokenizer::WhitespaceTokenizer(const WhitespaceTokenizer& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   pad_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.pad_token().empty()) {
+  if (!from._internal_pad_token().empty()) {
     pad_token_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.pad_token_);
   }
   ::memcpy(&max_length_, &from.max_length_,
@@ -14902,7 +10452,6 @@ void WhitespaceTokenizer::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* WhitespaceTokenizer::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -14913,7 +10462,9 @@ const char* WhitespaceTokenizer::_InternalParse(const char* ptr, ::PROTOBUF_NAME
       // string pad_token = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_pad_token(), ptr, ctx, "WhitespaceTokenizer.pad_token");
+          auto str = _internal_mutable_pad_token();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "WhitespaceTokenizer.pad_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -14957,132 +10508,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool WhitespaceTokenizer::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:WhitespaceTokenizer)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string pad_token = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_pad_token()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->pad_token().data(), static_cast<int>(this->pad_token().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "WhitespaceTokenizer.pad_token"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // int32 max_length = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &max_length_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool no_strip_special = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &no_strip_special_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool preserve_case = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &preserve_case_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:WhitespaceTokenizer)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:WhitespaceTokenizer)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void WhitespaceTokenizer::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:WhitespaceTokenizer)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string pad_token = 1;
-  if (this->pad_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->pad_token().data(), static_cast<int>(this->pad_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "WhitespaceTokenizer.pad_token");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->pad_token(), output);
-  }
-
-  // int32 max_length = 2;
-  if (this->max_length() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->max_length(), output);
-  }
-
-  // bool no_strip_special = 3;
-  if (this->no_strip_special() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(3, this->no_strip_special(), output);
-  }
-
-  // bool preserve_case = 4;
-  if (this->preserve_case() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(4, this->preserve_case(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:WhitespaceTokenizer)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* WhitespaceTokenizer::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* WhitespaceTokenizer::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:WhitespaceTokenizer)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -15090,32 +10518,34 @@ void WhitespaceTokenizer::SerializeWithCachedSizes(
   // string pad_token = 1;
   if (this->pad_token().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->pad_token().data(), static_cast<int>(this->pad_token().length()),
+      this->_internal_pad_token().data(), static_cast<int>(this->_internal_pad_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "WhitespaceTokenizer.pad_token");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->pad_token(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_pad_token(), target);
   }
 
   // int32 max_length = 2;
   if (this->max_length() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->max_length(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_max_length(), target);
   }
 
   // bool no_strip_special = 3;
   if (this->no_strip_special() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->no_strip_special(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_no_strip_special(), target);
   }
 
   // bool preserve_case = 4;
   if (this->preserve_case() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->preserve_case(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_preserve_case(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:WhitespaceTokenizer)
   return target;
@@ -15125,11 +10555,6 @@ size_t WhitespaceTokenizer::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:WhitespaceTokenizer)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -15138,14 +10563,14 @@ size_t WhitespaceTokenizer::ByteSizeLong() const {
   if (this->pad_token().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->pad_token());
+        this->_internal_pad_token());
   }
 
   // int32 max_length = 2;
   if (this->max_length() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->max_length());
+        this->_internal_max_length());
   }
 
   // bool no_strip_special = 3;
@@ -15158,6 +10583,10 @@ size_t WhitespaceTokenizer::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -15190,13 +10619,13 @@ void WhitespaceTokenizer::MergeFrom(const WhitespaceTokenizer& from) {
     pad_token_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.pad_token_);
   }
   if (from.max_length() != 0) {
-    set_max_length(from.max_length());
+    _internal_set_max_length(from._internal_max_length());
   }
   if (from.no_strip_special() != 0) {
-    set_no_strip_special(from.no_strip_special());
+    _internal_set_no_strip_special(from._internal_no_strip_special());
   }
   if (from.preserve_case() != 0) {
-    set_preserve_case(from.preserve_case());
+    _internal_set_preserve_case(from._internal_preserve_case());
   }
 }
 
@@ -15251,7 +10680,7 @@ TokenIndexer::TokenIndexer(const TokenIndexer& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   vocab_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.vocab_path().empty()) {
+  if (!from._internal_vocab_path().empty()) {
     vocab_path_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.vocab_path_);
   }
   num_oov_buckets_ = from.num_oov_buckets_;
@@ -15293,7 +10722,6 @@ void TokenIndexer::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* TokenIndexer::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -15304,7 +10732,9 @@ const char* TokenIndexer::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
       // string vocab_path = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_vocab_path(), ptr, ctx, "TokenIndexer.vocab_path");
+          auto str = _internal_mutable_vocab_path();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "TokenIndexer.vocab_path"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -15334,96 +10764,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool TokenIndexer::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:TokenIndexer)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string vocab_path = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_vocab_path()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->vocab_path().data(), static_cast<int>(this->vocab_path().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "TokenIndexer.vocab_path"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // int32 num_oov_buckets = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &num_oov_buckets_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:TokenIndexer)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:TokenIndexer)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void TokenIndexer::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:TokenIndexer)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string vocab_path = 1;
-  if (this->vocab_path().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->vocab_path().data(), static_cast<int>(this->vocab_path().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "TokenIndexer.vocab_path");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->vocab_path(), output);
-  }
-
-  // int32 num_oov_buckets = 2;
-  if (this->num_oov_buckets() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->num_oov_buckets(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:TokenIndexer)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* TokenIndexer::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* TokenIndexer::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:TokenIndexer)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -15431,22 +10774,22 @@ void TokenIndexer::SerializeWithCachedSizes(
   // string vocab_path = 1;
   if (this->vocab_path().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->vocab_path().data(), static_cast<int>(this->vocab_path().length()),
+      this->_internal_vocab_path().data(), static_cast<int>(this->_internal_vocab_path().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "TokenIndexer.vocab_path");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->vocab_path(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_vocab_path(), target);
   }
 
   // int32 num_oov_buckets = 2;
   if (this->num_oov_buckets() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->num_oov_buckets(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_num_oov_buckets(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:TokenIndexer)
   return target;
@@ -15456,11 +10799,6 @@ size_t TokenIndexer::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:TokenIndexer)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -15469,16 +10807,20 @@ size_t TokenIndexer::ByteSizeLong() const {
   if (this->vocab_path().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->vocab_path());
+        this->_internal_vocab_path());
   }
 
   // int32 num_oov_buckets = 2;
   if (this->num_oov_buckets() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->num_oov_buckets());
+        this->_internal_num_oov_buckets());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -15511,7 +10853,7 @@ void TokenIndexer::MergeFrom(const TokenIndexer& from) {
     vocab_path_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.vocab_path_);
   }
   if (from.num_oov_buckets() != 0) {
-    set_num_oov_buckets(from.num_oov_buckets());
+    _internal_set_num_oov_buckets(from._internal_num_oov_buckets());
   }
 }
 
@@ -15604,7 +10946,6 @@ void AudioMFCCTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* AudioMFCCTransform::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -15645,106 +10986,28 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AudioMFCCTransform::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:AudioMFCCTransform)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 numcep = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &numcep_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 numcontext = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &numcontext_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:AudioMFCCTransform)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:AudioMFCCTransform)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AudioMFCCTransform::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:AudioMFCCTransform)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 numcep = 1;
-  if (this->numcep() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->numcep(), output);
-  }
-
-  // int32 numcontext = 2;
-  if (this->numcontext() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->numcontext(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:AudioMFCCTransform)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AudioMFCCTransform::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* AudioMFCCTransform::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:AudioMFCCTransform)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 numcep = 1;
   if (this->numcep() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->numcep(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_numcep(), target);
   }
 
   // int32 numcontext = 2;
   if (this->numcontext() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->numcontext(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_numcontext(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:AudioMFCCTransform)
   return target;
@@ -15754,11 +11017,6 @@ size_t AudioMFCCTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:AudioMFCCTransform)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -15767,16 +11025,20 @@ size_t AudioMFCCTransform::ByteSizeLong() const {
   if (this->numcep() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->numcep());
+        this->_internal_numcep());
   }
 
   // int32 numcontext = 2;
   if (this->numcontext() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->numcontext());
+        this->_internal_numcontext());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -15805,10 +11067,10 @@ void AudioMFCCTransform::MergeFrom(const AudioMFCCTransform& from) {
   (void) cached_has_bits;
 
   if (from.numcep() != 0) {
-    set_numcep(from.numcep());
+    _internal_set_numcep(from._internal_numcep());
   }
   if (from.numcontext() != 0) {
-    set_numcontext(from.numcontext());
+    _internal_set_numcontext(from._internal_numcontext());
   }
 }
 
@@ -15900,7 +11162,6 @@ void FilterInvalidItems::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* FilterInvalidItems::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -15948,129 +11209,34 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool FilterInvalidItems::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:FilterInvalidItems)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // bool require_images = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &require_images_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool require_bboxes = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &require_bboxes_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool require_labels = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &require_labels_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:FilterInvalidItems)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:FilterInvalidItems)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void FilterInvalidItems::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:FilterInvalidItems)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool require_images = 1;
-  if (this->require_images() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(1, this->require_images(), output);
-  }
-
-  // bool require_bboxes = 2;
-  if (this->require_bboxes() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(2, this->require_bboxes(), output);
-  }
-
-  // bool require_labels = 3;
-  if (this->require_labels() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(3, this->require_labels(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:FilterInvalidItems)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* FilterInvalidItems::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* FilterInvalidItems::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:FilterInvalidItems)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool require_images = 1;
   if (this->require_images() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->require_images(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_require_images(), target);
   }
 
   // bool require_bboxes = 2;
   if (this->require_bboxes() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->require_bboxes(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_require_bboxes(), target);
   }
 
   // bool require_labels = 3;
   if (this->require_labels() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->require_labels(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_require_labels(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:FilterInvalidItems)
   return target;
@@ -16080,11 +11246,6 @@ size_t FilterInvalidItems::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:FilterInvalidItems)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -16104,6 +11265,10 @@ size_t FilterInvalidItems::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -16132,13 +11297,13 @@ void FilterInvalidItems::MergeFrom(const FilterInvalidItems& from) {
   (void) cached_has_bits;
 
   if (from.require_images() != 0) {
-    set_require_images(from.require_images());
+    _internal_set_require_images(from._internal_require_images());
   }
   if (from.require_bboxes() != 0) {
-    set_require_bboxes(from.require_bboxes());
+    _internal_set_require_bboxes(from._internal_require_bboxes());
   }
   if (from.require_labels() != 0) {
-    set_require_labels(from.require_labels());
+    _internal_set_require_labels(from._internal_require_labels());
   }
 }
 
@@ -16222,15 +11387,12 @@ void FilterPositiveLabels::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* FilterPositiveLabels::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
-    switch (tag >> 3) {
-      default: {
         if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
           goto success;
@@ -16238,8 +11400,6 @@ const char* FilterPositiveLabels::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
         CHK_(ptr != nullptr);
         continue;
-      }
-    }  // switch
   }  // while
 success:
   return ptr;
@@ -16248,55 +11408,16 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool FilterPositiveLabels::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:FilterPositiveLabels)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-  handle_unusual:
-    if (tag == 0) {
-      goto success;
-    }
-    DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-          input, tag, _internal_metadata_.mutable_unknown_fields()));
-  }
-success:
-  // @@protoc_insertion_point(parse_success:FilterPositiveLabels)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:FilterPositiveLabels)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void FilterPositiveLabels::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:FilterPositiveLabels)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:FilterPositiveLabels)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* FilterPositiveLabels::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* FilterPositiveLabels::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:FilterPositiveLabels)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:FilterPositiveLabels)
   return target;
@@ -16306,15 +11427,14 @@ size_t FilterPositiveLabels::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:FilterPositiveLabels)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -16875,95 +11995,95 @@ MiniBatchItemStage::MiniBatchItemStage(const MiniBatchItemStage& from)
   clear_has_stage();
   switch (from.stage_case()) {
     case kImageCropTransform: {
-      mutable_image_crop_transform()->::ImageCropTransform::MergeFrom(from.image_crop_transform());
+      _internal_mutable_image_crop_transform()->::ImageCropTransform::MergeFrom(from._internal_image_crop_transform());
       break;
     }
     case kLabelSmoother: {
-      mutable_label_smoother()->::LabelSmoother::MergeFrom(from.label_smoother());
+      _internal_mutable_label_smoother()->::LabelSmoother::MergeFrom(from._internal_label_smoother());
       break;
     }
     case kLabelDropper: {
-      mutable_label_dropper()->::LabelDropper::MergeFrom(from.label_dropper());
+      _internal_mutable_label_dropper()->::LabelDropper::MergeFrom(from._internal_label_dropper());
       break;
     }
     case kMaxNumLabelDropper: {
-      mutable_max_num_label_dropper()->::MaxNumLabelDropper::MergeFrom(from.max_num_label_dropper());
+      _internal_mutable_max_num_label_dropper()->::MaxNumLabelDropper::MergeFrom(from._internal_max_num_label_dropper());
       break;
     }
     case kLabelWeight: {
-      mutable_label_weight()->::LabelWeight::MergeFrom(from.label_weight());
+      _internal_mutable_label_weight()->::LabelWeight::MergeFrom(from._internal_label_weight());
       break;
     }
     case kSsdRandomCrop: {
-      mutable_ssd_random_crop()->::SSDRandomCropOperation::MergeFrom(from.ssd_random_crop());
+      _internal_mutable_ssd_random_crop()->::SSDRandomCropOperation::MergeFrom(from._internal_ssd_random_crop());
       break;
     }
     case kRelativeCropTransform: {
-      mutable_relative_crop_transform()->::RelativeCropTransform::MergeFrom(from.relative_crop_transform());
+      _internal_mutable_relative_crop_transform()->::RelativeCropTransform::MergeFrom(from._internal_relative_crop_transform());
       break;
     }
     case kAspectRatioTransform: {
-      mutable_aspect_ratio_transform()->::AspectRatioTransform::MergeFrom(from.aspect_ratio_transform());
+      _internal_mutable_aspect_ratio_transform()->::AspectRatioTransform::MergeFrom(from._internal_aspect_ratio_transform());
       break;
     }
     case kAffineTransform: {
-      mutable_affine_transform()->::AffineTransform::MergeFrom(from.affine_transform());
+      _internal_mutable_affine_transform()->::AffineTransform::MergeFrom(from._internal_affine_transform());
       break;
     }
     case kFlipTransform: {
-      mutable_flip_transform()->::FlipTransform::MergeFrom(from.flip_transform());
+      _internal_mutable_flip_transform()->::FlipTransform::MergeFrom(from._internal_flip_transform());
       break;
     }
     case kJpegRecompression: {
-      mutable_jpeg_recompression()->::JPEGRecompression::MergeFrom(from.jpeg_recompression());
+      _internal_mutable_jpeg_recompression()->::JPEGRecompression::MergeFrom(from._internal_jpeg_recompression());
       break;
     }
     case kFilterBbox: {
-      mutable_filter_bbox()->::FilterBbox::MergeFrom(from.filter_bbox());
+      _internal_mutable_filter_bbox()->::FilterBbox::MergeFrom(from._internal_filter_bbox());
       break;
     }
     case kColorTransform: {
-      mutable_color_transform()->::ColorTransform::MergeFrom(from.color_transform());
+      _internal_mutable_color_transform()->::ColorTransform::MergeFrom(from._internal_color_transform());
       break;
     }
     case kScaleTransform: {
-      mutable_scale_transform()->::ScaleTransform::MergeFrom(from.scale_transform());
+      _internal_mutable_scale_transform()->::ScaleTransform::MergeFrom(from._internal_scale_transform());
       break;
     }
     case kLabelsFromBboxes: {
-      mutable_labels_from_bboxes()->::LabelsFromBboxes::MergeFrom(from.labels_from_bboxes());
+      _internal_mutable_labels_from_bboxes()->::LabelsFromBboxes::MergeFrom(from._internal_labels_from_bboxes());
       break;
     }
     case kDistortionTransform: {
-      mutable_distortion_transform()->::DistortionTransform::MergeFrom(from.distortion_transform());
+      _internal_mutable_distortion_transform()->::DistortionTransform::MergeFrom(from._internal_distortion_transform());
       break;
     }
     case kWhitespaceTokenizer: {
-      mutable_whitespace_tokenizer()->::WhitespaceTokenizer::MergeFrom(from.whitespace_tokenizer());
+      _internal_mutable_whitespace_tokenizer()->::WhitespaceTokenizer::MergeFrom(from._internal_whitespace_tokenizer());
       break;
     }
     case kTokenIndexer: {
-      mutable_token_indexer()->::TokenIndexer::MergeFrom(from.token_indexer());
+      _internal_mutable_token_indexer()->::TokenIndexer::MergeFrom(from._internal_token_indexer());
       break;
     }
     case kAudioMfccTransform: {
-      mutable_audio_mfcc_transform()->::AudioMFCCTransform::MergeFrom(from.audio_mfcc_transform());
+      _internal_mutable_audio_mfcc_transform()->::AudioMFCCTransform::MergeFrom(from._internal_audio_mfcc_transform());
       break;
     }
     case kOcrCropTransform: {
-      mutable_ocr_crop_transform()->::OCRCropTransform::MergeFrom(from.ocr_crop_transform());
+      _internal_mutable_ocr_crop_transform()->::OCRCropTransform::MergeFrom(from._internal_ocr_crop_transform());
       break;
     }
     case kFilterInvalidItems: {
-      mutable_filter_invalid_items()->::FilterInvalidItems::MergeFrom(from.filter_invalid_items());
+      _internal_mutable_filter_invalid_items()->::FilterInvalidItems::MergeFrom(from._internal_filter_invalid_items());
       break;
     }
     case kLandmarkAlignTransform: {
-      mutable_landmark_align_transform()->::LandmarkAlignTransform::MergeFrom(from.landmark_align_transform());
+      _internal_mutable_landmark_align_transform()->::LandmarkAlignTransform::MergeFrom(from._internal_landmark_align_transform());
       break;
     }
     case kFilterPositiveLabels: {
-      mutable_filter_positive_labels()->::FilterPositiveLabels::MergeFrom(from.filter_positive_labels());
+      _internal_mutable_filter_positive_labels()->::FilterPositiveLabels::MergeFrom(from._internal_filter_positive_labels());
       break;
     }
     case STAGE_NOT_SET: {
@@ -17111,7 +12231,6 @@ void MiniBatchItemStage::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* MiniBatchItemStage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -17122,161 +12241,161 @@ const char* MiniBatchItemStage::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // .ImageCropTransform image_crop_transform = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_image_crop_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_image_crop_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LabelSmoother label_smoother = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_label_smoother(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_label_smoother(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LabelDropper label_dropper = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_label_dropper(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_label_dropper(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .MaxNumLabelDropper max_num_label_dropper = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(mutable_max_num_label_dropper(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_max_num_label_dropper(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LabelWeight label_weight = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(mutable_label_weight(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_label_weight(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .SSDRandomCropOperation ssd_random_crop = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(mutable_ssd_random_crop(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_ssd_random_crop(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .RelativeCropTransform relative_crop_transform = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(mutable_relative_crop_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_relative_crop_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .AspectRatioTransform aspect_ratio_transform = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(mutable_aspect_ratio_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_aspect_ratio_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .AffineTransform affine_transform = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(mutable_affine_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_affine_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .FlipTransform flip_transform = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(mutable_flip_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_flip_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .JPEGRecompression jpeg_recompression = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(mutable_jpeg_recompression(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_jpeg_recompression(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .FilterBbox filter_bbox = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(mutable_filter_bbox(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_filter_bbox(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .ColorTransform color_transform = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(mutable_color_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_color_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .ScaleTransform scale_transform = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
-          ptr = ctx->ParseMessage(mutable_scale_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_scale_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LabelsFromBboxes labels_from_bboxes = 15;
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
-          ptr = ctx->ParseMessage(mutable_labels_from_bboxes(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_labels_from_bboxes(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DistortionTransform distortion_transform = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
-          ptr = ctx->ParseMessage(mutable_distortion_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_distortion_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .WhitespaceTokenizer whitespace_tokenizer = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
-          ptr = ctx->ParseMessage(mutable_whitespace_tokenizer(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_whitespace_tokenizer(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .TokenIndexer token_indexer = 18;
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 146)) {
-          ptr = ctx->ParseMessage(mutable_token_indexer(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_token_indexer(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .AudioMFCCTransform audio_mfcc_transform = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
-          ptr = ctx->ParseMessage(mutable_audio_mfcc_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_audio_mfcc_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .OCRCropTransform ocr_crop_transform = 20;
       case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 162)) {
-          ptr = ctx->ParseMessage(mutable_ocr_crop_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_ocr_crop_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .FilterInvalidItems filter_invalid_items = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 170)) {
-          ptr = ctx->ParseMessage(mutable_filter_invalid_items(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_filter_invalid_items(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .LandmarkAlignTransform landmark_align_transform = 22;
       case 22:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 178)) {
-          ptr = ctx->ParseMessage(mutable_landmark_align_transform(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_landmark_align_transform(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .FilterPositiveLabels filter_positive_labels = 23;
       case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 186)) {
-          ptr = ctx->ParseMessage(mutable_filter_positive_labels(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_filter_positive_labels(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -17299,612 +12418,200 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool MiniBatchItemStage::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:MiniBatchItemStage)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .ImageCropTransform image_crop_transform = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_image_crop_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .LabelSmoother label_smoother = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_label_smoother()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LabelDropper label_dropper = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_label_dropper()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .MaxNumLabelDropper max_num_label_dropper = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_max_num_label_dropper()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LabelWeight label_weight = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_label_weight()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .SSDRandomCropOperation ssd_random_crop = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_ssd_random_crop()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .RelativeCropTransform relative_crop_transform = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_relative_crop_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .AspectRatioTransform aspect_ratio_transform = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_aspect_ratio_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .AffineTransform affine_transform = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_affine_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .FlipTransform flip_transform = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_flip_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .JPEGRecompression jpeg_recompression = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_jpeg_recompression()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .FilterBbox filter_bbox = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_filter_bbox()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .ColorTransform color_transform = 13;
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_color_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .ScaleTransform scale_transform = 14;
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (114 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_scale_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LabelsFromBboxes labels_from_bboxes = 15;
-      case 15: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (122 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_labels_from_bboxes()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .DistortionTransform distortion_transform = 16;
-      case 16: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (130 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_distortion_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .WhitespaceTokenizer whitespace_tokenizer = 17;
-      case 17: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (138 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_whitespace_tokenizer()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .TokenIndexer token_indexer = 18;
-      case 18: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (146 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_token_indexer()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .AudioMFCCTransform audio_mfcc_transform = 19;
-      case 19: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (154 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_audio_mfcc_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .OCRCropTransform ocr_crop_transform = 20;
-      case 20: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (162 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_ocr_crop_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .FilterInvalidItems filter_invalid_items = 21;
-      case 21: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (170 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_filter_invalid_items()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .LandmarkAlignTransform landmark_align_transform = 22;
-      case 22: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (178 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_landmark_align_transform()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .FilterPositiveLabels filter_positive_labels = 23;
-      case 23: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (186 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_filter_positive_labels()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:MiniBatchItemStage)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:MiniBatchItemStage)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void MiniBatchItemStage::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:MiniBatchItemStage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .ImageCropTransform image_crop_transform = 1;
-  if (has_image_crop_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::image_crop_transform(this), output);
-  }
-
-  // .LabelSmoother label_smoother = 2;
-  if (has_label_smoother()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::label_smoother(this), output);
-  }
-
-  // .LabelDropper label_dropper = 3;
-  if (has_label_dropper()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::label_dropper(this), output);
-  }
-
-  // .MaxNumLabelDropper max_num_label_dropper = 4;
-  if (has_max_num_label_dropper()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, _Internal::max_num_label_dropper(this), output);
-  }
-
-  // .LabelWeight label_weight = 5;
-  if (has_label_weight()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, _Internal::label_weight(this), output);
-  }
-
-  // .SSDRandomCropOperation ssd_random_crop = 6;
-  if (has_ssd_random_crop()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, _Internal::ssd_random_crop(this), output);
-  }
-
-  // .RelativeCropTransform relative_crop_transform = 7;
-  if (has_relative_crop_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, _Internal::relative_crop_transform(this), output);
-  }
-
-  // .AspectRatioTransform aspect_ratio_transform = 8;
-  if (has_aspect_ratio_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, _Internal::aspect_ratio_transform(this), output);
-  }
-
-  // .AffineTransform affine_transform = 9;
-  if (has_affine_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, _Internal::affine_transform(this), output);
-  }
-
-  // .FlipTransform flip_transform = 10;
-  if (has_flip_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, _Internal::flip_transform(this), output);
-  }
-
-  // .JPEGRecompression jpeg_recompression = 11;
-  if (has_jpeg_recompression()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, _Internal::jpeg_recompression(this), output);
-  }
-
-  // .FilterBbox filter_bbox = 12;
-  if (has_filter_bbox()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, _Internal::filter_bbox(this), output);
-  }
-
-  // .ColorTransform color_transform = 13;
-  if (has_color_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      13, _Internal::color_transform(this), output);
-  }
-
-  // .ScaleTransform scale_transform = 14;
-  if (has_scale_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      14, _Internal::scale_transform(this), output);
-  }
-
-  // .LabelsFromBboxes labels_from_bboxes = 15;
-  if (has_labels_from_bboxes()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      15, _Internal::labels_from_bboxes(this), output);
-  }
-
-  // .DistortionTransform distortion_transform = 16;
-  if (has_distortion_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      16, _Internal::distortion_transform(this), output);
-  }
-
-  // .WhitespaceTokenizer whitespace_tokenizer = 17;
-  if (has_whitespace_tokenizer()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      17, _Internal::whitespace_tokenizer(this), output);
-  }
-
-  // .TokenIndexer token_indexer = 18;
-  if (has_token_indexer()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      18, _Internal::token_indexer(this), output);
-  }
-
-  // .AudioMFCCTransform audio_mfcc_transform = 19;
-  if (has_audio_mfcc_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      19, _Internal::audio_mfcc_transform(this), output);
-  }
-
-  // .OCRCropTransform ocr_crop_transform = 20;
-  if (has_ocr_crop_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      20, _Internal::ocr_crop_transform(this), output);
-  }
-
-  // .FilterInvalidItems filter_invalid_items = 21;
-  if (has_filter_invalid_items()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      21, _Internal::filter_invalid_items(this), output);
-  }
-
-  // .LandmarkAlignTransform landmark_align_transform = 22;
-  if (has_landmark_align_transform()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      22, _Internal::landmark_align_transform(this), output);
-  }
-
-  // .FilterPositiveLabels filter_positive_labels = 23;
-  if (has_filter_positive_labels()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      23, _Internal::filter_positive_labels(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:MiniBatchItemStage)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* MiniBatchItemStage::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* MiniBatchItemStage::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:MiniBatchItemStage)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .ImageCropTransform image_crop_transform = 1;
-  if (has_image_crop_transform()) {
+  if (_internal_has_image_crop_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::image_crop_transform(this), target);
+      InternalWriteMessage(
+        1, _Internal::image_crop_transform(this), target, stream);
   }
 
   // .LabelSmoother label_smoother = 2;
-  if (has_label_smoother()) {
+  if (_internal_has_label_smoother()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::label_smoother(this), target);
+      InternalWriteMessage(
+        2, _Internal::label_smoother(this), target, stream);
   }
 
   // .LabelDropper label_dropper = 3;
-  if (has_label_dropper()) {
+  if (_internal_has_label_dropper()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::label_dropper(this), target);
+      InternalWriteMessage(
+        3, _Internal::label_dropper(this), target, stream);
   }
 
   // .MaxNumLabelDropper max_num_label_dropper = 4;
-  if (has_max_num_label_dropper()) {
+  if (_internal_has_max_num_label_dropper()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, _Internal::max_num_label_dropper(this), target);
+      InternalWriteMessage(
+        4, _Internal::max_num_label_dropper(this), target, stream);
   }
 
   // .LabelWeight label_weight = 5;
-  if (has_label_weight()) {
+  if (_internal_has_label_weight()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, _Internal::label_weight(this), target);
+      InternalWriteMessage(
+        5, _Internal::label_weight(this), target, stream);
   }
 
   // .SSDRandomCropOperation ssd_random_crop = 6;
-  if (has_ssd_random_crop()) {
+  if (_internal_has_ssd_random_crop()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, _Internal::ssd_random_crop(this), target);
+      InternalWriteMessage(
+        6, _Internal::ssd_random_crop(this), target, stream);
   }
 
   // .RelativeCropTransform relative_crop_transform = 7;
-  if (has_relative_crop_transform()) {
+  if (_internal_has_relative_crop_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, _Internal::relative_crop_transform(this), target);
+      InternalWriteMessage(
+        7, _Internal::relative_crop_transform(this), target, stream);
   }
 
   // .AspectRatioTransform aspect_ratio_transform = 8;
-  if (has_aspect_ratio_transform()) {
+  if (_internal_has_aspect_ratio_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, _Internal::aspect_ratio_transform(this), target);
+      InternalWriteMessage(
+        8, _Internal::aspect_ratio_transform(this), target, stream);
   }
 
   // .AffineTransform affine_transform = 9;
-  if (has_affine_transform()) {
+  if (_internal_has_affine_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, _Internal::affine_transform(this), target);
+      InternalWriteMessage(
+        9, _Internal::affine_transform(this), target, stream);
   }
 
   // .FlipTransform flip_transform = 10;
-  if (has_flip_transform()) {
+  if (_internal_has_flip_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, _Internal::flip_transform(this), target);
+      InternalWriteMessage(
+        10, _Internal::flip_transform(this), target, stream);
   }
 
   // .JPEGRecompression jpeg_recompression = 11;
-  if (has_jpeg_recompression()) {
+  if (_internal_has_jpeg_recompression()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, _Internal::jpeg_recompression(this), target);
+      InternalWriteMessage(
+        11, _Internal::jpeg_recompression(this), target, stream);
   }
 
   // .FilterBbox filter_bbox = 12;
-  if (has_filter_bbox()) {
+  if (_internal_has_filter_bbox()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        12, _Internal::filter_bbox(this), target);
+      InternalWriteMessage(
+        12, _Internal::filter_bbox(this), target, stream);
   }
 
   // .ColorTransform color_transform = 13;
-  if (has_color_transform()) {
+  if (_internal_has_color_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        13, _Internal::color_transform(this), target);
+      InternalWriteMessage(
+        13, _Internal::color_transform(this), target, stream);
   }
 
   // .ScaleTransform scale_transform = 14;
-  if (has_scale_transform()) {
+  if (_internal_has_scale_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        14, _Internal::scale_transform(this), target);
+      InternalWriteMessage(
+        14, _Internal::scale_transform(this), target, stream);
   }
 
   // .LabelsFromBboxes labels_from_bboxes = 15;
-  if (has_labels_from_bboxes()) {
+  if (_internal_has_labels_from_bboxes()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        15, _Internal::labels_from_bboxes(this), target);
+      InternalWriteMessage(
+        15, _Internal::labels_from_bboxes(this), target, stream);
   }
 
   // .DistortionTransform distortion_transform = 16;
-  if (has_distortion_transform()) {
+  if (_internal_has_distortion_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        16, _Internal::distortion_transform(this), target);
+      InternalWriteMessage(
+        16, _Internal::distortion_transform(this), target, stream);
   }
 
   // .WhitespaceTokenizer whitespace_tokenizer = 17;
-  if (has_whitespace_tokenizer()) {
+  if (_internal_has_whitespace_tokenizer()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        17, _Internal::whitespace_tokenizer(this), target);
+      InternalWriteMessage(
+        17, _Internal::whitespace_tokenizer(this), target, stream);
   }
 
   // .TokenIndexer token_indexer = 18;
-  if (has_token_indexer()) {
+  if (_internal_has_token_indexer()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        18, _Internal::token_indexer(this), target);
+      InternalWriteMessage(
+        18, _Internal::token_indexer(this), target, stream);
   }
 
   // .AudioMFCCTransform audio_mfcc_transform = 19;
-  if (has_audio_mfcc_transform()) {
+  if (_internal_has_audio_mfcc_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        19, _Internal::audio_mfcc_transform(this), target);
+      InternalWriteMessage(
+        19, _Internal::audio_mfcc_transform(this), target, stream);
   }
 
   // .OCRCropTransform ocr_crop_transform = 20;
-  if (has_ocr_crop_transform()) {
+  if (_internal_has_ocr_crop_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        20, _Internal::ocr_crop_transform(this), target);
+      InternalWriteMessage(
+        20, _Internal::ocr_crop_transform(this), target, stream);
   }
 
   // .FilterInvalidItems filter_invalid_items = 21;
-  if (has_filter_invalid_items()) {
+  if (_internal_has_filter_invalid_items()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        21, _Internal::filter_invalid_items(this), target);
+      InternalWriteMessage(
+        21, _Internal::filter_invalid_items(this), target, stream);
   }
 
   // .LandmarkAlignTransform landmark_align_transform = 22;
-  if (has_landmark_align_transform()) {
+  if (_internal_has_landmark_align_transform()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        22, _Internal::landmark_align_transform(this), target);
+      InternalWriteMessage(
+        22, _Internal::landmark_align_transform(this), target, stream);
   }
 
   // .FilterPositiveLabels filter_positive_labels = 23;
-  if (has_filter_positive_labels()) {
+  if (_internal_has_filter_positive_labels()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        23, _Internal::filter_positive_labels(this), target);
+      InternalWriteMessage(
+        23, _Internal::filter_positive_labels(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:MiniBatchItemStage)
   return target;
@@ -17914,11 +12621,6 @@ size_t MiniBatchItemStage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:MiniBatchItemStage)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -18089,6 +12791,10 @@ size_t MiniBatchItemStage::ByteSizeLong() const {
       break;
     }
   }
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -18118,95 +12824,95 @@ void MiniBatchItemStage::MergeFrom(const MiniBatchItemStage& from) {
 
   switch (from.stage_case()) {
     case kImageCropTransform: {
-      mutable_image_crop_transform()->::ImageCropTransform::MergeFrom(from.image_crop_transform());
+      _internal_mutable_image_crop_transform()->::ImageCropTransform::MergeFrom(from._internal_image_crop_transform());
       break;
     }
     case kLabelSmoother: {
-      mutable_label_smoother()->::LabelSmoother::MergeFrom(from.label_smoother());
+      _internal_mutable_label_smoother()->::LabelSmoother::MergeFrom(from._internal_label_smoother());
       break;
     }
     case kLabelDropper: {
-      mutable_label_dropper()->::LabelDropper::MergeFrom(from.label_dropper());
+      _internal_mutable_label_dropper()->::LabelDropper::MergeFrom(from._internal_label_dropper());
       break;
     }
     case kMaxNumLabelDropper: {
-      mutable_max_num_label_dropper()->::MaxNumLabelDropper::MergeFrom(from.max_num_label_dropper());
+      _internal_mutable_max_num_label_dropper()->::MaxNumLabelDropper::MergeFrom(from._internal_max_num_label_dropper());
       break;
     }
     case kLabelWeight: {
-      mutable_label_weight()->::LabelWeight::MergeFrom(from.label_weight());
+      _internal_mutable_label_weight()->::LabelWeight::MergeFrom(from._internal_label_weight());
       break;
     }
     case kSsdRandomCrop: {
-      mutable_ssd_random_crop()->::SSDRandomCropOperation::MergeFrom(from.ssd_random_crop());
+      _internal_mutable_ssd_random_crop()->::SSDRandomCropOperation::MergeFrom(from._internal_ssd_random_crop());
       break;
     }
     case kRelativeCropTransform: {
-      mutable_relative_crop_transform()->::RelativeCropTransform::MergeFrom(from.relative_crop_transform());
+      _internal_mutable_relative_crop_transform()->::RelativeCropTransform::MergeFrom(from._internal_relative_crop_transform());
       break;
     }
     case kAspectRatioTransform: {
-      mutable_aspect_ratio_transform()->::AspectRatioTransform::MergeFrom(from.aspect_ratio_transform());
+      _internal_mutable_aspect_ratio_transform()->::AspectRatioTransform::MergeFrom(from._internal_aspect_ratio_transform());
       break;
     }
     case kAffineTransform: {
-      mutable_affine_transform()->::AffineTransform::MergeFrom(from.affine_transform());
+      _internal_mutable_affine_transform()->::AffineTransform::MergeFrom(from._internal_affine_transform());
       break;
     }
     case kFlipTransform: {
-      mutable_flip_transform()->::FlipTransform::MergeFrom(from.flip_transform());
+      _internal_mutable_flip_transform()->::FlipTransform::MergeFrom(from._internal_flip_transform());
       break;
     }
     case kJpegRecompression: {
-      mutable_jpeg_recompression()->::JPEGRecompression::MergeFrom(from.jpeg_recompression());
+      _internal_mutable_jpeg_recompression()->::JPEGRecompression::MergeFrom(from._internal_jpeg_recompression());
       break;
     }
     case kFilterBbox: {
-      mutable_filter_bbox()->::FilterBbox::MergeFrom(from.filter_bbox());
+      _internal_mutable_filter_bbox()->::FilterBbox::MergeFrom(from._internal_filter_bbox());
       break;
     }
     case kColorTransform: {
-      mutable_color_transform()->::ColorTransform::MergeFrom(from.color_transform());
+      _internal_mutable_color_transform()->::ColorTransform::MergeFrom(from._internal_color_transform());
       break;
     }
     case kScaleTransform: {
-      mutable_scale_transform()->::ScaleTransform::MergeFrom(from.scale_transform());
+      _internal_mutable_scale_transform()->::ScaleTransform::MergeFrom(from._internal_scale_transform());
       break;
     }
     case kLabelsFromBboxes: {
-      mutable_labels_from_bboxes()->::LabelsFromBboxes::MergeFrom(from.labels_from_bboxes());
+      _internal_mutable_labels_from_bboxes()->::LabelsFromBboxes::MergeFrom(from._internal_labels_from_bboxes());
       break;
     }
     case kDistortionTransform: {
-      mutable_distortion_transform()->::DistortionTransform::MergeFrom(from.distortion_transform());
+      _internal_mutable_distortion_transform()->::DistortionTransform::MergeFrom(from._internal_distortion_transform());
       break;
     }
     case kWhitespaceTokenizer: {
-      mutable_whitespace_tokenizer()->::WhitespaceTokenizer::MergeFrom(from.whitespace_tokenizer());
+      _internal_mutable_whitespace_tokenizer()->::WhitespaceTokenizer::MergeFrom(from._internal_whitespace_tokenizer());
       break;
     }
     case kTokenIndexer: {
-      mutable_token_indexer()->::TokenIndexer::MergeFrom(from.token_indexer());
+      _internal_mutable_token_indexer()->::TokenIndexer::MergeFrom(from._internal_token_indexer());
       break;
     }
     case kAudioMfccTransform: {
-      mutable_audio_mfcc_transform()->::AudioMFCCTransform::MergeFrom(from.audio_mfcc_transform());
+      _internal_mutable_audio_mfcc_transform()->::AudioMFCCTransform::MergeFrom(from._internal_audio_mfcc_transform());
       break;
     }
     case kOcrCropTransform: {
-      mutable_ocr_crop_transform()->::OCRCropTransform::MergeFrom(from.ocr_crop_transform());
+      _internal_mutable_ocr_crop_transform()->::OCRCropTransform::MergeFrom(from._internal_ocr_crop_transform());
       break;
     }
     case kFilterInvalidItems: {
-      mutable_filter_invalid_items()->::FilterInvalidItems::MergeFrom(from.filter_invalid_items());
+      _internal_mutable_filter_invalid_items()->::FilterInvalidItems::MergeFrom(from._internal_filter_invalid_items());
       break;
     }
     case kLandmarkAlignTransform: {
-      mutable_landmark_align_transform()->::LandmarkAlignTransform::MergeFrom(from.landmark_align_transform());
+      _internal_mutable_landmark_align_transform()->::LandmarkAlignTransform::MergeFrom(from._internal_landmark_align_transform());
       break;
     }
     case kFilterPositiveLabels: {
-      mutable_filter_positive_labels()->::FilterPositiveLabels::MergeFrom(from.filter_positive_labels());
+      _internal_mutable_filter_positive_labels()->::FilterPositiveLabels::MergeFrom(from._internal_filter_positive_labels());
       break;
     }
     case STAGE_NOT_SET: {
@@ -18286,18 +12992,18 @@ gRPCReaderParams::gRPCReaderParams(const gRPCReaderParams& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   generator_class_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.generator_class_name().empty()) {
+  if (!from._internal_generator_class_name().empty()) {
     generator_class_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.generator_class_name_);
   }
   batch_size_ = from.batch_size_;
   clear_has_params();
   switch (from.params_case()) {
     case kDataProviderParams: {
-      mutable_data_provider_params()->::DataProviderParams::MergeFrom(from.data_provider_params());
+      _internal_mutable_data_provider_params()->::DataProviderParams::MergeFrom(from._internal_data_provider_params());
       break;
     }
     case kSerializedParams: {
-      set_serialized_params(from.serialized_params());
+      _internal_set_serialized_params(from._internal_serialized_params());
       break;
     }
     case PARAMS_NOT_SET: {
@@ -18366,7 +13072,6 @@ void gRPCReaderParams::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* gRPCReaderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -18377,21 +13082,24 @@ const char* gRPCReaderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       // string generator_class_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_generator_class_name(), ptr, ctx, "gRPCReaderParams.generator_class_name");
+          auto str = _internal_mutable_generator_class_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "gRPCReaderParams.generator_class_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataProviderParams data_provider_params = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_data_provider_params(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_data_provider_params(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // bytes serialized_params = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_serialized_params(), ptr, ctx);
+          auto str = _internal_mutable_serialized_params();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -18421,130 +13129,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool gRPCReaderParams::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:gRPCReaderParams)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string generator_class_name = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_generator_class_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->generator_class_name().data(), static_cast<int>(this->generator_class_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "gRPCReaderParams.generator_class_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataProviderParams data_provider_params = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_data_provider_params()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bytes serialized_params = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_serialized_params()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 batch_size = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &batch_size_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:gRPCReaderParams)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:gRPCReaderParams)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void gRPCReaderParams::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:gRPCReaderParams)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string generator_class_name = 1;
-  if (this->generator_class_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->generator_class_name().data(), static_cast<int>(this->generator_class_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "gRPCReaderParams.generator_class_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->generator_class_name(), output);
-  }
-
-  // .DataProviderParams data_provider_params = 2;
-  if (has_data_provider_params()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::data_provider_params(this), output);
-  }
-
-  // bytes serialized_params = 3;
-  if (has_serialized_params()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
-      3, this->serialized_params(), output);
-  }
-
-  // int32 batch_size = 4;
-  if (this->batch_size() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->batch_size(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:gRPCReaderParams)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* gRPCReaderParams::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* gRPCReaderParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:gRPCReaderParams)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -18552,36 +13139,36 @@ void gRPCReaderParams::SerializeWithCachedSizes(
   // string generator_class_name = 1;
   if (this->generator_class_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->generator_class_name().data(), static_cast<int>(this->generator_class_name().length()),
+      this->_internal_generator_class_name().data(), static_cast<int>(this->_internal_generator_class_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "gRPCReaderParams.generator_class_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->generator_class_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_generator_class_name(), target);
   }
 
   // .DataProviderParams data_provider_params = 2;
-  if (has_data_provider_params()) {
+  if (_internal_has_data_provider_params()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::data_provider_params(this), target);
+      InternalWriteMessage(
+        2, _Internal::data_provider_params(this), target, stream);
   }
 
   // bytes serialized_params = 3;
-  if (has_serialized_params()) {
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
-        3, this->serialized_params(), target);
+  if (_internal_has_serialized_params()) {
+    target = stream->WriteBytesMaybeAliased(
+        3, this->_internal_serialized_params(), target);
   }
 
   // int32 batch_size = 4;
   if (this->batch_size() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->batch_size(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_batch_size(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:gRPCReaderParams)
   return target;
@@ -18591,11 +13178,6 @@ size_t gRPCReaderParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:gRPCReaderParams)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -18604,14 +13186,14 @@ size_t gRPCReaderParams::ByteSizeLong() const {
   if (this->generator_class_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->generator_class_name());
+        this->_internal_generator_class_name());
   }
 
   // int32 batch_size = 4;
   if (this->batch_size() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->batch_size());
+        this->_internal_batch_size());
   }
 
   switch (params_case()) {
@@ -18626,12 +13208,16 @@ size_t gRPCReaderParams::ByteSizeLong() const {
     case kSerializedParams: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->serialized_params());
+          this->_internal_serialized_params());
       break;
     }
     case PARAMS_NOT_SET: {
       break;
     }
+  }
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
   }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
@@ -18665,15 +13251,15 @@ void gRPCReaderParams::MergeFrom(const gRPCReaderParams& from) {
     generator_class_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.generator_class_name_);
   }
   if (from.batch_size() != 0) {
-    set_batch_size(from.batch_size());
+    _internal_set_batch_size(from._internal_batch_size());
   }
   switch (from.params_case()) {
     case kDataProviderParams: {
-      mutable_data_provider_params()->::DataProviderParams::MergeFrom(from.data_provider_params());
+      _internal_mutable_data_provider_params()->::DataProviderParams::MergeFrom(from._internal_data_provider_params());
       break;
     }
     case kSerializedParams: {
-      set_serialized_params(from.serialized_params());
+      _internal_set_serialized_params(from._internal_serialized_params());
       break;
     }
     case PARAMS_NOT_SET: {
@@ -18779,7 +13365,6 @@ void FakeBoxes::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* FakeBoxes::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -18790,20 +13375,20 @@ const char* FakeBoxes::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
       // repeated float relative_scale_range = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_relative_scale_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_relative_scale_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13) {
-          add_relative_scale_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_relative_scale_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
       // repeated float relative_aspect_range = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_relative_aspect_range(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_relative_aspect_range(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21) {
-          add_relative_aspect_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_relative_aspect_range(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
@@ -18824,10 +13409,10 @@ const char* FakeBoxes::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
       // repeated uint32 imsize = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(mutable_imsize(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_imsize(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40) {
-          add_imsize(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          _internal_add_imsize(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -18857,245 +13442,53 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool FakeBoxes::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:FakeBoxes)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated float relative_scale_range = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_relative_scale_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 10u, input, this->mutable_relative_scale_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated float relative_aspect_range = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_relative_aspect_range())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 18u, input, this->mutable_relative_aspect_range())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 fill_color = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &fill_color_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 background_color = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &background_color_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated uint32 imsize = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, this->mutable_imsize())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 1, 42u, input, this->mutable_imsize())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 min_dim = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &min_dim_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:FakeBoxes)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:FakeBoxes)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void FakeBoxes::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:FakeBoxes)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated float relative_scale_range = 1;
-  if (this->relative_scale_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(1, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_relative_scale_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->relative_scale_range().data(), this->relative_scale_range_size(), output);
-  }
-
-  // repeated float relative_aspect_range = 2;
-  if (this->relative_aspect_range_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(2, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_relative_aspect_range_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->relative_aspect_range().data(), this->relative_aspect_range_size(), output);
-  }
-
-  // uint32 fill_color = 3;
-  if (this->fill_color() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(3, this->fill_color(), output);
-  }
-
-  // uint32 background_color = 4;
-  if (this->background_color() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(4, this->background_color(), output);
-  }
-
-  // repeated uint32 imsize = 5;
-  if (this->imsize_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(5, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_imsize_cached_byte_size_.load(
-        std::memory_order_relaxed));
-  }
-  for (int i = 0, n = this->imsize_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32NoTag(
-      this->imsize(i), output);
-  }
-
-  // uint32 min_dim = 6;
-  if (this->min_dim() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(6, this->min_dim(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:FakeBoxes)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* FakeBoxes::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* FakeBoxes::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:FakeBoxes)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated float relative_scale_range = 1;
-  if (this->relative_scale_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      1,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _relative_scale_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->relative_scale_range_, target);
+  if (this->_internal_relative_scale_range_size() > 0) {
+    target = stream->WriteFixedPacked(1, _internal_relative_scale_range(), target);
   }
 
   // repeated float relative_aspect_range = 2;
-  if (this->relative_aspect_range_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      2,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _relative_aspect_range_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->relative_aspect_range_, target);
+  if (this->_internal_relative_aspect_range_size() > 0) {
+    target = stream->WriteFixedPacked(2, _internal_relative_aspect_range(), target);
   }
 
   // uint32 fill_color = 3;
   if (this->fill_color() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->fill_color(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_fill_color(), target);
   }
 
   // uint32 background_color = 4;
   if (this->background_color() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->background_color(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->_internal_background_color(), target);
   }
 
   // repeated uint32 imsize = 5;
-  if (this->imsize_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      5,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _imsize_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteUInt32NoTagToArray(this->imsize_, target);
+  {
+    int byte_size = _imsize_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          5, _internal_imsize(), byte_size, target);
+    }
   }
 
   // uint32 min_dim = 6;
   if (this->min_dim() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(6, this->min_dim(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(6, this->_internal_min_dim(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:FakeBoxes)
   return target;
@@ -19105,18 +13498,13 @@ size_t FakeBoxes::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:FakeBoxes)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float relative_scale_range = 1;
   {
-    unsigned int count = static_cast<unsigned int>(this->relative_scale_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_relative_scale_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -19131,7 +13519,7 @@ size_t FakeBoxes::ByteSizeLong() const {
 
   // repeated float relative_aspect_range = 2;
   {
-    unsigned int count = static_cast<unsigned int>(this->relative_aspect_range_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_relative_aspect_range_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -19163,23 +13551,27 @@ size_t FakeBoxes::ByteSizeLong() const {
   if (this->fill_color() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->fill_color());
+        this->_internal_fill_color());
   }
 
   // uint32 background_color = 4;
   if (this->background_color() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->background_color());
+        this->_internal_background_color());
   }
 
   // uint32 min_dim = 6;
   if (this->min_dim() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->min_dim());
+        this->_internal_min_dim());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -19211,13 +13603,13 @@ void FakeBoxes::MergeFrom(const FakeBoxes& from) {
   relative_aspect_range_.MergeFrom(from.relative_aspect_range_);
   imsize_.MergeFrom(from.imsize_);
   if (from.fill_color() != 0) {
-    set_fill_color(from.fill_color());
+    _internal_set_fill_color(from._internal_fill_color());
   }
   if (from.background_color() != 0) {
-    set_background_color(from.background_color());
+    _internal_set_background_color(from._internal_background_color());
   }
   if (from.min_dim() != 0) {
-    set_min_dim(from.min_dim());
+    _internal_set_min_dim(from._internal_min_dim());
   }
 }
 

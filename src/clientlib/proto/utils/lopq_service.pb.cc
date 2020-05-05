@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -31,7 +30,7 @@ static void InitDefaultsscc_info_LOPQEvalResult_proto_2futils_2flopq_5fservice_2
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LOPQEvalResult_proto_2futils_2flopq_5fservice_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_LOPQEvalResult_proto_2futils_2flopq_5fservice_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LOPQEvalResult_proto_2futils_2flopq_5fservice_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_proto_2futils_2flopq_5fservice_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_proto_2futils_2flopq_5fservice_2eproto = nullptr;
@@ -144,7 +143,6 @@ void LOPQEvalResult::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* LOPQEvalResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -213,198 +211,52 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool LOPQEvalResult::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:LOPQEvalResult)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 k = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &k_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float recall_vs_brute_force = 2 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &recall_vs_brute_force_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float kendall_tau_vs_brute_force = 3 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &kendall_tau_vs_brute_force_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float most_frequent_code_percent = 4 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &most_frequent_code_percent_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float lopq_ndcg = 5 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (45 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &lopq_ndcg_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float brute_force_ndcg = 6 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (53 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &brute_force_ndcg_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:LOPQEvalResult)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:LOPQEvalResult)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void LOPQEvalResult::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:LOPQEvalResult)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 k = 1;
-  if (this->k() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->k(), output);
-  }
-
-  // float recall_vs_brute_force = 2 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->recall_vs_brute_force() <= 0 && this->recall_vs_brute_force() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->recall_vs_brute_force(), output);
-  }
-
-  // float kendall_tau_vs_brute_force = 3 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->kendall_tau_vs_brute_force() <= 0 && this->kendall_tau_vs_brute_force() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->kendall_tau_vs_brute_force(), output);
-  }
-
-  // float most_frequent_code_percent = 4 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->most_frequent_code_percent() <= 0 && this->most_frequent_code_percent() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->most_frequent_code_percent(), output);
-  }
-
-  // float lopq_ndcg = 5 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->lopq_ndcg() <= 0 && this->lopq_ndcg() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(5, this->lopq_ndcg(), output);
-  }
-
-  // float brute_force_ndcg = 6 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->brute_force_ndcg() <= 0 && this->brute_force_ndcg() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(6, this->brute_force_ndcg(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:LOPQEvalResult)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* LOPQEvalResult::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* LOPQEvalResult::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:LOPQEvalResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 k = 1;
   if (this->k() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->k(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_k(), target);
   }
 
   // float recall_vs_brute_force = 2 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->recall_vs_brute_force() <= 0 && this->recall_vs_brute_force() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->recall_vs_brute_force(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_recall_vs_brute_force(), target);
   }
 
   // float kendall_tau_vs_brute_force = 3 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->kendall_tau_vs_brute_force() <= 0 && this->kendall_tau_vs_brute_force() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->kendall_tau_vs_brute_force(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_kendall_tau_vs_brute_force(), target);
   }
 
   // float most_frequent_code_percent = 4 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->most_frequent_code_percent() <= 0 && this->most_frequent_code_percent() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->most_frequent_code_percent(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_most_frequent_code_percent(), target);
   }
 
   // float lopq_ndcg = 5 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->lopq_ndcg() <= 0 && this->lopq_ndcg() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->lopq_ndcg(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_lopq_ndcg(), target);
   }
 
   // float brute_force_ndcg = 6 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->brute_force_ndcg() <= 0 && this->brute_force_ndcg() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->brute_force_ndcg(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->_internal_brute_force_ndcg(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:LOPQEvalResult)
   return target;
@@ -414,11 +266,6 @@ size_t LOPQEvalResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:LOPQEvalResult)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -427,7 +274,7 @@ size_t LOPQEvalResult::ByteSizeLong() const {
   if (this->k() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->k());
+        this->_internal_k());
   }
 
   // float recall_vs_brute_force = 2 [(.clarifai.api.utils.cl_show_if_empty) = true];
@@ -455,6 +302,10 @@ size_t LOPQEvalResult::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -483,22 +334,22 @@ void LOPQEvalResult::MergeFrom(const LOPQEvalResult& from) {
   (void) cached_has_bits;
 
   if (from.k() != 0) {
-    set_k(from.k());
+    _internal_set_k(from._internal_k());
   }
   if (!(from.recall_vs_brute_force() <= 0 && from.recall_vs_brute_force() >= 0)) {
-    set_recall_vs_brute_force(from.recall_vs_brute_force());
+    _internal_set_recall_vs_brute_force(from._internal_recall_vs_brute_force());
   }
   if (!(from.kendall_tau_vs_brute_force() <= 0 && from.kendall_tau_vs_brute_force() >= 0)) {
-    set_kendall_tau_vs_brute_force(from.kendall_tau_vs_brute_force());
+    _internal_set_kendall_tau_vs_brute_force(from._internal_kendall_tau_vs_brute_force());
   }
   if (!(from.most_frequent_code_percent() <= 0 && from.most_frequent_code_percent() >= 0)) {
-    set_most_frequent_code_percent(from.most_frequent_code_percent());
+    _internal_set_most_frequent_code_percent(from._internal_most_frequent_code_percent());
   }
   if (!(from.lopq_ndcg() <= 0 && from.lopq_ndcg() >= 0)) {
-    set_lopq_ndcg(from.lopq_ndcg());
+    _internal_set_lopq_ndcg(from._internal_lopq_ndcg());
   }
   if (!(from.brute_force_ndcg() <= 0 && from.brute_force_ndcg() >= 0)) {
-    set_brute_force_ndcg(from.brute_force_ndcg());
+    _internal_set_brute_force_ndcg(from._internal_brute_force_ndcg());
   }
 }
 

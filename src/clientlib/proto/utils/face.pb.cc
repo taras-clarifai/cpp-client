@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -39,7 +38,7 @@ static void InitDefaultsscc_info_Face_proto_2futils_2fface_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Face_proto_2futils_2fface_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_Face_proto_2futils_2fface_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Face_proto_2futils_2fface_2eproto}, {
       &scc_info_Tag_proto_2futils_2ftag_2eproto.base,}};
 
 static void InitDefaultsscc_info_FaceDetection_proto_2futils_2fface_2eproto() {
@@ -54,7 +53,7 @@ static void InitDefaultsscc_info_FaceDetection_proto_2futils_2fface_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_FaceDetection_proto_2futils_2fface_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsscc_info_FaceDetection_proto_2futils_2fface_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_FaceDetection_proto_2futils_2fface_2eproto}, {
       &scc_info_BoundingBox_proto_2futils_2fboundingbox_2eproto.base,
       &scc_info_Face_proto_2futils_2fface_2eproto.base,
       &scc_info_Embedding_proto_2futils_2fembedding_2eproto.base,}};
@@ -194,7 +193,6 @@ void Face::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* Face::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -208,10 +206,10 @@ const char* Face::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_identity(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_identity(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 10);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .Tag age = 2;
@@ -220,10 +218,10 @@ const char* Face::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_age(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_age(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .Tag gender = 3;
@@ -232,10 +230,10 @@ const char* Face::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_gender(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_gender(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 26);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .Tag ethnicity = 4;
@@ -244,10 +242,10 @@ const char* Face::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_ethnicity(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_ethnicity(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 34);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -269,172 +267,48 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Face::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Face)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .Tag identity = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_identity()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated .Tag age = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_age()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .Tag gender = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_gender()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .Tag ethnicity = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_ethnicity()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Face)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Face)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Face::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Face)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .Tag identity = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->identity_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->identity(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .Tag age = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->age_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->age(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .Tag gender = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->gender_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3,
-      this->gender(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .Tag ethnicity = 4;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->ethnicity_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4,
-      this->ethnicity(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Face)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* Face::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Face::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Face)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .Tag identity = 1;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->identity_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_identity_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->identity(static_cast<int>(i)), target);
+      InternalWriteMessage(1, this->_internal_identity(i), target, stream);
   }
 
   // repeated .Tag age = 2;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->age_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_age_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->age(static_cast<int>(i)), target);
+      InternalWriteMessage(2, this->_internal_age(i), target, stream);
   }
 
   // repeated .Tag gender = 3;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->gender_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_gender_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->gender(static_cast<int>(i)), target);
+      InternalWriteMessage(3, this->_internal_gender(i), target, stream);
   }
 
   // repeated .Tag ethnicity = 4;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->ethnicity_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_ethnicity_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, this->ethnicity(static_cast<int>(i)), target);
+      InternalWriteMessage(4, this->_internal_ethnicity(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Face)
   return target;
@@ -444,59 +318,42 @@ size_t Face::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Face)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .Tag identity = 1;
-  {
-    unsigned int count = static_cast<unsigned int>(this->identity_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->identity(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_identity_size();
+  for (const auto& msg : this->identity_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .Tag age = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->age_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->age(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_age_size();
+  for (const auto& msg : this->age_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .Tag gender = 3;
-  {
-    unsigned int count = static_cast<unsigned int>(this->gender_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->gender(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_gender_size();
+  for (const auto& msg : this->gender_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .Tag ethnicity = 4;
-  {
-    unsigned int count = static_cast<unsigned int>(this->ethnicity_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->ethnicity(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_ethnicity_size();
+  for (const auto& msg : this->ethnicity_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -551,10 +408,10 @@ bool Face::IsInitialized() const {
 void Face::InternalSwap(Face* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&identity_)->InternalSwap(CastToBase(&other->identity_));
-  CastToBase(&age_)->InternalSwap(CastToBase(&other->age_));
-  CastToBase(&gender_)->InternalSwap(CastToBase(&other->gender_));
-  CastToBase(&ethnicity_)->InternalSwap(CastToBase(&other->ethnicity_));
+  identity_.InternalSwap(&other->identity_);
+  age_.InternalSwap(&other->age_);
+  gender_.InternalSwap(&other->gender_);
+  ethnicity_.InternalSwap(&other->ethnicity_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Face::GetMetadata() const {
@@ -612,17 +469,17 @@ FaceDetection::FaceDetection(const FaceDetection& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_box()) {
+  if (from._internal_has_box()) {
     box_ = new ::BoundingBox(*from.box_);
   } else {
     box_ = nullptr;
   }
-  if (from.has_face()) {
+  if (from._internal_has_face()) {
     face_ = new ::Face(*from.face_);
   } else {
     face_ = nullptr;
   }
-  if (from.has_embedding()) {
+  if (from._internal_has_embedding()) {
     embedding_ = new ::Embedding(*from.embedding_);
   } else {
     embedding_ = nullptr;
@@ -678,7 +535,6 @@ void FaceDetection::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* FaceDetection::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -689,21 +545,21 @@ const char* FaceDetection::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
       // .BoundingBox box = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_box(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_box(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .Face face = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_face(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_face(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .Embedding embedding = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_embedding(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_embedding(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -726,132 +582,40 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool FaceDetection::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:FaceDetection)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .BoundingBox box = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_box()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .Face face = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_face()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .Embedding embedding = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_embedding()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:FaceDetection)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:FaceDetection)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void FaceDetection::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:FaceDetection)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .BoundingBox box = 1;
-  if (this->has_box()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::box(this), output);
-  }
-
-  // .Face face = 2;
-  if (this->has_face()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::face(this), output);
-  }
-
-  // .Embedding embedding = 3;
-  if (this->has_embedding()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::embedding(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:FaceDetection)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* FaceDetection::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* FaceDetection::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:FaceDetection)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BoundingBox box = 1;
   if (this->has_box()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::box(this), target);
+      InternalWriteMessage(
+        1, _Internal::box(this), target, stream);
   }
 
   // .Face face = 2;
   if (this->has_face()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::face(this), target);
+      InternalWriteMessage(
+        2, _Internal::face(this), target, stream);
   }
 
   // .Embedding embedding = 3;
   if (this->has_embedding()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::embedding(this), target);
+      InternalWriteMessage(
+        3, _Internal::embedding(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:FaceDetection)
   return target;
@@ -861,11 +625,6 @@ size_t FaceDetection::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:FaceDetection)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -891,6 +650,10 @@ size_t FaceDetection::ByteSizeLong() const {
         *embedding_);
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -919,13 +682,13 @@ void FaceDetection::MergeFrom(const FaceDetection& from) {
   (void) cached_has_bits;
 
   if (from.has_box()) {
-    mutable_box()->::BoundingBox::MergeFrom(from.box());
+    _internal_mutable_box()->::BoundingBox::MergeFrom(from._internal_box());
   }
   if (from.has_face()) {
-    mutable_face()->::Face::MergeFrom(from.face());
+    _internal_mutable_face()->::Face::MergeFrom(from._internal_face());
   }
   if (from.has_embedding()) {
-    mutable_embedding()->::Embedding::MergeFrom(from.embedding());
+    _internal_mutable_embedding()->::Embedding::MergeFrom(from._internal_embedding());
   }
 }
 

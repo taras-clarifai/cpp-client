@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -42,7 +41,7 @@ static void InitDefaultsscc_info_ConceptClassifierDump_proto_2fconcept_5ftrainer
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ConceptClassifierDump_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ConceptClassifierDump_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ConceptClassifierDump_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto}, {}};
 
 static void InitDefaultsscc_info_ConceptTrainerDump_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -56,7 +55,7 @@ static void InitDefaultsscc_info_ConceptTrainerDump_proto_2fconcept_5ftrainer_5f
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ConceptTrainerDump_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_ConceptTrainerDump_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_ConceptTrainerDump_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto}, {
       &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
       &scc_info_ConceptTrainerDump_ClassifiersEntry_DoNotUse_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto.base,}};
 
@@ -71,7 +70,7 @@ static void InitDefaultsscc_info_ConceptTrainerDump_ClassifiersEntry_DoNotUse_pr
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ConceptTrainerDump_ClassifiersEntry_DoNotUse_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_ConceptTrainerDump_ClassifiersEntry_DoNotUse_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ConceptTrainerDump_ClassifiersEntry_DoNotUse_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto}, {
       &scc_info_ConceptClassifierDump_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto.base,}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_proto_2fconcept_5ftrainer_5fdump_2fconcept_5ftrainer_5fdump_2eproto[3];
@@ -267,18 +266,18 @@ ConceptTrainerDump::ConceptTrainerDump(const ConceptTrainerDump& from)
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   classifiers_.MergeFrom(from.classifiers_);
   embeddings_model_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.embeddings_model().empty()) {
+  if (!from._internal_embeddings_model().empty()) {
     embeddings_model_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.embeddings_model_);
   }
   tf_graph_proto_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.tf_graph_proto().empty()) {
+  if (!from._internal_tf_graph_proto().empty()) {
     tf_graph_proto_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tf_graph_proto_);
   }
   tf_frozen_meta_graph_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.tf_frozen_meta_graph().empty()) {
+  if (!from._internal_tf_frozen_meta_graph().empty()) {
     tf_frozen_meta_graph_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tf_frozen_meta_graph_);
   }
-  if (from.has_update_time()) {
+  if (from._internal_has_update_time()) {
     update_time_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.update_time_);
   } else {
     update_time_ = nullptr;
@@ -342,7 +341,6 @@ void ConceptTrainerDump::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -360,7 +358,7 @@ const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // .google.protobuf.Timestamp update_time = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_update_time(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_update_time(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -373,13 +371,15 @@ const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
             ptr = ctx->ParseMessage(&classifiers_, ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 26);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
       // string embeddings_model = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_embeddings_model(), ptr, ctx, "ConceptTrainerDump.embeddings_model");
+          auto str = _internal_mutable_embeddings_model();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ConceptTrainerDump.embeddings_model"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -388,7 +388,7 @@ const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_training_type(static_cast<::TrainingType>(val));
+          _internal_set_training_type(static_cast<::TrainingType>(val));
         } else goto handle_unusual;
         continue;
       // bool feature_normalization = 6;
@@ -401,14 +401,16 @@ const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // bytes tf_graph_proto = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_tf_graph_proto(), ptr, ctx);
+          auto str = _internal_mutable_tf_graph_proto();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // bytes tf_frozen_meta_graph = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_tf_frozen_meta_graph(), ptr, ctx);
+          auto str = _internal_mutable_tf_frozen_meta_graph();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -418,10 +420,12 @@ const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(add_aiids(), ptr, ctx, "ConceptTrainerDump.aiids");
+            auto str = _internal_add_aiids();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ConceptTrainerDump.aiids"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 74);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
         } else goto handle_unusual;
         continue;
       // .TrainingEnvironment training_environment = 10;
@@ -429,7 +433,7 @@ const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_training_environment(static_cast<::TrainingEnvironment>(val));
+          _internal_set_training_environment(static_cast<::TrainingEnvironment>(val));
         } else goto handle_unusual;
         continue;
       // repeated string concept_ids = 11;
@@ -438,10 +442,12 @@ const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(add_concept_ids(), ptr, ctx, "ConceptTrainerDump.concept_ids");
+            auto str = _internal_add_concept_ids();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ConceptTrainerDump.concept_ids"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 90);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<90>(ptr));
         } else goto handle_unusual;
         continue;
       // .MissingPositiveExamplePolicy missing_positive_example_policy = 12;
@@ -449,7 +455,7 @@ const char* ConceptTrainerDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 96)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_missing_positive_example_policy(static_cast<::MissingPositiveExamplePolicy>(val));
+          _internal_set_missing_positive_example_policy(static_cast<::MissingPositiveExamplePolicy>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -471,358 +477,29 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ConceptTrainerDump::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ConceptTrainerDump)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 version = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &version_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Timestamp update_time = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_update_time()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // map<string, .ConceptClassifierDump> classifiers = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          ConceptTrainerDump_ClassifiersEntry_DoNotUse::Parser< ::PROTOBUF_NAMESPACE_ID::internal::MapField<
-              ConceptTrainerDump_ClassifiersEntry_DoNotUse,
-              std::string, ::ConceptClassifierDump,
-              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_MESSAGE,
-              0 >,
-            ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump > > parser(&classifiers_);
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            parser.key().data(), static_cast<int>(parser.key().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ConceptTrainerDump.ClassifiersEntry.key"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string embeddings_model = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_embeddings_model()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->embeddings_model().data(), static_cast<int>(this->embeddings_model().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ConceptTrainerDump.embeddings_model"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .TrainingType training_type = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_training_type(static_cast< ::TrainingType >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool feature_normalization = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &feature_normalization_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bytes tf_graph_proto = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_tf_graph_proto()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bytes tf_frozen_meta_graph = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_tf_frozen_meta_graph()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated string aiids = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->add_aiids()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->aiids(this->aiids_size() - 1).data(),
-            static_cast<int>(this->aiids(this->aiids_size() - 1).length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ConceptTrainerDump.aiids"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .TrainingEnvironment training_environment = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (80 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_training_environment(static_cast< ::TrainingEnvironment >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated string concept_ids = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->add_concept_ids()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->concept_ids(this->concept_ids_size() - 1).data(),
-            static_cast<int>(this->concept_ids(this->concept_ids_size() - 1).length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ConceptTrainerDump.concept_ids"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .MissingPositiveExamplePolicy missing_positive_example_policy = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (96 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_missing_positive_example_policy(static_cast< ::MissingPositiveExamplePolicy >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ConceptTrainerDump)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ConceptTrainerDump)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ConceptTrainerDump::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ConceptTrainerDump)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 version = 1;
-  if (this->version() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->version(), output);
-  }
-
-  // .google.protobuf.Timestamp update_time = 2;
-  if (this->has_update_time()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::update_time(this), output);
-  }
-
-  // map<string, .ConceptClassifierDump> classifiers = 3;
-  if (!this->classifiers().empty()) {
-    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::const_pointer
-        ConstPtr;
-    typedef ConstPtr SortItem;
-    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
-    struct Utf8Check {
-      static void Check(ConstPtr p) {
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->first.data(), static_cast<int>(p->first.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "ConceptTrainerDump.ClassifiersEntry.key");
-      }
-    };
-
-    if (output->IsSerializationDeterministic() &&
-        this->classifiers().size() > 1) {
-      ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->classifiers().size()]);
-      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::size_type size_type;
-      size_type n = 0;
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::const_iterator
-          it = this->classifiers().begin();
-          it != this->classifiers().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      for (size_type i = 0; i < n; i++) {
-        ConceptTrainerDump_ClassifiersEntry_DoNotUse::Funcs::SerializeToCodedStream(3, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, output);
-        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
-      }
-    } else {
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::const_iterator
-          it = this->classifiers().begin();
-          it != this->classifiers().end(); ++it) {
-        ConceptTrainerDump_ClassifiersEntry_DoNotUse::Funcs::SerializeToCodedStream(3, it->first, it->second, output);
-        Utf8Check::Check(&(*it));
-      }
-    }
-  }
-
-  // string embeddings_model = 4;
-  if (this->embeddings_model().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->embeddings_model().data(), static_cast<int>(this->embeddings_model().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ConceptTrainerDump.embeddings_model");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->embeddings_model(), output);
-  }
-
-  // .TrainingType training_type = 5;
-  if (this->training_type() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      5, this->training_type(), output);
-  }
-
-  // bool feature_normalization = 6;
-  if (this->feature_normalization() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(6, this->feature_normalization(), output);
-  }
-
-  // bytes tf_graph_proto = 7;
-  if (this->tf_graph_proto().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
-      7, this->tf_graph_proto(), output);
-  }
-
-  // bytes tf_frozen_meta_graph = 8;
-  if (this->tf_frozen_meta_graph().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
-      8, this->tf_frozen_meta_graph(), output);
-  }
-
-  // repeated string aiids = 9;
-  for (int i = 0, n = this->aiids_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->aiids(i).data(), static_cast<int>(this->aiids(i).length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ConceptTrainerDump.aiids");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteString(
-      9, this->aiids(i), output);
-  }
-
-  // .TrainingEnvironment training_environment = 10;
-  if (this->training_environment() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      10, this->training_environment(), output);
-  }
-
-  // repeated string concept_ids = 11;
-  for (int i = 0, n = this->concept_ids_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->concept_ids(i).data(), static_cast<int>(this->concept_ids(i).length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ConceptTrainerDump.concept_ids");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteString(
-      11, this->concept_ids(i), output);
-  }
-
-  // .MissingPositiveExamplePolicy missing_positive_example_policy = 12;
-  if (this->missing_positive_example_policy() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      12, this->missing_positive_example_policy(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ConceptTrainerDump)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ConceptTrainerDump::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ConceptTrainerDump::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ConceptTrainerDump)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 version = 1;
   if (this->version() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->version(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_version(), target);
   }
 
   // .google.protobuf.Timestamp update_time = 2;
   if (this->has_update_time()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::update_time(this), target);
+      InternalWriteMessage(
+        2, _Internal::update_time(this), target, stream);
   }
 
   // map<string, .ConceptClassifierDump> classifiers = 3;
-  if (!this->classifiers().empty()) {
+  if (!this->_internal_classifiers().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
@@ -836,27 +513,27 @@ void ConceptTrainerDump::SerializeWithCachedSizes(
       }
     };
 
-    if (false &&
-        this->classifiers().size() > 1) {
+    if (stream->IsSerializationDeterministic() &&
+        this->_internal_classifiers().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->classifiers().size()]);
+          new SortItem[this->_internal_classifiers().size()]);
       typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::size_type size_type;
       size_type n = 0;
       for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::const_iterator
-          it = this->classifiers().begin();
-          it != this->classifiers().end(); ++it, ++n) {
+          it = this->_internal_classifiers().begin();
+          it != this->_internal_classifiers().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        target = ConceptTrainerDump_ClassifiersEntry_DoNotUse::Funcs::SerializeToArray(3, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target);
+        target = ConceptTrainerDump_ClassifiersEntry_DoNotUse::Funcs::InternalSerialize(3, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::const_iterator
-          it = this->classifiers().begin();
-          it != this->classifiers().end(); ++it) {
-        target = ConceptTrainerDump_ClassifiersEntry_DoNotUse::Funcs::SerializeToArray(3, it->first, it->second, target);
+          it = this->_internal_classifiers().begin();
+          it != this->_internal_classifiers().end(); ++it) {
+        target = ConceptTrainerDump_ClassifiersEntry_DoNotUse::Funcs::InternalSerialize(3, it->first, it->second, target, stream);
         Utf8Check::Check(&(*it));
       }
     }
@@ -865,74 +542,75 @@ void ConceptTrainerDump::SerializeWithCachedSizes(
   // string embeddings_model = 4;
   if (this->embeddings_model().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->embeddings_model().data(), static_cast<int>(this->embeddings_model().length()),
+      this->_internal_embeddings_model().data(), static_cast<int>(this->_internal_embeddings_model().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ConceptTrainerDump.embeddings_model");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->embeddings_model(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_embeddings_model(), target);
   }
 
   // .TrainingType training_type = 5;
   if (this->training_type() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      5, this->training_type(), target);
+      5, this->_internal_training_type(), target);
   }
 
   // bool feature_normalization = 6;
   if (this->feature_normalization() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->feature_normalization(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->_internal_feature_normalization(), target);
   }
 
   // bytes tf_graph_proto = 7;
   if (this->tf_graph_proto().size() > 0) {
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
-        7, this->tf_graph_proto(), target);
+    target = stream->WriteBytesMaybeAliased(
+        7, this->_internal_tf_graph_proto(), target);
   }
 
   // bytes tf_frozen_meta_graph = 8;
   if (this->tf_frozen_meta_graph().size() > 0) {
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
-        8, this->tf_frozen_meta_graph(), target);
+    target = stream->WriteBytesMaybeAliased(
+        8, this->_internal_tf_frozen_meta_graph(), target);
   }
 
   // repeated string aiids = 9;
-  for (int i = 0, n = this->aiids_size(); i < n; i++) {
+  for (int i = 0, n = this->_internal_aiids_size(); i < n; i++) {
+    const auto& s = this->_internal_aiids(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->aiids(i).data(), static_cast<int>(this->aiids(i).length()),
+      s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ConceptTrainerDump.aiids");
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteStringToArray(9, this->aiids(i), target);
+    target = stream->WriteString(9, s, target);
   }
 
   // .TrainingEnvironment training_environment = 10;
   if (this->training_environment() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      10, this->training_environment(), target);
+      10, this->_internal_training_environment(), target);
   }
 
   // repeated string concept_ids = 11;
-  for (int i = 0, n = this->concept_ids_size(); i < n; i++) {
+  for (int i = 0, n = this->_internal_concept_ids_size(); i < n; i++) {
+    const auto& s = this->_internal_concept_ids(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->concept_ids(i).data(), static_cast<int>(this->concept_ids(i).length()),
+      s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ConceptTrainerDump.concept_ids");
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteStringToArray(11, this->concept_ids(i), target);
+    target = stream->WriteString(11, s, target);
   }
 
   // .MissingPositiveExamplePolicy missing_positive_example_policy = 12;
   if (this->missing_positive_example_policy() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      12, this->missing_positive_example_policy(), target);
+      12, this->_internal_missing_positive_example_policy(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ConceptTrainerDump)
   return target;
@@ -942,59 +620,54 @@ size_t ConceptTrainerDump::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ConceptTrainerDump)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // map<string, .ConceptClassifierDump> classifiers = 3;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->classifiers_size());
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_classifiers_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::ConceptClassifierDump >::const_iterator
-      it = this->classifiers().begin();
-      it != this->classifiers().end(); ++it) {
+      it = this->_internal_classifiers().begin();
+      it != this->_internal_classifiers().end(); ++it) {
     total_size += ConceptTrainerDump_ClassifiersEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
   // repeated string aiids = 9;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->aiids_size());
-  for (int i = 0, n = this->aiids_size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(aiids_.size());
+  for (int i = 0, n = aiids_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      this->aiids(i));
+      aiids_.Get(i));
   }
 
   // repeated string concept_ids = 11;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->concept_ids_size());
-  for (int i = 0, n = this->concept_ids_size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(concept_ids_.size());
+  for (int i = 0, n = concept_ids_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      this->concept_ids(i));
+      concept_ids_.Get(i));
   }
 
   // string embeddings_model = 4;
   if (this->embeddings_model().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->embeddings_model());
+        this->_internal_embeddings_model());
   }
 
   // bytes tf_graph_proto = 7;
   if (this->tf_graph_proto().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->tf_graph_proto());
+        this->_internal_tf_graph_proto());
   }
 
   // bytes tf_frozen_meta_graph = 8;
   if (this->tf_frozen_meta_graph().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->tf_frozen_meta_graph());
+        this->_internal_tf_frozen_meta_graph());
   }
 
   // .google.protobuf.Timestamp update_time = 2;
@@ -1008,13 +681,13 @@ size_t ConceptTrainerDump::ByteSizeLong() const {
   if (this->version() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->version());
+        this->_internal_version());
   }
 
   // .TrainingType training_type = 5;
   if (this->training_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->training_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_training_type());
   }
 
   // bool feature_normalization = 6;
@@ -1025,15 +698,19 @@ size_t ConceptTrainerDump::ByteSizeLong() const {
   // .TrainingEnvironment training_environment = 10;
   if (this->training_environment() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->training_environment());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_training_environment());
   }
 
   // .MissingPositiveExamplePolicy missing_positive_example_policy = 12;
   if (this->missing_positive_example_policy() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->missing_positive_example_policy());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_missing_positive_example_policy());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1077,22 +754,22 @@ void ConceptTrainerDump::MergeFrom(const ConceptTrainerDump& from) {
     tf_frozen_meta_graph_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tf_frozen_meta_graph_);
   }
   if (from.has_update_time()) {
-    mutable_update_time()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.update_time());
+    _internal_mutable_update_time()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_update_time());
   }
   if (from.version() != 0) {
-    set_version(from.version());
+    _internal_set_version(from._internal_version());
   }
   if (from.training_type() != 0) {
-    set_training_type(from.training_type());
+    _internal_set_training_type(from._internal_training_type());
   }
   if (from.feature_normalization() != 0) {
-    set_feature_normalization(from.feature_normalization());
+    _internal_set_feature_normalization(from._internal_feature_normalization());
   }
   if (from.training_environment() != 0) {
-    set_training_environment(from.training_environment());
+    _internal_set_training_environment(from._internal_training_environment());
   }
   if (from.missing_positive_example_policy() != 0) {
-    set_missing_positive_example_policy(from.missing_positive_example_policy());
+    _internal_set_missing_positive_example_policy(from._internal_missing_positive_example_policy());
   }
 }
 
@@ -1118,8 +795,8 @@ void ConceptTrainerDump::InternalSwap(ConceptTrainerDump* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   classifiers_.Swap(&other->classifiers_);
-  aiids_.InternalSwap(CastToBase(&other->aiids_));
-  concept_ids_.InternalSwap(CastToBase(&other->concept_ids_));
+  aiids_.InternalSwap(&other->aiids_);
+  concept_ids_.InternalSwap(&other->concept_ids_);
   embeddings_model_.Swap(&other->embeddings_model_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   tf_graph_proto_.Swap(&other->tf_graph_proto_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
@@ -1158,7 +835,7 @@ ConceptClassifierDump::ConceptClassifierDump(const ConceptClassifierDump& from)
       weight_(from.weight_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   classifier_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.classifier_type().empty()) {
+  if (!from._internal_classifier_type().empty()) {
     classifier_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.classifier_type_);
   }
   ::memcpy(&bias_, &from.bias_,
@@ -1207,7 +884,6 @@ void ConceptClassifierDump::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ConceptClassifierDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -1218,17 +894,19 @@ const char* ConceptClassifierDump::_InternalParse(const char* ptr, ::PROTOBUF_NA
       // string classifier_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_classifier_type(), ptr, ctx, "ConceptClassifierDump.classifier_type");
+          auto str = _internal_mutable_classifier_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ConceptClassifierDump.classifier_type"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // repeated float weight = 2 [packed = true];
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(mutable_weight(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_weight(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 21) {
-          add_weight(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          _internal_add_weight(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
           ptr += sizeof(float);
         } else goto handle_unusual;
         continue;
@@ -1272,157 +950,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ConceptClassifierDump::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ConceptClassifierDump)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string classifier_type = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_classifier_type()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->classifier_type().data(), static_cast<int>(this->classifier_type().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ConceptClassifierDump.classifier_type"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // repeated float weight = 2 [packed = true];
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, this->mutable_weight())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 18u, input, this->mutable_weight())));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float bias = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &bias_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float norm = 4 [deprecated = true];
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &norm_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float logistic_temp = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (45 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &logistic_temp_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ConceptClassifierDump)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ConceptClassifierDump)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ConceptClassifierDump::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ConceptClassifierDump)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string classifier_type = 1;
-  if (this->classifier_type().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->classifier_type().data(), static_cast<int>(this->classifier_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ConceptClassifierDump.classifier_type");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->classifier_type(), output);
-  }
-
-  // repeated float weight = 2 [packed = true];
-  if (this->weight_size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(2, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_weight_cached_byte_size_.load(
-        std::memory_order_relaxed));
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatArray(
-      this->weight().data(), this->weight_size(), output);
-  }
-
-  // float bias = 3;
-  if (!(this->bias() <= 0 && this->bias() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->bias(), output);
-  }
-
-  // float norm = 4 [deprecated = true];
-  if (!(this->norm() <= 0 && this->norm() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->norm(), output);
-  }
-
-  // float logistic_temp = 5;
-  if (!(this->logistic_temp() <= 0 && this->logistic_temp() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(5, this->logistic_temp(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ConceptClassifierDump)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ConceptClassifierDump::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ConceptClassifierDump::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ConceptClassifierDump)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1430,45 +960,39 @@ void ConceptClassifierDump::SerializeWithCachedSizes(
   // string classifier_type = 1;
   if (this->classifier_type().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->classifier_type().data(), static_cast<int>(this->classifier_type().length()),
+      this->_internal_classifier_type().data(), static_cast<int>(this->_internal_classifier_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ConceptClassifierDump.classifier_type");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->classifier_type(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_classifier_type(), target);
   }
 
   // repeated float weight = 2 [packed = true];
-  if (this->weight_size() > 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
-      2,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
-        _weight_cached_byte_size_.load(std::memory_order_relaxed),
-         target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteFloatNoTagToArray(this->weight_, target);
+  if (this->_internal_weight_size() > 0) {
+    target = stream->WriteFixedPacked(2, _internal_weight(), target);
   }
 
   // float bias = 3;
   if (!(this->bias() <= 0 && this->bias() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->bias(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_bias(), target);
   }
 
   // float norm = 4 [deprecated = true];
   if (!(this->norm() <= 0 && this->norm() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->norm(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_norm(), target);
   }
 
   // float logistic_temp = 5;
   if (!(this->logistic_temp() <= 0 && this->logistic_temp() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->logistic_temp(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_logistic_temp(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ConceptClassifierDump)
   return target;
@@ -1478,18 +1002,13 @@ size_t ConceptClassifierDump::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ConceptClassifierDump)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated float weight = 2 [packed = true];
   {
-    unsigned int count = static_cast<unsigned int>(this->weight_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_weight_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
@@ -1506,7 +1025,7 @@ size_t ConceptClassifierDump::ByteSizeLong() const {
   if (this->classifier_type().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->classifier_type());
+        this->_internal_classifier_type());
   }
 
   // float bias = 3;
@@ -1524,6 +1043,10 @@ size_t ConceptClassifierDump::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1557,13 +1080,13 @@ void ConceptClassifierDump::MergeFrom(const ConceptClassifierDump& from) {
     classifier_type_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.classifier_type_);
   }
   if (!(from.bias() <= 0 && from.bias() >= 0)) {
-    set_bias(from.bias());
+    _internal_set_bias(from._internal_bias());
   }
   if (!(from.norm() <= 0 && from.norm() >= 0)) {
-    set_norm(from.norm());
+    _internal_set_norm(from._internal_norm());
   }
   if (!(from.logistic_temp() <= 0 && from.logistic_temp() >= 0)) {
-    set_logistic_temp(from.logistic_temp());
+    _internal_set_logistic_temp(from._internal_logistic_temp());
   }
 }
 

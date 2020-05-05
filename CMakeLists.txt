@@ -60,6 +60,9 @@ option (BUILD_TESTING "Build the testing tree." OFF)
 if (BUILD_TESTING OR (PROJECT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR))
     enable_testing()
 
+    set(CMAKE_CXX_STANDARD 14)
+    set(CMAKE_CXX_STANDARD_REQUIRED on)
+
     add_subdirectory(vendors/gtest)
     add_subdirectory(src/tests)
 endif()

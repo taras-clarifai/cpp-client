@@ -7,34 +7,24 @@
 #include "proto/health_check/health_check.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/client_context.h>
 #include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-
-namespace grpc_impl {
-class CompletionQueue;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc_impl
-
-namespace grpc {
-namespace experimental {
-template <typename RequestT, typename ResponseT>
-class MessageAllocator;
-}  // namespace experimental
-}  // namespace grpc
 
 // Interface exported by the server.
 class Health final {
@@ -68,15 +58,37 @@ class Health final {
       // Query the server's health status
       virtual void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Query if the server is ready. This should be used in k8s startup probes and smoke tests to know
       // if a docker build is functional.
       virtual void Startup(::grpc::ClientContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Startup(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthStartupResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Startup(::grpc::ClientContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void Startup(::grpc::ClientContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Startup(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthStartupResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void Startup(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthStartupResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::HealthCheckResponse>* AsyncCheckRaw(::grpc::ClientContext* context, const ::HealthCheckRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -106,12 +118,28 @@ class Health final {
      public:
       void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, std::function<void(::grpc::Status)>) override;
       void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void Startup(::grpc::ClientContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response, std::function<void(::grpc::Status)>) override;
       void Startup(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthStartupResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Startup(::grpc::ClientContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void Startup(::grpc::ClientContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Startup(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthStartupResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void Startup(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthStartupResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -145,7 +173,7 @@ class Health final {
   template <class BaseClass>
   class WithAsyncMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Check() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -154,7 +182,7 @@ class Health final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -165,7 +193,7 @@ class Health final {
   template <class BaseClass>
   class WithAsyncMethod_Startup : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Startup() {
       ::grpc::Service::MarkMethodAsync(1);
@@ -174,7 +202,7 @@ class Health final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Startup(::grpc::ServerContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response) override {
+    ::grpc::Status Startup(::grpc::ServerContext* /*context*/, const ::HealthStartupRequest* /*request*/, ::HealthStartupResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -186,70 +214,106 @@ class Health final {
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_Check() {
-      ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::HealthCheckRequest, ::HealthCheckResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::HealthCheckRequest* request,
-                 ::HealthCheckResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->Check(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::HealthCheckRequest, ::HealthCheckResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) { return this->Check(context, request, response); }));}
     void SetMessageAllocatorFor_Check(
         ::grpc::experimental::MessageAllocator< ::HealthCheckRequest, ::HealthCheckResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::HealthCheckRequest, ::HealthCheckResponse>*>(
-          ::grpc::Service::experimental().GetHandler(0))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::HealthCheckRequest, ::HealthCheckResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_Check() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Check(
+      ::grpc::CallbackServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Check(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_Startup : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_Startup() {
-      ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::HealthStartupRequest, ::HealthStartupResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::HealthStartupRequest* request,
-                 ::HealthStartupResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->Startup(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::HealthStartupRequest, ::HealthStartupResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response) { return this->Startup(context, request, response); }));}
     void SetMessageAllocatorFor_Startup(
         ::grpc::experimental::MessageAllocator< ::HealthStartupRequest, ::HealthStartupResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::HealthStartupRequest, ::HealthStartupResponse>*>(
-          ::grpc::Service::experimental().GetHandler(1))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::HealthStartupRequest, ::HealthStartupResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_Startup() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Startup(::grpc::ServerContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response) override {
+    ::grpc::Status Startup(::grpc::ServerContext* /*context*/, const ::HealthStartupRequest* /*request*/, ::HealthStartupResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Startup(::grpc::ServerContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Startup(
+      ::grpc::CallbackServerContext* /*context*/, const ::HealthStartupRequest* /*request*/, ::HealthStartupResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Startup(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::HealthStartupRequest* /*request*/, ::HealthStartupResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_Check<ExperimentalWithCallbackMethod_Startup<Service > > CallbackService;
+  #endif
+
   typedef ExperimentalWithCallbackMethod_Check<ExperimentalWithCallbackMethod_Startup<Service > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Check() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -258,7 +322,7 @@ class Health final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -266,7 +330,7 @@ class Health final {
   template <class BaseClass>
   class WithGenericMethod_Startup : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Startup() {
       ::grpc::Service::MarkMethodGeneric(1);
@@ -275,7 +339,7 @@ class Health final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Startup(::grpc::ServerContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response) override {
+    ::grpc::Status Startup(::grpc::ServerContext* /*context*/, const ::HealthStartupRequest* /*request*/, ::HealthStartupResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -283,7 +347,7 @@ class Health final {
   template <class BaseClass>
   class WithRawMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Check() {
       ::grpc::Service::MarkMethodRaw(0);
@@ -292,7 +356,7 @@ class Health final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -303,7 +367,7 @@ class Health final {
   template <class BaseClass>
   class WithRawMethod_Startup : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Startup() {
       ::grpc::Service::MarkMethodRaw(1);
@@ -312,7 +376,7 @@ class Health final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Startup(::grpc::ServerContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response) override {
+    ::grpc::Status Startup(::grpc::ServerContext* /*context*/, const ::HealthStartupRequest* /*request*/, ::HealthStartupResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -323,57 +387,83 @@ class Health final {
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_Check() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->Check(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Check(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_Check() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Check(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Check(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Check(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_Startup : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_Startup() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->Startup(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Startup(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_Startup() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Startup(::grpc::ServerContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response) override {
+    ::grpc::Status Startup(::grpc::ServerContext* /*context*/, const ::HealthStartupRequest* /*request*/, ::HealthStartupResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Startup(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Startup(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Startup(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Check() {
       ::grpc::Service::MarkMethodStreamed(0,
@@ -383,7 +473,7 @@ class Health final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -393,7 +483,7 @@ class Health final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_Startup : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Startup() {
       ::grpc::Service::MarkMethodStreamed(1,
@@ -403,7 +493,7 @@ class Health final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Startup(::grpc::ServerContext* context, const ::HealthStartupRequest* request, ::HealthStartupResponse* response) override {
+    ::grpc::Status Startup(::grpc::ServerContext* /*context*/, const ::HealthStartupRequest* /*request*/, ::HealthStartupResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

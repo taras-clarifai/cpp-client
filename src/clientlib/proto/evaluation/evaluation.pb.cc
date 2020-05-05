@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -36,7 +35,7 @@ static void InitDefaultsscc_info_EvaluationResult_proto_2fevaluation_2fevaluatio
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_EvaluationResult_proto_2fevaluation_2fevaluation_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsscc_info_EvaluationResult_proto_2fevaluation_2fevaluation_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, 0, InitDefaultsscc_info_EvaluationResult_proto_2fevaluation_2fevaluation_2eproto}, {
       &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
       &scc_info_ClassificationEvalResult_proto_2fevaluation_2fclassification_2eproto.base,
       &scc_info_DetectionEvalResult_proto_2fevaluation_2fdetection_2eproto.base,
@@ -223,38 +222,38 @@ EvaluationResult::EvaluationResult(const EvaluationResult& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   eid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.eid().empty()) {
+  if (!from._internal_eid().empty()) {
     eid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.eid_);
   }
   eval_dataset_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.eval_dataset_name().empty()) {
+  if (!from._internal_eval_dataset_name().empty()) {
     eval_dataset_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.eval_dataset_name_);
   }
   eval_dataset_split_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.eval_dataset_split().empty()) {
+  if (!from._internal_eval_dataset_split().empty()) {
     eval_dataset_split_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.eval_dataset_split_);
   }
-  if (from.has_created_at()) {
+  if (from._internal_has_created_at()) {
     created_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.created_at_);
   } else {
     created_at_ = nullptr;
   }
-  if (from.has_classification()) {
+  if (from._internal_has_classification()) {
     classification_ = new ::ClassificationEvalResult(*from.classification_);
   } else {
     classification_ = nullptr;
   }
-  if (from.has_detection()) {
+  if (from._internal_has_detection()) {
     detection_ = new ::DetectionEvalResult(*from.detection_);
   } else {
     detection_ = nullptr;
   }
-  if (from.has_ocr()) {
+  if (from._internal_has_ocr()) {
     ocr_ = new ::OCREvalResult(*from.ocr_);
   } else {
     ocr_ = nullptr;
   }
-  if (from.has_eval_metrics()) {
+  if (from._internal_has_eval_metrics()) {
     eval_metrics_ = new ::MulticlassMetrics(*from.eval_metrics_);
   } else {
     eval_metrics_ = nullptr;
@@ -335,7 +334,6 @@ void EvaluationResult::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* EvaluationResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -346,7 +344,9 @@ const char* EvaluationResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       // string eid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_eid(), ptr, ctx, "EvaluationResult.eid");
+          auto str = _internal_mutable_eid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "EvaluationResult.eid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -367,21 +367,25 @@ const char* EvaluationResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
       // string eval_dataset_name = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_eval_dataset_name(), ptr, ctx, "EvaluationResult.eval_dataset_name");
+          auto str = _internal_mutable_eval_dataset_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "EvaluationResult.eval_dataset_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string eval_dataset_split = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_eval_dataset_split(), ptr, ctx, "EvaluationResult.eval_dataset_split");
+          auto str = _internal_mutable_eval_dataset_split();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "EvaluationResult.eval_dataset_split"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Timestamp created_at = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(mutable_created_at(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_created_at(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -390,34 +394,34 @@ const char* EvaluationResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_kind(static_cast<::EvaluationResult_Kind>(val));
+          _internal_set_kind(static_cast<::EvaluationResult_Kind>(val));
         } else goto handle_unusual;
         continue;
       // .ClassificationEvalResult classification = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(mutable_classification(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_classification(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DetectionEvalResult detection = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(mutable_detection(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_detection(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .OCREvalResult ocr = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(mutable_ocr(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_ocr(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .MulticlassMetrics eval_metrics = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
-          ptr = ctx->ParseMessage(mutable_eval_metrics(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_eval_metrics(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -440,269 +444,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool EvaluationResult::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:EvaluationResult)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string eid = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_eid()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->eid().data(), static_cast<int>(this->eid().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "EvaluationResult.eid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // int64 training_epoch = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &training_epoch_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int64 training_step = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &training_step_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string eval_dataset_name = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_eval_dataset_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->eval_dataset_name().data(), static_cast<int>(this->eval_dataset_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "EvaluationResult.eval_dataset_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string eval_dataset_split = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_eval_dataset_split()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->eval_dataset_split().data(), static_cast<int>(this->eval_dataset_split().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "EvaluationResult.eval_dataset_split"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Timestamp created_at = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_created_at()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .EvaluationResult.Kind kind = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (80 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_kind(static_cast< ::EvaluationResult_Kind >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .ClassificationEvalResult classification = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_classification()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .DetectionEvalResult detection = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_detection()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .OCREvalResult ocr = 13;
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_ocr()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .MulticlassMetrics eval_metrics = 14;
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (114 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_eval_metrics()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:EvaluationResult)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:EvaluationResult)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void EvaluationResult::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:EvaluationResult)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string eid = 1;
-  if (this->eid().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->eid().data(), static_cast<int>(this->eid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "EvaluationResult.eid");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->eid(), output);
-  }
-
-  // int64 training_epoch = 2;
-  if (this->training_epoch() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(2, this->training_epoch(), output);
-  }
-
-  // int64 training_step = 3;
-  if (this->training_step() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(3, this->training_step(), output);
-  }
-
-  // string eval_dataset_name = 4;
-  if (this->eval_dataset_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->eval_dataset_name().data(), static_cast<int>(this->eval_dataset_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "EvaluationResult.eval_dataset_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->eval_dataset_name(), output);
-  }
-
-  // string eval_dataset_split = 5;
-  if (this->eval_dataset_split().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->eval_dataset_split().data(), static_cast<int>(this->eval_dataset_split().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "EvaluationResult.eval_dataset_split");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->eval_dataset_split(), output);
-  }
-
-  // .google.protobuf.Timestamp created_at = 6;
-  if (this->has_created_at()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, _Internal::created_at(this), output);
-  }
-
-  // .EvaluationResult.Kind kind = 10;
-  if (this->kind() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      10, this->kind(), output);
-  }
-
-  // .ClassificationEvalResult classification = 11;
-  if (this->has_classification()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, _Internal::classification(this), output);
-  }
-
-  // .DetectionEvalResult detection = 12;
-  if (this->has_detection()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, _Internal::detection(this), output);
-  }
-
-  // .OCREvalResult ocr = 13;
-  if (this->has_ocr()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      13, _Internal::ocr(this), output);
-  }
-
-  // .MulticlassMetrics eval_metrics = 14;
-  if (this->has_eval_metrics()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      14, _Internal::eval_metrics(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:EvaluationResult)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* EvaluationResult::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* EvaluationResult::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:EvaluationResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -710,90 +454,95 @@ void EvaluationResult::SerializeWithCachedSizes(
   // string eid = 1;
   if (this->eid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->eid().data(), static_cast<int>(this->eid().length()),
+      this->_internal_eid().data(), static_cast<int>(this->_internal_eid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "EvaluationResult.eid");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->eid(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_eid(), target);
   }
 
   // int64 training_epoch = 2;
   if (this->training_epoch() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->training_epoch(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_training_epoch(), target);
   }
 
   // int64 training_step = 3;
   if (this->training_step() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->training_step(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_training_step(), target);
   }
 
   // string eval_dataset_name = 4;
   if (this->eval_dataset_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->eval_dataset_name().data(), static_cast<int>(this->eval_dataset_name().length()),
+      this->_internal_eval_dataset_name().data(), static_cast<int>(this->_internal_eval_dataset_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "EvaluationResult.eval_dataset_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->eval_dataset_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_eval_dataset_name(), target);
   }
 
   // string eval_dataset_split = 5;
   if (this->eval_dataset_split().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->eval_dataset_split().data(), static_cast<int>(this->eval_dataset_split().length()),
+      this->_internal_eval_dataset_split().data(), static_cast<int>(this->_internal_eval_dataset_split().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "EvaluationResult.eval_dataset_split");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        5, this->eval_dataset_split(), target);
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_eval_dataset_split(), target);
   }
 
   // .google.protobuf.Timestamp created_at = 6;
   if (this->has_created_at()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, _Internal::created_at(this), target);
+      InternalWriteMessage(
+        6, _Internal::created_at(this), target, stream);
   }
 
   // .EvaluationResult.Kind kind = 10;
   if (this->kind() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      10, this->kind(), target);
+      10, this->_internal_kind(), target);
   }
 
   // .ClassificationEvalResult classification = 11;
   if (this->has_classification()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, _Internal::classification(this), target);
+      InternalWriteMessage(
+        11, _Internal::classification(this), target, stream);
   }
 
   // .DetectionEvalResult detection = 12;
   if (this->has_detection()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        12, _Internal::detection(this), target);
+      InternalWriteMessage(
+        12, _Internal::detection(this), target, stream);
   }
 
   // .OCREvalResult ocr = 13;
   if (this->has_ocr()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        13, _Internal::ocr(this), target);
+      InternalWriteMessage(
+        13, _Internal::ocr(this), target, stream);
   }
 
   // .MulticlassMetrics eval_metrics = 14;
   if (this->has_eval_metrics()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        14, _Internal::eval_metrics(this), target);
+      InternalWriteMessage(
+        14, _Internal::eval_metrics(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:EvaluationResult)
   return target;
@@ -803,11 +552,6 @@ size_t EvaluationResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:EvaluationResult)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -816,21 +560,21 @@ size_t EvaluationResult::ByteSizeLong() const {
   if (this->eid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->eid());
+        this->_internal_eid());
   }
 
   // string eval_dataset_name = 4;
   if (this->eval_dataset_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->eval_dataset_name());
+        this->_internal_eval_dataset_name());
   }
 
   // string eval_dataset_split = 5;
   if (this->eval_dataset_split().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->eval_dataset_split());
+        this->_internal_eval_dataset_split());
   }
 
   // .google.protobuf.Timestamp created_at = 6;
@@ -872,22 +616,26 @@ size_t EvaluationResult::ByteSizeLong() const {
   if (this->training_epoch() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->training_epoch());
+        this->_internal_training_epoch());
   }
 
   // int64 training_step = 3;
   if (this->training_step() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->training_step());
+        this->_internal_training_step());
   }
 
   // .EvaluationResult.Kind kind = 10;
   if (this->kind() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->kind());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_kind());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -928,28 +676,28 @@ void EvaluationResult::MergeFrom(const EvaluationResult& from) {
     eval_dataset_split_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.eval_dataset_split_);
   }
   if (from.has_created_at()) {
-    mutable_created_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.created_at());
+    _internal_mutable_created_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_created_at());
   }
   if (from.has_classification()) {
-    mutable_classification()->::ClassificationEvalResult::MergeFrom(from.classification());
+    _internal_mutable_classification()->::ClassificationEvalResult::MergeFrom(from._internal_classification());
   }
   if (from.has_detection()) {
-    mutable_detection()->::DetectionEvalResult::MergeFrom(from.detection());
+    _internal_mutable_detection()->::DetectionEvalResult::MergeFrom(from._internal_detection());
   }
   if (from.has_ocr()) {
-    mutable_ocr()->::OCREvalResult::MergeFrom(from.ocr());
+    _internal_mutable_ocr()->::OCREvalResult::MergeFrom(from._internal_ocr());
   }
   if (from.has_eval_metrics()) {
-    mutable_eval_metrics()->::MulticlassMetrics::MergeFrom(from.eval_metrics());
+    _internal_mutable_eval_metrics()->::MulticlassMetrics::MergeFrom(from._internal_eval_metrics());
   }
   if (from.training_epoch() != 0) {
-    set_training_epoch(from.training_epoch());
+    _internal_set_training_epoch(from._internal_training_epoch());
   }
   if (from.training_step() != 0) {
-    set_training_step(from.training_step());
+    _internal_set_training_step(from._internal_training_step());
   }
   if (from.kind() != 0) {
-    set_kind(from.kind());
+    _internal_set_kind(from._internal_kind());
   }
 }
 

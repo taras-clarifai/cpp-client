@@ -15,9 +15,13 @@ set(HEADERS
 file(GLOB_RECURSE PROTO_SOURCES proto/**/*.cc)
 file(GLOB_RECURSE PROTO_HEADERS proto/**/*.h)
 
-add_library(clarifai STATIC SHARED ${SOURCES} ${HEADERS} ${PROTO_SOURCES} ${PROTO_HEADERS})
+file(GLOB_RECURSE GOOGLEAPIS_SOURCES googleapis/**/*.cc)
+file(GLOB_RECURSE GOOGLEAPIS_HEADERS googleapis/**/*.h)
+
+add_library(clarifai STATIC SHARED ${SOURCES} ${HEADERS} ${PROTO_SOURCES} ${PROTO_HEADERS} ${GOOGLEAPIS_SOURCES} ${GOOGLEAPIS_HEADERS})
 
 target_include_directories(clarifai PRIVATE ${CLIENTLIB_ROOT_DIR}/src/clientlib)
+target_include_directories(clarifai PRIVATE ${CLIENTLIB_ROOT_DIR}/src/clientlib/googleapis)
 
 target_link_libraries(clarifai debug coverage_config)
 target_link_libraries(clarifai grpc++)

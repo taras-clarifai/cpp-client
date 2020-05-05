@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -33,7 +32,7 @@ static void InitDefaultsscc_info_BoundingBox_proto_2futils_2fboundingbox_2eproto
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_BoundingBox_proto_2futils_2fboundingbox_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_BoundingBox_proto_2futils_2fboundingbox_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_BoundingBox_proto_2futils_2fboundingbox_2eproto}, {
       &scc_info_Tag_proto_2futils_2ftag_2eproto.base,
       &scc_info_Embedding_proto_2futils_2fembedding_2eproto.base,}};
 
@@ -163,7 +162,6 @@ void BoundingBox::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* BoundingBox::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -177,10 +175,10 @@ const char* BoundingBox::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_tag(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_tag(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 10);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else goto handle_unusual;
         continue;
       // float top_row = 3 [(.clarifai.api.utils.cl_show_if_empty) = true];
@@ -224,10 +222,10 @@ const char* BoundingBox::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_embedding(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_embedding(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 66);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -249,231 +247,62 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool BoundingBox::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:BoundingBox)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .Tag tag = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_tag()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // float top_row = 3 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &top_row_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float left_col = 4 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &left_col_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float bottom_row = 5 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (45 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &bottom_row_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float right_col = 6 [(.clarifai.api.utils.cl_show_if_empty) = true];
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (53 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &right_col_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool is_positive = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (56 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &is_positive_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .Embedding embedding = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_embedding()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:BoundingBox)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:BoundingBox)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void BoundingBox::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:BoundingBox)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .Tag tag = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->tag_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->tag(static_cast<int>(i)),
-      output);
-  }
-
-  // float top_row = 3 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->top_row() <= 0 && this->top_row() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->top_row(), output);
-  }
-
-  // float left_col = 4 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->left_col() <= 0 && this->left_col() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->left_col(), output);
-  }
-
-  // float bottom_row = 5 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->bottom_row() <= 0 && this->bottom_row() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(5, this->bottom_row(), output);
-  }
-
-  // float right_col = 6 [(.clarifai.api.utils.cl_show_if_empty) = true];
-  if (!(this->right_col() <= 0 && this->right_col() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(6, this->right_col(), output);
-  }
-
-  // bool is_positive = 7;
-  if (this->is_positive() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(7, this->is_positive(), output);
-  }
-
-  // repeated .Embedding embedding = 8;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->embedding_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8,
-      this->embedding(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:BoundingBox)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* BoundingBox::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* BoundingBox::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:BoundingBox)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .Tag tag = 1;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->tag_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_tag_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->tag(static_cast<int>(i)), target);
+      InternalWriteMessage(1, this->_internal_tag(i), target, stream);
   }
 
   // float top_row = 3 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->top_row() <= 0 && this->top_row() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->top_row(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_top_row(), target);
   }
 
   // float left_col = 4 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->left_col() <= 0 && this->left_col() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->left_col(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_left_col(), target);
   }
 
   // float bottom_row = 5 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->bottom_row() <= 0 && this->bottom_row() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->bottom_row(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_bottom_row(), target);
   }
 
   // float right_col = 6 [(.clarifai.api.utils.cl_show_if_empty) = true];
   if (!(this->right_col() <= 0 && this->right_col() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->right_col(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->_internal_right_col(), target);
   }
 
   // bool is_positive = 7;
   if (this->is_positive() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(7, this->is_positive(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(7, this->_internal_is_positive(), target);
   }
 
   // repeated .Embedding embedding = 8;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->embedding_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_embedding_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, this->embedding(static_cast<int>(i)), target);
+      InternalWriteMessage(8, this->_internal_embedding(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:BoundingBox)
   return target;
@@ -483,35 +312,22 @@ size_t BoundingBox::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:BoundingBox)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .Tag tag = 1;
-  {
-    unsigned int count = static_cast<unsigned int>(this->tag_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->tag(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_tag_size();
+  for (const auto& msg : this->tag_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .Embedding embedding = 8;
-  {
-    unsigned int count = static_cast<unsigned int>(this->embedding_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->embedding(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_embedding_size();
+  for (const auto& msg : this->embedding_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // float top_row = 3 [(.clarifai.api.utils.cl_show_if_empty) = true];
@@ -539,6 +355,10 @@ size_t BoundingBox::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -569,19 +389,19 @@ void BoundingBox::MergeFrom(const BoundingBox& from) {
   tag_.MergeFrom(from.tag_);
   embedding_.MergeFrom(from.embedding_);
   if (!(from.top_row() <= 0 && from.top_row() >= 0)) {
-    set_top_row(from.top_row());
+    _internal_set_top_row(from._internal_top_row());
   }
   if (!(from.left_col() <= 0 && from.left_col() >= 0)) {
-    set_left_col(from.left_col());
+    _internal_set_left_col(from._internal_left_col());
   }
   if (!(from.bottom_row() <= 0 && from.bottom_row() >= 0)) {
-    set_bottom_row(from.bottom_row());
+    _internal_set_bottom_row(from._internal_bottom_row());
   }
   if (!(from.right_col() <= 0 && from.right_col() >= 0)) {
-    set_right_col(from.right_col());
+    _internal_set_right_col(from._internal_right_col());
   }
   if (from.is_positive() != 0) {
-    set_is_positive(from.is_positive());
+    _internal_set_is_positive(from._internal_is_positive());
   }
 }
 
@@ -606,8 +426,8 @@ bool BoundingBox::IsInitialized() const {
 void BoundingBox::InternalSwap(BoundingBox* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&tag_)->InternalSwap(CastToBase(&other->tag_));
-  CastToBase(&embedding_)->InternalSwap(CastToBase(&other->embedding_));
+  tag_.InternalSwap(&other->tag_);
+  embedding_.InternalSwap(&other->embedding_);
   swap(top_row_, other->top_row_);
   swap(left_col_, other->left_col_);
   swap(bottom_row_, other->bottom_row_);

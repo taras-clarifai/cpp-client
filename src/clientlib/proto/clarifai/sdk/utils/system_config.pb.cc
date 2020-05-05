@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -39,7 +38,7 @@ static void InitDefaultsscc_info_SystemConfig_proto_2fclarifai_2fsdk_2futils_2fs
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_SystemConfig_proto_2fclarifai_2fsdk_2futils_2fsystem_5fconfig_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_SystemConfig_proto_2fclarifai_2fsdk_2futils_2fsystem_5fconfig_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_SystemConfig_proto_2fclarifai_2fsdk_2futils_2fsystem_5fconfig_2eproto}, {
       &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
       &scc_info_Duration_google_2fprotobuf_2fduration_2eproto.base,}};
 
@@ -254,45 +253,45 @@ SystemConfig::SystemConfig(const SystemConfig& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   system_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.system_uuid().empty()) {
+  if (!from._internal_system_uuid().empty()) {
     system_uuid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.system_uuid_);
   }
-  if (from.has_discard_data_timestamp()) {
+  if (from._internal_has_discard_data_timestamp()) {
     discard_data_timestamp_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.discard_data_timestamp_);
   } else {
     discard_data_timestamp_ = nullptr;
   }
-  if (from.has_do_not_sync_until()) {
+  if (from._internal_has_do_not_sync_until()) {
     do_not_sync_until_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.do_not_sync_until_);
   } else {
     do_not_sync_until_ = nullptr;
   }
-  if (from.has_authentication_interval()) {
+  if (from._internal_has_authentication_interval()) {
     authentication_interval_ = new PROTOBUF_NAMESPACE_ID::Duration(*from.authentication_interval_);
   } else {
     authentication_interval_ = nullptr;
   }
-  if (from.has_batch_upload_interval()) {
+  if (from._internal_has_batch_upload_interval()) {
     batch_upload_interval_ = new PROTOBUF_NAMESPACE_ID::Duration(*from.batch_upload_interval_);
   } else {
     batch_upload_interval_ = nullptr;
   }
-  if (from.has_last_authentication_time()) {
+  if (from._internal_has_last_authentication_time()) {
     last_authentication_time_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.last_authentication_time_);
   } else {
     last_authentication_time_ = nullptr;
   }
-  if (from.has_last_batch_upload_time()) {
+  if (from._internal_has_last_batch_upload_time()) {
     last_batch_upload_time_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.last_batch_upload_time_);
   } else {
     last_batch_upload_time_ = nullptr;
   }
-  if (from.has_billing_interval()) {
+  if (from._internal_has_billing_interval()) {
     billing_interval_ = new PROTOBUF_NAMESPACE_ID::Duration(*from.billing_interval_);
   } else {
     billing_interval_ = nullptr;
   }
-  if (from.has_last_billing_time()) {
+  if (from._internal_has_last_billing_time()) {
     last_billing_time_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.last_billing_time_);
   } else {
     last_billing_time_ = nullptr;
@@ -382,7 +381,6 @@ void SystemConfig::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* SystemConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -393,28 +391,28 @@ const char* SystemConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
       // .google.protobuf.Timestamp discard_data_timestamp = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_discard_data_timestamp(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_discard_data_timestamp(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Timestamp do_not_sync_until = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_do_not_sync_until(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_do_not_sync_until(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Duration authentication_interval = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_authentication_interval(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_authentication_interval(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Duration batch_upload_interval = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(mutable_batch_upload_interval(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_batch_upload_interval(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -423,13 +421,15 @@ const char* SystemConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_network_constraint(static_cast<::clarifai::sdk::utils::NetworkConstraint>(val));
+          _internal_set_network_constraint(static_cast<::clarifai::sdk::utils::NetworkConstraint>(val));
         } else goto handle_unusual;
         continue;
       // string system_uuid = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_system_uuid(), ptr, ctx, "clarifai.sdk.utils.SystemConfig.system_uuid");
+          auto str = _internal_mutable_system_uuid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "clarifai.sdk.utils.SystemConfig.system_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -443,28 +443,28 @@ const char* SystemConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
       // .google.protobuf.Timestamp last_authentication_time = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(mutable_last_authentication_time(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_last_authentication_time(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Timestamp last_batch_upload_time = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(mutable_last_batch_upload_time(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_last_batch_upload_time(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Duration billing_interval = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(mutable_billing_interval(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_billing_interval(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Timestamp last_billing_time = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(mutable_last_billing_time(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_last_billing_time(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -487,337 +487,103 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SystemConfig::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:clarifai.sdk.utils.SystemConfig)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .google.protobuf.Timestamp discard_data_timestamp = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_discard_data_timestamp()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .google.protobuf.Timestamp do_not_sync_until = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_do_not_sync_until()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Duration authentication_interval = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_authentication_interval()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Duration batch_upload_interval = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_batch_upload_interval()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .clarifai.sdk.utils.NetworkConstraint network_constraint = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_network_constraint(static_cast< ::clarifai::sdk::utils::NetworkConstraint >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string system_uuid = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_system_uuid()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->system_uuid().data(), static_cast<int>(this->system_uuid().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "clarifai.sdk.utils.SystemConfig.system_uuid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 launch_count = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (56 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &launch_count_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Timestamp last_authentication_time = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_last_authentication_time()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Timestamp last_batch_upload_time = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_last_batch_upload_time()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Duration billing_interval = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_billing_interval()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Timestamp last_billing_time = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_last_billing_time()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:clarifai.sdk.utils.SystemConfig)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:clarifai.sdk.utils.SystemConfig)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SystemConfig::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:clarifai.sdk.utils.SystemConfig)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .google.protobuf.Timestamp discard_data_timestamp = 1;
-  if (this->has_discard_data_timestamp()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::discard_data_timestamp(this), output);
-  }
-
-  // .google.protobuf.Timestamp do_not_sync_until = 2;
-  if (this->has_do_not_sync_until()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::do_not_sync_until(this), output);
-  }
-
-  // .google.protobuf.Duration authentication_interval = 3;
-  if (this->has_authentication_interval()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::authentication_interval(this), output);
-  }
-
-  // .google.protobuf.Duration batch_upload_interval = 4;
-  if (this->has_batch_upload_interval()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, _Internal::batch_upload_interval(this), output);
-  }
-
-  // .clarifai.sdk.utils.NetworkConstraint network_constraint = 5;
-  if (this->network_constraint() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      5, this->network_constraint(), output);
-  }
-
-  // string system_uuid = 6;
-  if (this->system_uuid().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->system_uuid().data(), static_cast<int>(this->system_uuid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "clarifai.sdk.utils.SystemConfig.system_uuid");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->system_uuid(), output);
-  }
-
-  // uint32 launch_count = 7;
-  if (this->launch_count() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(7, this->launch_count(), output);
-  }
-
-  // .google.protobuf.Timestamp last_authentication_time = 8;
-  if (this->has_last_authentication_time()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, _Internal::last_authentication_time(this), output);
-  }
-
-  // .google.protobuf.Timestamp last_batch_upload_time = 9;
-  if (this->has_last_batch_upload_time()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, _Internal::last_batch_upload_time(this), output);
-  }
-
-  // .google.protobuf.Duration billing_interval = 10;
-  if (this->has_billing_interval()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, _Internal::billing_interval(this), output);
-  }
-
-  // .google.protobuf.Timestamp last_billing_time = 11;
-  if (this->has_last_billing_time()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, _Internal::last_billing_time(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:clarifai.sdk.utils.SystemConfig)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* SystemConfig::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SystemConfig::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:clarifai.sdk.utils.SystemConfig)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.Timestamp discard_data_timestamp = 1;
   if (this->has_discard_data_timestamp()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::discard_data_timestamp(this), target);
+      InternalWriteMessage(
+        1, _Internal::discard_data_timestamp(this), target, stream);
   }
 
   // .google.protobuf.Timestamp do_not_sync_until = 2;
   if (this->has_do_not_sync_until()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::do_not_sync_until(this), target);
+      InternalWriteMessage(
+        2, _Internal::do_not_sync_until(this), target, stream);
   }
 
   // .google.protobuf.Duration authentication_interval = 3;
   if (this->has_authentication_interval()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::authentication_interval(this), target);
+      InternalWriteMessage(
+        3, _Internal::authentication_interval(this), target, stream);
   }
 
   // .google.protobuf.Duration batch_upload_interval = 4;
   if (this->has_batch_upload_interval()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, _Internal::batch_upload_interval(this), target);
+      InternalWriteMessage(
+        4, _Internal::batch_upload_interval(this), target, stream);
   }
 
   // .clarifai.sdk.utils.NetworkConstraint network_constraint = 5;
   if (this->network_constraint() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      5, this->network_constraint(), target);
+      5, this->_internal_network_constraint(), target);
   }
 
   // string system_uuid = 6;
   if (this->system_uuid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->system_uuid().data(), static_cast<int>(this->system_uuid().length()),
+      this->_internal_system_uuid().data(), static_cast<int>(this->_internal_system_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "clarifai.sdk.utils.SystemConfig.system_uuid");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        6, this->system_uuid(), target);
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_system_uuid(), target);
   }
 
   // uint32 launch_count = 7;
   if (this->launch_count() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(7, this->launch_count(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(7, this->_internal_launch_count(), target);
   }
 
   // .google.protobuf.Timestamp last_authentication_time = 8;
   if (this->has_last_authentication_time()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, _Internal::last_authentication_time(this), target);
+      InternalWriteMessage(
+        8, _Internal::last_authentication_time(this), target, stream);
   }
 
   // .google.protobuf.Timestamp last_batch_upload_time = 9;
   if (this->has_last_batch_upload_time()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, _Internal::last_batch_upload_time(this), target);
+      InternalWriteMessage(
+        9, _Internal::last_batch_upload_time(this), target, stream);
   }
 
   // .google.protobuf.Duration billing_interval = 10;
   if (this->has_billing_interval()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, _Internal::billing_interval(this), target);
+      InternalWriteMessage(
+        10, _Internal::billing_interval(this), target, stream);
   }
 
   // .google.protobuf.Timestamp last_billing_time = 11;
   if (this->has_last_billing_time()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, _Internal::last_billing_time(this), target);
+      InternalWriteMessage(
+        11, _Internal::last_billing_time(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:clarifai.sdk.utils.SystemConfig)
   return target;
@@ -827,11 +593,6 @@ size_t SystemConfig::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:clarifai.sdk.utils.SystemConfig)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -840,7 +601,7 @@ size_t SystemConfig::ByteSizeLong() const {
   if (this->system_uuid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->system_uuid());
+        this->_internal_system_uuid());
   }
 
   // .google.protobuf.Timestamp discard_data_timestamp = 1;
@@ -902,16 +663,20 @@ size_t SystemConfig::ByteSizeLong() const {
   // .clarifai.sdk.utils.NetworkConstraint network_constraint = 5;
   if (this->network_constraint() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->network_constraint());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_network_constraint());
   }
 
   // uint32 launch_count = 7;
   if (this->launch_count() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->launch_count());
+        this->_internal_launch_count());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -944,34 +709,34 @@ void SystemConfig::MergeFrom(const SystemConfig& from) {
     system_uuid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.system_uuid_);
   }
   if (from.has_discard_data_timestamp()) {
-    mutable_discard_data_timestamp()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.discard_data_timestamp());
+    _internal_mutable_discard_data_timestamp()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_discard_data_timestamp());
   }
   if (from.has_do_not_sync_until()) {
-    mutable_do_not_sync_until()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.do_not_sync_until());
+    _internal_mutable_do_not_sync_until()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_do_not_sync_until());
   }
   if (from.has_authentication_interval()) {
-    mutable_authentication_interval()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from.authentication_interval());
+    _internal_mutable_authentication_interval()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from._internal_authentication_interval());
   }
   if (from.has_batch_upload_interval()) {
-    mutable_batch_upload_interval()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from.batch_upload_interval());
+    _internal_mutable_batch_upload_interval()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from._internal_batch_upload_interval());
   }
   if (from.has_last_authentication_time()) {
-    mutable_last_authentication_time()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.last_authentication_time());
+    _internal_mutable_last_authentication_time()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_last_authentication_time());
   }
   if (from.has_last_batch_upload_time()) {
-    mutable_last_batch_upload_time()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.last_batch_upload_time());
+    _internal_mutable_last_batch_upload_time()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_last_batch_upload_time());
   }
   if (from.has_billing_interval()) {
-    mutable_billing_interval()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from.billing_interval());
+    _internal_mutable_billing_interval()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from._internal_billing_interval());
   }
   if (from.has_last_billing_time()) {
-    mutable_last_billing_time()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.last_billing_time());
+    _internal_mutable_last_billing_time()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_last_billing_time());
   }
   if (from.network_constraint() != 0) {
-    set_network_constraint(from.network_constraint());
+    _internal_set_network_constraint(from._internal_network_constraint());
   }
   if (from.launch_count() != 0) {
-    set_launch_count(from.launch_count());
+    _internal_set_launch_count(from._internal_launch_count());
   }
 }
 

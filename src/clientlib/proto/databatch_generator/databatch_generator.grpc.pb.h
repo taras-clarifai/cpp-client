@@ -7,34 +7,24 @@
 #include "proto/databatch_generator/databatch_generator.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/client_context.h>
 #include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-
-namespace grpc_impl {
-class CompletionQueue;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc_impl
-
-namespace grpc {
-namespace experimental {
-template <typename RequestT, typename ResponseT>
-class MessageAllocator;
-}  // namespace experimental
-}  // namespace grpc
 
 class DataBatchGeneratorService final {
  public:
@@ -63,13 +53,35 @@ class DataBatchGeneratorService final {
       virtual ~experimental_async_interface() {}
       virtual void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorInitResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorInitResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorInitResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorNextResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorNextResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorNextResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::DataBatchGeneratorInitResponse>* AsyncDataBatchGeneratorInitRaw(::grpc::ClientContext* context, const ::DataBatchGeneratorInitRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -99,12 +111,28 @@ class DataBatchGeneratorService final {
      public:
       void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response, std::function<void(::grpc::Status)>) override;
       void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorInitResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorInitResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void DataBatchGeneratorInit(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorInitResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response, std::function<void(::grpc::Status)>) override;
       void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorNextResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorNextResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void DataBatchGeneratorNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::DataBatchGeneratorNextResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -135,7 +163,7 @@ class DataBatchGeneratorService final {
   template <class BaseClass>
   class WithAsyncMethod_DataBatchGeneratorInit : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_DataBatchGeneratorInit() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -144,7 +172,7 @@ class DataBatchGeneratorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response) override {
+    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorInitRequest* /*request*/, ::DataBatchGeneratorInitResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -155,7 +183,7 @@ class DataBatchGeneratorService final {
   template <class BaseClass>
   class WithAsyncMethod_DataBatchGeneratorNext : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_DataBatchGeneratorNext() {
       ::grpc::Service::MarkMethodAsync(1);
@@ -164,7 +192,7 @@ class DataBatchGeneratorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response) override {
+    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorNextRequest* /*request*/, ::DataBatchGeneratorNextResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -176,70 +204,106 @@ class DataBatchGeneratorService final {
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_DataBatchGeneratorInit : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_DataBatchGeneratorInit() {
-      ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::DataBatchGeneratorInitRequest, ::DataBatchGeneratorInitResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::DataBatchGeneratorInitRequest* request,
-                 ::DataBatchGeneratorInitResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->DataBatchGeneratorInit(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::DataBatchGeneratorInitRequest, ::DataBatchGeneratorInitResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response) { return this->DataBatchGeneratorInit(context, request, response); }));}
     void SetMessageAllocatorFor_DataBatchGeneratorInit(
         ::grpc::experimental::MessageAllocator< ::DataBatchGeneratorInitRequest, ::DataBatchGeneratorInitResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::DataBatchGeneratorInitRequest, ::DataBatchGeneratorInitResponse>*>(
-          ::grpc::Service::experimental().GetHandler(0))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::DataBatchGeneratorInitRequest, ::DataBatchGeneratorInitResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_DataBatchGeneratorInit() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response) override {
+    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorInitRequest* /*request*/, ::DataBatchGeneratorInitResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void DataBatchGeneratorInit(::grpc::ServerContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* DataBatchGeneratorInit(
+      ::grpc::CallbackServerContext* /*context*/, const ::DataBatchGeneratorInitRequest* /*request*/, ::DataBatchGeneratorInitResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* DataBatchGeneratorInit(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::DataBatchGeneratorInitRequest* /*request*/, ::DataBatchGeneratorInitResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_DataBatchGeneratorNext : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_DataBatchGeneratorNext() {
-      ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::DataBatchGeneratorNextRequest, ::DataBatchGeneratorNextResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::DataBatchGeneratorNextRequest* request,
-                 ::DataBatchGeneratorNextResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->DataBatchGeneratorNext(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::DataBatchGeneratorNextRequest, ::DataBatchGeneratorNextResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response) { return this->DataBatchGeneratorNext(context, request, response); }));}
     void SetMessageAllocatorFor_DataBatchGeneratorNext(
         ::grpc::experimental::MessageAllocator< ::DataBatchGeneratorNextRequest, ::DataBatchGeneratorNextResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::DataBatchGeneratorNextRequest, ::DataBatchGeneratorNextResponse>*>(
-          ::grpc::Service::experimental().GetHandler(1))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::DataBatchGeneratorNextRequest, ::DataBatchGeneratorNextResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_DataBatchGeneratorNext() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response) override {
+    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorNextRequest* /*request*/, ::DataBatchGeneratorNextResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void DataBatchGeneratorNext(::grpc::ServerContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* DataBatchGeneratorNext(
+      ::grpc::CallbackServerContext* /*context*/, const ::DataBatchGeneratorNextRequest* /*request*/, ::DataBatchGeneratorNextResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* DataBatchGeneratorNext(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::DataBatchGeneratorNextRequest* /*request*/, ::DataBatchGeneratorNextResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_DataBatchGeneratorInit<ExperimentalWithCallbackMethod_DataBatchGeneratorNext<Service > > CallbackService;
+  #endif
+
   typedef ExperimentalWithCallbackMethod_DataBatchGeneratorInit<ExperimentalWithCallbackMethod_DataBatchGeneratorNext<Service > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_DataBatchGeneratorInit : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_DataBatchGeneratorInit() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -248,7 +312,7 @@ class DataBatchGeneratorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response) override {
+    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorInitRequest* /*request*/, ::DataBatchGeneratorInitResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -256,7 +320,7 @@ class DataBatchGeneratorService final {
   template <class BaseClass>
   class WithGenericMethod_DataBatchGeneratorNext : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_DataBatchGeneratorNext() {
       ::grpc::Service::MarkMethodGeneric(1);
@@ -265,7 +329,7 @@ class DataBatchGeneratorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response) override {
+    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorNextRequest* /*request*/, ::DataBatchGeneratorNextResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -273,7 +337,7 @@ class DataBatchGeneratorService final {
   template <class BaseClass>
   class WithRawMethod_DataBatchGeneratorInit : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_DataBatchGeneratorInit() {
       ::grpc::Service::MarkMethodRaw(0);
@@ -282,7 +346,7 @@ class DataBatchGeneratorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response) override {
+    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorInitRequest* /*request*/, ::DataBatchGeneratorInitResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -293,7 +357,7 @@ class DataBatchGeneratorService final {
   template <class BaseClass>
   class WithRawMethod_DataBatchGeneratorNext : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_DataBatchGeneratorNext() {
       ::grpc::Service::MarkMethodRaw(1);
@@ -302,7 +366,7 @@ class DataBatchGeneratorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response) override {
+    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorNextRequest* /*request*/, ::DataBatchGeneratorNextResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -313,57 +377,83 @@ class DataBatchGeneratorService final {
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_DataBatchGeneratorInit : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_DataBatchGeneratorInit() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->DataBatchGeneratorInit(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DataBatchGeneratorInit(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_DataBatchGeneratorInit() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response) override {
+    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorInitRequest* /*request*/, ::DataBatchGeneratorInitResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void DataBatchGeneratorInit(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* DataBatchGeneratorInit(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* DataBatchGeneratorInit(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_DataBatchGeneratorNext : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_DataBatchGeneratorNext() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->DataBatchGeneratorNext(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DataBatchGeneratorNext(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_DataBatchGeneratorNext() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response) override {
+    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorNextRequest* /*request*/, ::DataBatchGeneratorNextResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void DataBatchGeneratorNext(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* DataBatchGeneratorNext(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* DataBatchGeneratorNext(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_DataBatchGeneratorInit : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_DataBatchGeneratorInit() {
       ::grpc::Service::MarkMethodStreamed(0,
@@ -373,7 +463,7 @@ class DataBatchGeneratorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* context, const ::DataBatchGeneratorInitRequest* request, ::DataBatchGeneratorInitResponse* response) override {
+    ::grpc::Status DataBatchGeneratorInit(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorInitRequest* /*request*/, ::DataBatchGeneratorInitResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -383,7 +473,7 @@ class DataBatchGeneratorService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_DataBatchGeneratorNext : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_DataBatchGeneratorNext() {
       ::grpc::Service::MarkMethodStreamed(1,
@@ -393,7 +483,7 @@ class DataBatchGeneratorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* context, const ::DataBatchGeneratorNextRequest* request, ::DataBatchGeneratorNextResponse* response) override {
+    ::grpc::Status DataBatchGeneratorNext(::grpc::ServerContext* /*context*/, const ::DataBatchGeneratorNextRequest* /*request*/, ::DataBatchGeneratorNextResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

@@ -7,34 +7,24 @@
 #include "proto/trainer/trainer.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/client_context.h>
 #include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-
-namespace grpc_impl {
-class CompletionQueue;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc_impl
-
-namespace grpc {
-namespace experimental {
-template <typename RequestT, typename ResponseT>
-class MessageAllocator;
-}  // namespace experimental
-}  // namespace grpc
 
 // Interface exported by the server.
 class TrainingCoordinator final {
@@ -99,34 +89,88 @@ class TrainingCoordinator final {
       // Train a model
       virtual void Train(::grpc::ClientContext* context, const ::TrainRequest* request, ::TrainResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Train(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TrainResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Train(::grpc::ClientContext* context, const ::TrainRequest* request, ::TrainResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void Train(::grpc::ClientContext* context, const ::TrainRequest* request, ::TrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Train(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TrainResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void Train(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Get status of training job
       virtual void GetStatus(::grpc::ClientContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetStatus(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetStatusResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetStatus(::grpc::ClientContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetStatus(::grpc::ClientContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetStatus(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetStatusResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetStatus(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetStatusResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Get evaluation metrics for the training job
       virtual void GetEvaluations(::grpc::ClientContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetEvaluations(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetEvaluationsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetEvaluations(::grpc::ClientContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetEvaluations(::grpc::ClientContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetEvaluations(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetEvaluationsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetEvaluations(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetEvaluationsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // List training templates and doc strings
       virtual void ListTemplates(::grpc::ClientContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void ListTemplates(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ListTemplatesResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ListTemplates(::grpc::ClientContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void ListTemplates(::grpc::ClientContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ListTemplates(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ListTemplatesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void ListTemplates(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ListTemplatesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Get spire name
       virtual void GetSpireConfig(::grpc::ClientContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetSpireConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetSpireConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetSpireConfig(::grpc::ClientContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetSpireConfig(::grpc::ClientContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetSpireConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetSpireConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetSpireConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetSpireConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Cleanup files no longer needed
       virtual void EidCleanUp(::grpc::ClientContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void EidCleanUp(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::EidCleanUpResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void EidCleanUp(::grpc::ClientContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void EidCleanUp(::grpc::ClientContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void EidCleanUp(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::EidCleanUpResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void EidCleanUp(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::EidCleanUpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::TrainResponse>* AsyncTrainRaw(::grpc::ClientContext* context, const ::TrainRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -192,28 +236,76 @@ class TrainingCoordinator final {
      public:
       void Train(::grpc::ClientContext* context, const ::TrainRequest* request, ::TrainResponse* response, std::function<void(::grpc::Status)>) override;
       void Train(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TrainResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Train(::grpc::ClientContext* context, const ::TrainRequest* request, ::TrainResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void Train(::grpc::ClientContext* context, const ::TrainRequest* request, ::TrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Train(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TrainResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void Train(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetStatus(::grpc::ClientContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response, std::function<void(::grpc::Status)>) override;
       void GetStatus(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetStatusResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetStatus(::grpc::ClientContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetStatus(::grpc::ClientContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetStatus(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetStatusResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetStatus(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetStatusResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetEvaluations(::grpc::ClientContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response, std::function<void(::grpc::Status)>) override;
       void GetEvaluations(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetEvaluationsResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetEvaluations(::grpc::ClientContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetEvaluations(::grpc::ClientContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetEvaluations(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetEvaluationsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetEvaluations(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetEvaluationsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void ListTemplates(::grpc::ClientContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response, std::function<void(::grpc::Status)>) override;
       void ListTemplates(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ListTemplatesResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ListTemplates(::grpc::ClientContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void ListTemplates(::grpc::ClientContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ListTemplates(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ListTemplatesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void ListTemplates(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ListTemplatesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetSpireConfig(::grpc::ClientContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response, std::function<void(::grpc::Status)>) override;
       void GetSpireConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetSpireConfigResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetSpireConfig(::grpc::ClientContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetSpireConfig(::grpc::ClientContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetSpireConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetSpireConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetSpireConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::GetSpireConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void EidCleanUp(::grpc::ClientContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response, std::function<void(::grpc::Status)>) override;
       void EidCleanUp(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::EidCleanUpResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void EidCleanUp(::grpc::ClientContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void EidCleanUp(::grpc::ClientContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void EidCleanUp(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::EidCleanUpResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void EidCleanUp(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::EidCleanUpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -266,7 +358,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithAsyncMethod_Train : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Train() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -275,7 +367,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Train(::grpc::ServerContext* context, const ::TrainRequest* request, ::TrainResponse* response) override {
+    ::grpc::Status Train(::grpc::ServerContext* /*context*/, const ::TrainRequest* /*request*/, ::TrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -286,7 +378,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithAsyncMethod_GetStatus : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetStatus() {
       ::grpc::Service::MarkMethodAsync(1);
@@ -295,7 +387,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* /*context*/, const ::GetStatusRequest* /*request*/, ::GetStatusResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -306,7 +398,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithAsyncMethod_GetEvaluations : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetEvaluations() {
       ::grpc::Service::MarkMethodAsync(2);
@@ -315,7 +407,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetEvaluations(::grpc::ServerContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response) override {
+    ::grpc::Status GetEvaluations(::grpc::ServerContext* /*context*/, const ::GetEvaluationsRequest* /*request*/, ::GetEvaluationsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -326,7 +418,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithAsyncMethod_ListTemplates : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ListTemplates() {
       ::grpc::Service::MarkMethodAsync(3);
@@ -335,7 +427,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ListTemplates(::grpc::ServerContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response) override {
+    ::grpc::Status ListTemplates(::grpc::ServerContext* /*context*/, const ::ListTemplatesRequest* /*request*/, ::ListTemplatesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -346,7 +438,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithAsyncMethod_GetSpireConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetSpireConfig() {
       ::grpc::Service::MarkMethodAsync(4);
@@ -355,7 +447,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSpireConfig(::grpc::ServerContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response) override {
+    ::grpc::Status GetSpireConfig(::grpc::ServerContext* /*context*/, const ::GetSpireConfigRequest* /*request*/, ::GetSpireConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -366,7 +458,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithAsyncMethod_EidCleanUp : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_EidCleanUp() {
       ::grpc::Service::MarkMethodAsync(5);
@@ -375,7 +467,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status EidCleanUp(::grpc::ServerContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response) override {
+    ::grpc::Status EidCleanUp(::grpc::ServerContext* /*context*/, const ::EidCleanUpRequest* /*request*/, ::EidCleanUpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -387,194 +479,294 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_Train : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_Train() {
-      ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::TrainRequest, ::TrainResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::TrainRequest* request,
-                 ::TrainResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->Train(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::TrainRequest, ::TrainResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::TrainRequest* request, ::TrainResponse* response) { return this->Train(context, request, response); }));}
     void SetMessageAllocatorFor_Train(
         ::grpc::experimental::MessageAllocator< ::TrainRequest, ::TrainResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::TrainRequest, ::TrainResponse>*>(
-          ::grpc::Service::experimental().GetHandler(0))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::TrainRequest, ::TrainResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_Train() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Train(::grpc::ServerContext* context, const ::TrainRequest* request, ::TrainResponse* response) override {
+    ::grpc::Status Train(::grpc::ServerContext* /*context*/, const ::TrainRequest* /*request*/, ::TrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Train(::grpc::ServerContext* context, const ::TrainRequest* request, ::TrainResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Train(
+      ::grpc::CallbackServerContext* /*context*/, const ::TrainRequest* /*request*/, ::TrainResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Train(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::TrainRequest* /*request*/, ::TrainResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetStatus : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_GetStatus() {
-      ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::GetStatusRequest, ::GetStatusResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::GetStatusRequest* request,
-                 ::GetStatusResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->GetStatus(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::GetStatusRequest, ::GetStatusResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::GetStatusRequest* request, ::GetStatusResponse* response) { return this->GetStatus(context, request, response); }));}
     void SetMessageAllocatorFor_GetStatus(
         ::grpc::experimental::MessageAllocator< ::GetStatusRequest, ::GetStatusResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::GetStatusRequest, ::GetStatusResponse>*>(
-          ::grpc::Service::experimental().GetHandler(1))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::GetStatusRequest, ::GetStatusResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* /*context*/, const ::GetStatusRequest* /*request*/, ::GetStatusResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetStatus(::grpc::ServerContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetStatus(
+      ::grpc::CallbackServerContext* /*context*/, const ::GetStatusRequest* /*request*/, ::GetStatusResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetStatus(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::GetStatusRequest* /*request*/, ::GetStatusResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetEvaluations : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_GetEvaluations() {
-      ::grpc::Service::experimental().MarkMethodCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::GetEvaluationsRequest, ::GetEvaluationsResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::GetEvaluationsRequest* request,
-                 ::GetEvaluationsResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->GetEvaluations(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::GetEvaluationsRequest, ::GetEvaluationsResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response) { return this->GetEvaluations(context, request, response); }));}
     void SetMessageAllocatorFor_GetEvaluations(
         ::grpc::experimental::MessageAllocator< ::GetEvaluationsRequest, ::GetEvaluationsResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::GetEvaluationsRequest, ::GetEvaluationsResponse>*>(
-          ::grpc::Service::experimental().GetHandler(2))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::GetEvaluationsRequest, ::GetEvaluationsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetEvaluations() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetEvaluations(::grpc::ServerContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response) override {
+    ::grpc::Status GetEvaluations(::grpc::ServerContext* /*context*/, const ::GetEvaluationsRequest* /*request*/, ::GetEvaluationsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetEvaluations(::grpc::ServerContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetEvaluations(
+      ::grpc::CallbackServerContext* /*context*/, const ::GetEvaluationsRequest* /*request*/, ::GetEvaluationsResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetEvaluations(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::GetEvaluationsRequest* /*request*/, ::GetEvaluationsResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_ListTemplates : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_ListTemplates() {
-      ::grpc::Service::experimental().MarkMethodCallback(3,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::ListTemplatesRequest, ::ListTemplatesResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::ListTemplatesRequest* request,
-                 ::ListTemplatesResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->ListTemplates(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::ListTemplatesRequest, ::ListTemplatesResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response) { return this->ListTemplates(context, request, response); }));}
     void SetMessageAllocatorFor_ListTemplates(
         ::grpc::experimental::MessageAllocator< ::ListTemplatesRequest, ::ListTemplatesResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ListTemplatesRequest, ::ListTemplatesResponse>*>(
-          ::grpc::Service::experimental().GetHandler(3))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ListTemplatesRequest, ::ListTemplatesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ListTemplates() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ListTemplates(::grpc::ServerContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response) override {
+    ::grpc::Status ListTemplates(::grpc::ServerContext* /*context*/, const ::ListTemplatesRequest* /*request*/, ::ListTemplatesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void ListTemplates(::grpc::ServerContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* ListTemplates(
+      ::grpc::CallbackServerContext* /*context*/, const ::ListTemplatesRequest* /*request*/, ::ListTemplatesResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ListTemplates(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ListTemplatesRequest* /*request*/, ::ListTemplatesResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetSpireConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_GetSpireConfig() {
-      ::grpc::Service::experimental().MarkMethodCallback(4,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::GetSpireConfigRequest, ::GetSpireConfigResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::GetSpireConfigRequest* request,
-                 ::GetSpireConfigResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->GetSpireConfig(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::GetSpireConfigRequest, ::GetSpireConfigResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response) { return this->GetSpireConfig(context, request, response); }));}
     void SetMessageAllocatorFor_GetSpireConfig(
         ::grpc::experimental::MessageAllocator< ::GetSpireConfigRequest, ::GetSpireConfigResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::GetSpireConfigRequest, ::GetSpireConfigResponse>*>(
-          ::grpc::Service::experimental().GetHandler(4))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::GetSpireConfigRequest, ::GetSpireConfigResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetSpireConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSpireConfig(::grpc::ServerContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response) override {
+    ::grpc::Status GetSpireConfig(::grpc::ServerContext* /*context*/, const ::GetSpireConfigRequest* /*request*/, ::GetSpireConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetSpireConfig(::grpc::ServerContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetSpireConfig(
+      ::grpc::CallbackServerContext* /*context*/, const ::GetSpireConfigRequest* /*request*/, ::GetSpireConfigResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetSpireConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::GetSpireConfigRequest* /*request*/, ::GetSpireConfigResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_EidCleanUp : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_EidCleanUp() {
-      ::grpc::Service::experimental().MarkMethodCallback(5,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::EidCleanUpRequest, ::EidCleanUpResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::EidCleanUpRequest* request,
-                 ::EidCleanUpResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->EidCleanUp(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::EidCleanUpRequest, ::EidCleanUpResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response) { return this->EidCleanUp(context, request, response); }));}
     void SetMessageAllocatorFor_EidCleanUp(
         ::grpc::experimental::MessageAllocator< ::EidCleanUpRequest, ::EidCleanUpResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::EidCleanUpRequest, ::EidCleanUpResponse>*>(
-          ::grpc::Service::experimental().GetHandler(5))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::EidCleanUpRequest, ::EidCleanUpResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_EidCleanUp() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status EidCleanUp(::grpc::ServerContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response) override {
+    ::grpc::Status EidCleanUp(::grpc::ServerContext* /*context*/, const ::EidCleanUpRequest* /*request*/, ::EidCleanUpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void EidCleanUp(::grpc::ServerContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* EidCleanUp(
+      ::grpc::CallbackServerContext* /*context*/, const ::EidCleanUpRequest* /*request*/, ::EidCleanUpResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* EidCleanUp(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::EidCleanUpRequest* /*request*/, ::EidCleanUpResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_Train<ExperimentalWithCallbackMethod_GetStatus<ExperimentalWithCallbackMethod_GetEvaluations<ExperimentalWithCallbackMethod_ListTemplates<ExperimentalWithCallbackMethod_GetSpireConfig<ExperimentalWithCallbackMethod_EidCleanUp<Service > > > > > > CallbackService;
+  #endif
+
   typedef ExperimentalWithCallbackMethod_Train<ExperimentalWithCallbackMethod_GetStatus<ExperimentalWithCallbackMethod_GetEvaluations<ExperimentalWithCallbackMethod_ListTemplates<ExperimentalWithCallbackMethod_GetSpireConfig<ExperimentalWithCallbackMethod_EidCleanUp<Service > > > > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_Train : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Train() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -583,7 +775,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Train(::grpc::ServerContext* context, const ::TrainRequest* request, ::TrainResponse* response) override {
+    ::grpc::Status Train(::grpc::ServerContext* /*context*/, const ::TrainRequest* /*request*/, ::TrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -591,7 +783,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithGenericMethod_GetStatus : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetStatus() {
       ::grpc::Service::MarkMethodGeneric(1);
@@ -600,7 +792,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* /*context*/, const ::GetStatusRequest* /*request*/, ::GetStatusResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -608,7 +800,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithGenericMethod_GetEvaluations : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetEvaluations() {
       ::grpc::Service::MarkMethodGeneric(2);
@@ -617,7 +809,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetEvaluations(::grpc::ServerContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response) override {
+    ::grpc::Status GetEvaluations(::grpc::ServerContext* /*context*/, const ::GetEvaluationsRequest* /*request*/, ::GetEvaluationsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -625,7 +817,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithGenericMethod_ListTemplates : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ListTemplates() {
       ::grpc::Service::MarkMethodGeneric(3);
@@ -634,7 +826,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ListTemplates(::grpc::ServerContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response) override {
+    ::grpc::Status ListTemplates(::grpc::ServerContext* /*context*/, const ::ListTemplatesRequest* /*request*/, ::ListTemplatesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -642,7 +834,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithGenericMethod_GetSpireConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetSpireConfig() {
       ::grpc::Service::MarkMethodGeneric(4);
@@ -651,7 +843,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSpireConfig(::grpc::ServerContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response) override {
+    ::grpc::Status GetSpireConfig(::grpc::ServerContext* /*context*/, const ::GetSpireConfigRequest* /*request*/, ::GetSpireConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -659,7 +851,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithGenericMethod_EidCleanUp : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_EidCleanUp() {
       ::grpc::Service::MarkMethodGeneric(5);
@@ -668,7 +860,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status EidCleanUp(::grpc::ServerContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response) override {
+    ::grpc::Status EidCleanUp(::grpc::ServerContext* /*context*/, const ::EidCleanUpRequest* /*request*/, ::EidCleanUpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -676,7 +868,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithRawMethod_Train : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Train() {
       ::grpc::Service::MarkMethodRaw(0);
@@ -685,7 +877,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Train(::grpc::ServerContext* context, const ::TrainRequest* request, ::TrainResponse* response) override {
+    ::grpc::Status Train(::grpc::ServerContext* /*context*/, const ::TrainRequest* /*request*/, ::TrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -696,7 +888,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithRawMethod_GetStatus : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetStatus() {
       ::grpc::Service::MarkMethodRaw(1);
@@ -705,7 +897,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* /*context*/, const ::GetStatusRequest* /*request*/, ::GetStatusResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -716,7 +908,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithRawMethod_GetEvaluations : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetEvaluations() {
       ::grpc::Service::MarkMethodRaw(2);
@@ -725,7 +917,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetEvaluations(::grpc::ServerContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response) override {
+    ::grpc::Status GetEvaluations(::grpc::ServerContext* /*context*/, const ::GetEvaluationsRequest* /*request*/, ::GetEvaluationsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -736,7 +928,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithRawMethod_ListTemplates : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ListTemplates() {
       ::grpc::Service::MarkMethodRaw(3);
@@ -745,7 +937,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ListTemplates(::grpc::ServerContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response) override {
+    ::grpc::Status ListTemplates(::grpc::ServerContext* /*context*/, const ::ListTemplatesRequest* /*request*/, ::ListTemplatesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -756,7 +948,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithRawMethod_GetSpireConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetSpireConfig() {
       ::grpc::Service::MarkMethodRaw(4);
@@ -765,7 +957,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSpireConfig(::grpc::ServerContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response) override {
+    ::grpc::Status GetSpireConfig(::grpc::ServerContext* /*context*/, const ::GetSpireConfigRequest* /*request*/, ::GetSpireConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -776,7 +968,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithRawMethod_EidCleanUp : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_EidCleanUp() {
       ::grpc::Service::MarkMethodRaw(5);
@@ -785,7 +977,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status EidCleanUp(::grpc::ServerContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response) override {
+    ::grpc::Status EidCleanUp(::grpc::ServerContext* /*context*/, const ::EidCleanUpRequest* /*request*/, ::EidCleanUpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -796,157 +988,235 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_Train : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_Train() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->Train(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Train(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_Train() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Train(::grpc::ServerContext* context, const ::TrainRequest* request, ::TrainResponse* response) override {
+    ::grpc::Status Train(::grpc::ServerContext* /*context*/, const ::TrainRequest* /*request*/, ::TrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Train(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Train(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Train(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_GetStatus : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_GetStatus() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->GetStatus(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetStatus(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* /*context*/, const ::GetStatusRequest* /*request*/, ::GetStatusResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetStatus(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetStatus(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetStatus(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_GetEvaluations : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_GetEvaluations() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->GetEvaluations(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEvaluations(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetEvaluations() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetEvaluations(::grpc::ServerContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response) override {
+    ::grpc::Status GetEvaluations(::grpc::ServerContext* /*context*/, const ::GetEvaluationsRequest* /*request*/, ::GetEvaluationsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetEvaluations(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetEvaluations(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetEvaluations(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_ListTemplates : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_ListTemplates() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(3,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->ListTemplates(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ListTemplates(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_ListTemplates() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ListTemplates(::grpc::ServerContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response) override {
+    ::grpc::Status ListTemplates(::grpc::ServerContext* /*context*/, const ::ListTemplatesRequest* /*request*/, ::ListTemplatesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void ListTemplates(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* ListTemplates(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ListTemplates(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_GetSpireConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_GetSpireConfig() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(4,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->GetSpireConfig(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetSpireConfig(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetSpireConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetSpireConfig(::grpc::ServerContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response) override {
+    ::grpc::Status GetSpireConfig(::grpc::ServerContext* /*context*/, const ::GetSpireConfigRequest* /*request*/, ::GetSpireConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetSpireConfig(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetSpireConfig(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetSpireConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_EidCleanUp : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_EidCleanUp() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(5,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->EidCleanUp(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->EidCleanUp(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_EidCleanUp() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status EidCleanUp(::grpc::ServerContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response) override {
+    ::grpc::Status EidCleanUp(::grpc::ServerContext* /*context*/, const ::EidCleanUpRequest* /*request*/, ::EidCleanUpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void EidCleanUp(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* EidCleanUp(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* EidCleanUp(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Train : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Train() {
       ::grpc::Service::MarkMethodStreamed(0,
@@ -956,7 +1226,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Train(::grpc::ServerContext* context, const ::TrainRequest* request, ::TrainResponse* response) override {
+    ::grpc::Status Train(::grpc::ServerContext* /*context*/, const ::TrainRequest* /*request*/, ::TrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -966,7 +1236,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetStatus : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetStatus() {
       ::grpc::Service::MarkMethodStreamed(1,
@@ -976,7 +1246,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::GetStatusRequest* request, ::GetStatusResponse* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* /*context*/, const ::GetStatusRequest* /*request*/, ::GetStatusResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -986,7 +1256,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetEvaluations : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetEvaluations() {
       ::grpc::Service::MarkMethodStreamed(2,
@@ -996,7 +1266,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetEvaluations(::grpc::ServerContext* context, const ::GetEvaluationsRequest* request, ::GetEvaluationsResponse* response) override {
+    ::grpc::Status GetEvaluations(::grpc::ServerContext* /*context*/, const ::GetEvaluationsRequest* /*request*/, ::GetEvaluationsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1006,7 +1276,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_ListTemplates : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ListTemplates() {
       ::grpc::Service::MarkMethodStreamed(3,
@@ -1016,7 +1286,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ListTemplates(::grpc::ServerContext* context, const ::ListTemplatesRequest* request, ::ListTemplatesResponse* response) override {
+    ::grpc::Status ListTemplates(::grpc::ServerContext* /*context*/, const ::ListTemplatesRequest* /*request*/, ::ListTemplatesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1026,7 +1296,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetSpireConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetSpireConfig() {
       ::grpc::Service::MarkMethodStreamed(4,
@@ -1036,7 +1306,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetSpireConfig(::grpc::ServerContext* context, const ::GetSpireConfigRequest* request, ::GetSpireConfigResponse* response) override {
+    ::grpc::Status GetSpireConfig(::grpc::ServerContext* /*context*/, const ::GetSpireConfigRequest* /*request*/, ::GetSpireConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1046,7 +1316,7 @@ class TrainingCoordinator final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_EidCleanUp : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_EidCleanUp() {
       ::grpc::Service::MarkMethodStreamed(5,
@@ -1056,7 +1326,7 @@ class TrainingCoordinator final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status EidCleanUp(::grpc::ServerContext* context, const ::EidCleanUpRequest* request, ::EidCleanUpResponse* response) override {
+    ::grpc::Status EidCleanUp(::grpc::ServerContext* /*context*/, const ::EidCleanUpRequest* /*request*/, ::EidCleanUpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

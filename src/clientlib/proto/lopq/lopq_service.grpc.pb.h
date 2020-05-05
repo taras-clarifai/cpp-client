@@ -7,34 +7,24 @@
 #include "proto/lopq/lopq_service.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/client_context.h>
 #include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-
-namespace grpc_impl {
-class CompletionQueue;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc_impl
-
-namespace grpc {
-namespace experimental {
-template <typename RequestT, typename ResponseT>
-class MessageAllocator;
-}  // namespace experimental
-}  // namespace grpc
 
 // Interface exported by the server.
 class LOPQService final {
@@ -107,39 +97,101 @@ class LOPQService final {
       // Predicts the LOPQ codes for given embeddings for a LOPQ model
       virtual void LOPQPredict(::grpc::ClientContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LOPQPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQPredictResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQPredict(::grpc::ClientContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQPredict(::grpc::ClientContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Searches for embeddings given an optional SQL template to only consider a subset of assets for a LOPQ model
       virtual void LOPQSearch(::grpc::ClientContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LOPQSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQSearch(::grpc::ClientContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQSearch(::grpc::ClientContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Searches for embeddings and attributes given a SQL template and custom models to weight results
       virtual void LOPQAttributeSearch(::grpc::ClientContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LOPQAttributeSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQAttributeSearch(::grpc::ClientContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQAttributeSearch(::grpc::ClientContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQAttributeSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQAttributeSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Searches for embeddings given a LOPQ model returning LOPQ coarse keys and distances only
       virtual void LOPQSearchForCodes(::grpc::ClientContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LOPQSearchForCodes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchForCodesResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQSearchForCodes(::grpc::ClientContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQSearchForCodes(::grpc::ClientContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQSearchForCodes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchForCodesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQSearchForCodes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchForCodesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Brute force search for nearest neighbors of query embeddings.
       virtual void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQBruteForceSearchResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQBruteForceSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQBruteForceSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // LOPQTrain by iterating over database and then save model to s3.
       virtual void LOPQTrain(::grpc::ClientContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LOPQTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQTrain(::grpc::ClientContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQTrain(::grpc::ClientContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Evaluates a LOPQ model by comparing to brute force for a set of sample query embeddings.
       virtual void LOPQTrainAndEval(::grpc::ClientContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LOPQTrainAndEval(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainAndEvalResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQTrainAndEval(::grpc::ClientContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQTrainAndEval(::grpc::ClientContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void LOPQTrainAndEval(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainAndEvalResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void LOPQTrainAndEval(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainAndEvalResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::LOPQPredictResponse>* AsyncLOPQPredictRaw(::grpc::ClientContext* context, const ::LOPQPredictRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -214,32 +266,88 @@ class LOPQService final {
      public:
       void LOPQPredict(::grpc::ClientContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response, std::function<void(::grpc::Status)>) override;
       void LOPQPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQPredictResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQPredict(::grpc::ClientContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQPredict(::grpc::ClientContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void LOPQSearch(::grpc::ClientContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response, std::function<void(::grpc::Status)>) override;
       void LOPQSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQSearch(::grpc::ClientContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQSearch(::grpc::ClientContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void LOPQAttributeSearch(::grpc::ClientContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response, std::function<void(::grpc::Status)>) override;
       void LOPQAttributeSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQAttributeSearch(::grpc::ClientContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQAttributeSearch(::grpc::ClientContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQAttributeSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQAttributeSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void LOPQSearchForCodes(::grpc::ClientContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response, std::function<void(::grpc::Status)>) override;
       void LOPQSearchForCodes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchForCodesResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQSearchForCodes(::grpc::ClientContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQSearchForCodes(::grpc::ClientContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQSearchForCodes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchForCodesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQSearchForCodes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQSearchForCodesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response, std::function<void(::grpc::Status)>) override;
       void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQBruteForceSearchResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQBruteForceSearchResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQBruteForceSearch(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQBruteForceSearchResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void LOPQTrain(::grpc::ClientContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response, std::function<void(::grpc::Status)>) override;
       void LOPQTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQTrain(::grpc::ClientContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQTrain(::grpc::ClientContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void LOPQTrainAndEval(::grpc::ClientContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response, std::function<void(::grpc::Status)>) override;
       void LOPQTrainAndEval(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainAndEvalResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQTrainAndEval(::grpc::ClientContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQTrainAndEval(::grpc::ClientContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void LOPQTrainAndEval(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainAndEvalResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void LOPQTrainAndEval(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::LOPQTrainAndEvalResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -297,7 +405,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithAsyncMethod_LOPQPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LOPQPredict() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -306,7 +414,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQPredict(::grpc::ServerContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response) override {
+    ::grpc::Status LOPQPredict(::grpc::ServerContext* /*context*/, const ::LOPQPredictRequest* /*request*/, ::LOPQPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -317,7 +425,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithAsyncMethod_LOPQSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LOPQSearch() {
       ::grpc::Service::MarkMethodAsync(1);
@@ -326,7 +434,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearch(::grpc::ServerContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQSearch(::grpc::ServerContext* /*context*/, const ::LOPQSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -337,7 +445,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithAsyncMethod_LOPQAttributeSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LOPQAttributeSearch() {
       ::grpc::Service::MarkMethodAsync(2);
@@ -346,7 +454,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* /*context*/, const ::LOPQAttributeSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -357,7 +465,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithAsyncMethod_LOPQSearchForCodes : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LOPQSearchForCodes() {
       ::grpc::Service::MarkMethodAsync(3);
@@ -366,7 +474,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response) override {
+    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* /*context*/, const ::LOPQSearchForCodesRequest* /*request*/, ::LOPQSearchForCodesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -377,7 +485,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithAsyncMethod_LOPQBruteForceSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LOPQBruteForceSearch() {
       ::grpc::Service::MarkMethodAsync(4);
@@ -386,7 +494,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response) override {
+    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* /*context*/, const ::LOPQBruteForceSearchRequest* /*request*/, ::LOPQBruteForceSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -397,7 +505,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithAsyncMethod_LOPQTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LOPQTrain() {
       ::grpc::Service::MarkMethodAsync(5);
@@ -406,7 +514,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrain(::grpc::ServerContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response) override {
+    ::grpc::Status LOPQTrain(::grpc::ServerContext* /*context*/, const ::LOPQTrainRequest* /*request*/, ::LOPQTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -417,7 +525,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithAsyncMethod_LOPQTrainAndEval : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LOPQTrainAndEval() {
       ::grpc::Service::MarkMethodAsync(6);
@@ -426,7 +534,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response) override {
+    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* /*context*/, const ::LOPQTrainAndEvalRequest* /*request*/, ::LOPQTrainAndEvalResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -438,225 +546,341 @@ class LOPQService final {
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_LOPQPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_LOPQPredict() {
-      ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQPredictRequest, ::LOPQPredictResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::LOPQPredictRequest* request,
-                 ::LOPQPredictResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->LOPQPredict(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQPredictRequest, ::LOPQPredictResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response) { return this->LOPQPredict(context, request, response); }));}
     void SetMessageAllocatorFor_LOPQPredict(
         ::grpc::experimental::MessageAllocator< ::LOPQPredictRequest, ::LOPQPredictResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQPredictRequest, ::LOPQPredictResponse>*>(
-          ::grpc::Service::experimental().GetHandler(0))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQPredictRequest, ::LOPQPredictResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_LOPQPredict() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQPredict(::grpc::ServerContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response) override {
+    ::grpc::Status LOPQPredict(::grpc::ServerContext* /*context*/, const ::LOPQPredictRequest* /*request*/, ::LOPQPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQPredict(::grpc::ServerContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQPredict(
+      ::grpc::CallbackServerContext* /*context*/, const ::LOPQPredictRequest* /*request*/, ::LOPQPredictResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQPredict(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::LOPQPredictRequest* /*request*/, ::LOPQPredictResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_LOPQSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_LOPQSearch() {
-      ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQSearchRequest, ::LOPQSearchResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::LOPQSearchRequest* request,
-                 ::LOPQSearchResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->LOPQSearch(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQSearchRequest, ::LOPQSearchResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response) { return this->LOPQSearch(context, request, response); }));}
     void SetMessageAllocatorFor_LOPQSearch(
         ::grpc::experimental::MessageAllocator< ::LOPQSearchRequest, ::LOPQSearchResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQSearchRequest, ::LOPQSearchResponse>*>(
-          ::grpc::Service::experimental().GetHandler(1))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQSearchRequest, ::LOPQSearchResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_LOPQSearch() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearch(::grpc::ServerContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQSearch(::grpc::ServerContext* /*context*/, const ::LOPQSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQSearch(::grpc::ServerContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQSearch(
+      ::grpc::CallbackServerContext* /*context*/, const ::LOPQSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQSearch(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::LOPQSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_LOPQAttributeSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_LOPQAttributeSearch() {
-      ::grpc::Service::experimental().MarkMethodCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQAttributeSearchRequest, ::LOPQSearchResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::LOPQAttributeSearchRequest* request,
-                 ::LOPQSearchResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->LOPQAttributeSearch(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQAttributeSearchRequest, ::LOPQSearchResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response) { return this->LOPQAttributeSearch(context, request, response); }));}
     void SetMessageAllocatorFor_LOPQAttributeSearch(
         ::grpc::experimental::MessageAllocator< ::LOPQAttributeSearchRequest, ::LOPQSearchResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQAttributeSearchRequest, ::LOPQSearchResponse>*>(
-          ::grpc::Service::experimental().GetHandler(2))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQAttributeSearchRequest, ::LOPQSearchResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_LOPQAttributeSearch() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* /*context*/, const ::LOPQAttributeSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQAttributeSearch(::grpc::ServerContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQAttributeSearch(
+      ::grpc::CallbackServerContext* /*context*/, const ::LOPQAttributeSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQAttributeSearch(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::LOPQAttributeSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_LOPQSearchForCodes : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_LOPQSearchForCodes() {
-      ::grpc::Service::experimental().MarkMethodCallback(3,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQSearchForCodesRequest, ::LOPQSearchForCodesResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::LOPQSearchForCodesRequest* request,
-                 ::LOPQSearchForCodesResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->LOPQSearchForCodes(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQSearchForCodesRequest, ::LOPQSearchForCodesResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response) { return this->LOPQSearchForCodes(context, request, response); }));}
     void SetMessageAllocatorFor_LOPQSearchForCodes(
         ::grpc::experimental::MessageAllocator< ::LOPQSearchForCodesRequest, ::LOPQSearchForCodesResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQSearchForCodesRequest, ::LOPQSearchForCodesResponse>*>(
-          ::grpc::Service::experimental().GetHandler(3))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQSearchForCodesRequest, ::LOPQSearchForCodesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_LOPQSearchForCodes() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response) override {
+    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* /*context*/, const ::LOPQSearchForCodesRequest* /*request*/, ::LOPQSearchForCodesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQSearchForCodes(::grpc::ServerContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQSearchForCodes(
+      ::grpc::CallbackServerContext* /*context*/, const ::LOPQSearchForCodesRequest* /*request*/, ::LOPQSearchForCodesResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQSearchForCodes(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::LOPQSearchForCodesRequest* /*request*/, ::LOPQSearchForCodesResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_LOPQBruteForceSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_LOPQBruteForceSearch() {
-      ::grpc::Service::experimental().MarkMethodCallback(4,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQBruteForceSearchRequest, ::LOPQBruteForceSearchResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::LOPQBruteForceSearchRequest* request,
-                 ::LOPQBruteForceSearchResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->LOPQBruteForceSearch(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQBruteForceSearchRequest, ::LOPQBruteForceSearchResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response) { return this->LOPQBruteForceSearch(context, request, response); }));}
     void SetMessageAllocatorFor_LOPQBruteForceSearch(
         ::grpc::experimental::MessageAllocator< ::LOPQBruteForceSearchRequest, ::LOPQBruteForceSearchResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQBruteForceSearchRequest, ::LOPQBruteForceSearchResponse>*>(
-          ::grpc::Service::experimental().GetHandler(4))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQBruteForceSearchRequest, ::LOPQBruteForceSearchResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_LOPQBruteForceSearch() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response) override {
+    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* /*context*/, const ::LOPQBruteForceSearchRequest* /*request*/, ::LOPQBruteForceSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQBruteForceSearch(::grpc::ServerContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQBruteForceSearch(
+      ::grpc::CallbackServerContext* /*context*/, const ::LOPQBruteForceSearchRequest* /*request*/, ::LOPQBruteForceSearchResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQBruteForceSearch(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::LOPQBruteForceSearchRequest* /*request*/, ::LOPQBruteForceSearchResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_LOPQTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_LOPQTrain() {
-      ::grpc::Service::experimental().MarkMethodCallback(5,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQTrainRequest, ::LOPQTrainResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::LOPQTrainRequest* request,
-                 ::LOPQTrainResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->LOPQTrain(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQTrainRequest, ::LOPQTrainResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response) { return this->LOPQTrain(context, request, response); }));}
     void SetMessageAllocatorFor_LOPQTrain(
         ::grpc::experimental::MessageAllocator< ::LOPQTrainRequest, ::LOPQTrainResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQTrainRequest, ::LOPQTrainResponse>*>(
-          ::grpc::Service::experimental().GetHandler(5))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQTrainRequest, ::LOPQTrainResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_LOPQTrain() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrain(::grpc::ServerContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response) override {
+    ::grpc::Status LOPQTrain(::grpc::ServerContext* /*context*/, const ::LOPQTrainRequest* /*request*/, ::LOPQTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQTrain(::grpc::ServerContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQTrain(
+      ::grpc::CallbackServerContext* /*context*/, const ::LOPQTrainRequest* /*request*/, ::LOPQTrainResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQTrain(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::LOPQTrainRequest* /*request*/, ::LOPQTrainResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_LOPQTrainAndEval : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_LOPQTrainAndEval() {
-      ::grpc::Service::experimental().MarkMethodCallback(6,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQTrainAndEvalRequest, ::LOPQTrainAndEvalResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::LOPQTrainAndEvalRequest* request,
-                 ::LOPQTrainAndEvalResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->LOPQTrainAndEval(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::LOPQTrainAndEvalRequest, ::LOPQTrainAndEvalResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response) { return this->LOPQTrainAndEval(context, request, response); }));}
     void SetMessageAllocatorFor_LOPQTrainAndEval(
         ::grpc::experimental::MessageAllocator< ::LOPQTrainAndEvalRequest, ::LOPQTrainAndEvalResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQTrainAndEvalRequest, ::LOPQTrainAndEvalResponse>*>(
-          ::grpc::Service::experimental().GetHandler(6))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(6);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::LOPQTrainAndEvalRequest, ::LOPQTrainAndEvalResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_LOPQTrainAndEval() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response) override {
+    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* /*context*/, const ::LOPQTrainAndEvalRequest* /*request*/, ::LOPQTrainAndEvalResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQTrainAndEval(::grpc::ServerContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQTrainAndEval(
+      ::grpc::CallbackServerContext* /*context*/, const ::LOPQTrainAndEvalRequest* /*request*/, ::LOPQTrainAndEvalResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQTrainAndEval(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::LOPQTrainAndEvalRequest* /*request*/, ::LOPQTrainAndEvalResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_LOPQPredict<ExperimentalWithCallbackMethod_LOPQSearch<ExperimentalWithCallbackMethod_LOPQAttributeSearch<ExperimentalWithCallbackMethod_LOPQSearchForCodes<ExperimentalWithCallbackMethod_LOPQBruteForceSearch<ExperimentalWithCallbackMethod_LOPQTrain<ExperimentalWithCallbackMethod_LOPQTrainAndEval<Service > > > > > > > CallbackService;
+  #endif
+
   typedef ExperimentalWithCallbackMethod_LOPQPredict<ExperimentalWithCallbackMethod_LOPQSearch<ExperimentalWithCallbackMethod_LOPQAttributeSearch<ExperimentalWithCallbackMethod_LOPQSearchForCodes<ExperimentalWithCallbackMethod_LOPQBruteForceSearch<ExperimentalWithCallbackMethod_LOPQTrain<ExperimentalWithCallbackMethod_LOPQTrainAndEval<Service > > > > > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_LOPQPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LOPQPredict() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -665,7 +889,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQPredict(::grpc::ServerContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response) override {
+    ::grpc::Status LOPQPredict(::grpc::ServerContext* /*context*/, const ::LOPQPredictRequest* /*request*/, ::LOPQPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -673,7 +897,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithGenericMethod_LOPQSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LOPQSearch() {
       ::grpc::Service::MarkMethodGeneric(1);
@@ -682,7 +906,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearch(::grpc::ServerContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQSearch(::grpc::ServerContext* /*context*/, const ::LOPQSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -690,7 +914,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithGenericMethod_LOPQAttributeSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LOPQAttributeSearch() {
       ::grpc::Service::MarkMethodGeneric(2);
@@ -699,7 +923,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* /*context*/, const ::LOPQAttributeSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -707,7 +931,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithGenericMethod_LOPQSearchForCodes : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LOPQSearchForCodes() {
       ::grpc::Service::MarkMethodGeneric(3);
@@ -716,7 +940,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response) override {
+    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* /*context*/, const ::LOPQSearchForCodesRequest* /*request*/, ::LOPQSearchForCodesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -724,7 +948,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithGenericMethod_LOPQBruteForceSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LOPQBruteForceSearch() {
       ::grpc::Service::MarkMethodGeneric(4);
@@ -733,7 +957,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response) override {
+    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* /*context*/, const ::LOPQBruteForceSearchRequest* /*request*/, ::LOPQBruteForceSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -741,7 +965,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithGenericMethod_LOPQTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LOPQTrain() {
       ::grpc::Service::MarkMethodGeneric(5);
@@ -750,7 +974,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrain(::grpc::ServerContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response) override {
+    ::grpc::Status LOPQTrain(::grpc::ServerContext* /*context*/, const ::LOPQTrainRequest* /*request*/, ::LOPQTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -758,7 +982,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithGenericMethod_LOPQTrainAndEval : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LOPQTrainAndEval() {
       ::grpc::Service::MarkMethodGeneric(6);
@@ -767,7 +991,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response) override {
+    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* /*context*/, const ::LOPQTrainAndEvalRequest* /*request*/, ::LOPQTrainAndEvalResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -775,7 +999,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithRawMethod_LOPQPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LOPQPredict() {
       ::grpc::Service::MarkMethodRaw(0);
@@ -784,7 +1008,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQPredict(::grpc::ServerContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response) override {
+    ::grpc::Status LOPQPredict(::grpc::ServerContext* /*context*/, const ::LOPQPredictRequest* /*request*/, ::LOPQPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -795,7 +1019,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithRawMethod_LOPQSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LOPQSearch() {
       ::grpc::Service::MarkMethodRaw(1);
@@ -804,7 +1028,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearch(::grpc::ServerContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQSearch(::grpc::ServerContext* /*context*/, const ::LOPQSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -815,7 +1039,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithRawMethod_LOPQAttributeSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LOPQAttributeSearch() {
       ::grpc::Service::MarkMethodRaw(2);
@@ -824,7 +1048,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* /*context*/, const ::LOPQAttributeSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -835,7 +1059,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithRawMethod_LOPQSearchForCodes : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LOPQSearchForCodes() {
       ::grpc::Service::MarkMethodRaw(3);
@@ -844,7 +1068,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response) override {
+    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* /*context*/, const ::LOPQSearchForCodesRequest* /*request*/, ::LOPQSearchForCodesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -855,7 +1079,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithRawMethod_LOPQBruteForceSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LOPQBruteForceSearch() {
       ::grpc::Service::MarkMethodRaw(4);
@@ -864,7 +1088,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response) override {
+    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* /*context*/, const ::LOPQBruteForceSearchRequest* /*request*/, ::LOPQBruteForceSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -875,7 +1099,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithRawMethod_LOPQTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LOPQTrain() {
       ::grpc::Service::MarkMethodRaw(5);
@@ -884,7 +1108,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrain(::grpc::ServerContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response) override {
+    ::grpc::Status LOPQTrain(::grpc::ServerContext* /*context*/, const ::LOPQTrainRequest* /*request*/, ::LOPQTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -895,7 +1119,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithRawMethod_LOPQTrainAndEval : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LOPQTrainAndEval() {
       ::grpc::Service::MarkMethodRaw(6);
@@ -904,7 +1128,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response) override {
+    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* /*context*/, const ::LOPQTrainAndEvalRequest* /*request*/, ::LOPQTrainAndEvalResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -915,182 +1139,273 @@ class LOPQService final {
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_LOPQPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_LOPQPredict() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->LOPQPredict(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LOPQPredict(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_LOPQPredict() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQPredict(::grpc::ServerContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response) override {
+    ::grpc::Status LOPQPredict(::grpc::ServerContext* /*context*/, const ::LOPQPredictRequest* /*request*/, ::LOPQPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQPredict(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQPredict(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQPredict(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_LOPQSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_LOPQSearch() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->LOPQSearch(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LOPQSearch(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_LOPQSearch() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearch(::grpc::ServerContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQSearch(::grpc::ServerContext* /*context*/, const ::LOPQSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQSearch(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQSearch(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQSearch(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_LOPQAttributeSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_LOPQAttributeSearch() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->LOPQAttributeSearch(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LOPQAttributeSearch(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_LOPQAttributeSearch() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* /*context*/, const ::LOPQAttributeSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQAttributeSearch(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQAttributeSearch(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQAttributeSearch(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_LOPQSearchForCodes : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_LOPQSearchForCodes() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(3,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->LOPQSearchForCodes(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LOPQSearchForCodes(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_LOPQSearchForCodes() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response) override {
+    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* /*context*/, const ::LOPQSearchForCodesRequest* /*request*/, ::LOPQSearchForCodesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQSearchForCodes(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQSearchForCodes(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQSearchForCodes(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_LOPQBruteForceSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_LOPQBruteForceSearch() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(4,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->LOPQBruteForceSearch(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LOPQBruteForceSearch(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_LOPQBruteForceSearch() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response) override {
+    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* /*context*/, const ::LOPQBruteForceSearchRequest* /*request*/, ::LOPQBruteForceSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQBruteForceSearch(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQBruteForceSearch(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQBruteForceSearch(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_LOPQTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_LOPQTrain() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(5,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->LOPQTrain(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LOPQTrain(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_LOPQTrain() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrain(::grpc::ServerContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response) override {
+    ::grpc::Status LOPQTrain(::grpc::ServerContext* /*context*/, const ::LOPQTrainRequest* /*request*/, ::LOPQTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQTrain(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQTrain(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQTrain(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_LOPQTrainAndEval : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_LOPQTrainAndEval() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(6,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->LOPQTrainAndEval(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LOPQTrainAndEval(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_LOPQTrainAndEval() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response) override {
+    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* /*context*/, const ::LOPQTrainAndEvalRequest* /*request*/, ::LOPQTrainAndEvalResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void LOPQTrainAndEval(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* LOPQTrainAndEval(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* LOPQTrainAndEval(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_LOPQPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LOPQPredict() {
       ::grpc::Service::MarkMethodStreamed(0,
@@ -1100,7 +1415,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status LOPQPredict(::grpc::ServerContext* context, const ::LOPQPredictRequest* request, ::LOPQPredictResponse* response) override {
+    ::grpc::Status LOPQPredict(::grpc::ServerContext* /*context*/, const ::LOPQPredictRequest* /*request*/, ::LOPQPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1110,7 +1425,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_LOPQSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LOPQSearch() {
       ::grpc::Service::MarkMethodStreamed(1,
@@ -1120,7 +1435,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status LOPQSearch(::grpc::ServerContext* context, const ::LOPQSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQSearch(::grpc::ServerContext* /*context*/, const ::LOPQSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1130,7 +1445,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_LOPQAttributeSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LOPQAttributeSearch() {
       ::grpc::Service::MarkMethodStreamed(2,
@@ -1140,7 +1455,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* context, const ::LOPQAttributeSearchRequest* request, ::LOPQSearchResponse* response) override {
+    ::grpc::Status LOPQAttributeSearch(::grpc::ServerContext* /*context*/, const ::LOPQAttributeSearchRequest* /*request*/, ::LOPQSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1150,7 +1465,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_LOPQSearchForCodes : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LOPQSearchForCodes() {
       ::grpc::Service::MarkMethodStreamed(3,
@@ -1160,7 +1475,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* context, const ::LOPQSearchForCodesRequest* request, ::LOPQSearchForCodesResponse* response) override {
+    ::grpc::Status LOPQSearchForCodes(::grpc::ServerContext* /*context*/, const ::LOPQSearchForCodesRequest* /*request*/, ::LOPQSearchForCodesResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1170,7 +1485,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_LOPQBruteForceSearch : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LOPQBruteForceSearch() {
       ::grpc::Service::MarkMethodStreamed(4,
@@ -1180,7 +1495,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* context, const ::LOPQBruteForceSearchRequest* request, ::LOPQBruteForceSearchResponse* response) override {
+    ::grpc::Status LOPQBruteForceSearch(::grpc::ServerContext* /*context*/, const ::LOPQBruteForceSearchRequest* /*request*/, ::LOPQBruteForceSearchResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1190,7 +1505,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_LOPQTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LOPQTrain() {
       ::grpc::Service::MarkMethodStreamed(5,
@@ -1200,7 +1515,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status LOPQTrain(::grpc::ServerContext* context, const ::LOPQTrainRequest* request, ::LOPQTrainResponse* response) override {
+    ::grpc::Status LOPQTrain(::grpc::ServerContext* /*context*/, const ::LOPQTrainRequest* /*request*/, ::LOPQTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1210,7 +1525,7 @@ class LOPQService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_LOPQTrainAndEval : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LOPQTrainAndEval() {
       ::grpc::Service::MarkMethodStreamed(6,
@@ -1220,7 +1535,7 @@ class LOPQService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* context, const ::LOPQTrainAndEvalRequest* request, ::LOPQTrainAndEvalResponse* response) override {
+    ::grpc::Status LOPQTrainAndEval(::grpc::ServerContext* /*context*/, const ::LOPQTrainAndEvalRequest* /*request*/, ::LOPQTrainAndEvalResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

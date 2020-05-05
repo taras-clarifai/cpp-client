@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -36,7 +35,7 @@ static void InitDefaultsscc_info_Video_proto_2futils_2fvideo_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_Video_proto_2futils_2fvideo_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsscc_info_Video_proto_2futils_2fvideo_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_Video_proto_2futils_2fvideo_2eproto}, {
       &scc_info_NDArray_proto_2futils_2fndarray_2eproto.base,
       &scc_info_Frame_proto_2futils_2fframe_2eproto.base,
       &scc_info_Duration_google_2fprotobuf_2fduration_2eproto.base,}};
@@ -156,7 +155,7 @@ void Video::set_allocated_ndarray(::NDArray* ndarray) {
   // @@protoc_insertion_point(field_set_allocated:Video.ndarray)
 }
 void Video::clear_ndarray() {
-  if (has_ndarray()) {
+  if (_internal_has_ndarray()) {
     delete data_.ndarray_;
     clear_has_data();
   }
@@ -195,23 +194,23 @@ Video::Video(const Video& from)
       optical_flow_y_(from.optical_flow_y_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.name().empty()) {
+  if (!from._internal_name().empty()) {
     name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
   url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.url().empty()) {
+  if (!from._internal_url().empty()) {
     url_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.url_);
   }
   hosted_orig_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.hosted_orig_url().empty()) {
+  if (!from._internal_hosted_orig_url().empty()) {
     hosted_orig_url_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.hosted_orig_url_);
   }
-  if (from.has_thumbnail()) {
+  if (from._internal_has_thumbnail()) {
     thumbnail_ = new ::Frame(*from.thumbnail_);
   } else {
     thumbnail_ = nullptr;
   }
-  if (from.has_duration()) {
+  if (from._internal_has_duration()) {
     duration_ = new PROTOBUF_NAMESPACE_ID::Duration(*from.duration_);
   } else {
     duration_ = nullptr;
@@ -222,11 +221,11 @@ Video::Video(const Video& from)
   clear_has_data();
   switch (from.data_case()) {
     case kEncodedBytes: {
-      set_encoded_bytes(from.encoded_bytes());
+      _internal_set_encoded_bytes(from._internal_encoded_bytes());
       break;
     }
     case kNdarray: {
-      mutable_ndarray()->::NDArray::MergeFrom(from.ndarray());
+      _internal_mutable_ndarray()->::NDArray::MergeFrom(from._internal_ndarray());
       break;
     }
     case DATA_NOT_SET: {
@@ -318,7 +317,6 @@ void Video::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* Video::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -329,28 +327,33 @@ const char* Video::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
       // string name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_name(), ptr, ctx, "Video.name");
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Video.name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // bytes encoded_bytes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_encoded_bytes(), ptr, ctx);
+          auto str = _internal_mutable_encoded_bytes();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .NDArray ndarray = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_ndarray(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_ndarray(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string url = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_url(), ptr, ctx, "Video.url");
+          auto str = _internal_mutable_url();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Video.url"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -360,10 +363,10 @@ const char* Video::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_frames(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_frames(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 42);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .Frame optical_flow_x = 6;
@@ -372,10 +375,10 @@ const char* Video::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_optical_flow_x(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_optical_flow_x(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 50);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
         } else goto handle_unusual;
         continue;
       // repeated .Frame optical_flow_y = 7;
@@ -384,23 +387,25 @@ const char* Video::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_optical_flow_y(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_optical_flow_y(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 58);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else goto handle_unusual;
         continue;
       // .Frame thumbnail = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(mutable_thumbnail(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_thumbnail(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string hosted_orig_url = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_hosted_orig_url(), ptr, ctx, "Video.hosted_orig_url");
+          auto str = _internal_mutable_hosted_orig_url();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Video.hosted_orig_url"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -428,7 +433,7 @@ const char* Video::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
       // .google.protobuf.Duration duration = 1003;
       case 1003:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(mutable_duration(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_duration(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -458,328 +463,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Video::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Video)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string name = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Video.name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // bytes encoded_bytes = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_encoded_bytes()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .NDArray ndarray = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_ndarray()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string url = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_url()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->url().data(), static_cast<int>(this->url().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Video.url"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .Frame frames = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_frames()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .Frame optical_flow_x = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_optical_flow_x()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .Frame optical_flow_y = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_optical_flow_y()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .Frame thumbnail = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_thumbnail()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string hosted_orig_url = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_hosted_orig_url()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->hosted_orig_url().data(), static_cast<int>(this->hosted_orig_url().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Video.hosted_orig_url"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 width = 1000;
-      case 1000: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8000 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &width_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 height = 1001;
-      case 1001: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8008 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &height_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 colors = 1002;
-      case 1002: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8016 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &colors_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Duration duration = 1003;
-      case 1003: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8026 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_duration()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float fps = 1004;
-      case 1004: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8037 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &fps_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Video)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Video)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Video::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Video)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string name = 1;
-  if (this->name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Video.name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->name(), output);
-  }
-
-  // bytes encoded_bytes = 2;
-  if (has_encoded_bytes()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
-      2, this->encoded_bytes(), output);
-  }
-
-  // .NDArray ndarray = 3;
-  if (has_ndarray()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::ndarray(this), output);
-  }
-
-  // string url = 4;
-  if (this->url().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->url().data(), static_cast<int>(this->url().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Video.url");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->url(), output);
-  }
-
-  // repeated .Frame frames = 5;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->frames_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5,
-      this->frames(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .Frame optical_flow_x = 6;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->optical_flow_x_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6,
-      this->optical_flow_x(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .Frame optical_flow_y = 7;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->optical_flow_y_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7,
-      this->optical_flow_y(static_cast<int>(i)),
-      output);
-  }
-
-  // .Frame thumbnail = 8;
-  if (this->has_thumbnail()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, _Internal::thumbnail(this), output);
-  }
-
-  // string hosted_orig_url = 9;
-  if (this->hosted_orig_url().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->hosted_orig_url().data(), static_cast<int>(this->hosted_orig_url().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Video.hosted_orig_url");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      9, this->hosted_orig_url(), output);
-  }
-
-  // int32 width = 1000;
-  if (this->width() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1000, this->width(), output);
-  }
-
-  // int32 height = 1001;
-  if (this->height() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1001, this->height(), output);
-  }
-
-  // int32 colors = 1002;
-  if (this->colors() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1002, this->colors(), output);
-  }
-
-  // .google.protobuf.Duration duration = 1003;
-  if (this->has_duration()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1003, _Internal::duration(this), output);
-  }
-
-  // float fps = 1004;
-  if (!(this->fps() <= 0 && this->fps() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(1004, this->fps(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Video)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* Video::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Video::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Video)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -787,111 +473,114 @@ void Video::SerializeWithCachedSizes(
   // string name = 1;
   if (this->name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Video.name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
   }
 
   // bytes encoded_bytes = 2;
-  if (has_encoded_bytes()) {
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
-        2, this->encoded_bytes(), target);
+  if (_internal_has_encoded_bytes()) {
+    target = stream->WriteBytesMaybeAliased(
+        2, this->_internal_encoded_bytes(), target);
   }
 
   // .NDArray ndarray = 3;
-  if (has_ndarray()) {
+  if (_internal_has_ndarray()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::ndarray(this), target);
+      InternalWriteMessage(
+        3, _Internal::ndarray(this), target, stream);
   }
 
   // string url = 4;
   if (this->url().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->url().data(), static_cast<int>(this->url().length()),
+      this->_internal_url().data(), static_cast<int>(this->_internal_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Video.url");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->url(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_url(), target);
   }
 
   // repeated .Frame frames = 5;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->frames_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_frames_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->frames(static_cast<int>(i)), target);
+      InternalWriteMessage(5, this->_internal_frames(i), target, stream);
   }
 
   // repeated .Frame optical_flow_x = 6;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->optical_flow_x_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_optical_flow_x_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->optical_flow_x(static_cast<int>(i)), target);
+      InternalWriteMessage(6, this->_internal_optical_flow_x(i), target, stream);
   }
 
   // repeated .Frame optical_flow_y = 7;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->optical_flow_y_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_optical_flow_y_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, this->optical_flow_y(static_cast<int>(i)), target);
+      InternalWriteMessage(7, this->_internal_optical_flow_y(i), target, stream);
   }
 
   // .Frame thumbnail = 8;
   if (this->has_thumbnail()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, _Internal::thumbnail(this), target);
+      InternalWriteMessage(
+        8, _Internal::thumbnail(this), target, stream);
   }
 
   // string hosted_orig_url = 9;
   if (this->hosted_orig_url().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->hosted_orig_url().data(), static_cast<int>(this->hosted_orig_url().length()),
+      this->_internal_hosted_orig_url().data(), static_cast<int>(this->_internal_hosted_orig_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Video.hosted_orig_url");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        9, this->hosted_orig_url(), target);
+    target = stream->WriteStringMaybeAliased(
+        9, this->_internal_hosted_orig_url(), target);
   }
 
   // int32 width = 1000;
   if (this->width() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1000, this->width(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1000, this->_internal_width(), target);
   }
 
   // int32 height = 1001;
   if (this->height() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1001, this->height(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1001, this->_internal_height(), target);
   }
 
   // int32 colors = 1002;
   if (this->colors() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1002, this->colors(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1002, this->_internal_colors(), target);
   }
 
   // .google.protobuf.Duration duration = 1003;
   if (this->has_duration()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1003, _Internal::duration(this), target);
+      InternalWriteMessage(
+        1003, _Internal::duration(this), target, stream);
   }
 
   // float fps = 1004;
   if (!(this->fps() <= 0 && this->fps() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1004, this->fps(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1004, this->_internal_fps(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Video)
   return target;
@@ -901,67 +590,50 @@ size_t Video::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Video)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .Frame frames = 5;
-  {
-    unsigned int count = static_cast<unsigned int>(this->frames_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->frames(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_frames_size();
+  for (const auto& msg : this->frames_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .Frame optical_flow_x = 6;
-  {
-    unsigned int count = static_cast<unsigned int>(this->optical_flow_x_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->optical_flow_x(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_optical_flow_x_size();
+  for (const auto& msg : this->optical_flow_x_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .Frame optical_flow_y = 7;
-  {
-    unsigned int count = static_cast<unsigned int>(this->optical_flow_y_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->optical_flow_y(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_optical_flow_y_size();
+  for (const auto& msg : this->optical_flow_y_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->name());
+        this->_internal_name());
   }
 
   // string url = 4;
   if (this->url().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->url());
+        this->_internal_url());
   }
 
   // string hosted_orig_url = 9;
   if (this->hosted_orig_url().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->hosted_orig_url());
+        this->_internal_hosted_orig_url());
   }
 
   // .Frame thumbnail = 8;
@@ -982,21 +654,21 @@ size_t Video::ByteSizeLong() const {
   if (this->width() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->width());
+        this->_internal_width());
   }
 
   // int32 height = 1001;
   if (this->height() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->height());
+        this->_internal_height());
   }
 
   // int32 colors = 1002;
   if (this->colors() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->colors());
+        this->_internal_colors());
   }
 
   // float fps = 1004;
@@ -1009,7 +681,7 @@ size_t Video::ByteSizeLong() const {
     case kEncodedBytes: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->encoded_bytes());
+          this->_internal_encoded_bytes());
       break;
     }
     // .NDArray ndarray = 3;
@@ -1022,6 +694,10 @@ size_t Video::ByteSizeLong() const {
     case DATA_NOT_SET: {
       break;
     }
+  }
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
   }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
@@ -1066,30 +742,30 @@ void Video::MergeFrom(const Video& from) {
     hosted_orig_url_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.hosted_orig_url_);
   }
   if (from.has_thumbnail()) {
-    mutable_thumbnail()->::Frame::MergeFrom(from.thumbnail());
+    _internal_mutable_thumbnail()->::Frame::MergeFrom(from._internal_thumbnail());
   }
   if (from.has_duration()) {
-    mutable_duration()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from.duration());
+    _internal_mutable_duration()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from._internal_duration());
   }
   if (from.width() != 0) {
-    set_width(from.width());
+    _internal_set_width(from._internal_width());
   }
   if (from.height() != 0) {
-    set_height(from.height());
+    _internal_set_height(from._internal_height());
   }
   if (from.colors() != 0) {
-    set_colors(from.colors());
+    _internal_set_colors(from._internal_colors());
   }
   if (!(from.fps() <= 0 && from.fps() >= 0)) {
-    set_fps(from.fps());
+    _internal_set_fps(from._internal_fps());
   }
   switch (from.data_case()) {
     case kEncodedBytes: {
-      set_encoded_bytes(from.encoded_bytes());
+      _internal_set_encoded_bytes(from._internal_encoded_bytes());
       break;
     }
     case kNdarray: {
-      mutable_ndarray()->::NDArray::MergeFrom(from.ndarray());
+      _internal_mutable_ndarray()->::NDArray::MergeFrom(from._internal_ndarray());
       break;
     }
     case DATA_NOT_SET: {
@@ -1119,9 +795,9 @@ bool Video::IsInitialized() const {
 void Video::InternalSwap(Video* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&frames_)->InternalSwap(CastToBase(&other->frames_));
-  CastToBase(&optical_flow_x_)->InternalSwap(CastToBase(&other->optical_flow_x_));
-  CastToBase(&optical_flow_y_)->InternalSwap(CastToBase(&other->optical_flow_y_));
+  frames_.InternalSwap(&other->frames_);
+  optical_flow_x_.InternalSwap(&other->optical_flow_x_);
+  optical_flow_y_.InternalSwap(&other->optical_flow_y_);
   name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   url_.Swap(&other->url_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),

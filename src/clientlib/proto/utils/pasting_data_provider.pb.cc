@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -39,7 +38,7 @@ static void InitDefaultsscc_info_PastingDataProviderParams_proto_2futils_2fpasti
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_PastingDataProviderParams_proto_2futils_2fpasting_5fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsscc_info_PastingDataProviderParams_proto_2futils_2fpasting_5fdata_5fprovider_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_PastingDataProviderParams_proto_2futils_2fpasting_5fdata_5fprovider_2eproto}, {
       &scc_info_DataProviderParams_proto_2futils_2fdata_5fprovider_2eproto.base,
       &scc_info_PastingLevelParams_proto_2futils_2fpasting_5fdata_5fprovider_2eproto.base,
       &scc_info_MiniBatchItemStage_proto_2futils_2fdata_5fprovider_2eproto.base,
@@ -57,7 +56,7 @@ static void InitDefaultsscc_info_PastingLevelParams_proto_2futils_2fpasting_5fda
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PastingLevelParams_proto_2futils_2fpasting_5fdata_5fprovider_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_PastingLevelParams_proto_2futils_2fpasting_5fdata_5fprovider_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PastingLevelParams_proto_2futils_2fpasting_5fdata_5fprovider_2eproto}, {
       &scc_info_DataProviderParams_proto_2futils_2fdata_5fprovider_2eproto.base,}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_proto_2futils_2fpasting_5fdata_5fprovider_2eproto[2];
@@ -199,23 +198,23 @@ PastingDataProviderParams::PastingDataProviderParams(const PastingDataProviderPa
       mbitem_stage_(from.mbitem_stage_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   background_dataset_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.background_dataset().empty()) {
+  if (!from._internal_background_dataset().empty()) {
     background_dataset_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.background_dataset_);
   }
   output_dataset_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.output_dataset().empty()) {
+  if (!from._internal_output_dataset().empty()) {
     output_dataset_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.output_dataset_);
   }
   background_dataset_split_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.background_dataset_split().empty()) {
+  if (!from._internal_background_dataset_split().empty()) {
     background_dataset_split_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.background_dataset_split_);
   }
-  if (from.has_background_dpp()) {
+  if (from._internal_has_background_dpp()) {
     background_dpp_ = new ::DataProviderParams(*from.background_dpp_);
   } else {
     background_dpp_ = nullptr;
   }
-  if (from.has_processing_params()) {
+  if (from._internal_has_processing_params()) {
     processing_params_ = new ::ProcessingParams(*from.processing_params_);
   } else {
     processing_params_ = nullptr;
@@ -283,7 +282,6 @@ void PastingDataProviderParams::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* PastingDataProviderParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -294,14 +292,16 @@ const char* PastingDataProviderParams::_InternalParse(const char* ptr, ::PROTOBU
       // string background_dataset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_background_dataset(), ptr, ctx, "PastingDataProviderParams.background_dataset");
+          auto str = _internal_mutable_background_dataset();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "PastingDataProviderParams.background_dataset"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .DataProviderParams background_dpp = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_background_dpp(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_background_dpp(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -311,16 +311,18 @@ const char* PastingDataProviderParams::_InternalParse(const char* ptr, ::PROTOBU
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_level_dpp(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_level_dpp(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 26);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
       // string output_dataset = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_output_dataset(), ptr, ctx, "PastingDataProviderParams.output_dataset");
+          auto str = _internal_mutable_output_dataset();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "PastingDataProviderParams.output_dataset"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -330,23 +332,25 @@ const char* PastingDataProviderParams::_InternalParse(const char* ptr, ::PROTOBU
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_mbitem_stage(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_mbitem_stage(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 42);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
       // .ProcessingParams processing_params = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(mutable_processing_params(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_processing_params(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string background_dataset_split = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_background_dataset_split(), ptr, ctx, "PastingDataProviderParams.background_dataset_split");
+          auto str = _internal_mutable_background_dataset_split();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "PastingDataProviderParams.background_dataset_split"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -383,238 +387,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool PastingDataProviderParams::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:PastingDataProviderParams)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string background_dataset = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_background_dataset()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->background_dataset().data(), static_cast<int>(this->background_dataset().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "PastingDataProviderParams.background_dataset"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .DataProviderParams background_dpp = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_background_dpp()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .PastingLevelParams level_dpp = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_level_dpp()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string output_dataset = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_output_dataset()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->output_dataset().data(), static_cast<int>(this->output_dataset().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "PastingDataProviderParams.output_dataset"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .MiniBatchItemStage mbitem_stage = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_mbitem_stage()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .ProcessingParams processing_params = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_processing_params()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string background_dataset_split = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_background_dataset_split()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->background_dataset_split().data(), static_cast<int>(this->background_dataset_split().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "PastingDataProviderParams.background_dataset_split"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool random_layer_order = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (64 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &random_layer_order_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool constrain_boxes_to_visible = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (72 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &constrain_boxes_to_visible_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:PastingDataProviderParams)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:PastingDataProviderParams)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void PastingDataProviderParams::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:PastingDataProviderParams)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string background_dataset = 1;
-  if (this->background_dataset().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->background_dataset().data(), static_cast<int>(this->background_dataset().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "PastingDataProviderParams.background_dataset");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->background_dataset(), output);
-  }
-
-  // .DataProviderParams background_dpp = 2;
-  if (this->has_background_dpp()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::background_dpp(this), output);
-  }
-
-  // repeated .PastingLevelParams level_dpp = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->level_dpp_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3,
-      this->level_dpp(static_cast<int>(i)),
-      output);
-  }
-
-  // string output_dataset = 4;
-  if (this->output_dataset().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->output_dataset().data(), static_cast<int>(this->output_dataset().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "PastingDataProviderParams.output_dataset");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->output_dataset(), output);
-  }
-
-  // repeated .MiniBatchItemStage mbitem_stage = 5;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->mbitem_stage_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5,
-      this->mbitem_stage(static_cast<int>(i)),
-      output);
-  }
-
-  // .ProcessingParams processing_params = 6;
-  if (this->has_processing_params()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, _Internal::processing_params(this), output);
-  }
-
-  // string background_dataset_split = 7;
-  if (this->background_dataset_split().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->background_dataset_split().data(), static_cast<int>(this->background_dataset_split().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "PastingDataProviderParams.background_dataset_split");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->background_dataset_split(), output);
-  }
-
-  // bool random_layer_order = 8;
-  if (this->random_layer_order() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(8, this->random_layer_order(), output);
-  }
-
-  // bool constrain_boxes_to_visible = 9;
-  if (this->constrain_boxes_to_visible() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(9, this->constrain_boxes_to_visible(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:PastingDataProviderParams)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* PastingDataProviderParams::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* PastingDataProviderParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:PastingDataProviderParams)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -622,79 +397,80 @@ void PastingDataProviderParams::SerializeWithCachedSizes(
   // string background_dataset = 1;
   if (this->background_dataset().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->background_dataset().data(), static_cast<int>(this->background_dataset().length()),
+      this->_internal_background_dataset().data(), static_cast<int>(this->_internal_background_dataset().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "PastingDataProviderParams.background_dataset");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->background_dataset(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_background_dataset(), target);
   }
 
   // .DataProviderParams background_dpp = 2;
   if (this->has_background_dpp()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::background_dpp(this), target);
+      InternalWriteMessage(
+        2, _Internal::background_dpp(this), target, stream);
   }
 
   // repeated .PastingLevelParams level_dpp = 3;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->level_dpp_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_level_dpp_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->level_dpp(static_cast<int>(i)), target);
+      InternalWriteMessage(3, this->_internal_level_dpp(i), target, stream);
   }
 
   // string output_dataset = 4;
   if (this->output_dataset().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->output_dataset().data(), static_cast<int>(this->output_dataset().length()),
+      this->_internal_output_dataset().data(), static_cast<int>(this->_internal_output_dataset().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "PastingDataProviderParams.output_dataset");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->output_dataset(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_output_dataset(), target);
   }
 
   // repeated .MiniBatchItemStage mbitem_stage = 5;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->mbitem_stage_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_mbitem_stage_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->mbitem_stage(static_cast<int>(i)), target);
+      InternalWriteMessage(5, this->_internal_mbitem_stage(i), target, stream);
   }
 
   // .ProcessingParams processing_params = 6;
   if (this->has_processing_params()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, _Internal::processing_params(this), target);
+      InternalWriteMessage(
+        6, _Internal::processing_params(this), target, stream);
   }
 
   // string background_dataset_split = 7;
   if (this->background_dataset_split().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->background_dataset_split().data(), static_cast<int>(this->background_dataset_split().length()),
+      this->_internal_background_dataset_split().data(), static_cast<int>(this->_internal_background_dataset_split().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "PastingDataProviderParams.background_dataset_split");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        7, this->background_dataset_split(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_background_dataset_split(), target);
   }
 
   // bool random_layer_order = 8;
   if (this->random_layer_order() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->random_layer_order(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->_internal_random_layer_order(), target);
   }
 
   // bool constrain_boxes_to_visible = 9;
   if (this->constrain_boxes_to_visible() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(9, this->constrain_boxes_to_visible(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(9, this->_internal_constrain_boxes_to_visible(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:PastingDataProviderParams)
   return target;
@@ -704,56 +480,43 @@ size_t PastingDataProviderParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:PastingDataProviderParams)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .PastingLevelParams level_dpp = 3;
-  {
-    unsigned int count = static_cast<unsigned int>(this->level_dpp_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->level_dpp(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_level_dpp_size();
+  for (const auto& msg : this->level_dpp_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .MiniBatchItemStage mbitem_stage = 5;
-  {
-    unsigned int count = static_cast<unsigned int>(this->mbitem_stage_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->mbitem_stage(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_mbitem_stage_size();
+  for (const auto& msg : this->mbitem_stage_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string background_dataset = 1;
   if (this->background_dataset().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->background_dataset());
+        this->_internal_background_dataset());
   }
 
   // string output_dataset = 4;
   if (this->output_dataset().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->output_dataset());
+        this->_internal_output_dataset());
   }
 
   // string background_dataset_split = 7;
   if (this->background_dataset_split().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->background_dataset_split());
+        this->_internal_background_dataset_split());
   }
 
   // .DataProviderParams background_dpp = 2;
@@ -780,6 +543,10 @@ size_t PastingDataProviderParams::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -822,16 +589,16 @@ void PastingDataProviderParams::MergeFrom(const PastingDataProviderParams& from)
     background_dataset_split_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.background_dataset_split_);
   }
   if (from.has_background_dpp()) {
-    mutable_background_dpp()->::DataProviderParams::MergeFrom(from.background_dpp());
+    _internal_mutable_background_dpp()->::DataProviderParams::MergeFrom(from._internal_background_dpp());
   }
   if (from.has_processing_params()) {
-    mutable_processing_params()->::ProcessingParams::MergeFrom(from.processing_params());
+    _internal_mutable_processing_params()->::ProcessingParams::MergeFrom(from._internal_processing_params());
   }
   if (from.random_layer_order() != 0) {
-    set_random_layer_order(from.random_layer_order());
+    _internal_set_random_layer_order(from._internal_random_layer_order());
   }
   if (from.constrain_boxes_to_visible() != 0) {
-    set_constrain_boxes_to_visible(from.constrain_boxes_to_visible());
+    _internal_set_constrain_boxes_to_visible(from._internal_constrain_boxes_to_visible());
   }
 }
 
@@ -856,8 +623,8 @@ bool PastingDataProviderParams::IsInitialized() const {
 void PastingDataProviderParams::InternalSwap(PastingDataProviderParams* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&level_dpp_)->InternalSwap(CastToBase(&other->level_dpp_));
-  CastToBase(&mbitem_stage_)->InternalSwap(CastToBase(&other->mbitem_stage_));
+  level_dpp_.InternalSwap(&other->level_dpp_);
+  mbitem_stage_.InternalSwap(&other->mbitem_stage_);
   background_dataset_.Swap(&other->background_dataset_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   output_dataset_.Swap(&other->output_dataset_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
@@ -906,18 +673,18 @@ PastingLevelParams::PastingLevelParams(const PastingLevelParams& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   dataset_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.dataset_name().empty()) {
+  if (!from._internal_dataset_name().empty()) {
     dataset_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.dataset_name_);
   }
   dataset_split_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.dataset_split().empty()) {
+  if (!from._internal_dataset_split().empty()) {
     dataset_split_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.dataset_split_);
   }
   pasting_method_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.pasting_method().empty()) {
+  if (!from._internal_pasting_method().empty()) {
     pasting_method_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.pasting_method_);
   }
-  if (from.has_common_dpp()) {
+  if (from._internal_has_common_dpp()) {
     common_dpp_ = new ::DataProviderParams(*from.common_dpp_);
   } else {
     common_dpp_ = nullptr;
@@ -978,7 +745,6 @@ void PastingLevelParams::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* PastingLevelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -989,14 +755,16 @@ const char* PastingLevelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // .DataProviderParams common_dpp = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_common_dpp(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_common_dpp(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string dataset_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_dataset_name(), ptr, ctx, "PastingLevelParams.dataset_name");
+          auto str = _internal_mutable_dataset_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "PastingLevelParams.dataset_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1066,14 +834,18 @@ const char* PastingLevelParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       // string dataset_split = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_dataset_split(), ptr, ctx, "PastingLevelParams.dataset_split");
+          auto str = _internal_mutable_dataset_split();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "PastingLevelParams.dataset_split"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string pasting_method = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_pasting_method(), ptr, ctx, "PastingLevelParams.pasting_method");
+          auto str = _internal_mutable_pasting_method();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "PastingLevelParams.pasting_method"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1103,422 +875,114 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool PastingLevelParams::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:PastingLevelParams)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .DataProviderParams common_dpp = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_common_dpp()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // string dataset_name = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_dataset_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "PastingLevelParams.dataset_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float min_x = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &min_x_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float max_x = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &max_x_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float min_y = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (45 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &min_y_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float max_y = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (53 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &max_y_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float paste_prob = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (61 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &paste_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool write_bbox = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (64 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &write_bbox_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float min_visible = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (77 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &min_visible_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float max_visible = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (85 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &max_visible_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 repetitions = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (88 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &repetitions_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string dataset_split = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_dataset_split()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->dataset_split().data(), static_cast<int>(this->dataset_split().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "PastingLevelParams.dataset_split"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string pasting_method = 13;
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_pasting_method()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->pasting_method().data(), static_cast<int>(this->pasting_method().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "PastingLevelParams.pasting_method"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float skip_prob = 14;
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (117 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &skip_prob_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:PastingLevelParams)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:PastingLevelParams)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void PastingLevelParams::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:PastingLevelParams)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .DataProviderParams common_dpp = 1;
-  if (this->has_common_dpp()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::common_dpp(this), output);
-  }
-
-  // string dataset_name = 2;
-  if (this->dataset_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "PastingLevelParams.dataset_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->dataset_name(), output);
-  }
-
-  // float min_x = 3;
-  if (!(this->min_x() <= 0 && this->min_x() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->min_x(), output);
-  }
-
-  // float max_x = 4;
-  if (!(this->max_x() <= 0 && this->max_x() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->max_x(), output);
-  }
-
-  // float min_y = 5;
-  if (!(this->min_y() <= 0 && this->min_y() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(5, this->min_y(), output);
-  }
-
-  // float max_y = 6;
-  if (!(this->max_y() <= 0 && this->max_y() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(6, this->max_y(), output);
-  }
-
-  // float paste_prob = 7;
-  if (!(this->paste_prob() <= 0 && this->paste_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(7, this->paste_prob(), output);
-  }
-
-  // bool write_bbox = 8;
-  if (this->write_bbox() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(8, this->write_bbox(), output);
-  }
-
-  // float min_visible = 9;
-  if (!(this->min_visible() <= 0 && this->min_visible() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(9, this->min_visible(), output);
-  }
-
-  // float max_visible = 10;
-  if (!(this->max_visible() <= 0 && this->max_visible() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(10, this->max_visible(), output);
-  }
-
-  // int32 repetitions = 11;
-  if (this->repetitions() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(11, this->repetitions(), output);
-  }
-
-  // string dataset_split = 12;
-  if (this->dataset_split().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_split().data(), static_cast<int>(this->dataset_split().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "PastingLevelParams.dataset_split");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      12, this->dataset_split(), output);
-  }
-
-  // string pasting_method = 13;
-  if (this->pasting_method().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->pasting_method().data(), static_cast<int>(this->pasting_method().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "PastingLevelParams.pasting_method");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      13, this->pasting_method(), output);
-  }
-
-  // float skip_prob = 14;
-  if (!(this->skip_prob() <= 0 && this->skip_prob() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(14, this->skip_prob(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:PastingLevelParams)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* PastingLevelParams::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* PastingLevelParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:PastingLevelParams)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .DataProviderParams common_dpp = 1;
   if (this->has_common_dpp()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::common_dpp(this), target);
+      InternalWriteMessage(
+        1, _Internal::common_dpp(this), target, stream);
   }
 
   // string dataset_name = 2;
   if (this->dataset_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_name().data(), static_cast<int>(this->dataset_name().length()),
+      this->_internal_dataset_name().data(), static_cast<int>(this->_internal_dataset_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "PastingLevelParams.dataset_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->dataset_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_dataset_name(), target);
   }
 
   // float min_x = 3;
   if (!(this->min_x() <= 0 && this->min_x() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->min_x(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->_internal_min_x(), target);
   }
 
   // float max_x = 4;
   if (!(this->max_x() <= 0 && this->max_x() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->max_x(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->_internal_max_x(), target);
   }
 
   // float min_y = 5;
   if (!(this->min_y() <= 0 && this->min_y() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->min_y(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(5, this->_internal_min_y(), target);
   }
 
   // float max_y = 6;
   if (!(this->max_y() <= 0 && this->max_y() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->max_y(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(6, this->_internal_max_y(), target);
   }
 
   // float paste_prob = 7;
   if (!(this->paste_prob() <= 0 && this->paste_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(7, this->paste_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(7, this->_internal_paste_prob(), target);
   }
 
   // bool write_bbox = 8;
   if (this->write_bbox() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->write_bbox(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->_internal_write_bbox(), target);
   }
 
   // float min_visible = 9;
   if (!(this->min_visible() <= 0 && this->min_visible() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(9, this->min_visible(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(9, this->_internal_min_visible(), target);
   }
 
   // float max_visible = 10;
   if (!(this->max_visible() <= 0 && this->max_visible() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(10, this->max_visible(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(10, this->_internal_max_visible(), target);
   }
 
   // int32 repetitions = 11;
   if (this->repetitions() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(11, this->repetitions(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(11, this->_internal_repetitions(), target);
   }
 
   // string dataset_split = 12;
   if (this->dataset_split().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->dataset_split().data(), static_cast<int>(this->dataset_split().length()),
+      this->_internal_dataset_split().data(), static_cast<int>(this->_internal_dataset_split().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "PastingLevelParams.dataset_split");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        12, this->dataset_split(), target);
+    target = stream->WriteStringMaybeAliased(
+        12, this->_internal_dataset_split(), target);
   }
 
   // string pasting_method = 13;
   if (this->pasting_method().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->pasting_method().data(), static_cast<int>(this->pasting_method().length()),
+      this->_internal_pasting_method().data(), static_cast<int>(this->_internal_pasting_method().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "PastingLevelParams.pasting_method");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        13, this->pasting_method(), target);
+    target = stream->WriteStringMaybeAliased(
+        13, this->_internal_pasting_method(), target);
   }
 
   // float skip_prob = 14;
   if (!(this->skip_prob() <= 0 && this->skip_prob() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(14, this->skip_prob(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(14, this->_internal_skip_prob(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:PastingLevelParams)
   return target;
@@ -1528,11 +992,6 @@ size_t PastingLevelParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:PastingLevelParams)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1541,21 +1000,21 @@ size_t PastingLevelParams::ByteSizeLong() const {
   if (this->dataset_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->dataset_name());
+        this->_internal_dataset_name());
   }
 
   // string dataset_split = 12;
   if (this->dataset_split().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->dataset_split());
+        this->_internal_dataset_split());
   }
 
   // string pasting_method = 13;
   if (this->pasting_method().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->pasting_method());
+        this->_internal_pasting_method());
   }
 
   // .DataProviderParams common_dpp = 1;
@@ -1609,7 +1068,7 @@ size_t PastingLevelParams::ByteSizeLong() const {
   if (this->repetitions() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->repetitions());
+        this->_internal_repetitions());
   }
 
   // float skip_prob = 14;
@@ -1617,6 +1076,10 @@ size_t PastingLevelParams::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1657,37 +1120,37 @@ void PastingLevelParams::MergeFrom(const PastingLevelParams& from) {
     pasting_method_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.pasting_method_);
   }
   if (from.has_common_dpp()) {
-    mutable_common_dpp()->::DataProviderParams::MergeFrom(from.common_dpp());
+    _internal_mutable_common_dpp()->::DataProviderParams::MergeFrom(from._internal_common_dpp());
   }
   if (!(from.min_x() <= 0 && from.min_x() >= 0)) {
-    set_min_x(from.min_x());
+    _internal_set_min_x(from._internal_min_x());
   }
   if (!(from.max_x() <= 0 && from.max_x() >= 0)) {
-    set_max_x(from.max_x());
+    _internal_set_max_x(from._internal_max_x());
   }
   if (!(from.min_y() <= 0 && from.min_y() >= 0)) {
-    set_min_y(from.min_y());
+    _internal_set_min_y(from._internal_min_y());
   }
   if (!(from.max_y() <= 0 && from.max_y() >= 0)) {
-    set_max_y(from.max_y());
+    _internal_set_max_y(from._internal_max_y());
   }
   if (!(from.paste_prob() <= 0 && from.paste_prob() >= 0)) {
-    set_paste_prob(from.paste_prob());
+    _internal_set_paste_prob(from._internal_paste_prob());
   }
   if (from.write_bbox() != 0) {
-    set_write_bbox(from.write_bbox());
+    _internal_set_write_bbox(from._internal_write_bbox());
   }
   if (!(from.min_visible() <= 0 && from.min_visible() >= 0)) {
-    set_min_visible(from.min_visible());
+    _internal_set_min_visible(from._internal_min_visible());
   }
   if (!(from.max_visible() <= 0 && from.max_visible() >= 0)) {
-    set_max_visible(from.max_visible());
+    _internal_set_max_visible(from._internal_max_visible());
   }
   if (from.repetitions() != 0) {
-    set_repetitions(from.repetitions());
+    _internal_set_repetitions(from._internal_repetitions());
   }
   if (!(from.skip_prob() <= 0 && from.skip_prob() >= 0)) {
-    set_skip_prob(from.skip_prob());
+    _internal_set_skip_prob(from._internal_skip_prob());
   }
 }
 

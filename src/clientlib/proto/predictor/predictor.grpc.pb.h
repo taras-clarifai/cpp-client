@@ -7,34 +7,24 @@
 #include "proto/predictor/predictor.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/client_context.h>
 #include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-
-namespace grpc_impl {
-class CompletionQueue;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc_impl
-
-namespace grpc {
-namespace experimental {
-template <typename RequestT, typename ResponseT>
-class MessageAllocator;
-}  // namespace experimental
-}  // namespace grpc
 
 // Interface exported by the server.
 class PredictorService final {
@@ -110,37 +100,95 @@ class PredictorService final {
       // Predict given a trained model and embeddings from some examples
       virtual void PredictorPredict(::grpc::ClientContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PredictorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorPredict(::grpc::ClientContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorPredict(::grpc::ClientContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Predict given a trained model and embeddings from some examples
       // return result with topk examples sorted
       virtual void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Put new DataExamples into the desired collection.
       virtual void PredictorTrain(::grpc::ClientContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PredictorTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorTrainResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorTrain(::grpc::ClientContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorTrain(::grpc::ClientContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorTrainResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorTrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Same as above except server streams back intermediate results
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorTrainStream(::grpc::ClientContext* context, ::PredictorTrainRequest* request, ::grpc::ClientReadReactor< ::PredictorTrainResponse>* reactor) = 0;
+      #else
       virtual void PredictorTrainStream(::grpc::ClientContext* context, ::PredictorTrainRequest* request, ::grpc::experimental::ClientReadReactor< ::PredictorTrainResponse>* reactor) = 0;
+      #endif
       // Get the weights as a list of embeddings from the given model.
       virtual void PredictorGetWeights(::grpc::ClientContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PredictorGetWeights(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorGetWeightsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorGetWeights(::grpc::ClientContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorGetWeights(::grpc::ClientContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorGetWeights(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorGetWeightsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorGetWeights(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorGetWeightsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // evaluate a model
       virtual void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Evaluate two sets of data
       virtual void PredictorEvaluate(::grpc::ClientContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PredictorEvaluate(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorEvaluate(::grpc::ClientContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorEvaluate(::grpc::ClientContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PredictorEvaluate(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PredictorEvaluate(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::PredictorPredictResponse>* AsyncPredictorPredictRaw(::grpc::ClientContext* context, const ::PredictorPredictRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -218,29 +266,81 @@ class PredictorService final {
      public:
       void PredictorPredict(::grpc::ClientContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response, std::function<void(::grpc::Status)>) override;
       void PredictorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorPredict(::grpc::ClientContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorPredict(::grpc::ClientContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response, std::function<void(::grpc::Status)>) override;
       void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorPredictSQLQuery(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void PredictorTrain(::grpc::ClientContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response, std::function<void(::grpc::Status)>) override;
       void PredictorTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorTrainResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorTrain(::grpc::ClientContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorTrain(::grpc::ClientContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorTrainResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorTrain(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorTrainResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorTrainStream(::grpc::ClientContext* context, ::PredictorTrainRequest* request, ::grpc::ClientReadReactor< ::PredictorTrainResponse>* reactor) override;
+      #else
       void PredictorTrainStream(::grpc::ClientContext* context, ::PredictorTrainRequest* request, ::grpc::experimental::ClientReadReactor< ::PredictorTrainResponse>* reactor) override;
+      #endif
       void PredictorGetWeights(::grpc::ClientContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response, std::function<void(::grpc::Status)>) override;
       void PredictorGetWeights(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorGetWeightsResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorGetWeights(::grpc::ClientContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorGetWeights(::grpc::ClientContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorGetWeights(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorGetWeightsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorGetWeights(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::PredictorGetWeightsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response, std::function<void(::grpc::Status)>) override;
       void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorGetMulticlassMetrics(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void PredictorEvaluate(::grpc::ClientContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response, std::function<void(::grpc::Status)>) override;
       void PredictorEvaluate(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorEvaluate(::grpc::ClientContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorEvaluate(::grpc::ClientContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PredictorEvaluate(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PredictorEvaluate(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -300,7 +400,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithAsyncMethod_PredictorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PredictorPredict() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -309,7 +409,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredict(::grpc::ServerContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredict(::grpc::ServerContext* /*context*/, const ::PredictorPredictRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -320,7 +420,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithAsyncMethod_PredictorPredictSQLQuery : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PredictorPredictSQLQuery() {
       ::grpc::Service::MarkMethodAsync(1);
@@ -329,7 +429,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* /*context*/, const ::PredictorPredictSQLQueryRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -340,7 +440,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithAsyncMethod_PredictorTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PredictorTrain() {
       ::grpc::Service::MarkMethodAsync(2);
@@ -349,7 +449,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrain(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response) override {
+    ::grpc::Status PredictorTrain(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::PredictorTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -360,7 +460,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithAsyncMethod_PredictorTrainStream : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PredictorTrainStream() {
       ::grpc::Service::MarkMethodAsync(3);
@@ -369,7 +469,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::grpc::ServerWriter< ::PredictorTrainResponse>* writer) override {
+    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::grpc::ServerWriter< ::PredictorTrainResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -380,7 +480,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithAsyncMethod_PredictorGetWeights : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PredictorGetWeights() {
       ::grpc::Service::MarkMethodAsync(4);
@@ -389,7 +489,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response) override {
+    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* /*context*/, const ::PredictorGetWeightsRequest* /*request*/, ::PredictorGetWeightsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -400,7 +500,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithAsyncMethod_PredictorGetMulticlassMetrics : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PredictorGetMulticlassMetrics() {
       ::grpc::Service::MarkMethodAsync(5);
@@ -409,7 +509,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* /*context*/, const ::PredictorTrainAndEvalRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -420,7 +520,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithAsyncMethod_PredictorEvaluate : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PredictorEvaluate() {
       ::grpc::Service::MarkMethodAsync(6);
@@ -429,7 +529,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* /*context*/, const ::PredictorEvaluateRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -441,216 +541,332 @@ class PredictorService final {
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_PredictorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_PredictorPredict() {
-      ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorPredictRequest, ::PredictorPredictResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::PredictorPredictRequest* request,
-                 ::PredictorPredictResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->PredictorPredict(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorPredictRequest, ::PredictorPredictResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response) { return this->PredictorPredict(context, request, response); }));}
     void SetMessageAllocatorFor_PredictorPredict(
         ::grpc::experimental::MessageAllocator< ::PredictorPredictRequest, ::PredictorPredictResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorPredictRequest, ::PredictorPredictResponse>*>(
-          ::grpc::Service::experimental().GetHandler(0))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorPredictRequest, ::PredictorPredictResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_PredictorPredict() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredict(::grpc::ServerContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredict(::grpc::ServerContext* /*context*/, const ::PredictorPredictRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorPredict(::grpc::ServerContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorPredict(
+      ::grpc::CallbackServerContext* /*context*/, const ::PredictorPredictRequest* /*request*/, ::PredictorPredictResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorPredict(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::PredictorPredictRequest* /*request*/, ::PredictorPredictResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_PredictorPredictSQLQuery : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_PredictorPredictSQLQuery() {
-      ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorPredictSQLQueryRequest, ::PredictorPredictResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::PredictorPredictSQLQueryRequest* request,
-                 ::PredictorPredictResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->PredictorPredictSQLQuery(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorPredictSQLQueryRequest, ::PredictorPredictResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response) { return this->PredictorPredictSQLQuery(context, request, response); }));}
     void SetMessageAllocatorFor_PredictorPredictSQLQuery(
         ::grpc::experimental::MessageAllocator< ::PredictorPredictSQLQueryRequest, ::PredictorPredictResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorPredictSQLQueryRequest, ::PredictorPredictResponse>*>(
-          ::grpc::Service::experimental().GetHandler(1))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorPredictSQLQueryRequest, ::PredictorPredictResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_PredictorPredictSQLQuery() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* /*context*/, const ::PredictorPredictSQLQueryRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorPredictSQLQuery(::grpc::ServerContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorPredictSQLQuery(
+      ::grpc::CallbackServerContext* /*context*/, const ::PredictorPredictSQLQueryRequest* /*request*/, ::PredictorPredictResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorPredictSQLQuery(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::PredictorPredictSQLQueryRequest* /*request*/, ::PredictorPredictResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_PredictorTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_PredictorTrain() {
-      ::grpc::Service::experimental().MarkMethodCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorTrainRequest, ::PredictorTrainResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::PredictorTrainRequest* request,
-                 ::PredictorTrainResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->PredictorTrain(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorTrainRequest, ::PredictorTrainResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response) { return this->PredictorTrain(context, request, response); }));}
     void SetMessageAllocatorFor_PredictorTrain(
         ::grpc::experimental::MessageAllocator< ::PredictorTrainRequest, ::PredictorTrainResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorTrainRequest, ::PredictorTrainResponse>*>(
-          ::grpc::Service::experimental().GetHandler(2))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorTrainRequest, ::PredictorTrainResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_PredictorTrain() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrain(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response) override {
+    ::grpc::Status PredictorTrain(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::PredictorTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorTrain(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorTrain(
+      ::grpc::CallbackServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::PredictorTrainResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorTrain(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::PredictorTrainResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_PredictorTrainStream : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_PredictorTrainStream() {
-      ::grpc::Service::experimental().MarkMethodCallback(3,
-        new ::grpc_impl::internal::CallbackServerStreamingHandler< ::PredictorTrainRequest, ::PredictorTrainResponse>(
-          [this] { return this->PredictorTrainStream(); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(3,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::PredictorTrainRequest, ::PredictorTrainResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::PredictorTrainRequest* request) { return this->PredictorTrainStream(context, request); }));
     }
     ~ExperimentalWithCallbackMethod_PredictorTrainStream() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::grpc::ServerWriter< ::PredictorTrainResponse>* writer) override {
+    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::grpc::ServerWriter< ::PredictorTrainResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::experimental::ServerWriteReactor< ::PredictorTrainRequest, ::PredictorTrainResponse>* PredictorTrainStream() {
-      return new ::grpc_impl::internal::UnimplementedWriteReactor<
-        ::PredictorTrainRequest, ::PredictorTrainResponse>;}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerWriteReactor< ::PredictorTrainResponse>* PredictorTrainStream(
+      ::grpc::CallbackServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/)
+    #else
+    virtual ::grpc::experimental::ServerWriteReactor< ::PredictorTrainResponse>* PredictorTrainStream(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_PredictorGetWeights : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_PredictorGetWeights() {
-      ::grpc::Service::experimental().MarkMethodCallback(4,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorGetWeightsRequest, ::PredictorGetWeightsResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::PredictorGetWeightsRequest* request,
-                 ::PredictorGetWeightsResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->PredictorGetWeights(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorGetWeightsRequest, ::PredictorGetWeightsResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response) { return this->PredictorGetWeights(context, request, response); }));}
     void SetMessageAllocatorFor_PredictorGetWeights(
         ::grpc::experimental::MessageAllocator< ::PredictorGetWeightsRequest, ::PredictorGetWeightsResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorGetWeightsRequest, ::PredictorGetWeightsResponse>*>(
-          ::grpc::Service::experimental().GetHandler(4))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorGetWeightsRequest, ::PredictorGetWeightsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_PredictorGetWeights() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response) override {
+    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* /*context*/, const ::PredictorGetWeightsRequest* /*request*/, ::PredictorGetWeightsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorGetWeights(::grpc::ServerContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorGetWeights(
+      ::grpc::CallbackServerContext* /*context*/, const ::PredictorGetWeightsRequest* /*request*/, ::PredictorGetWeightsResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorGetWeights(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::PredictorGetWeightsRequest* /*request*/, ::PredictorGetWeightsResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_PredictorGetMulticlassMetrics : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_PredictorGetMulticlassMetrics() {
-      ::grpc::Service::experimental().MarkMethodCallback(5,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorTrainAndEvalRequest, ::MulticlassMetricsResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::PredictorTrainAndEvalRequest* request,
-                 ::MulticlassMetricsResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->PredictorGetMulticlassMetrics(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorTrainAndEvalRequest, ::MulticlassMetricsResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response) { return this->PredictorGetMulticlassMetrics(context, request, response); }));}
     void SetMessageAllocatorFor_PredictorGetMulticlassMetrics(
         ::grpc::experimental::MessageAllocator< ::PredictorTrainAndEvalRequest, ::MulticlassMetricsResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorTrainAndEvalRequest, ::MulticlassMetricsResponse>*>(
-          ::grpc::Service::experimental().GetHandler(5))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorTrainAndEvalRequest, ::MulticlassMetricsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_PredictorGetMulticlassMetrics() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* /*context*/, const ::PredictorTrainAndEvalRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorGetMulticlassMetrics(::grpc::ServerContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorGetMulticlassMetrics(
+      ::grpc::CallbackServerContext* /*context*/, const ::PredictorTrainAndEvalRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorGetMulticlassMetrics(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::PredictorTrainAndEvalRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_PredictorEvaluate : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_PredictorEvaluate() {
-      ::grpc::Service::experimental().MarkMethodCallback(6,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorEvaluateRequest, ::MulticlassMetricsResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::PredictorEvaluateRequest* request,
-                 ::MulticlassMetricsResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->PredictorEvaluate(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::PredictorEvaluateRequest, ::MulticlassMetricsResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response) { return this->PredictorEvaluate(context, request, response); }));}
     void SetMessageAllocatorFor_PredictorEvaluate(
         ::grpc::experimental::MessageAllocator< ::PredictorEvaluateRequest, ::MulticlassMetricsResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorEvaluateRequest, ::MulticlassMetricsResponse>*>(
-          ::grpc::Service::experimental().GetHandler(6))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(6);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::PredictorEvaluateRequest, ::MulticlassMetricsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_PredictorEvaluate() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* /*context*/, const ::PredictorEvaluateRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorEvaluate(::grpc::ServerContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorEvaluate(
+      ::grpc::CallbackServerContext* /*context*/, const ::PredictorEvaluateRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorEvaluate(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::PredictorEvaluateRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_PredictorPredict<ExperimentalWithCallbackMethod_PredictorPredictSQLQuery<ExperimentalWithCallbackMethod_PredictorTrain<ExperimentalWithCallbackMethod_PredictorTrainStream<ExperimentalWithCallbackMethod_PredictorGetWeights<ExperimentalWithCallbackMethod_PredictorGetMulticlassMetrics<ExperimentalWithCallbackMethod_PredictorEvaluate<Service > > > > > > > CallbackService;
+  #endif
+
   typedef ExperimentalWithCallbackMethod_PredictorPredict<ExperimentalWithCallbackMethod_PredictorPredictSQLQuery<ExperimentalWithCallbackMethod_PredictorTrain<ExperimentalWithCallbackMethod_PredictorTrainStream<ExperimentalWithCallbackMethod_PredictorGetWeights<ExperimentalWithCallbackMethod_PredictorGetMulticlassMetrics<ExperimentalWithCallbackMethod_PredictorEvaluate<Service > > > > > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_PredictorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PredictorPredict() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -659,7 +875,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredict(::grpc::ServerContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredict(::grpc::ServerContext* /*context*/, const ::PredictorPredictRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -667,7 +883,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithGenericMethod_PredictorPredictSQLQuery : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PredictorPredictSQLQuery() {
       ::grpc::Service::MarkMethodGeneric(1);
@@ -676,7 +892,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* /*context*/, const ::PredictorPredictSQLQueryRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -684,7 +900,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithGenericMethod_PredictorTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PredictorTrain() {
       ::grpc::Service::MarkMethodGeneric(2);
@@ -693,7 +909,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrain(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response) override {
+    ::grpc::Status PredictorTrain(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::PredictorTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -701,7 +917,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithGenericMethod_PredictorTrainStream : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PredictorTrainStream() {
       ::grpc::Service::MarkMethodGeneric(3);
@@ -710,7 +926,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::grpc::ServerWriter< ::PredictorTrainResponse>* writer) override {
+    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::grpc::ServerWriter< ::PredictorTrainResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -718,7 +934,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithGenericMethod_PredictorGetWeights : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PredictorGetWeights() {
       ::grpc::Service::MarkMethodGeneric(4);
@@ -727,7 +943,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response) override {
+    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* /*context*/, const ::PredictorGetWeightsRequest* /*request*/, ::PredictorGetWeightsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -735,7 +951,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithGenericMethod_PredictorGetMulticlassMetrics : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PredictorGetMulticlassMetrics() {
       ::grpc::Service::MarkMethodGeneric(5);
@@ -744,7 +960,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* /*context*/, const ::PredictorTrainAndEvalRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -752,7 +968,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithGenericMethod_PredictorEvaluate : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PredictorEvaluate() {
       ::grpc::Service::MarkMethodGeneric(6);
@@ -761,7 +977,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* /*context*/, const ::PredictorEvaluateRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -769,7 +985,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithRawMethod_PredictorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PredictorPredict() {
       ::grpc::Service::MarkMethodRaw(0);
@@ -778,7 +994,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredict(::grpc::ServerContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredict(::grpc::ServerContext* /*context*/, const ::PredictorPredictRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -789,7 +1005,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithRawMethod_PredictorPredictSQLQuery : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PredictorPredictSQLQuery() {
       ::grpc::Service::MarkMethodRaw(1);
@@ -798,7 +1014,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* /*context*/, const ::PredictorPredictSQLQueryRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -809,7 +1025,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithRawMethod_PredictorTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PredictorTrain() {
       ::grpc::Service::MarkMethodRaw(2);
@@ -818,7 +1034,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrain(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response) override {
+    ::grpc::Status PredictorTrain(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::PredictorTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -829,7 +1045,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithRawMethod_PredictorTrainStream : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PredictorTrainStream() {
       ::grpc::Service::MarkMethodRaw(3);
@@ -838,7 +1054,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::grpc::ServerWriter< ::PredictorTrainResponse>* writer) override {
+    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::grpc::ServerWriter< ::PredictorTrainResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -849,7 +1065,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithRawMethod_PredictorGetWeights : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PredictorGetWeights() {
       ::grpc::Service::MarkMethodRaw(4);
@@ -858,7 +1074,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response) override {
+    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* /*context*/, const ::PredictorGetWeightsRequest* /*request*/, ::PredictorGetWeightsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -869,7 +1085,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithRawMethod_PredictorGetMulticlassMetrics : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PredictorGetMulticlassMetrics() {
       ::grpc::Service::MarkMethodRaw(5);
@@ -878,7 +1094,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* /*context*/, const ::PredictorTrainAndEvalRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -889,7 +1105,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithRawMethod_PredictorEvaluate : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PredictorEvaluate() {
       ::grpc::Service::MarkMethodRaw(6);
@@ -898,7 +1114,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* /*context*/, const ::PredictorEvaluateRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -909,179 +1125,273 @@ class PredictorService final {
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_PredictorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_PredictorPredict() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->PredictorPredict(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PredictorPredict(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_PredictorPredict() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredict(::grpc::ServerContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredict(::grpc::ServerContext* /*context*/, const ::PredictorPredictRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorPredict(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorPredict(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorPredict(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_PredictorPredictSQLQuery : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_PredictorPredictSQLQuery() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->PredictorPredictSQLQuery(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PredictorPredictSQLQuery(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_PredictorPredictSQLQuery() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* /*context*/, const ::PredictorPredictSQLQueryRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorPredictSQLQuery(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorPredictSQLQuery(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorPredictSQLQuery(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_PredictorTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_PredictorTrain() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->PredictorTrain(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PredictorTrain(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_PredictorTrain() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrain(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response) override {
+    ::grpc::Status PredictorTrain(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::PredictorTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorTrain(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorTrain(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorTrain(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_PredictorTrainStream : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_PredictorTrainStream() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(3,
-        new ::grpc_impl::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this] { return this->PredictorTrainStream(); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(3,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const::grpc::ByteBuffer* request) { return this->PredictorTrainStream(context, request); }));
     }
     ~ExperimentalWithRawCallbackMethod_PredictorTrainStream() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::grpc::ServerWriter< ::PredictorTrainResponse>* writer) override {
+    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::grpc::ServerWriter< ::PredictorTrainResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::experimental::ServerWriteReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* PredictorTrainStream() {
-      return new ::grpc_impl::internal::UnimplementedWriteReactor<
-        ::grpc::ByteBuffer, ::grpc::ByteBuffer>;}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* PredictorTrainStream(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)
+    #else
+    virtual ::grpc::experimental::ServerWriteReactor< ::grpc::ByteBuffer>* PredictorTrainStream(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_PredictorGetWeights : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_PredictorGetWeights() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(4,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->PredictorGetWeights(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PredictorGetWeights(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_PredictorGetWeights() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response) override {
+    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* /*context*/, const ::PredictorGetWeightsRequest* /*request*/, ::PredictorGetWeightsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorGetWeights(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorGetWeights(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorGetWeights(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_PredictorGetMulticlassMetrics : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_PredictorGetMulticlassMetrics() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(5,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->PredictorGetMulticlassMetrics(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PredictorGetMulticlassMetrics(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_PredictorGetMulticlassMetrics() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* /*context*/, const ::PredictorTrainAndEvalRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorGetMulticlassMetrics(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorGetMulticlassMetrics(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorGetMulticlassMetrics(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_PredictorEvaluate : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_PredictorEvaluate() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(6,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->PredictorEvaluate(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PredictorEvaluate(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_PredictorEvaluate() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* /*context*/, const ::PredictorEvaluateRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PredictorEvaluate(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PredictorEvaluate(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PredictorEvaluate(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_PredictorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PredictorPredict() {
       ::grpc::Service::MarkMethodStreamed(0,
@@ -1091,7 +1401,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PredictorPredict(::grpc::ServerContext* context, const ::PredictorPredictRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredict(::grpc::ServerContext* /*context*/, const ::PredictorPredictRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1101,7 +1411,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_PredictorPredictSQLQuery : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PredictorPredictSQLQuery() {
       ::grpc::Service::MarkMethodStreamed(1,
@@ -1111,7 +1421,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* context, const ::PredictorPredictSQLQueryRequest* request, ::PredictorPredictResponse* response) override {
+    ::grpc::Status PredictorPredictSQLQuery(::grpc::ServerContext* /*context*/, const ::PredictorPredictSQLQueryRequest* /*request*/, ::PredictorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1121,7 +1431,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_PredictorTrain : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PredictorTrain() {
       ::grpc::Service::MarkMethodStreamed(2,
@@ -1131,7 +1441,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PredictorTrain(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::PredictorTrainResponse* response) override {
+    ::grpc::Status PredictorTrain(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::PredictorTrainResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1141,7 +1451,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_PredictorGetWeights : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PredictorGetWeights() {
       ::grpc::Service::MarkMethodStreamed(4,
@@ -1151,7 +1461,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* context, const ::PredictorGetWeightsRequest* request, ::PredictorGetWeightsResponse* response) override {
+    ::grpc::Status PredictorGetWeights(::grpc::ServerContext* /*context*/, const ::PredictorGetWeightsRequest* /*request*/, ::PredictorGetWeightsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1161,7 +1471,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_PredictorGetMulticlassMetrics : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PredictorGetMulticlassMetrics() {
       ::grpc::Service::MarkMethodStreamed(5,
@@ -1171,7 +1481,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* context, const ::PredictorTrainAndEvalRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorGetMulticlassMetrics(::grpc::ServerContext* /*context*/, const ::PredictorTrainAndEvalRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1181,7 +1491,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_PredictorEvaluate : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PredictorEvaluate() {
       ::grpc::Service::MarkMethodStreamed(6,
@@ -1191,7 +1501,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* context, const ::PredictorEvaluateRequest* request, ::MulticlassMetricsResponse* response) override {
+    ::grpc::Status PredictorEvaluate(::grpc::ServerContext* /*context*/, const ::PredictorEvaluateRequest* /*request*/, ::MulticlassMetricsResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1202,7 +1512,7 @@ class PredictorService final {
   template <class BaseClass>
   class WithSplitStreamingMethod_PredictorTrainStream : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithSplitStreamingMethod_PredictorTrainStream() {
       ::grpc::Service::MarkMethodStreamed(3,
@@ -1212,7 +1522,7 @@ class PredictorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* context, const ::PredictorTrainRequest* request, ::grpc::ServerWriter< ::PredictorTrainResponse>* writer) override {
+    ::grpc::Status PredictorTrainStream(::grpc::ServerContext* /*context*/, const ::PredictorTrainRequest* /*request*/, ::grpc::ServerWriter< ::PredictorTrainResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

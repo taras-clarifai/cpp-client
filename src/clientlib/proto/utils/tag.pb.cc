@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -31,7 +30,7 @@ static void InitDefaultsscc_info_Tag_proto_2futils_2ftag_2eproto() {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Tag_proto_2futils_2ftag_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Tag_proto_2futils_2ftag_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Tag_proto_2futils_2ftag_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_proto_2futils_2ftag_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_proto_2futils_2ftag_2eproto = nullptr;
@@ -104,27 +103,27 @@ Tag::Tag(const Tag& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   aiid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.aiid().empty()) {
+  if (!from._internal_aiid().empty()) {
     aiid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.aiid_);
   }
   cname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.cname().empty()) {
+  if (!from._internal_cname().empty()) {
     cname_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.cname_);
   }
   user_unique_concept_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.user_unique_concept_id().empty()) {
+  if (!from._internal_user_unique_concept_id().empty()) {
     user_unique_concept_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.user_unique_concept_id_);
   }
   user_unique_app_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.user_unique_app_id().empty()) {
+  if (!from._internal_user_unique_app_id().empty()) {
     user_unique_app_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.user_unique_app_id_);
   }
   user_unique_user_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.user_unique_user_id().empty()) {
+  if (!from._internal_user_unique_user_id().empty()) {
     user_unique_user_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.user_unique_user_id_);
   }
   user_unique_vocab_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.user_unique_vocab_id().empty()) {
+  if (!from._internal_user_unique_vocab_id().empty()) {
     user_unique_vocab_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.user_unique_vocab_id_);
   }
   ::memcpy(&label_num_, &from.label_num_,
@@ -187,7 +186,6 @@ void Tag::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* Tag::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -212,42 +210,54 @@ const char* Tag::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::intern
       // string aiid = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_aiid(), ptr, ctx, "Tag.aiid");
+          auto str = _internal_mutable_aiid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Tag.aiid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string cname = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_cname(), ptr, ctx, "Tag.cname");
+          auto str = _internal_mutable_cname();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Tag.cname"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string user_unique_concept_id = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_user_unique_concept_id(), ptr, ctx, "Tag.user_unique_concept_id");
+          auto str = _internal_mutable_user_unique_concept_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Tag.user_unique_concept_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string user_unique_app_id = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_user_unique_app_id(), ptr, ctx, "Tag.user_unique_app_id");
+          auto str = _internal_mutable_user_unique_app_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Tag.user_unique_app_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string user_unique_user_id = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_user_unique_user_id(), ptr, ctx, "Tag.user_unique_user_id");
+          auto str = _internal_mutable_user_unique_user_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Tag.user_unique_user_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string user_unique_vocab_id = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_user_unique_vocab_id(), ptr, ctx, "Tag.user_unique_vocab_id");
+          auto str = _internal_mutable_user_unique_vocab_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "Tag.user_unique_vocab_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -270,322 +280,88 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool Tag::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Tag)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 label_num = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &label_num_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // float label_value = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &label_value_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string aiid = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_aiid()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->aiid().data(), static_cast<int>(this->aiid().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Tag.aiid"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string cname = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_cname()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->cname().data(), static_cast<int>(this->cname().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Tag.cname"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string user_unique_concept_id = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_user_unique_concept_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->user_unique_concept_id().data(), static_cast<int>(this->user_unique_concept_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Tag.user_unique_concept_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string user_unique_app_id = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_user_unique_app_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->user_unique_app_id().data(), static_cast<int>(this->user_unique_app_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Tag.user_unique_app_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string user_unique_user_id = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_user_unique_user_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->user_unique_user_id().data(), static_cast<int>(this->user_unique_user_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Tag.user_unique_user_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string user_unique_vocab_id = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_user_unique_vocab_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->user_unique_vocab_id().data(), static_cast<int>(this->user_unique_vocab_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "Tag.user_unique_vocab_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:Tag)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:Tag)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void Tag::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Tag)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 label_num = 1;
-  if (this->label_num() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->label_num(), output);
-  }
-
-  // float label_value = 2;
-  if (!(this->label_value() <= 0 && this->label_value() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->label_value(), output);
-  }
-
-  // string aiid = 3;
-  if (this->aiid().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->aiid().data(), static_cast<int>(this->aiid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Tag.aiid");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->aiid(), output);
-  }
-
-  // string cname = 4;
-  if (this->cname().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->cname().data(), static_cast<int>(this->cname().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Tag.cname");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->cname(), output);
-  }
-
-  // string user_unique_concept_id = 5;
-  if (this->user_unique_concept_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->user_unique_concept_id().data(), static_cast<int>(this->user_unique_concept_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Tag.user_unique_concept_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->user_unique_concept_id(), output);
-  }
-
-  // string user_unique_app_id = 6;
-  if (this->user_unique_app_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->user_unique_app_id().data(), static_cast<int>(this->user_unique_app_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Tag.user_unique_app_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->user_unique_app_id(), output);
-  }
-
-  // string user_unique_user_id = 7;
-  if (this->user_unique_user_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->user_unique_user_id().data(), static_cast<int>(this->user_unique_user_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Tag.user_unique_user_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->user_unique_user_id(), output);
-  }
-
-  // string user_unique_vocab_id = 8;
-  if (this->user_unique_vocab_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->user_unique_vocab_id().data(), static_cast<int>(this->user_unique_vocab_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "Tag.user_unique_vocab_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->user_unique_vocab_id(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:Tag)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* Tag::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* Tag::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:Tag)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 label_num = 1;
   if (this->label_num() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->label_num(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_label_num(), target);
   }
 
   // float label_value = 2;
   if (!(this->label_value() <= 0 && this->label_value() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->label_value(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->_internal_label_value(), target);
   }
 
   // string aiid = 3;
   if (this->aiid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->aiid().data(), static_cast<int>(this->aiid().length()),
+      this->_internal_aiid().data(), static_cast<int>(this->_internal_aiid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Tag.aiid");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        3, this->aiid(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_aiid(), target);
   }
 
   // string cname = 4;
   if (this->cname().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->cname().data(), static_cast<int>(this->cname().length()),
+      this->_internal_cname().data(), static_cast<int>(this->_internal_cname().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Tag.cname");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->cname(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_cname(), target);
   }
 
   // string user_unique_concept_id = 5;
   if (this->user_unique_concept_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->user_unique_concept_id().data(), static_cast<int>(this->user_unique_concept_id().length()),
+      this->_internal_user_unique_concept_id().data(), static_cast<int>(this->_internal_user_unique_concept_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Tag.user_unique_concept_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        5, this->user_unique_concept_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_user_unique_concept_id(), target);
   }
 
   // string user_unique_app_id = 6;
   if (this->user_unique_app_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->user_unique_app_id().data(), static_cast<int>(this->user_unique_app_id().length()),
+      this->_internal_user_unique_app_id().data(), static_cast<int>(this->_internal_user_unique_app_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Tag.user_unique_app_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        6, this->user_unique_app_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_user_unique_app_id(), target);
   }
 
   // string user_unique_user_id = 7;
   if (this->user_unique_user_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->user_unique_user_id().data(), static_cast<int>(this->user_unique_user_id().length()),
+      this->_internal_user_unique_user_id().data(), static_cast<int>(this->_internal_user_unique_user_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Tag.user_unique_user_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        7, this->user_unique_user_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_user_unique_user_id(), target);
   }
 
   // string user_unique_vocab_id = 8;
   if (this->user_unique_vocab_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->user_unique_vocab_id().data(), static_cast<int>(this->user_unique_vocab_id().length()),
+      this->_internal_user_unique_vocab_id().data(), static_cast<int>(this->_internal_user_unique_vocab_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Tag.user_unique_vocab_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        8, this->user_unique_vocab_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        8, this->_internal_user_unique_vocab_id(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Tag)
   return target;
@@ -595,11 +371,6 @@ size_t Tag::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Tag)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -608,49 +379,49 @@ size_t Tag::ByteSizeLong() const {
   if (this->aiid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->aiid());
+        this->_internal_aiid());
   }
 
   // string cname = 4;
   if (this->cname().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->cname());
+        this->_internal_cname());
   }
 
   // string user_unique_concept_id = 5;
   if (this->user_unique_concept_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->user_unique_concept_id());
+        this->_internal_user_unique_concept_id());
   }
 
   // string user_unique_app_id = 6;
   if (this->user_unique_app_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->user_unique_app_id());
+        this->_internal_user_unique_app_id());
   }
 
   // string user_unique_user_id = 7;
   if (this->user_unique_user_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->user_unique_user_id());
+        this->_internal_user_unique_user_id());
   }
 
   // string user_unique_vocab_id = 8;
   if (this->user_unique_vocab_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->user_unique_vocab_id());
+        this->_internal_user_unique_vocab_id());
   }
 
   // int32 label_num = 1;
   if (this->label_num() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->label_num());
+        this->_internal_label_num());
   }
 
   // float label_value = 2;
@@ -658,6 +429,10 @@ size_t Tag::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -710,10 +485,10 @@ void Tag::MergeFrom(const Tag& from) {
     user_unique_vocab_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.user_unique_vocab_id_);
   }
   if (from.label_num() != 0) {
-    set_label_num(from.label_num());
+    _internal_set_label_num(from._internal_label_num());
   }
   if (!(from.label_value() <= 0 && from.label_value() >= 0)) {
-    set_label_value(from.label_value());
+    _internal_set_label_value(from._internal_label_value());
   }
 }
 

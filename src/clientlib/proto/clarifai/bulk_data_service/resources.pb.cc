@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -43,7 +42,7 @@ static void InitDefaultsscc_info_DataDump_proto_2fclarifai_2fbulk_5fdata_5fservi
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_DataDump_proto_2fclarifai_2fbulk_5fdata_5fservice_2fresources_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_DataDump_proto_2fclarifai_2fbulk_5fdata_5fservice_2fresources_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_DataDump_proto_2fclarifai_2fbulk_5fdata_5fservice_2fresources_2eproto}, {
       &scc_info_PostDataDumpsRequest_proto_2fclarifai_2fbulk_5fdata_5fservice_2fresources_2eproto.base,
       &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,}};
 
@@ -59,7 +58,7 @@ static void InitDefaultsscc_info_PostDataDumpsRequest_proto_2fclarifai_2fbulk_5f
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PostDataDumpsRequest_proto_2fclarifai_2fbulk_5fdata_5fservice_2fresources_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_PostDataDumpsRequest_proto_2fclarifai_2fbulk_5fdata_5fservice_2fresources_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_PostDataDumpsRequest_proto_2fclarifai_2fbulk_5fdata_5fservice_2fresources_2eproto}, {
       &scc_info_UserAppIDSet_proto_2fclarifai_2fapi_2fresources_2eproto.base,
       &scc_info_Search_proto_2fclarifai_2fapi_2fresources_2eproto.base,}};
 
@@ -186,12 +185,12 @@ PostDataDumpsRequest::PostDataDumpsRequest(const PostDataDumpsRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_user_app_id()) {
+  if (from._internal_has_user_app_id()) {
     user_app_id_ = new ::clarifai::api::UserAppIDSet(*from.user_app_id_);
   } else {
     user_app_id_ = nullptr;
   }
-  if (from.has_search()) {
+  if (from._internal_has_search()) {
     search_ = new ::clarifai::api::Search(*from.search_);
   } else {
     search_ = nullptr;
@@ -244,7 +243,6 @@ void PostDataDumpsRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* PostDataDumpsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -255,14 +253,14 @@ const char* PostDataDumpsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAM
       // .clarifai.api.UserAppIDSet user_app_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_user_app_id(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_user_app_id(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .clarifai.api.Search search = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_search(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_search(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -292,131 +290,38 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool PostDataDumpsRequest::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:clarifai.bulk_data_service.PostDataDumpsRequest)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .clarifai.api.UserAppIDSet user_app_id = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_user_app_id()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // .clarifai.api.Search search = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_search()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool include_embeddings = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &include_embeddings_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:clarifai.bulk_data_service.PostDataDumpsRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:clarifai.bulk_data_service.PostDataDumpsRequest)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void PostDataDumpsRequest::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:clarifai.bulk_data_service.PostDataDumpsRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .clarifai.api.UserAppIDSet user_app_id = 1;
-  if (this->has_user_app_id()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::user_app_id(this), output);
-  }
-
-  // .clarifai.api.Search search = 2;
-  if (this->has_search()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::search(this), output);
-  }
-
-  // bool include_embeddings = 3;
-  if (this->include_embeddings() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(3, this->include_embeddings(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:clarifai.bulk_data_service.PostDataDumpsRequest)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* PostDataDumpsRequest::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* PostDataDumpsRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:clarifai.bulk_data_service.PostDataDumpsRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .clarifai.api.UserAppIDSet user_app_id = 1;
   if (this->has_user_app_id()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::user_app_id(this), target);
+      InternalWriteMessage(
+        1, _Internal::user_app_id(this), target, stream);
   }
 
   // .clarifai.api.Search search = 2;
   if (this->has_search()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::search(this), target);
+      InternalWriteMessage(
+        2, _Internal::search(this), target, stream);
   }
 
   // bool include_embeddings = 3;
   if (this->include_embeddings() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->include_embeddings(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_include_embeddings(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:clarifai.bulk_data_service.PostDataDumpsRequest)
   return target;
@@ -426,11 +331,6 @@ size_t PostDataDumpsRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:clarifai.bulk_data_service.PostDataDumpsRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -454,6 +354,10 @@ size_t PostDataDumpsRequest::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -482,13 +386,13 @@ void PostDataDumpsRequest::MergeFrom(const PostDataDumpsRequest& from) {
   (void) cached_has_bits;
 
   if (from.has_user_app_id()) {
-    mutable_user_app_id()->::clarifai::api::UserAppIDSet::MergeFrom(from.user_app_id());
+    _internal_mutable_user_app_id()->::clarifai::api::UserAppIDSet::MergeFrom(from._internal_user_app_id());
   }
   if (from.has_search()) {
-    mutable_search()->::clarifai::api::Search::MergeFrom(from.search());
+    _internal_mutable_search()->::clarifai::api::Search::MergeFrom(from._internal_search());
   }
   if (from.include_embeddings() != 0) {
-    set_include_embeddings(from.include_embeddings());
+    _internal_set_include_embeddings(from._internal_include_embeddings());
   }
 }
 
@@ -574,32 +478,32 @@ DataDump::DataDump(const DataDump& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.id().empty()) {
+  if (!from._internal_id().empty()) {
     id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
   }
   app_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.app_id().empty()) {
+  if (!from._internal_app_id().empty()) {
     app_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.app_id_);
   }
   location_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.location().empty()) {
+  if (!from._internal_location().empty()) {
     location_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.location_);
   }
   created_by_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.created_by().empty()) {
+  if (!from._internal_created_by().empty()) {
     created_by_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.created_by_);
   }
-  if (from.has_request()) {
+  if (from._internal_has_request()) {
     request_ = new ::clarifai::bulk_data_service::PostDataDumpsRequest(*from.request_);
   } else {
     request_ = nullptr;
   }
-  if (from.has_created_at()) {
+  if (from._internal_has_created_at()) {
     created_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.created_at_);
   } else {
     created_at_ = nullptr;
   }
-  if (from.has_modified_at()) {
+  if (from._internal_has_modified_at()) {
     modified_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.modified_at_);
   } else {
     modified_at_ = nullptr;
@@ -669,7 +573,6 @@ void DataDump::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* DataDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -680,28 +583,34 @@ const char* DataDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
       // string id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_id(), ptr, ctx, "clarifai.bulk_data_service.DataDump.id");
+          auto str = _internal_mutable_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "clarifai.bulk_data_service.DataDump.id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string app_id = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_app_id(), ptr, ctx, "clarifai.bulk_data_service.DataDump.app_id");
+          auto str = _internal_mutable_app_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "clarifai.bulk_data_service.DataDump.app_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .clarifai.bulk_data_service.PostDataDumpsRequest request = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_request(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_request(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string location = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_location(), ptr, ctx, "clarifai.bulk_data_service.DataDump.location");
+          auto str = _internal_mutable_location();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "clarifai.bulk_data_service.DataDump.location"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -710,27 +619,29 @@ const char* DataDump::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          set_status(static_cast<::clarifai::api::status::StatusCode>(val));
+          _internal_set_status(static_cast<::clarifai::api::status::StatusCode>(val));
         } else goto handle_unusual;
         continue;
       // string created_by = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_created_by(), ptr, ctx, "clarifai.bulk_data_service.DataDump.created_by");
+          auto str = _internal_mutable_created_by();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "clarifai.bulk_data_service.DataDump.created_by"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Timestamp created_at = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(mutable_created_at(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_created_at(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // .google.protobuf.Timestamp modified_at = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(mutable_modified_at(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_modified_at(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -753,224 +664,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool DataDump::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:clarifai.bulk_data_service.DataDump)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string id = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->id().data(), static_cast<int>(this->id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "clarifai.bulk_data_service.DataDump.id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // string app_id = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_app_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->app_id().data(), static_cast<int>(this->app_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "clarifai.bulk_data_service.DataDump.app_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .clarifai.bulk_data_service.PostDataDumpsRequest request = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_request()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string location = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_location()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->location().data(), static_cast<int>(this->location().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "clarifai.bulk_data_service.DataDump.location"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .clarifai.api.status.StatusCode status = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_status(static_cast< ::clarifai::api::status::StatusCode >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string created_by = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_created_by()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->created_by().data(), static_cast<int>(this->created_by().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "clarifai.bulk_data_service.DataDump.created_by"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Timestamp created_at = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_created_at()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.Timestamp modified_at = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_modified_at()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:clarifai.bulk_data_service.DataDump)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:clarifai.bulk_data_service.DataDump)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void DataDump::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:clarifai.bulk_data_service.DataDump)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string id = 1;
-  if (this->id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "clarifai.bulk_data_service.DataDump.id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->id(), output);
-  }
-
-  // string app_id = 2;
-  if (this->app_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->app_id().data(), static_cast<int>(this->app_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "clarifai.bulk_data_service.DataDump.app_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->app_id(), output);
-  }
-
-  // .clarifai.bulk_data_service.PostDataDumpsRequest request = 3;
-  if (this->has_request()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::request(this), output);
-  }
-
-  // string location = 4;
-  if (this->location().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->location().data(), static_cast<int>(this->location().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "clarifai.bulk_data_service.DataDump.location");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->location(), output);
-  }
-
-  // .clarifai.api.status.StatusCode status = 5;
-  if (this->status() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      5, this->status(), output);
-  }
-
-  // string created_by = 6;
-  if (this->created_by().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->created_by().data(), static_cast<int>(this->created_by().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "clarifai.bulk_data_service.DataDump.created_by");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->created_by(), output);
-  }
-
-  // .google.protobuf.Timestamp created_at = 7;
-  if (this->has_created_at()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, _Internal::created_at(this), output);
-  }
-
-  // .google.protobuf.Timestamp modified_at = 8;
-  if (this->has_modified_at()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, _Internal::modified_at(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:clarifai.bulk_data_service.DataDump)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* DataDump::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* DataDump::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:clarifai.bulk_data_service.DataDump)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -978,77 +674,77 @@ void DataDump::SerializeWithCachedSizes(
   // string id = 1;
   if (this->id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "clarifai.bulk_data_service.DataDump.id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->id(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_id(), target);
   }
 
   // string app_id = 2;
   if (this->app_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->app_id().data(), static_cast<int>(this->app_id().length()),
+      this->_internal_app_id().data(), static_cast<int>(this->_internal_app_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "clarifai.bulk_data_service.DataDump.app_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->app_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_app_id(), target);
   }
 
   // .clarifai.bulk_data_service.PostDataDumpsRequest request = 3;
   if (this->has_request()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::request(this), target);
+      InternalWriteMessage(
+        3, _Internal::request(this), target, stream);
   }
 
   // string location = 4;
   if (this->location().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->location().data(), static_cast<int>(this->location().length()),
+      this->_internal_location().data(), static_cast<int>(this->_internal_location().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "clarifai.bulk_data_service.DataDump.location");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        4, this->location(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_location(), target);
   }
 
   // .clarifai.api.status.StatusCode status = 5;
   if (this->status() != 0) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      5, this->status(), target);
+      5, this->_internal_status(), target);
   }
 
   // string created_by = 6;
   if (this->created_by().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->created_by().data(), static_cast<int>(this->created_by().length()),
+      this->_internal_created_by().data(), static_cast<int>(this->_internal_created_by().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "clarifai.bulk_data_service.DataDump.created_by");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        6, this->created_by(), target);
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_created_by(), target);
   }
 
   // .google.protobuf.Timestamp created_at = 7;
   if (this->has_created_at()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, _Internal::created_at(this), target);
+      InternalWriteMessage(
+        7, _Internal::created_at(this), target, stream);
   }
 
   // .google.protobuf.Timestamp modified_at = 8;
   if (this->has_modified_at()) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, _Internal::modified_at(this), target);
+      InternalWriteMessage(
+        8, _Internal::modified_at(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:clarifai.bulk_data_service.DataDump)
   return target;
@@ -1058,11 +754,6 @@ size_t DataDump::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:clarifai.bulk_data_service.DataDump)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1071,28 +762,28 @@ size_t DataDump::ByteSizeLong() const {
   if (this->id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->id());
+        this->_internal_id());
   }
 
   // string app_id = 2;
   if (this->app_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->app_id());
+        this->_internal_app_id());
   }
 
   // string location = 4;
   if (this->location().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->location());
+        this->_internal_location());
   }
 
   // string created_by = 6;
   if (this->created_by().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->created_by());
+        this->_internal_created_by());
   }
 
   // .clarifai.bulk_data_service.PostDataDumpsRequest request = 3;
@@ -1119,9 +810,13 @@ size_t DataDump::ByteSizeLong() const {
   // .clarifai.api.status.StatusCode status = 5;
   if (this->status() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->status());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_status());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -1166,16 +861,16 @@ void DataDump::MergeFrom(const DataDump& from) {
     created_by_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.created_by_);
   }
   if (from.has_request()) {
-    mutable_request()->::clarifai::bulk_data_service::PostDataDumpsRequest::MergeFrom(from.request());
+    _internal_mutable_request()->::clarifai::bulk_data_service::PostDataDumpsRequest::MergeFrom(from._internal_request());
   }
   if (from.has_created_at()) {
-    mutable_created_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.created_at());
+    _internal_mutable_created_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_created_at());
   }
   if (from.has_modified_at()) {
-    mutable_modified_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from.modified_at());
+    _internal_mutable_modified_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_modified_at());
   }
   if (from.status() != 0) {
-    set_status(from.status());
+    _internal_set_status(from._internal_status());
   }
 }
 

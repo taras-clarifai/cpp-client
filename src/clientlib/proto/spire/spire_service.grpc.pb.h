@@ -7,34 +7,24 @@
 #include "proto/spire/spire_service.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/client_context.h>
 #include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-
-namespace grpc_impl {
-class CompletionQueue;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc_impl
-
-namespace grpc {
-namespace experimental {
-template <typename RequestT, typename ResponseT>
-class MessageAllocator;
-}  // namespace experimental
-}  // namespace grpc
 
 // Interface exported by the server.
 class SpireService final {
@@ -133,54 +123,140 @@ class SpireService final {
       // This replaces is_ready and is_started which were always confusing.
       virtual void SpireGetState(::grpc::ClientContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireGetState(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetStateResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireGetState(::grpc::ClientContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireGetState(::grpc::ClientContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireGetState(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetStateResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireGetState(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetStateResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Predict given a trained model and embeddings from some examples
       virtual void SpireGetConfig(::grpc::ClientContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireGetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireGetConfig(::grpc::ClientContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireGetConfig(::grpc::ClientContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireGetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireGetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Sets the spire config into the net and re-JITs with the new model.
       virtual void SpireSetConfig(::grpc::ClientContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireSetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSetConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireSetConfig(::grpc::ClientContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireSetConfig(::grpc::ClientContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireSetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireSetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // If the net is not JIT initialized then do it now.
       virtual void SpireMaybeJIT(::grpc::ClientContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireMaybeJIT(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireMaybeJITResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireMaybeJIT(::grpc::ClientContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireMaybeJIT(::grpc::ClientContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireMaybeJIT(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireMaybeJITResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireMaybeJIT(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireMaybeJITResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Health check interface: Perform a prediction on a test batch
       virtual void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Tell the net to stop serving which shutdowns the spire neural net and flushes the socket.
       virtual void SpireStopServing(::grpc::ClientContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireStopServing(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireStopServingResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireStopServing(::grpc::ClientContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireStopServing(::grpc::ClientContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireStopServing(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireStopServingResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireStopServing(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireStopServingResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // This does 'tag' and 'embed' ops on the image or any combination of them.
       virtual void SpireEmbedTag(::grpc::ClientContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireEmbedTagResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireEmbedTag(::grpc::ClientContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireEmbedTag(::grpc::ClientContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireEmbedTagResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireEmbedTagResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Get the saved outputs from the neural network.
       virtual void SpireSavedOutput(::grpc::ClientContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireSavedOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSavedOutputResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireSavedOutput(::grpc::ClientContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireSavedOutput(::grpc::ClientContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireSavedOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSavedOutputResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireSavedOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSavedOutputResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Face and object detection in a single endpoint.
       virtual void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireDetectEmbedTagResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireDetectEmbedTagResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireDetectEmbedTagResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       // Segmentation model rpc.
       virtual void SpireInstanceSegment(::grpc::ClientContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void SpireInstanceSegment(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireInstanceSegmentResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireInstanceSegment(::grpc::ClientContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireInstanceSegment(::grpc::ClientContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SpireInstanceSegment(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireInstanceSegmentResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void SpireInstanceSegment(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireInstanceSegmentResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::SpireGetStateResponse>* AsyncSpireGetStateRaw(::grpc::ClientContext* context, const ::SpireGetStateRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -282,44 +358,124 @@ class SpireService final {
      public:
       void SpireGetState(::grpc::ClientContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireGetState(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetStateResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireGetState(::grpc::ClientContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireGetState(::grpc::ClientContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireGetState(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetStateResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireGetState(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetStateResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SpireGetConfig(::grpc::ClientContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireGetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetConfigResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireGetConfig(::grpc::ClientContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireGetConfig(::grpc::ClientContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireGetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireGetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireGetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SpireSetConfig(::grpc::ClientContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireSetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSetConfigResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireSetConfig(::grpc::ClientContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireSetConfig(::grpc::ClientContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireSetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireSetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SpireMaybeJIT(::grpc::ClientContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireMaybeJIT(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireMaybeJITResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireMaybeJIT(::grpc::ClientContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireMaybeJIT(::grpc::ClientContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireMaybeJIT(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireMaybeJITResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireMaybeJIT(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireMaybeJITResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, std::function<void(::grpc::Status)>) override;
       void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void Check(::grpc::ClientContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::HealthCheckResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SpireStopServing(::grpc::ClientContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireStopServing(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireStopServingResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireStopServing(::grpc::ClientContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireStopServing(::grpc::ClientContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireStopServing(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireStopServingResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireStopServing(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireStopServingResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SpireEmbedTag(::grpc::ClientContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireEmbedTagResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireEmbedTag(::grpc::ClientContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireEmbedTag(::grpc::ClientContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireEmbedTagResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireEmbedTagResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SpireSavedOutput(::grpc::ClientContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireSavedOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSavedOutputResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireSavedOutput(::grpc::ClientContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireSavedOutput(::grpc::ClientContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireSavedOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSavedOutputResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireSavedOutput(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireSavedOutputResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireDetectEmbedTagResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireDetectEmbedTagResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireDetectEmbedTag(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireDetectEmbedTagResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SpireInstanceSegment(::grpc::ClientContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response, std::function<void(::grpc::Status)>) override;
       void SpireInstanceSegment(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireInstanceSegmentResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireInstanceSegment(::grpc::ClientContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireInstanceSegment(::grpc::ClientContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SpireInstanceSegment(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireInstanceSegmentResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void SpireInstanceSegment(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::SpireInstanceSegmentResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -393,7 +549,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireGetState : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireGetState() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -402,7 +558,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetState(::grpc::ServerContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response) override {
+    ::grpc::Status SpireGetState(::grpc::ServerContext* /*context*/, const ::SpireGetStateRequest* /*request*/, ::SpireGetStateResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -413,7 +569,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireGetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireGetConfig() {
       ::grpc::Service::MarkMethodAsync(1);
@@ -422,7 +578,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetConfig(::grpc::ServerContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response) override {
+    ::grpc::Status SpireGetConfig(::grpc::ServerContext* /*context*/, const ::SpireGetConfigRequest* /*request*/, ::SpireGetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -433,7 +589,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireSetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireSetConfig() {
       ::grpc::Service::MarkMethodAsync(2);
@@ -442,7 +598,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSetConfig(::grpc::ServerContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response) override {
+    ::grpc::Status SpireSetConfig(::grpc::ServerContext* /*context*/, const ::SpireSetConfigRequest* /*request*/, ::SpireSetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -453,7 +609,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireMaybeJIT : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireMaybeJIT() {
       ::grpc::Service::MarkMethodAsync(3);
@@ -462,7 +618,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response) override {
+    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* /*context*/, const ::SpireMaybeJITRequest* /*request*/, ::SpireMaybeJITResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -473,7 +629,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Check() {
       ::grpc::Service::MarkMethodAsync(4);
@@ -482,7 +638,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -493,7 +649,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireStopServing : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireStopServing() {
       ::grpc::Service::MarkMethodAsync(5);
@@ -502,7 +658,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireStopServing(::grpc::ServerContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response) override {
+    ::grpc::Status SpireStopServing(::grpc::ServerContext* /*context*/, const ::SpireStopServingRequest* /*request*/, ::SpireStopServingResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -513,7 +669,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireEmbedTag() {
       ::grpc::Service::MarkMethodAsync(6);
@@ -522,7 +678,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response) override {
+    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireEmbedTagRequest* /*request*/, ::SpireEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -533,7 +689,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireSavedOutput : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireSavedOutput() {
       ::grpc::Service::MarkMethodAsync(7);
@@ -542,7 +698,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response) override {
+    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* /*context*/, const ::SpireSavedOutputRequest* /*request*/, ::SpireSavedOutputResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -553,7 +709,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireDetectEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireDetectEmbedTag() {
       ::grpc::Service::MarkMethodAsync(8);
@@ -562,7 +718,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response) override {
+    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireDetectEmbedTagRequest* /*request*/, ::SpireDetectEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -573,7 +729,7 @@ class SpireService final {
   template <class BaseClass>
   class WithAsyncMethod_SpireInstanceSegment : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SpireInstanceSegment() {
       ::grpc::Service::MarkMethodAsync(9);
@@ -582,7 +738,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response) override {
+    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* /*context*/, const ::SpireInstanceSegmentRequest* /*request*/, ::SpireInstanceSegmentResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -594,318 +750,482 @@ class SpireService final {
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireGetState : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireGetState() {
-      ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireGetStateRequest, ::SpireGetStateResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireGetStateRequest* request,
-                 ::SpireGetStateResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireGetState(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireGetStateRequest, ::SpireGetStateResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response) { return this->SpireGetState(context, request, response); }));}
     void SetMessageAllocatorFor_SpireGetState(
         ::grpc::experimental::MessageAllocator< ::SpireGetStateRequest, ::SpireGetStateResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireGetStateRequest, ::SpireGetStateResponse>*>(
-          ::grpc::Service::experimental().GetHandler(0))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireGetStateRequest, ::SpireGetStateResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireGetState() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetState(::grpc::ServerContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response) override {
+    ::grpc::Status SpireGetState(::grpc::ServerContext* /*context*/, const ::SpireGetStateRequest* /*request*/, ::SpireGetStateResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireGetState(::grpc::ServerContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireGetState(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireGetStateRequest* /*request*/, ::SpireGetStateResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireGetState(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireGetStateRequest* /*request*/, ::SpireGetStateResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireGetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireGetConfig() {
-      ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireGetConfigRequest, ::SpireGetConfigResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireGetConfigRequest* request,
-                 ::SpireGetConfigResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireGetConfig(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireGetConfigRequest, ::SpireGetConfigResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response) { return this->SpireGetConfig(context, request, response); }));}
     void SetMessageAllocatorFor_SpireGetConfig(
         ::grpc::experimental::MessageAllocator< ::SpireGetConfigRequest, ::SpireGetConfigResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireGetConfigRequest, ::SpireGetConfigResponse>*>(
-          ::grpc::Service::experimental().GetHandler(1))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireGetConfigRequest, ::SpireGetConfigResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireGetConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetConfig(::grpc::ServerContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response) override {
+    ::grpc::Status SpireGetConfig(::grpc::ServerContext* /*context*/, const ::SpireGetConfigRequest* /*request*/, ::SpireGetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireGetConfig(::grpc::ServerContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireGetConfig(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireGetConfigRequest* /*request*/, ::SpireGetConfigResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireGetConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireGetConfigRequest* /*request*/, ::SpireGetConfigResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireSetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireSetConfig() {
-      ::grpc::Service::experimental().MarkMethodCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireSetConfigRequest, ::SpireSetConfigResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireSetConfigRequest* request,
-                 ::SpireSetConfigResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireSetConfig(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireSetConfigRequest, ::SpireSetConfigResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response) { return this->SpireSetConfig(context, request, response); }));}
     void SetMessageAllocatorFor_SpireSetConfig(
         ::grpc::experimental::MessageAllocator< ::SpireSetConfigRequest, ::SpireSetConfigResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireSetConfigRequest, ::SpireSetConfigResponse>*>(
-          ::grpc::Service::experimental().GetHandler(2))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireSetConfigRequest, ::SpireSetConfigResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireSetConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSetConfig(::grpc::ServerContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response) override {
+    ::grpc::Status SpireSetConfig(::grpc::ServerContext* /*context*/, const ::SpireSetConfigRequest* /*request*/, ::SpireSetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireSetConfig(::grpc::ServerContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireSetConfig(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireSetConfigRequest* /*request*/, ::SpireSetConfigResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireSetConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireSetConfigRequest* /*request*/, ::SpireSetConfigResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireMaybeJIT : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireMaybeJIT() {
-      ::grpc::Service::experimental().MarkMethodCallback(3,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireMaybeJITRequest, ::SpireMaybeJITResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireMaybeJITRequest* request,
-                 ::SpireMaybeJITResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireMaybeJIT(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireMaybeJITRequest, ::SpireMaybeJITResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response) { return this->SpireMaybeJIT(context, request, response); }));}
     void SetMessageAllocatorFor_SpireMaybeJIT(
         ::grpc::experimental::MessageAllocator< ::SpireMaybeJITRequest, ::SpireMaybeJITResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireMaybeJITRequest, ::SpireMaybeJITResponse>*>(
-          ::grpc::Service::experimental().GetHandler(3))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireMaybeJITRequest, ::SpireMaybeJITResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireMaybeJIT() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response) override {
+    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* /*context*/, const ::SpireMaybeJITRequest* /*request*/, ::SpireMaybeJITResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireMaybeJIT(::grpc::ServerContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireMaybeJIT(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireMaybeJITRequest* /*request*/, ::SpireMaybeJITResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireMaybeJIT(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireMaybeJITRequest* /*request*/, ::SpireMaybeJITResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_Check() {
-      ::grpc::Service::experimental().MarkMethodCallback(4,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::HealthCheckRequest, ::HealthCheckResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::HealthCheckRequest* request,
-                 ::HealthCheckResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->Check(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::HealthCheckRequest, ::HealthCheckResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) { return this->Check(context, request, response); }));}
     void SetMessageAllocatorFor_Check(
         ::grpc::experimental::MessageAllocator< ::HealthCheckRequest, ::HealthCheckResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::HealthCheckRequest, ::HealthCheckResponse>*>(
-          ::grpc::Service::experimental().GetHandler(4))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::HealthCheckRequest, ::HealthCheckResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_Check() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Check(
+      ::grpc::CallbackServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Check(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireStopServing : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireStopServing() {
-      ::grpc::Service::experimental().MarkMethodCallback(5,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireStopServingRequest, ::SpireStopServingResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireStopServingRequest* request,
-                 ::SpireStopServingResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireStopServing(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireStopServingRequest, ::SpireStopServingResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response) { return this->SpireStopServing(context, request, response); }));}
     void SetMessageAllocatorFor_SpireStopServing(
         ::grpc::experimental::MessageAllocator< ::SpireStopServingRequest, ::SpireStopServingResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireStopServingRequest, ::SpireStopServingResponse>*>(
-          ::grpc::Service::experimental().GetHandler(5))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireStopServingRequest, ::SpireStopServingResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireStopServing() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireStopServing(::grpc::ServerContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response) override {
+    ::grpc::Status SpireStopServing(::grpc::ServerContext* /*context*/, const ::SpireStopServingRequest* /*request*/, ::SpireStopServingResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireStopServing(::grpc::ServerContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireStopServing(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireStopServingRequest* /*request*/, ::SpireStopServingResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireStopServing(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireStopServingRequest* /*request*/, ::SpireStopServingResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireEmbedTag() {
-      ::grpc::Service::experimental().MarkMethodCallback(6,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireEmbedTagRequest, ::SpireEmbedTagResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireEmbedTagRequest* request,
-                 ::SpireEmbedTagResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireEmbedTag(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireEmbedTagRequest, ::SpireEmbedTagResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response) { return this->SpireEmbedTag(context, request, response); }));}
     void SetMessageAllocatorFor_SpireEmbedTag(
         ::grpc::experimental::MessageAllocator< ::SpireEmbedTagRequest, ::SpireEmbedTagResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireEmbedTagRequest, ::SpireEmbedTagResponse>*>(
-          ::grpc::Service::experimental().GetHandler(6))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(6);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireEmbedTagRequest, ::SpireEmbedTagResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireEmbedTag() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response) override {
+    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireEmbedTagRequest* /*request*/, ::SpireEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireEmbedTag(::grpc::ServerContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireEmbedTag(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireEmbedTagRequest* /*request*/, ::SpireEmbedTagResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireEmbedTag(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireEmbedTagRequest* /*request*/, ::SpireEmbedTagResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireSavedOutput : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireSavedOutput() {
-      ::grpc::Service::experimental().MarkMethodCallback(7,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireSavedOutputRequest, ::SpireSavedOutputResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireSavedOutputRequest* request,
-                 ::SpireSavedOutputResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireSavedOutput(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(7,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireSavedOutputRequest, ::SpireSavedOutputResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response) { return this->SpireSavedOutput(context, request, response); }));}
     void SetMessageAllocatorFor_SpireSavedOutput(
         ::grpc::experimental::MessageAllocator< ::SpireSavedOutputRequest, ::SpireSavedOutputResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireSavedOutputRequest, ::SpireSavedOutputResponse>*>(
-          ::grpc::Service::experimental().GetHandler(7))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(7);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireSavedOutputRequest, ::SpireSavedOutputResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireSavedOutput() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response) override {
+    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* /*context*/, const ::SpireSavedOutputRequest* /*request*/, ::SpireSavedOutputResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireSavedOutput(::grpc::ServerContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireSavedOutput(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireSavedOutputRequest* /*request*/, ::SpireSavedOutputResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireSavedOutput(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireSavedOutputRequest* /*request*/, ::SpireSavedOutputResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireDetectEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireDetectEmbedTag() {
-      ::grpc::Service::experimental().MarkMethodCallback(8,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireDetectEmbedTagRequest, ::SpireDetectEmbedTagResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireDetectEmbedTagRequest* request,
-                 ::SpireDetectEmbedTagResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireDetectEmbedTag(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(8,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireDetectEmbedTagRequest, ::SpireDetectEmbedTagResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response) { return this->SpireDetectEmbedTag(context, request, response); }));}
     void SetMessageAllocatorFor_SpireDetectEmbedTag(
         ::grpc::experimental::MessageAllocator< ::SpireDetectEmbedTagRequest, ::SpireDetectEmbedTagResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireDetectEmbedTagRequest, ::SpireDetectEmbedTagResponse>*>(
-          ::grpc::Service::experimental().GetHandler(8))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(8);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireDetectEmbedTagRequest, ::SpireDetectEmbedTagResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireDetectEmbedTag() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response) override {
+    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireDetectEmbedTagRequest* /*request*/, ::SpireDetectEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireDetectEmbedTag(::grpc::ServerContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireDetectEmbedTag(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireDetectEmbedTagRequest* /*request*/, ::SpireDetectEmbedTagResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireDetectEmbedTag(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireDetectEmbedTagRequest* /*request*/, ::SpireDetectEmbedTagResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_SpireInstanceSegment : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_SpireInstanceSegment() {
-      ::grpc::Service::experimental().MarkMethodCallback(9,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireInstanceSegmentRequest, ::SpireInstanceSegmentResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::SpireInstanceSegmentRequest* request,
-                 ::SpireInstanceSegmentResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->SpireInstanceSegment(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(9,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::SpireInstanceSegmentRequest, ::SpireInstanceSegmentResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response) { return this->SpireInstanceSegment(context, request, response); }));}
     void SetMessageAllocatorFor_SpireInstanceSegment(
         ::grpc::experimental::MessageAllocator< ::SpireInstanceSegmentRequest, ::SpireInstanceSegmentResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireInstanceSegmentRequest, ::SpireInstanceSegmentResponse>*>(
-          ::grpc::Service::experimental().GetHandler(9))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(9);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::SpireInstanceSegmentRequest, ::SpireInstanceSegmentResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SpireInstanceSegment() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response) override {
+    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* /*context*/, const ::SpireInstanceSegmentRequest* /*request*/, ::SpireInstanceSegmentResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireInstanceSegment(::grpc::ServerContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireInstanceSegment(
+      ::grpc::CallbackServerContext* /*context*/, const ::SpireInstanceSegmentRequest* /*request*/, ::SpireInstanceSegmentResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireInstanceSegment(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::SpireInstanceSegmentRequest* /*request*/, ::SpireInstanceSegmentResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_SpireGetState<ExperimentalWithCallbackMethod_SpireGetConfig<ExperimentalWithCallbackMethod_SpireSetConfig<ExperimentalWithCallbackMethod_SpireMaybeJIT<ExperimentalWithCallbackMethod_Check<ExperimentalWithCallbackMethod_SpireStopServing<ExperimentalWithCallbackMethod_SpireEmbedTag<ExperimentalWithCallbackMethod_SpireSavedOutput<ExperimentalWithCallbackMethod_SpireDetectEmbedTag<ExperimentalWithCallbackMethod_SpireInstanceSegment<Service > > > > > > > > > > CallbackService;
+  #endif
+
   typedef ExperimentalWithCallbackMethod_SpireGetState<ExperimentalWithCallbackMethod_SpireGetConfig<ExperimentalWithCallbackMethod_SpireSetConfig<ExperimentalWithCallbackMethod_SpireMaybeJIT<ExperimentalWithCallbackMethod_Check<ExperimentalWithCallbackMethod_SpireStopServing<ExperimentalWithCallbackMethod_SpireEmbedTag<ExperimentalWithCallbackMethod_SpireSavedOutput<ExperimentalWithCallbackMethod_SpireDetectEmbedTag<ExperimentalWithCallbackMethod_SpireInstanceSegment<Service > > > > > > > > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_SpireGetState : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireGetState() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -914,7 +1234,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetState(::grpc::ServerContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response) override {
+    ::grpc::Status SpireGetState(::grpc::ServerContext* /*context*/, const ::SpireGetStateRequest* /*request*/, ::SpireGetStateResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -922,7 +1242,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_SpireGetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireGetConfig() {
       ::grpc::Service::MarkMethodGeneric(1);
@@ -931,7 +1251,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetConfig(::grpc::ServerContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response) override {
+    ::grpc::Status SpireGetConfig(::grpc::ServerContext* /*context*/, const ::SpireGetConfigRequest* /*request*/, ::SpireGetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -939,7 +1259,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_SpireSetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireSetConfig() {
       ::grpc::Service::MarkMethodGeneric(2);
@@ -948,7 +1268,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSetConfig(::grpc::ServerContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response) override {
+    ::grpc::Status SpireSetConfig(::grpc::ServerContext* /*context*/, const ::SpireSetConfigRequest* /*request*/, ::SpireSetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -956,7 +1276,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_SpireMaybeJIT : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireMaybeJIT() {
       ::grpc::Service::MarkMethodGeneric(3);
@@ -965,7 +1285,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response) override {
+    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* /*context*/, const ::SpireMaybeJITRequest* /*request*/, ::SpireMaybeJITResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -973,7 +1293,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Check() {
       ::grpc::Service::MarkMethodGeneric(4);
@@ -982,7 +1302,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -990,7 +1310,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_SpireStopServing : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireStopServing() {
       ::grpc::Service::MarkMethodGeneric(5);
@@ -999,7 +1319,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireStopServing(::grpc::ServerContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response) override {
+    ::grpc::Status SpireStopServing(::grpc::ServerContext* /*context*/, const ::SpireStopServingRequest* /*request*/, ::SpireStopServingResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1007,7 +1327,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_SpireEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireEmbedTag() {
       ::grpc::Service::MarkMethodGeneric(6);
@@ -1016,7 +1336,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response) override {
+    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireEmbedTagRequest* /*request*/, ::SpireEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1024,7 +1344,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_SpireSavedOutput : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireSavedOutput() {
       ::grpc::Service::MarkMethodGeneric(7);
@@ -1033,7 +1353,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response) override {
+    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* /*context*/, const ::SpireSavedOutputRequest* /*request*/, ::SpireSavedOutputResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1041,7 +1361,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_SpireDetectEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireDetectEmbedTag() {
       ::grpc::Service::MarkMethodGeneric(8);
@@ -1050,7 +1370,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response) override {
+    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireDetectEmbedTagRequest* /*request*/, ::SpireDetectEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1058,7 +1378,7 @@ class SpireService final {
   template <class BaseClass>
   class WithGenericMethod_SpireInstanceSegment : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SpireInstanceSegment() {
       ::grpc::Service::MarkMethodGeneric(9);
@@ -1067,7 +1387,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response) override {
+    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* /*context*/, const ::SpireInstanceSegmentRequest* /*request*/, ::SpireInstanceSegmentResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1075,7 +1395,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireGetState : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireGetState() {
       ::grpc::Service::MarkMethodRaw(0);
@@ -1084,7 +1404,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetState(::grpc::ServerContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response) override {
+    ::grpc::Status SpireGetState(::grpc::ServerContext* /*context*/, const ::SpireGetStateRequest* /*request*/, ::SpireGetStateResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1095,7 +1415,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireGetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireGetConfig() {
       ::grpc::Service::MarkMethodRaw(1);
@@ -1104,7 +1424,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetConfig(::grpc::ServerContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response) override {
+    ::grpc::Status SpireGetConfig(::grpc::ServerContext* /*context*/, const ::SpireGetConfigRequest* /*request*/, ::SpireGetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1115,7 +1435,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireSetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireSetConfig() {
       ::grpc::Service::MarkMethodRaw(2);
@@ -1124,7 +1444,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSetConfig(::grpc::ServerContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response) override {
+    ::grpc::Status SpireSetConfig(::grpc::ServerContext* /*context*/, const ::SpireSetConfigRequest* /*request*/, ::SpireSetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1135,7 +1455,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireMaybeJIT : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireMaybeJIT() {
       ::grpc::Service::MarkMethodRaw(3);
@@ -1144,7 +1464,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response) override {
+    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* /*context*/, const ::SpireMaybeJITRequest* /*request*/, ::SpireMaybeJITResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1155,7 +1475,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Check() {
       ::grpc::Service::MarkMethodRaw(4);
@@ -1164,7 +1484,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1175,7 +1495,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireStopServing : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireStopServing() {
       ::grpc::Service::MarkMethodRaw(5);
@@ -1184,7 +1504,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireStopServing(::grpc::ServerContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response) override {
+    ::grpc::Status SpireStopServing(::grpc::ServerContext* /*context*/, const ::SpireStopServingRequest* /*request*/, ::SpireStopServingResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1195,7 +1515,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireEmbedTag() {
       ::grpc::Service::MarkMethodRaw(6);
@@ -1204,7 +1524,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response) override {
+    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireEmbedTagRequest* /*request*/, ::SpireEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1215,7 +1535,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireSavedOutput : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireSavedOutput() {
       ::grpc::Service::MarkMethodRaw(7);
@@ -1224,7 +1544,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response) override {
+    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* /*context*/, const ::SpireSavedOutputRequest* /*request*/, ::SpireSavedOutputResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1235,7 +1555,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireDetectEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireDetectEmbedTag() {
       ::grpc::Service::MarkMethodRaw(8);
@@ -1244,7 +1564,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response) override {
+    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireDetectEmbedTagRequest* /*request*/, ::SpireDetectEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1255,7 +1575,7 @@ class SpireService final {
   template <class BaseClass>
   class WithRawMethod_SpireInstanceSegment : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SpireInstanceSegment() {
       ::grpc::Service::MarkMethodRaw(9);
@@ -1264,7 +1584,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response) override {
+    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* /*context*/, const ::SpireInstanceSegmentRequest* /*request*/, ::SpireInstanceSegmentResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1275,257 +1595,387 @@ class SpireService final {
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireGetState : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireGetState() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireGetState(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireGetState(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireGetState() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetState(::grpc::ServerContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response) override {
+    ::grpc::Status SpireGetState(::grpc::ServerContext* /*context*/, const ::SpireGetStateRequest* /*request*/, ::SpireGetStateResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireGetState(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireGetState(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireGetState(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireGetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireGetConfig() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireGetConfig(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireGetConfig(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireGetConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireGetConfig(::grpc::ServerContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response) override {
+    ::grpc::Status SpireGetConfig(::grpc::ServerContext* /*context*/, const ::SpireGetConfigRequest* /*request*/, ::SpireGetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireGetConfig(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireGetConfig(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireGetConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireSetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireSetConfig() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireSetConfig(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireSetConfig(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireSetConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSetConfig(::grpc::ServerContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response) override {
+    ::grpc::Status SpireSetConfig(::grpc::ServerContext* /*context*/, const ::SpireSetConfigRequest* /*request*/, ::SpireSetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireSetConfig(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireSetConfig(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireSetConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireMaybeJIT : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireMaybeJIT() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(3,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireMaybeJIT(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireMaybeJIT(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireMaybeJIT() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response) override {
+    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* /*context*/, const ::SpireMaybeJITRequest* /*request*/, ::SpireMaybeJITResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireMaybeJIT(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireMaybeJIT(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireMaybeJIT(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_Check() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(4,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->Check(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Check(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_Check() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Check(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* Check(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Check(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireStopServing : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireStopServing() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(5,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireStopServing(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireStopServing(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireStopServing() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireStopServing(::grpc::ServerContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response) override {
+    ::grpc::Status SpireStopServing(::grpc::ServerContext* /*context*/, const ::SpireStopServingRequest* /*request*/, ::SpireStopServingResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireStopServing(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireStopServing(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireStopServing(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireEmbedTag() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(6,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireEmbedTag(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireEmbedTag(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireEmbedTag() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response) override {
+    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireEmbedTagRequest* /*request*/, ::SpireEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireEmbedTag(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireEmbedTag(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireEmbedTag(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireSavedOutput : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireSavedOutput() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(7,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireSavedOutput(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(7,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireSavedOutput(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireSavedOutput() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response) override {
+    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* /*context*/, const ::SpireSavedOutputRequest* /*request*/, ::SpireSavedOutputResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireSavedOutput(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireSavedOutput(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireSavedOutput(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireDetectEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireDetectEmbedTag() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(8,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireDetectEmbedTag(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(8,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireDetectEmbedTag(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireDetectEmbedTag() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response) override {
+    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireDetectEmbedTagRequest* /*request*/, ::SpireDetectEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireDetectEmbedTag(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireDetectEmbedTag(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireDetectEmbedTag(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_SpireInstanceSegment : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_SpireInstanceSegment() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(9,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->SpireInstanceSegment(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(9,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SpireInstanceSegment(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_SpireInstanceSegment() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response) override {
+    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* /*context*/, const ::SpireInstanceSegmentRequest* /*request*/, ::SpireInstanceSegmentResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void SpireInstanceSegment(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SpireInstanceSegment(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SpireInstanceSegment(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireGetState : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireGetState() {
       ::grpc::Service::MarkMethodStreamed(0,
@@ -1535,7 +1985,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireGetState(::grpc::ServerContext* context, const ::SpireGetStateRequest* request, ::SpireGetStateResponse* response) override {
+    ::grpc::Status SpireGetState(::grpc::ServerContext* /*context*/, const ::SpireGetStateRequest* /*request*/, ::SpireGetStateResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1545,7 +1995,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireGetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireGetConfig() {
       ::grpc::Service::MarkMethodStreamed(1,
@@ -1555,7 +2005,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireGetConfig(::grpc::ServerContext* context, const ::SpireGetConfigRequest* request, ::SpireGetConfigResponse* response) override {
+    ::grpc::Status SpireGetConfig(::grpc::ServerContext* /*context*/, const ::SpireGetConfigRequest* /*request*/, ::SpireGetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1565,7 +2015,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireSetConfig : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireSetConfig() {
       ::grpc::Service::MarkMethodStreamed(2,
@@ -1575,7 +2025,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireSetConfig(::grpc::ServerContext* context, const ::SpireSetConfigRequest* request, ::SpireSetConfigResponse* response) override {
+    ::grpc::Status SpireSetConfig(::grpc::ServerContext* /*context*/, const ::SpireSetConfigRequest* /*request*/, ::SpireSetConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1585,7 +2035,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireMaybeJIT : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireMaybeJIT() {
       ::grpc::Service::MarkMethodStreamed(3,
@@ -1595,7 +2045,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* context, const ::SpireMaybeJITRequest* request, ::SpireMaybeJITResponse* response) override {
+    ::grpc::Status SpireMaybeJIT(::grpc::ServerContext* /*context*/, const ::SpireMaybeJITRequest* /*request*/, ::SpireMaybeJITResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1605,7 +2055,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_Check : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Check() {
       ::grpc::Service::MarkMethodStreamed(4,
@@ -1615,7 +2065,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Check(::grpc::ServerContext* context, const ::HealthCheckRequest* request, ::HealthCheckResponse* response) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::HealthCheckRequest* /*request*/, ::HealthCheckResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1625,7 +2075,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireStopServing : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireStopServing() {
       ::grpc::Service::MarkMethodStreamed(5,
@@ -1635,7 +2085,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireStopServing(::grpc::ServerContext* context, const ::SpireStopServingRequest* request, ::SpireStopServingResponse* response) override {
+    ::grpc::Status SpireStopServing(::grpc::ServerContext* /*context*/, const ::SpireStopServingRequest* /*request*/, ::SpireStopServingResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1645,7 +2095,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireEmbedTag() {
       ::grpc::Service::MarkMethodStreamed(6,
@@ -1655,7 +2105,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* context, const ::SpireEmbedTagRequest* request, ::SpireEmbedTagResponse* response) override {
+    ::grpc::Status SpireEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireEmbedTagRequest* /*request*/, ::SpireEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1665,7 +2115,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireSavedOutput : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireSavedOutput() {
       ::grpc::Service::MarkMethodStreamed(7,
@@ -1675,7 +2125,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* context, const ::SpireSavedOutputRequest* request, ::SpireSavedOutputResponse* response) override {
+    ::grpc::Status SpireSavedOutput(::grpc::ServerContext* /*context*/, const ::SpireSavedOutputRequest* /*request*/, ::SpireSavedOutputResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1685,7 +2135,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireDetectEmbedTag : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireDetectEmbedTag() {
       ::grpc::Service::MarkMethodStreamed(8,
@@ -1695,7 +2145,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* context, const ::SpireDetectEmbedTagRequest* request, ::SpireDetectEmbedTagResponse* response) override {
+    ::grpc::Status SpireDetectEmbedTag(::grpc::ServerContext* /*context*/, const ::SpireDetectEmbedTagRequest* /*request*/, ::SpireDetectEmbedTagResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1705,7 +2155,7 @@ class SpireService final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_SpireInstanceSegment : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SpireInstanceSegment() {
       ::grpc::Service::MarkMethodStreamed(9,
@@ -1715,7 +2165,7 @@ class SpireService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* context, const ::SpireInstanceSegmentRequest* request, ::SpireInstanceSegmentResponse* response) override {
+    ::grpc::Status SpireInstanceSegment(::grpc::ServerContext* /*context*/, const ::SpireInstanceSegmentRequest* /*request*/, ::SpireInstanceSegmentResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

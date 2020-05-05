@@ -7,34 +7,24 @@
 #include "proto/color/color.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/client_context.h>
 #include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-
-namespace grpc_impl {
-class CompletionQueue;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc_impl
-
-namespace grpc {
-namespace experimental {
-template <typename RequestT, typename ResponseT>
-class MessageAllocator;
-}  // namespace experimental
-}  // namespace grpc
 
 class ColorService final {
  public:
@@ -56,9 +46,23 @@ class ColorService final {
       virtual ~experimental_async_interface() {}
       virtual void ColorPredict(::grpc::ClientContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void ColorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ColorPredictResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ColorPredict(::grpc::ClientContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void ColorPredict(::grpc::ClientContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ColorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ColorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void ColorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ColorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::ColorPredictResponse>* AsyncColorPredictRaw(::grpc::ClientContext* context, const ::ColorPredictRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -79,8 +83,16 @@ class ColorService final {
      public:
       void ColorPredict(::grpc::ClientContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response, std::function<void(::grpc::Status)>) override;
       void ColorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ColorPredictResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ColorPredict(::grpc::ClientContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void ColorPredict(::grpc::ClientContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ColorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ColorPredictResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void ColorPredict(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ColorPredictResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -107,7 +119,7 @@ class ColorService final {
   template <class BaseClass>
   class WithAsyncMethod_ColorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ColorPredict() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -116,7 +128,7 @@ class ColorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ColorPredict(::grpc::ServerContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response) override {
+    ::grpc::Status ColorPredict(::grpc::ServerContext* /*context*/, const ::ColorPredictRequest* /*request*/, ::ColorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -128,39 +140,59 @@ class ColorService final {
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_ColorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_ColorPredict() {
-      ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::ColorPredictRequest, ::ColorPredictResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::ColorPredictRequest* request,
-                 ::ColorPredictResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->ColorPredict(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::ColorPredictRequest, ::ColorPredictResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response) { return this->ColorPredict(context, request, response); }));}
     void SetMessageAllocatorFor_ColorPredict(
         ::grpc::experimental::MessageAllocator< ::ColorPredictRequest, ::ColorPredictResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ColorPredictRequest, ::ColorPredictResponse>*>(
-          ::grpc::Service::experimental().GetHandler(0))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ColorPredictRequest, ::ColorPredictResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ColorPredict() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ColorPredict(::grpc::ServerContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response) override {
+    ::grpc::Status ColorPredict(::grpc::ServerContext* /*context*/, const ::ColorPredictRequest* /*request*/, ::ColorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void ColorPredict(::grpc::ServerContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* ColorPredict(
+      ::grpc::CallbackServerContext* /*context*/, const ::ColorPredictRequest* /*request*/, ::ColorPredictResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ColorPredict(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ColorPredictRequest* /*request*/, ::ColorPredictResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_ColorPredict<Service > CallbackService;
+  #endif
+
   typedef ExperimentalWithCallbackMethod_ColorPredict<Service > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_ColorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ColorPredict() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -169,7 +201,7 @@ class ColorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ColorPredict(::grpc::ServerContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response) override {
+    ::grpc::Status ColorPredict(::grpc::ServerContext* /*context*/, const ::ColorPredictRequest* /*request*/, ::ColorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -177,7 +209,7 @@ class ColorService final {
   template <class BaseClass>
   class WithRawMethod_ColorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ColorPredict() {
       ::grpc::Service::MarkMethodRaw(0);
@@ -186,7 +218,7 @@ class ColorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ColorPredict(::grpc::ServerContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response) override {
+    ::grpc::Status ColorPredict(::grpc::ServerContext* /*context*/, const ::ColorPredictRequest* /*request*/, ::ColorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -197,32 +229,45 @@ class ColorService final {
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_ColorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_ColorPredict() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->ColorPredict(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ColorPredict(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_ColorPredict() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ColorPredict(::grpc::ServerContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response) override {
+    ::grpc::Status ColorPredict(::grpc::ServerContext* /*context*/, const ::ColorPredictRequest* /*request*/, ::ColorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void ColorPredict(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* ColorPredict(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ColorPredict(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_ColorPredict : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ColorPredict() {
       ::grpc::Service::MarkMethodStreamed(0,
@@ -232,7 +277,7 @@ class ColorService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ColorPredict(::grpc::ServerContext* context, const ::ColorPredictRequest* request, ::ColorPredictResponse* response) override {
+    ::grpc::Status ColorPredict(::grpc::ServerContext* /*context*/, const ::ColorPredictRequest* /*request*/, ::ColorPredictResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }

@@ -5,7 +5,6 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
@@ -36,7 +35,7 @@ static void InitDefaultsscc_info_ClassificationEvalResult_proto_2fevaluation_2fc
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ClassificationEvalResult_proto_2fevaluation_2fclassification_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_ClassificationEvalResult_proto_2fevaluation_2fclassification_2eproto}, {
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ClassificationEvalResult_proto_2fevaluation_2fclassification_2eproto}, {
       &scc_info_ClassificationEvalSubset_proto_2fevaluation_2fclassification_2eproto.base,}};
 
 static void InitDefaultsscc_info_ClassificationEvalSubset_proto_2fevaluation_2fclassification_2eproto() {
@@ -51,7 +50,7 @@ static void InitDefaultsscc_info_ClassificationEvalSubset_proto_2fevaluation_2fc
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ClassificationEvalSubset_proto_2fevaluation_2fclassification_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_ClassificationEvalSubset_proto_2fevaluation_2fclassification_2eproto}, {}};
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ClassificationEvalSubset_proto_2fevaluation_2fclassification_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_proto_2fevaluation_2fclassification_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_proto_2fevaluation_2fclassification_2eproto = nullptr;
@@ -181,7 +180,6 @@ void ClassificationEvalResult::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ClassificationEvalResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -209,10 +207,10 @@ const char* ClassificationEvalResult::_InternalParse(const char* ptr, ::PROTOBUF
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(add_subsets(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_subsets(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 26);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -234,134 +232,36 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ClassificationEvalResult::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ClassificationEvalResult)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double top1_correct = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (9 & 0xFF)) {
 
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &top1_correct_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double topk_correct = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (17 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &topk_correct_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .ClassificationEvalSubset subsets = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_subsets()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ClassificationEvalResult)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ClassificationEvalResult)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ClassificationEvalResult::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ClassificationEvalResult)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // double top1_correct = 1;
-  if (!(this->top1_correct() <= 0 && this->top1_correct() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(1, this->top1_correct(), output);
-  }
-
-  // double topk_correct = 2;
-  if (!(this->topk_correct() <= 0 && this->topk_correct() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(2, this->topk_correct(), output);
-  }
-
-  // repeated .ClassificationEvalSubset subsets = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->subsets_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3,
-      this->subsets(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ClassificationEvalResult)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ClassificationEvalResult::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ClassificationEvalResult::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ClassificationEvalResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // double top1_correct = 1;
   if (!(this->top1_correct() <= 0 && this->top1_correct() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->top1_correct(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_top1_correct(), target);
   }
 
   // double topk_correct = 2;
   if (!(this->topk_correct() <= 0 && this->topk_correct() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->topk_correct(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_topk_correct(), target);
   }
 
   // repeated .ClassificationEvalSubset subsets = 3;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->subsets_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_subsets_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->subsets(static_cast<int>(i)), target);
+      InternalWriteMessage(3, this->_internal_subsets(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ClassificationEvalResult)
   return target;
@@ -371,24 +271,15 @@ size_t ClassificationEvalResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ClassificationEvalResult)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .ClassificationEvalSubset subsets = 3;
-  {
-    unsigned int count = static_cast<unsigned int>(this->subsets_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->subsets(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_subsets_size();
+  for (const auto& msg : this->subsets_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // double top1_correct = 1;
@@ -401,6 +292,10 @@ size_t ClassificationEvalResult::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -430,10 +325,10 @@ void ClassificationEvalResult::MergeFrom(const ClassificationEvalResult& from) {
 
   subsets_.MergeFrom(from.subsets_);
   if (!(from.top1_correct() <= 0 && from.top1_correct() >= 0)) {
-    set_top1_correct(from.top1_correct());
+    _internal_set_top1_correct(from._internal_top1_correct());
   }
   if (!(from.topk_correct() <= 0 && from.topk_correct() >= 0)) {
-    set_topk_correct(from.topk_correct());
+    _internal_set_topk_correct(from._internal_topk_correct());
   }
 }
 
@@ -458,7 +353,7 @@ bool ClassificationEvalResult::IsInitialized() const {
 void ClassificationEvalResult::InternalSwap(ClassificationEvalResult* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&subsets_)->InternalSwap(CastToBase(&other->subsets_));
+  subsets_.InternalSwap(&other->subsets_);
   swap(top1_correct_, other->top1_correct_);
   swap(topk_correct_, other->topk_correct_);
 }
@@ -486,11 +381,11 @@ ClassificationEvalSubset::ClassificationEvalSubset(const ClassificationEvalSubse
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   concept_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.concept_name().empty()) {
+  if (!from._internal_concept_name().empty()) {
     concept_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.concept_name_);
   }
   concept_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.concept_id().empty()) {
+  if (!from._internal_concept_id().empty()) {
     concept_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.concept_id_);
   }
   ::memcpy(&top1_correct_, &from.top1_correct_,
@@ -541,7 +436,6 @@ void ClassificationEvalSubset::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* ClassificationEvalSubset::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
@@ -552,14 +446,18 @@ const char* ClassificationEvalSubset::_InternalParse(const char* ptr, ::PROTOBUF
       // string concept_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_concept_name(), ptr, ctx, "ClassificationEvalSubset.concept_name");
+          auto str = _internal_mutable_concept_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ClassificationEvalSubset.concept_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // string concept_id = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_concept_id(), ptr, ctx, "ClassificationEvalSubset.concept_id");
+          auto str = _internal_mutable_concept_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ClassificationEvalSubset.concept_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -624,211 +522,9 @@ failure:
   goto success;
 #undef CHK_
 }
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ClassificationEvalSubset::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ClassificationEvalSubset)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string concept_name = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_concept_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->concept_name().data(), static_cast<int>(this->concept_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ClassificationEvalSubset.concept_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
 
-      // string concept_id = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_concept_id()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->concept_id().data(), static_cast<int>(this->concept_id().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "ClassificationEvalSubset.concept_id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double top1_correct = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (81 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &top1_correct_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double topk_correct = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (89 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &topk_correct_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double auc = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (97 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &auc_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double precision_at_50 = 13;
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (105 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &precision_at_50_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double recall_at_50 = 14;
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (113 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &recall_at_50_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int64 num_gt_images = 17;
-      case 17: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (136 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT64>(
-                 input, &num_gt_images_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:ClassificationEvalSubset)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:ClassificationEvalSubset)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ClassificationEvalSubset::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ClassificationEvalSubset)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string concept_name = 1;
-  if (this->concept_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->concept_name().data(), static_cast<int>(this->concept_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ClassificationEvalSubset.concept_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->concept_name(), output);
-  }
-
-  // string concept_id = 2;
-  if (this->concept_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->concept_id().data(), static_cast<int>(this->concept_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ClassificationEvalSubset.concept_id");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->concept_id(), output);
-  }
-
-  // double top1_correct = 10;
-  if (!(this->top1_correct() <= 0 && this->top1_correct() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(10, this->top1_correct(), output);
-  }
-
-  // double topk_correct = 11;
-  if (!(this->topk_correct() <= 0 && this->topk_correct() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(11, this->topk_correct(), output);
-  }
-
-  // double auc = 12;
-  if (!(this->auc() <= 0 && this->auc() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(12, this->auc(), output);
-  }
-
-  // double precision_at_50 = 13;
-  if (!(this->precision_at_50() <= 0 && this->precision_at_50() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(13, this->precision_at_50(), output);
-  }
-
-  // double recall_at_50 = 14;
-  if (!(this->recall_at_50() <= 0 && this->recall_at_50() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(14, this->recall_at_50(), output);
-  }
-
-  // int64 num_gt_images = 17;
-  if (this->num_gt_images() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64(17, this->num_gt_images(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:ClassificationEvalSubset)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ClassificationEvalSubset::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ClassificationEvalSubset::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:ClassificationEvalSubset)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -836,58 +532,62 @@ void ClassificationEvalSubset::SerializeWithCachedSizes(
   // string concept_name = 1;
   if (this->concept_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->concept_name().data(), static_cast<int>(this->concept_name().length()),
+      this->_internal_concept_name().data(), static_cast<int>(this->_internal_concept_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ClassificationEvalSubset.concept_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->concept_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_concept_name(), target);
   }
 
   // string concept_id = 2;
   if (this->concept_id().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->concept_id().data(), static_cast<int>(this->concept_id().length()),
+      this->_internal_concept_id().data(), static_cast<int>(this->_internal_concept_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "ClassificationEvalSubset.concept_id");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        2, this->concept_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_concept_id(), target);
   }
 
   // double top1_correct = 10;
   if (!(this->top1_correct() <= 0 && this->top1_correct() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(10, this->top1_correct(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(10, this->_internal_top1_correct(), target);
   }
 
   // double topk_correct = 11;
   if (!(this->topk_correct() <= 0 && this->topk_correct() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(11, this->topk_correct(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(11, this->_internal_topk_correct(), target);
   }
 
   // double auc = 12;
   if (!(this->auc() <= 0 && this->auc() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(12, this->auc(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(12, this->_internal_auc(), target);
   }
 
   // double precision_at_50 = 13;
   if (!(this->precision_at_50() <= 0 && this->precision_at_50() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(13, this->precision_at_50(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(13, this->_internal_precision_at_50(), target);
   }
 
   // double recall_at_50 = 14;
   if (!(this->recall_at_50() <= 0 && this->recall_at_50() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(14, this->recall_at_50(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(14, this->_internal_recall_at_50(), target);
   }
 
   // int64 num_gt_images = 17;
   if (this->num_gt_images() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(17, this->num_gt_images(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(17, this->_internal_num_gt_images(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ClassificationEvalSubset)
   return target;
@@ -897,11 +597,6 @@ size_t ClassificationEvalSubset::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ClassificationEvalSubset)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -910,14 +605,14 @@ size_t ClassificationEvalSubset::ByteSizeLong() const {
   if (this->concept_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->concept_name());
+        this->_internal_concept_name());
   }
 
   // string concept_id = 2;
   if (this->concept_id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->concept_id());
+        this->_internal_concept_id());
   }
 
   // double top1_correct = 10;
@@ -949,9 +644,13 @@ size_t ClassificationEvalSubset::ByteSizeLong() const {
   if (this->num_gt_images() != 0) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->num_gt_images());
+        this->_internal_num_gt_images());
   }
 
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -988,22 +687,22 @@ void ClassificationEvalSubset::MergeFrom(const ClassificationEvalSubset& from) {
     concept_id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.concept_id_);
   }
   if (!(from.top1_correct() <= 0 && from.top1_correct() >= 0)) {
-    set_top1_correct(from.top1_correct());
+    _internal_set_top1_correct(from._internal_top1_correct());
   }
   if (!(from.topk_correct() <= 0 && from.topk_correct() >= 0)) {
-    set_topk_correct(from.topk_correct());
+    _internal_set_topk_correct(from._internal_topk_correct());
   }
   if (!(from.auc() <= 0 && from.auc() >= 0)) {
-    set_auc(from.auc());
+    _internal_set_auc(from._internal_auc());
   }
   if (!(from.precision_at_50() <= 0 && from.precision_at_50() >= 0)) {
-    set_precision_at_50(from.precision_at_50());
+    _internal_set_precision_at_50(from._internal_precision_at_50());
   }
   if (!(from.recall_at_50() <= 0 && from.recall_at_50() >= 0)) {
-    set_recall_at_50(from.recall_at_50());
+    _internal_set_recall_at_50(from._internal_recall_at_50());
   }
   if (from.num_gt_images() != 0) {
-    set_num_gt_images(from.num_gt_images());
+    _internal_set_num_gt_images(from._internal_num_gt_images());
   }
 }
 

@@ -7,34 +7,24 @@
 #include "proto/clarifai/bulk_data_service/service.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
 #include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/client_context.h>
 #include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/method_handler_impl.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
 #include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/codegen/server_callback_handlers.h>
 #include <grpcpp/impl/codegen/server_context.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-
-namespace grpc_impl {
-class CompletionQueue;
-class ServerCompletionQueue;
-class ServerContext;
-}  // namespace grpc_impl
-
-namespace grpc {
-namespace experimental {
-template <typename RequestT, typename ResponseT>
-class MessageAllocator;
-}  // namespace experimental
-}  // namespace grpc
 
 namespace clarifai {
 namespace bulk_data_service {
@@ -80,17 +70,47 @@ class BulkDataServiceAPI final {
       // Health check
       virtual void GetHealthz(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetHealthz(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetHealthz(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetHealthz(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetHealthz(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetHealthz(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void PostDataDumps(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PostDataDumps(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PostDataDumps(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PostDataDumps(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PostDataDumps(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void PostDataDumps(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetDataDump(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetDataDump(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetDataDump(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetDataDump(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetDataDump(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
       virtual void GetDataDump(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::clarifai::bulk_data_service::GetHealthzResponse>* AsyncGetHealthzRaw(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -129,16 +149,40 @@ class BulkDataServiceAPI final {
      public:
       void GetHealthz(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, std::function<void(::grpc::Status)>) override;
       void GetHealthz(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetHealthz(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetHealthz(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetHealthz(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetHealthz(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void PostDataDumps(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, std::function<void(::grpc::Status)>) override;
       void PostDataDumps(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PostDataDumps(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PostDataDumps(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PostDataDumps(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void PostDataDumps(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetDataDump(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, std::function<void(::grpc::Status)>) override;
       void GetDataDump(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetDataDump(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetDataDump(::grpc::ClientContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetDataDump(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
       void GetDataDump(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -174,7 +218,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithAsyncMethod_GetHealthz : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetHealthz() {
       ::grpc::Service::MarkMethodAsync(0);
@@ -183,7 +227,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHealthz(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response) override {
+    ::grpc::Status GetHealthz(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetHealthzRequest* /*request*/, ::clarifai::bulk_data_service::GetHealthzResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -194,7 +238,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithAsyncMethod_PostDataDumps : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PostDataDumps() {
       ::grpc::Service::MarkMethodAsync(1);
@@ -203,7 +247,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PostDataDumps(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response) override {
+    ::grpc::Status PostDataDumps(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::PostDataDumpsRequest* /*request*/, ::clarifai::bulk_data_service::MultiDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -214,7 +258,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithAsyncMethod_GetDataDump : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetDataDump() {
       ::grpc::Service::MarkMethodAsync(2);
@@ -223,7 +267,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDataDump(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response) override {
+    ::grpc::Status GetDataDump(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetDataDumpRequest* /*request*/, ::clarifai::bulk_data_service::SingleDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -235,101 +279,153 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetHealthz : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_GetHealthz() {
-      ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::GetHealthzRequest, ::clarifai::bulk_data_service::GetHealthzResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::clarifai::bulk_data_service::GetHealthzRequest* request,
-                 ::clarifai::bulk_data_service::GetHealthzResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->GetHealthz(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::GetHealthzRequest, ::clarifai::bulk_data_service::GetHealthzResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response) { return this->GetHealthz(context, request, response); }));}
     void SetMessageAllocatorFor_GetHealthz(
         ::grpc::experimental::MessageAllocator< ::clarifai::bulk_data_service::GetHealthzRequest, ::clarifai::bulk_data_service::GetHealthzResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::GetHealthzRequest, ::clarifai::bulk_data_service::GetHealthzResponse>*>(
-          ::grpc::Service::experimental().GetHandler(0))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::GetHealthzRequest, ::clarifai::bulk_data_service::GetHealthzResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetHealthz() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHealthz(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response) override {
+    ::grpc::Status GetHealthz(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetHealthzRequest* /*request*/, ::clarifai::bulk_data_service::GetHealthzResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetHealthz(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetHealthz(
+      ::grpc::CallbackServerContext* /*context*/, const ::clarifai::bulk_data_service::GetHealthzRequest* /*request*/, ::clarifai::bulk_data_service::GetHealthzResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetHealthz(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::clarifai::bulk_data_service::GetHealthzRequest* /*request*/, ::clarifai::bulk_data_service::GetHealthzResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_PostDataDumps : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_PostDataDumps() {
-      ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::PostDataDumpsRequest, ::clarifai::bulk_data_service::MultiDataDumpResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::clarifai::bulk_data_service::PostDataDumpsRequest* request,
-                 ::clarifai::bulk_data_service::MultiDataDumpResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->PostDataDumps(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::PostDataDumpsRequest, ::clarifai::bulk_data_service::MultiDataDumpResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response) { return this->PostDataDumps(context, request, response); }));}
     void SetMessageAllocatorFor_PostDataDumps(
         ::grpc::experimental::MessageAllocator< ::clarifai::bulk_data_service::PostDataDumpsRequest, ::clarifai::bulk_data_service::MultiDataDumpResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::PostDataDumpsRequest, ::clarifai::bulk_data_service::MultiDataDumpResponse>*>(
-          ::grpc::Service::experimental().GetHandler(1))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::PostDataDumpsRequest, ::clarifai::bulk_data_service::MultiDataDumpResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_PostDataDumps() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PostDataDumps(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response) override {
+    ::grpc::Status PostDataDumps(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::PostDataDumpsRequest* /*request*/, ::clarifai::bulk_data_service::MultiDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PostDataDumps(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PostDataDumps(
+      ::grpc::CallbackServerContext* /*context*/, const ::clarifai::bulk_data_service::PostDataDumpsRequest* /*request*/, ::clarifai::bulk_data_service::MultiDataDumpResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PostDataDumps(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::clarifai::bulk_data_service::PostDataDumpsRequest* /*request*/, ::clarifai::bulk_data_service::MultiDataDumpResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetDataDump : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithCallbackMethod_GetDataDump() {
-      ::grpc::Service::experimental().MarkMethodCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::GetDataDumpRequest, ::clarifai::bulk_data_service::SingleDataDumpResponse>(
-          [this](::grpc::ServerContext* context,
-                 const ::clarifai::bulk_data_service::GetDataDumpRequest* request,
-                 ::clarifai::bulk_data_service::SingleDataDumpResponse* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   return this->GetDataDump(context, request, response, controller);
-                 }));
-    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::GetDataDumpRequest, ::clarifai::bulk_data_service::SingleDataDumpResponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response) { return this->GetDataDump(context, request, response); }));}
     void SetMessageAllocatorFor_GetDataDump(
         ::grpc::experimental::MessageAllocator< ::clarifai::bulk_data_service::GetDataDumpRequest, ::clarifai::bulk_data_service::SingleDataDumpResponse>* allocator) {
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::GetDataDumpRequest, ::clarifai::bulk_data_service::SingleDataDumpResponse>*>(
-          ::grpc::Service::experimental().GetHandler(2))
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::clarifai::bulk_data_service::GetDataDumpRequest, ::clarifai::bulk_data_service::SingleDataDumpResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetDataDump() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDataDump(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response) override {
+    ::grpc::Status GetDataDump(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetDataDumpRequest* /*request*/, ::clarifai::bulk_data_service::SingleDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetDataDump(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetDataDump(
+      ::grpc::CallbackServerContext* /*context*/, const ::clarifai::bulk_data_service::GetDataDumpRequest* /*request*/, ::clarifai::bulk_data_service::SingleDataDumpResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetDataDump(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::clarifai::bulk_data_service::GetDataDumpRequest* /*request*/, ::clarifai::bulk_data_service::SingleDataDumpResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_GetHealthz<ExperimentalWithCallbackMethod_PostDataDumps<ExperimentalWithCallbackMethod_GetDataDump<Service > > > CallbackService;
+  #endif
+
   typedef ExperimentalWithCallbackMethod_GetHealthz<ExperimentalWithCallbackMethod_PostDataDumps<ExperimentalWithCallbackMethod_GetDataDump<Service > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_GetHealthz : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetHealthz() {
       ::grpc::Service::MarkMethodGeneric(0);
@@ -338,7 +434,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHealthz(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response) override {
+    ::grpc::Status GetHealthz(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetHealthzRequest* /*request*/, ::clarifai::bulk_data_service::GetHealthzResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -346,7 +442,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithGenericMethod_PostDataDumps : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PostDataDumps() {
       ::grpc::Service::MarkMethodGeneric(1);
@@ -355,7 +451,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PostDataDumps(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response) override {
+    ::grpc::Status PostDataDumps(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::PostDataDumpsRequest* /*request*/, ::clarifai::bulk_data_service::MultiDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -363,7 +459,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithGenericMethod_GetDataDump : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetDataDump() {
       ::grpc::Service::MarkMethodGeneric(2);
@@ -372,7 +468,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDataDump(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response) override {
+    ::grpc::Status GetDataDump(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetDataDumpRequest* /*request*/, ::clarifai::bulk_data_service::SingleDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -380,7 +476,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithRawMethod_GetHealthz : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetHealthz() {
       ::grpc::Service::MarkMethodRaw(0);
@@ -389,7 +485,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHealthz(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response) override {
+    ::grpc::Status GetHealthz(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetHealthzRequest* /*request*/, ::clarifai::bulk_data_service::GetHealthzResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -400,7 +496,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithRawMethod_PostDataDumps : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PostDataDumps() {
       ::grpc::Service::MarkMethodRaw(1);
@@ -409,7 +505,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PostDataDumps(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response) override {
+    ::grpc::Status PostDataDumps(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::PostDataDumpsRequest* /*request*/, ::clarifai::bulk_data_service::MultiDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -420,7 +516,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithRawMethod_GetDataDump : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetDataDump() {
       ::grpc::Service::MarkMethodRaw(2);
@@ -429,7 +525,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDataDump(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response) override {
+    ::grpc::Status GetDataDump(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetDataDumpRequest* /*request*/, ::clarifai::bulk_data_service::SingleDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -440,82 +536,121 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_GetHealthz : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_GetHealthz() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(0,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->GetHealthz(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetHealthz(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetHealthz() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHealthz(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response) override {
+    ::grpc::Status GetHealthz(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetHealthzRequest* /*request*/, ::clarifai::bulk_data_service::GetHealthzResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetHealthz(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetHealthz(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetHealthz(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_PostDataDumps : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_PostDataDumps() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(1,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->PostDataDumps(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PostDataDumps(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_PostDataDumps() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PostDataDumps(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response) override {
+    ::grpc::Status PostDataDumps(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::PostDataDumpsRequest* /*request*/, ::clarifai::bulk_data_service::MultiDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void PostDataDumps(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* PostDataDumps(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PostDataDumps(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_GetDataDump : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     ExperimentalWithRawCallbackMethod_GetDataDump() {
-      ::grpc::Service::experimental().MarkMethodRawCallback(2,
-        new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-          [this](::grpc::ServerContext* context,
-                 const ::grpc::ByteBuffer* request,
-                 ::grpc::ByteBuffer* response,
-                 ::grpc::experimental::ServerCallbackRpcController* controller) {
-                   this->GetDataDump(context, request, response, controller);
-                 }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetDataDump(context, request, response); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetDataDump() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDataDump(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response) override {
+    ::grpc::Status GetDataDump(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetDataDumpRequest* /*request*/, ::clarifai::bulk_data_service::SingleDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetDataDump(::grpc::ServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* GetDataDump(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetDataDump(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetHealthz : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetHealthz() {
       ::grpc::Service::MarkMethodStreamed(0,
@@ -525,7 +660,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetHealthz(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetHealthzRequest* request, ::clarifai::bulk_data_service::GetHealthzResponse* response) override {
+    ::grpc::Status GetHealthz(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetHealthzRequest* /*request*/, ::clarifai::bulk_data_service::GetHealthzResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -535,7 +670,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_PostDataDumps : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PostDataDumps() {
       ::grpc::Service::MarkMethodStreamed(1,
@@ -545,7 +680,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PostDataDumps(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::PostDataDumpsRequest* request, ::clarifai::bulk_data_service::MultiDataDumpResponse* response) override {
+    ::grpc::Status PostDataDumps(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::PostDataDumpsRequest* /*request*/, ::clarifai::bulk_data_service::MultiDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -555,7 +690,7 @@ class BulkDataServiceAPI final {
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetDataDump : public BaseClass {
    private:
-    void BaseClassMustBeDerivedFromService(const Service *service) {}
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetDataDump() {
       ::grpc::Service::MarkMethodStreamed(2,
@@ -565,7 +700,7 @@ class BulkDataServiceAPI final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetDataDump(::grpc::ServerContext* context, const ::clarifai::bulk_data_service::GetDataDumpRequest* request, ::clarifai::bulk_data_service::SingleDataDumpResponse* response) override {
+    ::grpc::Status GetDataDump(::grpc::ServerContext* /*context*/, const ::clarifai::bulk_data_service::GetDataDumpRequest* /*request*/, ::clarifai::bulk_data_service::SingleDataDumpResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
