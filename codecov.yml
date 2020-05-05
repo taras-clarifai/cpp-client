@@ -1,0 +1,34 @@
+codecov:
+  branch: master
+  notify:
+    require_ci_to_pass: yes
+
+coverage:
+  range: 50..75
+  round: down
+  precision: 2
+  status:
+    project:
+      default:
+        enabled: true
+        if_ci_failed: error
+        only_pulls: false
+        target: 75%
+        threshold: 5%
+        paths:
+          - src/clientlib/
+          - !vendors/
+
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: false  # if true: only post the comment if coverage changes
+  require_base: no        # [yes :: must have a base report to post]
+  require_head: yes       # [yes :: must have a head report to post]
+  branches: null
+
+ignore:
+  - "vendors"
+  - "vendors/**/*"
+  - "src/tests"
+

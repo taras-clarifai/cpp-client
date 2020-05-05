@@ -43,11 +43,12 @@ jobs:
         mkdir build && cd build
         ulimit -c unlimited -S
         cmake .. -DCMAKE_BUILD_TYPE="${BUILD_TYPE}" -DCODE_COVERAGE=ON
-        make -j4
+        make -j$(nproc)
 
     - name: test
       run: |
-        ctest --build-config Debug
+        make test ARGS=-V
+        "../scripts/ci/get_code_cov.sh" "${PWD}"
 
     - name: collect code coverage
       run: bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
