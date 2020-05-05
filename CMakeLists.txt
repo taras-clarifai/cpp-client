@@ -2,9 +2,6 @@ cmake_minimum_required(VERSION 3.13)
 
 project(CPP_CLARIFAI_CLIENT CXX)
 
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_STANDARD_REQUIRED on)
-
 set(GTEST_SOURCE_DIR ${PROJECT_SOURCE_DIR}/vendors/gtest)
 set(CLIENTLIB_ROOT_DIR ${PROJECT_SOURCE_DIR})
 
@@ -31,6 +28,9 @@ endif()
 ###########################################
 #################  GRPC  ##################
 ###########################################
+# hack for some old grpc submodules issues
+set(GO_EXECUTABLE "/usr/local/go/bin/go")
+
 add_subdirectory(vendors/grpc)
 message(STATUS "Using gRPC via add_subdirectory.")
 # After using add_subdirectory, we can now use the grpc targets directly from
