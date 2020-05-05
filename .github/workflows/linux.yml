@@ -26,6 +26,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - run: scripts/ci/actions-install-linux.sh
+    - run: git submodule update --init --recursive
+
       # CACHE
     - id: ccache-cache
       uses: actions/cache@v1
@@ -34,8 +37,6 @@ jobs:
         key: ${{ runner.os }}-ccache-${{ github.sha }}
         restore-keys: |
           ${{ runner.os }}-ccache
-
-    - run: git submodule update --init --recursive
 
     - name: build
       run: |
