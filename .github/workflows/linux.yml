@@ -52,6 +52,6 @@ jobs:
         "../scripts/ci/get_code_cov.sh" "${PWD}"
 
     - name: collect code coverage
-      run: bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+      run: bash <(curl -s https://codecov.io/bash) -X gcov || echo "Codecov did not collect coverage reports"
 
     - run: ccache -s
