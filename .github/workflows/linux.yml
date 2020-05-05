@@ -13,6 +13,7 @@ on:
     types: [opened, reopened]
 
 env:
+  BUILD_TYPE: Debug
   CTEST_OUTPUT_ON_FAILURE: 1
   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
@@ -36,13 +37,13 @@ jobs:
 
     - name: build
       run: |
-        mkdir build
+        mkdir build && cd build
         ulimit -c unlimited -S
-        cmake --build build --config Debug -DCODE_COVERAGE=ON -j4
+        cmake .. -DCMAKE_BUILD_TYPE="${BUILD_TYPE}" -DCODE_COVERAGE=ON
+        make -j4
 
     - name: test
       run: |
-        cd build
         ctest --build-config Debug
 
     - name: collect code coverage
