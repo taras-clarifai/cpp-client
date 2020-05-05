@@ -35,6 +35,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-ccache
 
+    - run: git submodule update --init --recursive
+
     - name: build
       run: |
         mkdir build && cd build
