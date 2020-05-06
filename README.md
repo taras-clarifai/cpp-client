@@ -21,7 +21,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Debug
 make
 ```
 
-Or if you're using IDE, just open top-level `CMakeLists.txt` file.
+Or if you're using an IDE, just open top-level `CMakeLists.txt` file.
 
 #### Preparation
 
@@ -40,3 +40,7 @@ protoc -I $SOURCEDIR \
 ```
 
 After this I copied generated `*.cc` and `.h` files for Google APIs and added to this repository.
+
+## Usage
+
+If you're using git submodules and CMake, use `add_subdirectory()` in your `CMakeLists.txt` to the root of this repository. See examples in `src/tests/clientlib_tests`.
